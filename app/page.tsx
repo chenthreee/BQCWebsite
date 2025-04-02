@@ -5,6 +5,7 @@ import { MainNavigation } from "@/components/main-navigation"
 import { ProductSection } from "@/components/product-section"
 import { AboutSection } from "@/components/about-section"
 import { useLanguage } from "@/components/language-context"
+import { ServicesSection } from "@/components/services-section"
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, MessageCircle, ArrowUp } from "lucide-react"
@@ -24,6 +25,9 @@ export default function HomePage() {
       <main className="flex-1">
         {/* 产品中心 */}
         <ProductSection />
+
+        {/* 服务中心 - 包含OEM代工和ODM研发 */}
+        <ServicesSection />
 
         {/* 关于我们 */}
         <AboutSection />
