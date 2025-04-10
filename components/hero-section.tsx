@@ -30,7 +30,7 @@ export function HeroSection() {
       title: "储能BMS系统专家",
       subtitle: "安全可靠，智能高效",
       description: "专注于电力储能、船舶储能、通讯基站等领域的BMS系统研发与生产",
-      buttonText: t("button.learnMore"), 
+      buttonText: t("button.learnMore"),
       buttonLink: "/products",
       image: "/images/image_BMS.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
@@ -266,4 +266,3 @@ export function HeroSection() {
     </section>
   )
 }
-

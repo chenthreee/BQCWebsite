@@ -10,4 +10,3 @@ export const OemServiceIcons = {
   efficiency: Zap,
   management: BarChart,
 }
-

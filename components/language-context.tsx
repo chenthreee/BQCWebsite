@@ -4,9 +4,9 @@ import { createContext, useContext, useState, type ReactNode } from "react"
 
 type Language = "zh" | "en"
 
-type LanguageContextType = {
+interface LanguageContextType {
   language: Language
-  setLanguage: (lang: Language) => void
+  setLanguage: (language: Language) => void
   t: (key: string) => string
 }
 
@@ -250,4 +250,3 @@ export function useLanguage() {
   }
   return context
 }
-

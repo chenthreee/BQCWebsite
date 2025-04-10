@@ -34,4 +34,3 @@ export function AnimatedButton({ children, className, href, onClick }: AnimatedB
     </button>
   )
 }
-

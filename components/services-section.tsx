@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "./language-context"
-import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck } from 'lucide-react'
+import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function ServicesSection() {
@@ -57,66 +57,36 @@ export function ServicesSection() {
       title: "需求分析与方案设计",
       description: "深入理解客户需求，提供专业的技术咨询和解决方案设计，确保产品设计满足市场需求与技术要求",
       icon: <Lightbulb className="h-16 w-16 text-blue-600" />,
-      features: [
-        "需求调研与分析",
-        "技术可行性评估",
-        "整体方案设计",
-        "成本优化建议",
-        "项目规划与里程碑制定"
-      ],
+      features: ["需求调研与分析", "技术可行性评估", "整体方案设计", "成本优化建议", "项目规划与里程碑制定"],
     },
     {
       id: 2,
       title: "硬件系统开发",
       description: "专业的硬件系统开发团队，可根据客户需求开发各类定制化硬件系统，包括电路设计和PCB布局",
       icon: <Cpu className="h-16 w-16 text-blue-600" />,
-      features: [
-        "电路原理图设计",
-        "PCB布局设计",
-        "硬件测试与验证",
-        "元器件选型优化",
-        "DFM设计优化"
-      ],
+      features: ["电路原理图设计", "PCB布局设计", "硬件测试与验证", "元器件选型优化", "DFM设计优化"],
     },
     {
       id: 3,
       title: "嵌入式软件开发",
       description: "提供高质量的嵌入式软件开发服务，涵盖底层驱动、中间层架构和应用层开发，确保软件性能和稳定性",
       icon: <Code className="h-16 w-16 text-blue-600" />,
-      features: [
-        "实时操作系统(RTOS)应用开发",
-        "底层驱动开发",
-        "通信协议栈实现",
-        "算法优化与移植",
-        "软件架构设计"
-      ],
+      features: ["实时操作系统(RTOS)应用开发", "底层驱动开发", "通信协议栈实现", "算法优化与移植", "软件架构设计"],
     },
     {
       id: 4,
       title: "样机制作与测试验证",
       description: "快速样机制作与全面的测试验证服务，帮助客户缩短产品开发周期，提前发现并解决潜在问题",
       icon: <Settings className="h-16 w-16 text-blue-600" />,
-      features: [
-        "快速原型制作",
-        "功能测试与验证",
-        "环境适应性测试",
-        "可靠性与寿命测试",
-        "EMC/EMI测试支持"
-      ],
+      features: ["快速原型制作", "功能测试与验证", "环境适应性测试", "可靠性与寿命测试", "EMC/EMI测试支持"],
     },
     {
       id: 5,
       title: "产品认证与量产支持",
       description: "协助客户完成产品认证并提供量产阶段的全方位技术支持，确保产品顺利进入市场",
       icon: <FileCheck className="h-16 w-16 text-blue-600" />,
-      features: [
-        "CE/UL/FCC等认证支持",
-        "生产工艺优化",
-        "量产测试方案设计",
-        "产品迭代升级支持",
-        "技术文档编写"
-      ],
-    }
+      features: ["CE/UL/FCC等认证支持", "生产工艺优化", "量产测试方案设计", "产品迭代升级支持", "技术文档编写"],
+    },
   ]
 
   // 获取当前活动的服务数据
@@ -130,7 +100,7 @@ export function ServicesSection() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             百千成电子提供专业的OEM代工服务和ODM研发服务，满足客户从产品设计到量产的全流程需求
           </p>
-          
+
           {/* 服务类型选择器 */}
           <div className="flex justify-center mt-8">
             <div className="inline-flex rounded-md shadow-sm p-1 bg-white">
@@ -141,9 +111,7 @@ export function ServicesSection() {
                 }}
                 className={cn(
                   "px-6 py-3 text-lg font-medium rounded-md transition-colors",
-                  activeService === "oem"
-                    ? "bg-blue-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
+                  activeService === "oem" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100",
                 )}
               >
                 OEM代工服务
@@ -155,9 +123,7 @@ export function ServicesSection() {
                 }}
                 className={cn(
                   "px-6 py-3 text-lg font-medium rounded-md transition-colors",
-                  activeService === "odm"
-                    ? "bg-blue-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
+                  activeService === "odm" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100",
                 )}
               >
                 ODM研发服务
@@ -327,9 +293,7 @@ export function ServicesSection() {
                     <span className="text-3xl font-bold">15+</span>
                   </div>
                   <h4 className="text-xl font-bold mb-3">多年研发经验</h4>
-                  <p className="text-gray-600">
-                    拥有15年以上电子产品研发经验，深入了解各类应用场景的技术需求
-                  </p>
+                  <p className="text-gray-600">拥有15年以上电子产品研发经验，深入了解各类应用场景的技术需求</p>
                 </div>
                 <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">
@@ -345,9 +309,7 @@ export function ServicesSection() {
                     <span className="text-3xl font-bold">30%</span>
                   </div>
                   <h4 className="text-xl font-bold mb-3">高比例研发人员</h4>
-                  <p className="text-gray-600">
-                    研发人员占比30%，拥有丰富的硬件设计、嵌入式开发和系统设计经验
-                  </p>
+                  <p className="text-gray-600">研发人员占比30%，拥有丰富的硬件设计、嵌入式开发和系统设计经验</p>
                 </div>
               </div>
             </div>
@@ -421,21 +383,21 @@ export function ServicesSection() {
                 {[
                   {
                     title: "工业控制系统",
-                    description: "为某制造企业定制开发的工业控制系统，实现生产线自动化控制与数据采集，提升生产效率30%"
-                  }, 
+                    description: "为某制造企业定制开发的工业控制系统，实现生产线自动化控制与数据采集，提升生产效率30%",
+                  },
                   {
                     title: "智能监控设备",
-                    description: "为安防行业客户开发的智能监控设备，集成多种传感器与AI算法，实现智能识别与预警功能"
+                    description: "为安防行业客户开发的智能监控设备，集成多种传感器与AI算法，实现智能识别与预警功能",
                   },
                   {
                     title: "物联网终端设备",
-                    description: "为物联网应用场景开发的低功耗终端设备，支持多种无线通信协议，电池寿命可达3年"
+                    description: "为物联网应用场景开发的低功耗终端设备，支持多种无线通信协议，电池寿命可达3年",
                   },
                 ].map((case_, index) => (
                   <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
                     <div className="h-48 bg-gray-200">
                       <Image
-                        src={`/placeholder.svg?height=400&width=600&text=案例${index+1}`}
+                        src={`/placeholder.svg?height=400&width=600&text=案例${index + 1}`}
                         alt={case_.title}
                         width={600}
                         height={400}
