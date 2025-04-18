@@ -54,7 +54,7 @@ export function OdmServiceSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">ODM研发服务</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">ODM研发服务（BMS）</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             百千成电子拥有专业的研发团队，提供从需求分析、方案设计到样机制作、量产支持的一站式ODM研发服务，帮助客户快速实现产品创新
           </p>

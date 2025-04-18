@@ -126,7 +126,7 @@ export function ServicesSection() {
                   activeService === "odm" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100",
                 )}
               >
-                ODM研发服务
+                ODM研发服务（BMS）
               </button>
             </div>
           </div>

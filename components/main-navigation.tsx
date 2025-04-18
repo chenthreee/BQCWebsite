@@ -7,44 +7,72 @@ import { ChevronDown, Menu, X, Globe } from "lucide-react"
 import { useLanguage } from "./language-context"
 
 export function MainNavigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null)
+  const [scrolled, setScrolled] = useState(false)
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const subDropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const { language, setLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+
+    // Add scroll event listener
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    // Initial check
+    handleScroll()
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
-  const handleDropdownEnter = (dropdown: string) => {
+  const handleDropdownEnter = (key: string) => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current)
       dropdownTimeoutRef.current = null
     }
-    setActiveDropdown(dropdown)
+    setActiveDropdown(key)
   }
 
   const handleDropdownLeave = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null)
+      setActiveSubDropdown(null)
     }, 200)
   }
 
-  const toggleLanguage = () => {
-    setLanguage(language === "zh" ? "en" : "zh")
+  const handleSubDropdownEnter = (key: string) => {
+    if (subDropdownTimeoutRef.current) {
+      clearTimeout(subDropdownTimeoutRef.current)
+      subDropdownTimeoutRef.current = null
+    }
+    setActiveSubDropdown(key)
   }
 
-  if (!mounted) {
-    return null
+  const handleSubDropdownLeave = () => {
+    subDropdownTimeoutRef.current = setTimeout(() => {
+      setActiveSubDropdown(null)
+    }, 200)
   }
 
   const menuItems = [
     {
+      key: "about",
       label: t("nav.about"),
       href: "/about",
-      dropdown: "about",
-      submenu: [
+      children: [
         { label: t("about.introduction"), href: "/about/introduction" },
         { label: t("about.coreValues"), href: "/about/core-values" },
         { label: t("about.strategicPosition"), href: "/about/strategic-positioning" },
@@ -55,41 +83,50 @@ export function MainNavigation() {
       ],
     },
     {
+      key: "products",
       label: t("nav.products"),
       href: "/products",
-      dropdown: "products",
-      submenu: [
-        { label: t("products.bms"), href: "/products/energy-storage-bms" },
-        { label: t("products.ems"), href: "/products/energy-storage-ems" },
+      children: [
+        {
+          label: t("products.bms"),
+          href: "/products/energy-storage-bms",
+          children: [
+            { label: t("bms.powerStorage"), href: "/products/energy-storage-bms/power-storage" },
+            { label: t("bms.largeShip"), href: "/products/energy-storage-bms/large-ship" },
+            { label: t("bms.smallShip"), href: "/products/energy-storage-bms/small-ship" },
+            { label: t("bms.communicationBase"), href: "/products/energy-storage-bms/communication-base" },
+            { label: t("products.ems"), href: "/products/energy-storage-bms/energy-storage-ems" },
+          ],
+        },
         { label: t("products.pcs"), href: "/products/energy-storage-pcs" },
         { label: t("products.robotSystems"), href: "/products/intelligent-robot-systems" },
         { label: t("products.controlBoards"), href: "/products/industrial-control-boards" },
       ],
     },
     {
+      key: "services",
       label: t("nav.services"),
       href: "/services",
-      dropdown: "services",
-      submenu: [
+      children: [
         { label: t("services.odm"), href: "/services/odm" },
-        { label: t("services.jdsmOem"), href: "/services/jdsm-oem" },
+        { label: t("services.jdsmOem"), href: "/services/oem" },
       ],
     },
     {
+      key: "news",
       label: t("nav.news"),
       href: "/news",
-      dropdown: "news",
-      submenu: [
+      children: [
         { label: t("news.company"), href: "/news/company" },
         { label: t("news.industry"), href: "/news/industry" },
         { label: t("news.technology"), href: "/news/technology" },
       ],
     },
     {
+      key: "contact",
       label: t("nav.contact"),
       href: "/contact",
-      dropdown: "contact",
-      submenu: [
+      children: [
         { label: t("contact.rdCenter"), href: "/contact/rd-center" },
         { label: t("contact.shenzhenFactory"), href: "/contact/shenzhen-factory" },
         { label: t("contact.malaysiaFactory"), href: "/contact/malaysia-factory" },
@@ -97,109 +134,182 @@ export function MainNavigation() {
     },
   ]
 
-  return (
-    <header className="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm text-white">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/BQCLogo.png"
-              alt={t("company.name")}
-              width={40}
-              height={40}
-              className="h-10 w-auto"
-            />
-            <span className="ml-3 text-xl font-bold">{t("company.name")}</span>
-          </Link>
+  if (!mounted) {
+    return null
+  }
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black" : "bg-transparent"}`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/BQCLogo.png" 
+                alt={t("company.name")} 
+                width={40} 
+                height={40} 
+                className="mr-2"
+              />
+              <span className="text-xl font-bold text-white">{t("company.name")}</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation - 使用 flex-1 和 justify-center 来居中菜单项 */}
+          <div className="hidden md:flex flex-1 justify-center items-center">
             {menuItems.map((item) => (
               <div
-                key={item.href}
-                className="relative group"
-                onMouseEnter={() => handleDropdownEnter(item.dropdown)}
+                key={item.key}
+                className="relative px-2"
+                onMouseEnter={() => handleDropdownEnter(item.key)}
                 onMouseLeave={handleDropdownLeave}
               >
                 <Link
                   href={item.href}
-                  className="flex items-center py-2 text-white hover:text-blue-300 transition-colors"
+                  className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
                 >
                   {item.label}
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link>
 
-                {/* Dropdown Menu */}
-                {activeDropdown === item.dropdown && (
-                  <div
-                    className="absolute left-0 mt-2 w-56 bg-white text-gray-800 rounded-md shadow-lg py-2 z-20 transition-all duration-200"
-                    onMouseEnter={() => handleDropdownEnter(item.dropdown)}
-                    onMouseLeave={handleDropdownLeave}
-                  >
-                    {item.submenu.map((subitem) => (
-                      <Link key={subitem.href} href={subitem.href} className="block px-4 py-2 hover:bg-gray-100">
-                        {subitem.label}
-                      </Link>
+                {item.children && activeDropdown === item.key && (
+                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 transition-all duration-300 ease-in-out">
+                    <div className="py-1">
+                      {item.children.map((child) => (
+                        <div
+                          key={child.href}
+                          className="relative"
+                          onMouseEnter={child.children ? () => handleSubDropdownEnter(child.href) : undefined}
+                          onMouseLeave={child.children ? handleSubDropdownLeave : undefined}
+                        >
+                          <Link
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
+                          >
+                            {child.label}
+                            {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                          </Link>
+
+                          {child.children && activeSubDropdown === child.href && (
+                            <div className="absolute left-full top-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 transition-all duration-300 ease-in-out">
+                              <div className="py-1">
+                                {child.children.map((subChild) => (
+                                  <Link
+                                    key={subChild.href}
+                                    href={subChild.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                  >
+                                    {subChild.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Language Switcher - 放在最右边 */}
+          <div className="hidden md:flex flex-shrink-0">
+            <button
+              onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
+              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
+            >
+              <Globe className="mr-1 h-4 w-4" />
+              {language === "zh" ? t("language.select") : "中文"}
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex-shrink-0 ml-auto">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-800/70"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-black">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {menuItems.map((item) => (
+              <div key={item.key} className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === item.key ? null : item.key)}
+                  className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex justify-between items-center"
+                >
+                  {item.label}
+                  {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                </button>
+
+                {item.children && activeDropdown === item.key && (
+                  <div className="pl-4 space-y-1">
+                    {item.children.map((child) => (
+                      <div key={child.href} className="relative">
+                        {child.children ? (
+                          <>
+                            <button
+                              onClick={() => setActiveSubDropdown(activeSubDropdown === child.href ? null : child.href)}
+                              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex justify-between items-center"
+                            >
+                              {child.label}
+                              <ChevronDown className="ml-1 h-4 w-4" />
+                            </button>
+
+                            {activeSubDropdown === child.href && (
+                              <div className="pl-4 space-y-1">
+                                {child.children.map((subChild) => (
+                                  <Link
+                                    key={subChild.href}
+                                    href={subChild.href}
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                                    onClick={() => setIsOpen(false)}
+                                  >
+                                    {subChild.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <Link
+                            href={child.href}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-          </nav>
 
-          {/* Language Switcher */}
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center text-white hover:text-blue-300 transition-colors"
-          >
-            <Globe className="h-5 w-5 mr-1" />
-            <span>{language === "zh" ? "EN" : "中"}</span>
-          </button>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "关闭菜单" : "打开菜单"}
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 py-4">
-          <div className="container mx-auto px-4">
-            <nav className="flex flex-col space-y-4">
-              {menuItems.map((item) => (
-                <div key={item.href} className="flex flex-col">
-                  <Link
-                    href={item.href}
-                    className="flex items-center py-2 text-white hover:text-blue-300"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  <div className="pl-4 mt-2 flex flex-col space-y-2">
-                    {item.submenu.map((subitem) => (
-                      <Link
-                        key={subitem.href}
-                        href={subitem.href}
-                        className="text-gray-300 hover:text-white py-1"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subitem.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </nav>
+            {/* Mobile Language Switcher */}
+            <button
+              onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
+              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex items-center"
+            >
+              <Globe className="mr-1 h-4 w-4" />
+              {language === "zh" ? t("language.select") : "中文"}
+            </button>
           </div>
         </div>
       )}
-    </header>
+    </nav>
   )
 }

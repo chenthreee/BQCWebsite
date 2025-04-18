@@ -149,7 +149,7 @@ export function ProductSection() {
     },
     {
       id: 5,
-      title: "ODM研发服务",
+      title: "ODM研发服务（BMS）",
       description: "基于客户需求提供定制化的产品设计与开发服务，从方案设计、原型制作到量产支持的全流程ODM服务",
       image: "/placeholder.svg?height=600&width=1200",
       products: [

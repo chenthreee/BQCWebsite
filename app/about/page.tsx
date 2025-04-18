@@ -95,7 +95,7 @@ export default function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/ems" className="text-gray-400 hover:text-white">
+                  <Link href="/products/energy-storage-bms/energy-storage-ems" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "储能EMS（总控）" : "Energy Storage EMS"}
                   </Link>
                 </li>

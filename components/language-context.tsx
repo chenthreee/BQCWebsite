@@ -120,8 +120,8 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Services submenu
   "services.odm": {
-    zh: "ODM研发服务",
-    en: "ODM Development Services",
+    zh: "ODM研发服务（BMS）",
+    en: "ODM Development Services (BMS)",
   },
   "services.jdsmOem": {
     zh: "OEM代工服务",
@@ -188,8 +188,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Search",
   },
   "language.select": {
-    zh: "选择语言类型",
-    en: "Select Language",
+    zh: "EN",
+    en: "中",
   },
 
   // Footer sections

@@ -115,7 +115,7 @@ export default function EnergyStorageBmsPage() {
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">船舶储能BMS系列</h3>
               <p className="text-gray-700 mb-4">
-                针对海洋环境特殊要求设计的船舶储能BMS系统，具备高防护等级、抗震动、抗盐雾腐蚀等特性，满足各类船舶电力系统需求。
+                针对海洋环境特殊要求设计的船舶储能BMS系统，具备高防护等级、抗震动、抗盐雾腐蚀等特性。
               </p>
               <div className="flex space-x-4">
                 <Link
@@ -139,16 +139,16 @@ export default function EnergyStorageBmsPage() {
             <div className="h-64 overflow-hidden">
               <Image
                 src="/placeholder.svg?height=600&width=800"
-                alt="通讯基站BMS系列"
+                alt="通信基站BMS系列"
                 width={800}
                 height={600}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-3">通讯基站BMS系列</h3>
+              <h3 className="text-2xl font-bold mb-3">通信基站BMS系列</h3>
               <p className="text-gray-700 mb-4">
-                为通讯基站备电系统设计的高可靠性BMS，具备远程监控、故障预警和智能维护功能，确保通讯系统持续稳定运行。
+                为通信基站备电系统设计的高可靠性BMS，具备远程监控、故障预警和智能维护功能。
               </p>
               <Link
                 href="/products/energy-storage-bms/communication-base"
@@ -163,19 +163,22 @@ export default function EnergyStorageBmsPage() {
             <div className="h-64 overflow-hidden">
               <Image
                 src="/placeholder.svg?height=600&width=800"
-                alt="定制BMS解决方案"
+                alt="储能EMS系统"
                 width={800}
                 height={600}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-3">定制BMS解决方案</h3>
+              <h3 className="text-2xl font-bold mb-3">储能EMS（总控）</h3>
               <p className="text-gray-700 mb-4">
-                根据客户特定需求提供定制化BMS解决方案，满足不同应用场景的特殊要求，如特殊环境适应性、特殊通信协议等。
+                智能高效的能源管理系统，实现储能系统的智能调度和管理，优化能源使用效率。
               </p>
-              <Link href="/services/odm" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
-                了解ODM服务
+              <Link
+                href="/products/energy-storage-bms/energy-storage-ems"
+                className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
+              >
+                查看详情
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>

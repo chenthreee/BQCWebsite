@@ -21,11 +21,11 @@ export default function OdmServicePage() {
 
   const content = {
     zh: {
-      title: "ODM研发服务",
+      title: "ODM研发服务（BMS）",
       subtitle: "一站式电子产品研发解决方案",
       breadcrumbs: [
         { label: "服务", href: "/services" },
-        { label: "ODM研发服务", href: "/services/odm" },
+        { label: "ODM研发服务（BMS）", href: "/services/odm" },
       ],
       intro: {
         title: "BQC 提供BMS PCBA ODM服务",
@@ -36,15 +36,18 @@ export default function OdmServicePage() {
         sections: [
           {
             title: "1. 核心器件选型及框图",
-            alt: "核心器件选型及框图"
+            alt: "核心器件选型及框图",
+            image: "/images/about/services/odm/key_components_zh.png"
           },
           {
             title: "2. 原理图",
-            alt: "原理图"
+            alt: "原理图",
+            image: "/images/about/services/odm/schematic_zh_en.png"
           },
           {
             title: "3. PCB 布局",
-            alt: "PCB 布局"
+            alt: "PCB 布局",
+            image: "/images/about/services/odm/PCB_layout_zh_en.png"
           }
         ]
       },
@@ -91,7 +94,8 @@ export default function OdmServicePage() {
         description: "用气动顶针替代手动插拔连接器，通过编程实现自动烧录和测试，用电脑程序替代人工操作，缩短生产时间和减少人为不良"
       },
       dfm: {
-        title: "DFM可制造性设计分析"
+        title: "DFM可制造性设计分析",
+        image: "/images/about/services/odm/DFM_zh.png"
       },
       contact: {
         title: "联系我们",
@@ -100,7 +104,7 @@ export default function OdmServicePage() {
       }
     },
     en: {
-      title: "ODM R&D Services",
+      title: "ODM R&D Services（BMS）",
       subtitle: "One-stop electronic product R&D solution",
       breadcrumbs: [
         { label: "Services", href: "/services" },
@@ -115,15 +119,18 @@ export default function OdmServicePage() {
         sections: [
           {
             title: "1. Core Component Selection and Block Diagram",
-            alt: "Core Component Selection and Block Diagram"
+            alt: "Core Component Selection and Block Diagram",
+            image: "/images/about/services/odm/key_components_en.png"
           },
           {
             title: "2. Schematic Design",
-            alt: "Schematic Design"
+            alt: "Schematic Design",
+            image: "/images/about/services/odm/schematic_zh_en.png"
           },
           {
             title: "3. PCB Layout",
-            alt: "PCB Layout"
+            alt: "PCB Layout",
+            image: "/images/about/services/odm/PCB_layout_zh_en.png"
           }
         ]
       },
@@ -170,7 +177,8 @@ export default function OdmServicePage() {
         description: "Using pneumatic pogo pins instead of manual connector insertion and removal, achieving automated programming and testing through programming, replacing manual operations with computer programs, shortening production time and reducing human-caused defects"
       },
       dfm: {
-        title: "DFM (Design for Manufacturing) Analysis"
+        title: "DFM (Design for Manufacturing) Analysis",
+        image: "/images/about/services/odm/DFM_en.png"
       },
       contact: {
         title: "Contact Us",
@@ -219,7 +227,7 @@ export default function OdmServicePage() {
               <h3 className="text-xl font-bold mb-4">{section.title}</h3>
               <div className="flex justify-center">
                 <Image
-                  src="/images/about/services/odm/key_components_zh.png"
+                  src={section.image}
                   alt={section.alt}
                   width={800}
                   height={500}
@@ -310,7 +318,7 @@ export default function OdmServicePage() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex justify-center">
             <Image
-              src="/images/about/services/odm/DFM_zh.png"
+              src={content[language].dfm.image}
               alt={content[language].dfm.title}
               width={800}
               height={500}
