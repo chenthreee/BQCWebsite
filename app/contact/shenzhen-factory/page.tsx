@@ -1,4 +1,4 @@
-import { PageLayout } from "@/components/page-layout"
+import  PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 
@@ -17,14 +17,14 @@ export default function ShenzhenFactoryPage() {
         <div>
           <h2 className="text-3xl font-bold mb-6">深圳工厂介绍</h2>
           <p className="text-lg text-gray-700 mb-4">
-            百千成电子深圳工厂位于深圳市宝安区工业园区，是公司的主要生产基地，占地面积1.5万平方米，拥有先进的生产设备和完善的制造工艺。
+            百千成电子深圳工厂位于深圳市光明区，是公司的主要生产基地，占地面积**，拥有先进的生产设备和完善的制造工艺。
           </p>
-          <p className="text-lg text-gray-700 mb-4">
+          {/* <p className="text-lg text-gray-700 mb-4">
             工厂配备了多条全自动SMT生产线和自动化组装设备，以及先进的测试仪器和检测设备，年产能超过100万件电子产品。
           </p>
           <p className="text-lg text-gray-700 mb-8">
             工厂严格执行ISO9001质量管理体系和IPC标准，从原材料进厂到成品出货的全过程进行严格控制，确保产品品质。
-          </p>
+          </p> */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex items-start">
@@ -51,7 +51,7 @@ export default function ShenzhenFactoryPage() {
               </div>
               <div>
                 <h3 className="font-bold mb-1">地址</h3>
-                <p className="text-gray-700">深圳市宝安区工业园区</p>
+                <p className="text-gray-700">深圳市光明区</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -60,7 +60,7 @@ export default function ShenzhenFactoryPage() {
               </div>
               <div>
                 <h3 className="font-bold mb-1">工作时间</h3>
-                <p className="text-gray-700">周一至周五 9:00-18:00</p>
+                <p className="text-gray-700">周一至周五 8:00-18:00</p>
               </div>
             </div>
           </div>
@@ -148,14 +148,14 @@ export default function ShenzhenFactoryPage() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">12+</div>
               <div className="text-xl font-bold mb-1">SMT生产线</div>
-              <p className="text-gray-700">配备8条以上全自动SMT生产线</p>
+              <p className="text-gray-700">配备12条以上全自动SMT生产线</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">4万+</div>
               <div className="text-xl font-bold mb-1">日产能</div>
-              <p className="text-gray-700">日产能超过4万件PCBA</p>
+              <p className="text-gray-700">日产能超过12万件PCBA</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">99.8%</div>

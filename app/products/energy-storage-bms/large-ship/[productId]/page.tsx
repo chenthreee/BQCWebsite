@@ -537,7 +537,7 @@ const productsData: Record<string, Product> = {
       "钻井平台供电船",
       "风电运维船"
     ],
-    faqs: []  // 待填写
+    faqs: []  //TO DO LIST 代填充
   },
   "power-propulsion": {
     model: "船舶电力推进系统",

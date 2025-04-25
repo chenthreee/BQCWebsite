@@ -26,7 +26,7 @@ const translations: Record<string, Record<Language, string>> = {
     en: "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
   },
 
-  // Navigation
+//navigation
   "nav.about": {
     zh: "关于我们",
     en: "About Us",

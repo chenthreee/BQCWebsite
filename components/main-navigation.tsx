@@ -70,66 +70,74 @@ export function MainNavigation() {
   const menuItems = [
     {
       key: "about",
-      label: t("nav.about"),
+      label: mounted ? t("关于我们") : "关于我们",
       href: "/about",
       children: [
-        { label: t("about.introduction"), href: "/about/introduction" },
-        { label: t("about.coreValues"), href: "/about/core-values" },
-        { label: t("about.strategicPosition"), href: "/about/strategic-positioning" },
-        { label: t("about.developmentHistory"), href: "/about/development-history" },
-        { label: t("about.managementSystem"), href: "/about/management-system" },
-        { label: t("about.manufacturingCapabilities"), href: "/about/manufacturing-capabilities" },
-        { label: t("about.certificates"), href: "/about/certificates" },
+        { label: mounted ? t("公司介绍") : "公司介绍", href: "/about/introduction" },
+        { label: mounted ? t("核心价值观") : "核心价值观", href: "/about/core-values" },
+        { label: mounted ? t("战略定位") : "战略定位", href: "/about/strategic-positioning" },
+        { label: mounted ? t("发展历程") : "发展历程", href: "/about/development-history" },
+        { label: mounted ? t("管理系统") : "管理系统", href: "/about/management-system" },
+        { label: mounted ? t("制造能力") : "制造能力", href: "/about/manufacturing-capabilities" },
+        { label: mounted ? t("资质证书") : "资质证书", href: "/about/certificates" },
       ],
     },
     {
       key: "products",
-      label: t("nav.products"),
+      label: mounted ? t("产品中心") : "产品中心",
       href: "/products",
       children: [
         {
-          label: t("products.bms"),
+          label: mounted ? t("储能BMS") : "储能BMS",
           href: "/products/energy-storage-bms",
           children: [
-            { label: t("bms.powerStorage"), href: "/products/energy-storage-bms/power-storage" },
-            { label: t("bms.largeShip"), href: "/products/energy-storage-bms/large-ship" },
-            { label: t("bms.smallShip"), href: "/products/energy-storage-bms/small-ship" },
-            { label: t("bms.communicationBase"), href: "/products/energy-storage-bms/communication-base" },
-            { label: t("products.ems"), href: "/products/energy-storage-bms/energy-storage-ems" },
+            { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: "/products/energy-storage-bms/power-storage" },
+            {
+              label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS",
+              href: "/products/energy-storage-bms/large-ship",
+            },
+            {
+              label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS",
+              href: "/products/energy-storage-bms/small-ship",
+            },
+            {
+              label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS",
+              href: "/products/energy-storage-bms/communication-base",
+            },
+            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: "/products/energy-storage-ems" },
           ],
         },
-        { label: t("products.pcs"), href: "/products/energy-storage-pcs" },
-        { label: t("products.robotSystems"), href: "/products/intelligent-robot-systems" },
-        { label: t("products.controlBoards"), href: "/products/industrial-control-boards" },
+        { label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
+        { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: "/products/intelligent-robot-systems" },
+        { label: mounted ? t("工业控制板") : "工业控制板", href: "/products/industrial-control-boards" },
       ],
     },
     {
       key: "services",
-      label: t("nav.services"),
+      label: mounted ? t("服务") : "服务",
       href: "/services",
       children: [
-        { label: t("services.odm"), href: "/services/odm" },
-        { label: t("services.jdsmOem"), href: "/services/oem" },
+        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: "/services/odm" },
+        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: "/services/oem" },
       ],
     },
     {
       key: "news",
-      label: t("nav.news"),
+      label: mounted ? t("新闻中心") : "新闻中心",
       href: "/news",
       children: [
-        { label: t("news.company"), href: "/news/company" },
-        { label: t("news.industry"), href: "/news/industry" },
-        { label: t("news.technology"), href: "/news/technology" },
+        { label: mounted ? t("国内新闻") : "国内新闻", href: "/news/domestic" },
+        { label: mounted ? t("海外新闻") : "海外新闻", href: "/news/overseas" },
       ],
     },
     {
       key: "contact",
-      label: t("nav.contact"),
+      label: mounted ? t("联系我们") : "联系我们",
       href: "/contact",
       children: [
-        { label: t("contact.rdCenter"), href: "/contact/rd-center" },
-        { label: t("contact.shenzhenFactory"), href: "/contact/shenzhen-factory" },
-        { label: t("contact.malaysiaFactory"), href: "/contact/malaysia-factory" },
+        { label: mounted ? t("研发中心") : "研发中心", href: "/contact#rd-center" },
+        { label: mounted ? t("深圳工厂") : "深圳工厂", href: "/contact#shenzhen-factory" },
+        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: "/contact#malaysia-factory" },
       ],
     },
   ]
@@ -147,14 +155,8 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img 
-                src="/BQCLogo.png" 
-                alt={t("company.name")} 
-                width={40} 
-                height={40} 
-                className="mr-2"
-              />
-              <span className="text-xl font-bold text-white">{t("company.name")}</span>
+              <Image src="/BQCLogo.png" alt="百千成电子" width={40} height={40} className="mr-2" />
+              <span className="text-xl font-bold text-white">百千成电子</span>
             </Link>
           </div>
 
@@ -224,7 +226,7 @@ export function MainNavigation() {
               className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
             >
               <Globe className="mr-1 h-4 w-4" />
-              {language === "zh" ? t("language.select") : "中文"}
+              {language === "zh" ? "EN" : "中文"}
             </button>
           </div>
 
@@ -305,7 +307,7 @@ export function MainNavigation() {
               className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex items-center"
             >
               <Globe className="mr-1 h-4 w-4" />
-              {language === "zh" ? t("language.select") : "中文"}
+              {language === "zh" ? "English" : "中文"}
             </button>
           </div>
         </div>

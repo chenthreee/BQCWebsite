@@ -1,92 +1,93 @@
-import { PageLayout } from "@/components/page-layout"
+import  PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight } from "lucide-react"
 
-export default function TechnologyNewsPage() {
-  // 模拟新闻数据
+export default function DomesticNewsPage() {
+  // 模拟国内新闻数据
   const news = [
     {
       id: 1,
-      title: "BMS系统SOC算法优化：提高电池状态估算精度",
+      title: "百千成电子有限公司亮相RE+展会，引领行业潮流",
       summary:
-        "SOC（State of Charge）是BMS系统的核心参数之一，准确估算SOC对提高电池使用效率和延长寿命至关重要。本文介绍了几种先进的SOC估算算法及其优化方法。",
-      date: "2024-03-18",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术研发",
+        "2024．9.9-2024.9.12，“百千成电子有限公司”（Baichiancheng Electronics Co., Ltd.）出席RE+展会（Renewable Energy Expo）是一个非常有意义的举措，尤其对于关注新能源和可持续发展的公司而言。RE+展会是全球领先的可再生能源展览会之一，通常会涉及太阳能、风能、储能技术以及电力电子产品等领域",
+      date: "2024-09-13",
+      author: "业务部",
+      image: "/images/news/domestic/1-1.png",
+      category: "展会活动",
     },
     {
       id: 2,
-      title: "储能系统均衡技术比较：被动均衡vs主动均衡",
+      title: "百千成电子闪耀杭州电子展，展示电子制造新实力",
       summary:
-        "电池均衡是BMS系统的重要功能之一，可分为被动均衡和主动均衡两种方式。本文对这两种均衡技术进行了详细比较，分析了各自的优缺点和适用场景。",
-      date: "2024-03-05",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术研发",
+        "2024年3月11-13日，全球范围内影响力最大的国际顶级储能盛会之一—— “第十四届中国国际储能大会”在杭州国际博览中心隆重举行。深圳市百千成电子有限公司（以下简称百千成）作为储能领域的佼佼者，也应邀参加了此次盛会。与大会汇聚来自全球各地的储能领域专业人士，共同探讨储能行业的最新发展趋势和技术创新",
+      date: "2024-03-14",
+      author: "业务部",
+      image: "/images/news/domestic/2-1.png",
+      category: "展会活动",
     },
     {
       id: 3,
-      title: "储能PCS系统控制策略：提高系统效率与可靠性",
+      title: "2024年百千成电子有限公司闪耀亮相重庆国际电池技术展览会",
       summary:
-        "PCS（Power Conversion System）是储能系统的核心设备，其控制策略直接影响系统的效率和可靠性。本文介绍了几种先进的PCS控制策略及其实现方法。",
-      date: "2024-02-20",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术研发",
+        "2024年4月27日至29日，全球电池行业的目光聚焦于中国重庆，第十六届重庆国际电池技术交流会/展览会（CIBF2024）在此盛大举行。此次展会汇聚了来自世界各地的电池技术精英和参展企业，其中，深圳市百千成电子有限公司作为储能锂电池BMS设计制造的领军企业，精彩亮相并展示了其在电池管理系统（BMS）领域的最新技术成果和解决方案。",
+      date: "2024-04-30",
+      author: "业务部",
+      image: "/images/news/domestic/3-1.png",
+      category: "展会活动",
     },
-    {
-      id: 4,
-      title: "储能EMS系统优化算法：基于人工智能的调度策略",
-      summary: 'EMS（Energy Management System）是储能系统的"大脑"',
-      date: "2024-02-10",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术研发",
-    },
-    {
-      id: 5,
-      title: "储能系统安全技术：多重保护策略设计",
-      summary:
-        "安全是储能系统的首要考虑因素，本文介绍了储能系统的多重保护策略设计，包括硬件保护、软件保护、通信保护等多个层面，确保系统安全可靠运行。",
-      date: "2024-01-25",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术研发",
-    },
-    {
-      id: 6,
-      title: "储能系统通信协议：标准化与兼容性",
-      summary:
-        "通信是储能系统各部分协同工作的基础，本文介绍了储能系统常用的通信协议，分析了标准化与兼容性问题，并提出了解决方案。",
-      date: "2024-01-15",
-      author: "技术研发部",
-      image: "/placeholder.svg?height=600&amp;width=800",
-      category: "技术研发",
-    },
+    // {
+    //   id: 4,
+    //   title: '百千成电子荣获"国家高新技术企业"认定',
+    //   summary:
+    //     '近日，百千成电子成功通过"国家高新技术企业"认定，这是对公司技术创新能力和研发实力的高度认可，也是公司发展历程中的重要里程碑。',
+    //   date: "2023-12-20",
+    //   author: "行政部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "企业荣誉",
+    // },
+    // {
+    //   id: 5,
+    //   title: "百千成电子参加2023年储能技术展览会",
+    //   summary:
+    //     "近日，百千成电子参加了在深圳举办的2023年储能技术展览会，展示了公司最新研发的储能BMS系统和智能控制产品，吸引了众多客户和合作伙伴的关注。",
+    //   date: "2023-11-15",
+    //   author: "市场部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "展会活动",
+    // },
+    // {
+    //   id: 6,
+    //   title: "百千成电子举办2023年技术创新大赛",
+    //   summary:
+    //     "为激发员工创新热情，提升公司技术实力，百千成电子近日举办了2023年技术创新大赛，来自各部门的员工踊跃参与，提出了多项创新方案和技术改进建议。",
+    //   date: "2023-10-25",
+    //   author: "人力资源部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "企业文化",
+    // },
   ]
 
   return (
     <PageLayout
-      title="技术分享"
-      subtitle="储能技术与产品应用分享"
+      title="国内新闻"
+      subtitle="了解百千成电子国内最新动态"
       breadcrumbs={[
         { label: "新闻中心", href: "/news" },
-        { label: "技术分享", href: "/news/technology" },
+        { label: "国内新闻", href: "/news/domestic" },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-8">
-        <div className="flex flex-wrap gap-4 mb-8">
-          <Link href="/news/company" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-            公司新闻
+        <div className="flex flex-wrap gap-4 mb-8 bg-white p-4 rounded-lg shadow-sm">
+          <Link href="/news" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
+            全部新闻
           </Link>
-          <Link href="/news/industry" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-            行业资讯
+          <Link href="/news/domestic" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            国内新闻
           </Link>
-          <Link href="/news/technology" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-            技术分享
+          <Link href="/news/overseas" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
+            海外新闻
           </Link>
         </div>
 
@@ -119,7 +120,7 @@ export default function TechnologyNewsPage() {
               <h2 className="text-2xl font-bold mb-4">{news[0].title}</h2>
               <p className="text-gray-700 mb-6">{news[0].summary}</p>
               <Link
-                href={`/news/technology/${news[0].id}`}
+                href={`/news/domestic/${news[0].id}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 阅读全文
@@ -155,7 +156,7 @@ export default function TechnologyNewsPage() {
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-gray-700 mb-4 line-clamp-3">{item.summary}</p>
                 <Link
-                  href={`/news/technology/${item.id}`}
+                  href={`/news/domestic/${item.id}`}
                   className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
                 >
                   阅读全文

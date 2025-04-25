@@ -1,184 +1,206 @@
-import { PageLayout } from "@/components/page-layout"
+"use client"
+
+import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { useLanguage } from "@/components/language-context"
+import { useEffect, useState } from "react"
 
 export default function ContactPage() {
-  const locations = [
-    {
-      title: "研发中心",
-      description: "百千成电子技术创新的核心",
-      address: "深圳市南山区科技园",
-      phone: "+86 755 8765 4321",
-      email: "rd@baiqiancheng.com",
-      link: "/contact/rd-center",
-      image: "/placeholder.svg?height=400&width=600",
+  const { language } = useLanguage()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const content = {
+    zh: {
+      title: "联系我们",
+      subtitle: "欢迎通过以下方式与我们联系",
+      breadcrumbs: [{ label: "联系我们", href: "/contact" }],
+      generalContact: {
+        title: "联系方式",
+        description: "欢迎通过以下方式与我们联系，或致电获取即时帮助：",
+        workingHours: "工作时间：周一至周五 9:00-18:00",
+        phone: "电话：86-755-26950571",
+        fax: "传真：86-755-26788245",
+        email: "邮箱：pcba@bqcdz.com"
+      },
+      locations: {
+        shenzhenFactory: {
+          title: "深圳工厂",
+          address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3栋3B号整栋，518132"
+        },
+        rdCenter: {
+          title: "研发中心",
+          address: "深圳市南山区"
+        },
+        malaysiaFactory: {
+          title: "马来西亚工厂",
+          address: "马来西亚槟城"
+        }
+      }
     },
-    {
-      title: "深圳工厂",
-      description: "先进的电子产品制造基地",
-      address: "深圳市宝安区工业园区",
-      phone: "+86 755 1234 5678",
-      email: "factory-sz@baiqiancheng.com",
-      link: "/contact/shenzhen-factory",
-      image: "/placeholder.svg?height=400&width=600",
-    },
-    {
-      title: "马来西亚工厂",
-      description: "面向东南亚市场的生产基地",
-      address: "马来西亚吉隆坡工业园区",
-      phone: "+60 3 1234 5678",
-      email: "factory-my@baiqiancheng.com",
-      link: "/contact/malaysia-factory",
-      image: "/placeholder.svg?height=400&width=600",
-    },
-  ]
+    en: {
+      title: "Contact Us",
+      subtitle: "Get in touch with us",
+      breadcrumbs: [{ label: "Contact Us", href: "/contact" }],
+      generalContact: {
+        title: "General Contact",
+        description: "Send us a general inquiry through below info or contact by phone for immediate assistance:",
+        workingHours: "We are in the office from 9 am to 6 pm, Monday through Friday.",
+        phone: "T: 86-755-26950571",
+        fax: "F: 86-755-26788245",
+        email: "E: pcba@bqcdz.com"
+      },
+      locations: {
+        shenzhenFactory: {
+          title: "Shenzhen Factory",
+          address: "Complete Building 3, No.3B ShaTouXiang Industrial Zone, ChangZhen Community, Yutang Street, Guangming District, Shenzhen, China. 518132"
+        },
+        rdCenter: {
+          title: "R&D Centre",
+          address: "Nanshan District, Shenzhen, China."
+        },
+        malaysiaFactory: {
+          title: "Malaysia Factory",
+          address: "State of Penang, Malaysia."
+        }
+      }
+    }
+  }
+
+  const currentContent = language === "zh" ? content.zh : content.en
 
   return (
     <PageLayout
-      title="联系我们"
-      subtitle="随时与百千成电子取得联系"
-      breadcrumbs={[{ label: "联系我们", href: "/contact" }]}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {locations.map((location, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+      {/* 联系方式 */}
+      <div className="mb-16">
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-6">{currentContent.generalContact.title}</h2>
+          <p className="text-gray-700 mb-6">{currentContent.generalContact.description}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex items-start">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <Clock className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">工作时间</h3>
+                <p className="text-gray-700">{currentContent.generalContact.workingHours}</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <Phone className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">电话</h3>
+                <p className="text-gray-700">{currentContent.generalContact.phone}</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <Phone className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">传真</h3>
+                <p className="text-gray-700">{currentContent.generalContact.fax}</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <Mail className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">邮箱</h3>
+                <p className="text-gray-700">{currentContent.generalContact.email}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 位置卡片 */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Link href="/contact/shenzhen-factory" className="block">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
-                src={location.image || "/placeholder.svg"}
-                alt={location.title}
+                src="/placeholder.svg?height=400&width=600"
+                alt={currentContent.locations.shenzhenFactory.title}
                 width={600}
                 height={400}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">{location.title}</h3>
-              <p className="text-gray-700 mb-4">{location.description}</p>
-              <div className="space-y-2 mb-4">
-                <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>{location.address}</span>
-                </div>
-                <div className="flex items-start">
-                  <Phone className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>{location.phone}</span>
-                </div>
-                <div className="flex items-start">
-                  <Mail className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>{location.email}</span>
-                </div>
-              </div>
-              <Link href={location.link} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
-                了解详情
-                <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="p-8">
-            <h2 className="text-2xl font-bold mb-6">联系表单</h2>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  姓名
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="请输入您的姓名"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  电子邮箱
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="请输入您的电子邮箱"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  电话
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="请输入您的电话号码"
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  主题
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="请输入主题"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  留言内容
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="请输入您的留言内容"
-                ></textarea>
-              </div>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">提交</Button>
-            </form>
-          </div>
-          <div className="bg-gray-100 p-8 flex items-center">
-            <div>
-              <h2 className="text-2xl font-bold mb-6">公司总部</h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-bold mb-1">地址</h3>
-                    <p className="text-gray-700">深圳市南山区高新科技园区</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-bold mb-1">电话</h3>
-                    <p className="text-gray-700">+86 755 1234 5678</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-bold mb-1">电子邮箱</h3>
-                    <p className="text-gray-700">info@baiqiancheng.com</p>
-                  </div>
+              <div className="flex items-start mb-4">
+                <MapPin className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{currentContent.locations.shenzhenFactory.title}</h3>
+                  <p className="text-gray-700">{currentContent.locations.shenzhenFactory.address}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </Link>
 
-      <div>
-        <h2 className="text-3xl font-bold mb-8 text-center">公司地图</h2>
-        <div className="bg-gray-200 rounded-lg overflow-hidden h-[400px] flex items-center justify-center">
-          <p className="text-gray-600">此处将显示公司地图</p>
-        </div>
+        <Link href="/contact/rd-center" className="block">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="h-48 overflow-hidden">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt={currentContent.locations.rdCenter.title}
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <div className="flex items-start mb-4">
+                <MapPin className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{currentContent.locations.rdCenter.title}</h3>
+                  <p className="text-gray-700">{currentContent.locations.rdCenter.address}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/contact/malaysia-factory" className="block">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="h-48 overflow-hidden">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt={currentContent.locations.malaysiaFactory.title}
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <div className="flex items-start mb-4">
+                <MapPin className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{currentContent.locations.malaysiaFactory.title}</h3>
+                  <p className="text-gray-700">{currentContent.locations.malaysiaFactory.address}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
     </PageLayout>
   )

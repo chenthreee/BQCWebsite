@@ -1,93 +1,93 @@
-import { PageLayout } from "@/components/page-layout"
+import  PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight } from "lucide-react"
 
-export default function IndustryNewsPage() {
-  // 模拟新闻数据
+export default function OverseasNewsPage() {
+  // 模拟海外新闻数据
   const news = [
     {
       id: 1,
-      title: "2024年全球储能市场展望：增长趋势与技术发展",
+      title: "中国电子制造领军企业百千成，CES舞台大放异彩 CES 2024",
       summary:
-        "随着全球能源转型的加速推进，储能市场迎来了快速发展期。本文分析了2024年全球储能市场的增长趋势与技术发展方向，为行业提供参考。",
-      date: "2024-03-20",
-      author: "行业分析师",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "市场趋势",
+        "1月9日，国际消费类电子展（CES）在拉斯维加斯盛大开展！深圳市百千成电子有限公司聚势主场，带来了最新储能生态技术与产品，吸引了众多客户，业内人士驻足咨询探讨",
+      date: "2024-01-10",
+      author: "业务部",
+      image: "/images/news/overseas/1-1.png",
+      category: "展会活动",
     },
     {
       id: 2,
-      title: "中国储能产业政策解读：机遇与挑战",
+      title: "亮相EES Europe 2024， 多场景综合储能解决方案引领低碳未来！",
       summary:
-        "近期，中国政府出台了一系列支持储能产业发展的政策措施，为行业带来了新的发展机遇。本文对这些政策进行了详细解读，并分析了行业面临的机遇与挑战。",
-      date: "2024-03-10",
-      author: "政策研究员",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "政策解读",
+        "6月19日-21日，EES Europe 2024展在德国慕尼黑新国际博览中心举行，作为国内领先的电子制造服务商，百千成电子以“定制化BMS解决方案，助力能源未来”为主题，向业界展示了其在硬件设计与制造、BMS技术和客户服务方面的多项优势。",
+      date: "2024-06-22",
+      author: "业务部",
+      image: "/images/news/overseas/2-1.png",
+      category: "展会活动",
     },
     {
       id: 3,
-      title: "储能技术创新：从锂电池到固态电池",
+      title: "汉诺威工业博览会：CeBIT的传承与创新",
       summary:
-        "储能技术正在经历快速创新，从传统的锂离子电池到新型的固态电池，技术路线不断丰富。本文介绍了当前储能技术的最新进展和未来发展方向。",
-      date: "2024-02-25",
-      author: "技术专家",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "技术创新",
+        "曾经作为全球最大的信息和通信技术博览会的CeBIT，虽然已不复存在，但其创新精神却在汉诺威工业博览会中得到了延续。今年的汉诺威工业博览会，以“工业转型”为主题，将人工智能、物联网、5G等前沿技术与传统工业深度融合，为我们展示了一个充满活力的未来工业图景。",
+      date: "2024-01-15",
+      author: "业务部",
+      image: "/images/news/overseas/3-1.png",
+      category: "展会活动",
     },
-    {
-      id: 4,
-      title: "储能与可再生能源协同发展：案例分析",
-      summary:
-        "储能系统与可再生能源的协同发展，是实现能源转型的重要途径。本文通过多个案例分析，展示了储能系统如何提升可再生能源的利用效率和经济性。",
-      date: "2024-02-15",
-      author: "能源专家",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "应用案例",
-    },
-    {
-      id: 5,
-      title: "全球储能企业竞争格局分析",
-      summary:
-        "随着储能市场的快速发展，全球储能企业的竞争也日趋激烈。本文分析了当前全球储能企业的竞争格局，包括技术路线、市场份额、发展战略等方面。",
-      date: "2024-01-30",
-      author: "市场分析师",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "竞争分析",
-    },
-    {
-      id: 6,
-      title: "储能标准化进程加速：行业规范与质量控制",
-      summary:
-        "随着储能产业的快速发展，标准化工作也在加速推进。本文介绍了当前储能标准化的最新进展，以及标准化对行业规范和质量控制的重要意义。",
-      date: "2024-01-20",
-      author: "标准化专家",
-      image: "/placeholder.svg?height=600&width=800",
-      category: "标准化",
-    },
+    // {
+    //   id: 4,
+    //   title: "百千成电子新加坡研发中心成立",
+    //   summary:
+    //     "为加强国际技术交流与合作，百千成电子近日在新加坡成立研发中心，将重点开展储能技术、人工智能等领域的研究，为公司国际化发展提供技术支持。",
+    //   date: "2023-12-10",
+    //   author: "研发部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "研发布局",
+    // },
+    // {
+    //   id: 5,
+    //   title: "百千成电子产品获得欧盟CE认证",
+    //   summary:
+    //     "近日，百千成电子多款储能BMS产品成功获得欧盟CE认证，标志着公司产品质量和安全性能达到欧盟标准，为产品进入欧洲市场奠定了基础。",
+    //   date: "2023-11-05",
+    //   author: "质量部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "国际认证",
+    // },
+    // {
+    //   id: 6,
+    //   title: "百千成电子参加美国储能展览会",
+    //   summary:
+    //     "近日，百千成电子参加了在美国举办的国际储能展览会，展示了公司最新研发的储能BMS系统和智能控制产品，吸引了众多国际客户和合作伙伴的关注。",
+    //   date: "2023-10-15",
+    //   author: "市场部",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   category: "国际展会",
+    // },
   ]
 
   return (
     <PageLayout
-      title="行业资讯"
-      subtitle="了解储能行业最新动态与趋势"
+      title="海外新闻"
+      subtitle="了解百千成电子海外最新动态"
       breadcrumbs={[
         { label: "新闻中心", href: "/news" },
-        { label: "行业资讯", href: "/news/industry" },
+        { label: "海外新闻", href: "/news/overseas" },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-8">
-        <div className="flex flex-wrap gap-4 mb-8">
-          <Link href="/news/company" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-            公司新闻
+        <div className="flex flex-wrap gap-4 mb-8 bg-white p-4 rounded-lg shadow-sm">
+          <Link href="/news" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
+            全部新闻
           </Link>
-          <Link href="/news/industry" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-            行业资讯
+          <Link href="/news/domestic" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
+            国内新闻
           </Link>
-          <Link href="/news/technology" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-            技术分享
+          <Link href="/news/overseas" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            海外新闻
           </Link>
         </div>
 
@@ -120,7 +120,7 @@ export default function IndustryNewsPage() {
               <h2 className="text-2xl font-bold mb-4">{news[0].title}</h2>
               <p className="text-gray-700 mb-6">{news[0].summary}</p>
               <Link
-                href={`/news/industry/${news[0].id}`}
+                href={`/news/overseas/${news[0].id}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 阅读全文
@@ -156,7 +156,7 @@ export default function IndustryNewsPage() {
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-gray-700 mb-4 line-clamp-3">{item.summary}</p>
                 <Link
-                  href={`/news/industry/${item.id}`}
+                  href={`/news/overseas/${item.id}`}
                   className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
                 >
                   阅读全文

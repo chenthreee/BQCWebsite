@@ -1,6 +1,6 @@
 "use client"
 
-import { PageLayout } from "@/components/page-layout"
+import PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -8,19 +8,31 @@ import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
 
 export default function OemServicePage() {
-  // 添加状态来跟踪当前选中的服务类型
-  const [activeService, setActiveService] = useState("oem") // 'oem' 或 'jdsm'
   const { language } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  // 将 activeService 的初始状态设置为 null，等待客户端渲染后再设置
+  const [activeService, setActiveService] = useState<string | null>(null)
 
   useEffect(() => {
     setMounted(true)
+    // 在客户端渲染后设置默认值
+    setActiveService("oem")
   }, [])
 
-  // 避免水合不匹配
+  // 在客户端渲染前返回一个加载状态
   if (!mounted) {
-    return null
+    return (
+      <PageLayout
+        title=""
+        subtitle=""
+        breadcrumbs={[]}
+        backgroundImage="/placeholder.svg?height=1080&width=1920"
+      >
+        <div className="min-h-screen"></div>
+      </PageLayout>
+    )
   }
+
   const content = {
     zh: {
       title: "OEM代工服务",
@@ -148,109 +160,114 @@ export default function OemServicePage() {
           </div>
         </div>
 
-        {/* OEM代工服务内容 */}
-        {activeService === "oem" && (
+        {/* 只在 activeService 有值时渲染内容 */}
+        {activeService && (
           <>
-            <div className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-                <div>
-                  {content[language].oem.description.map((paragraph, index) => (
-                    <p key={index} className="text-lg text-gray-700 mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-                <div>
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt={content[language].title}
-                    width={800}
-                    height={600}
-                    className="rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-
-        {/* JDSM代工服务内容 */}
-        {activeService === "jdsm" && (
-          <>
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center">{content[language].jdsm.intro.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <p className="text-lg text-gray-700 mb-4">
-                    {content[language].jdsm.intro.description}
-                  </p>
-                </div>
-                <div>
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt={content[language].jdsm.intro.title}
-                    width={800}
-                    height={600}
-                    className="rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center">{content[language].jdsm.advantages.title}</h2>
-              <div className="mb-8">
-                {content[language].jdsm.advantages.description.map((paragraph, index) => (
-                  <p key={index} className="text-lg text-gray-700 mb-4">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {content[language].jdsm.advantages.cards.map((card, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <Image src="/placeholder.svg?height=40&width=40" alt={card.title} width={40} height={40} />
-                  </div>
-                    <h3 className="text-xl font-bold mb-3 text-center">{card.title}</h3>
-                    <p className="text-gray-700">{card.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center">JDSM服务流程</h2>
-              <div className="relative">
-                <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-200 -translate-y-1/2 z-0"></div>
-                <div className="flex flex-col md:flex-row justify-between relative z-10">
-                  {[1, 2, 3, 4, 5].map((step, index) => (
-                    <div key={index} className="flex flex-col items-center mb-8 md:mb-0">
-                      <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-4">
-                        {step}
-                      </div>
-                      <div className="text-center">
-                        <h3 className="font-bold text-lg mb-2">
-                          {index === 0 && "需求分析"}
-                          {index === 1 && "联合设计"}
-                          {index === 2 && "原型验证"}
-                          {index === 3 && "优化改进"}
-                          {index === 4 && "批量生产"}
-                        </h3>
-                        <p className="text-gray-600 text-sm px-4">
-                          {index === 0 && "深入了解客户需求"}
-                          {index === 1 && "共同设计产品方案"}
-                          {index === 2 && "快速制作原型验证"}
-                          {index === 3 && "基于反馈优化设计"}
-                          {index === 4 && "规模化生产交付"}
+            {/* OEM代工服务内容 */}
+            {activeService === "oem" && (
+              <>
+                <div className="mb-16">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+                    <div>
+                      {content[language].oem.description.map((paragraph, index) => (
+                        <p key={index} className="text-lg text-gray-700 mb-4">
+                          {paragraph}
                         </p>
-                      </div>
+                      ))}
                     </div>
-                  ))}
+                    <div>
+                      <Image
+                        src="/placeholder.svg?height=600&width=800"
+                        alt={content[language].title}
+                        width={800}
+                        height={600}
+                        className="rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </>
+            )}
+
+            {/* JDSM代工服务内容 */}
+            {activeService === "jdsm" && (
+              <>
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-8 text-center">{content[language].jdsm.intro.title}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <p className="text-lg text-gray-700 mb-4">
+                        {content[language].jdsm.intro.description}
+                      </p>
+                    </div>
+                    <div>
+                      <Image
+                        src="/placeholder.svg?height=600&width=800"
+                        alt={content[language].jdsm.intro.title}
+                        width={800}
+                        height={600}
+                        className="rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-8 text-center">{content[language].jdsm.advantages.title}</h2>
+                  <div className="mb-8">
+                    {content[language].jdsm.advantages.description.map((paragraph, index) => (
+                      <p key={index} className="text-lg text-gray-700 mb-4">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {content[language].jdsm.advantages.cards.map((card, index) => (
+                      <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                          <Image src="/placeholder.svg?height=40&width=40" alt={card.title} width={40} height={40} />
+                      </div>
+                        <h3 className="text-xl font-bold mb-3 text-center">{card.title}</h3>
+                        <p className="text-gray-700">{card.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-8 text-center">JDSM服务流程</h2>
+                  <div className="relative">
+                    <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-200 -translate-y-1/2 z-0"></div>
+                    <div className="flex flex-col md:flex-row justify-between relative z-10">
+                      {[1, 2, 3, 4, 5].map((step, index) => (
+                        <div key={index} className="flex flex-col items-center mb-8 md:mb-0">
+                          <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-4">
+                            {step}
+                          </div>
+                          <div className="text-center">
+                            <h3 className="font-bold text-lg mb-2">
+                              {index === 0 && "需求分析"}
+                              {index === 1 && "联合设计"}
+                              {index === 2 && "原型验证"}
+                              {index === 3 && "优化改进"}
+                              {index === 4 && "批量生产"}
+                            </h3>
+                            <p className="text-gray-600 text-sm px-4">
+                              {index === 0 && "深入了解客户需求"}
+                              {index === 1 && "共同设计产品方案"}
+                              {index === 2 && "快速制作原型验证"}
+                              {index === 3 && "基于反馈优化设计"}
+                              {index === 4 && "规模化生产交付"}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
           </>
         )}
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { PageLayout } from "@/components/page-layout"
+import  PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"

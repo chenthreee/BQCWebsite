@@ -1,4 +1,4 @@
-import { PageLayout } from "@/components/page-layout"
+import  PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -18,14 +18,14 @@ export default function RdCenterPage() {
         <div>
           <h2 className="text-3xl font-bold mb-6">研发中心介绍</h2>
           <p className="text-lg text-gray-700 mb-4">
-            百千成电子研发中心位于深圳市南山区科技园，是公司技术创新的核心，拥有一支由博士、硕士等高学历人才组成的专业研发团队。
+            百千成电子研发中心位于深圳市南山区南山睿园，是公司技术创新的核心，这里需要放一些介绍。
           </p>
-          <p className="text-lg text-gray-700 mb-4">
+          {/* <p className="text-lg text-gray-700 mb-4">
             研发中心下设电路设计部、嵌入式软件部、结构设计部、测试验证部等多个部门，配备先进的研发设备和测试仪器，为产品创新提供强大的技术支持。
           </p>
           <p className="text-lg text-gray-700 mb-8">
             目前，研发中心已获得60多项核心专利，在储能BMS系统、智能控制等领域拥有深厚的技术积累和创新能力。
-          </p>
+          </p> */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex items-start">
@@ -52,7 +52,7 @@ export default function RdCenterPage() {
               </div>
               <div>
                 <h3 className="font-bold mb-1">地址</h3>
-                <p className="text-gray-700">深圳市南山区科技园</p>
+                <p className="text-gray-700">深圳市南山区南山睿园</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -106,9 +106,9 @@ export default function RdCenterPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold mb-1">张工</h3>
-            <p className="text-blue-600 mb-3">技术总监</p>
-            <p className="text-gray-700">博士学位，20年电子产品研发经验，主导多项国家专利技术的研发。</p>
+            <h3 className="text-xl font-bold mb-1">熊工</h3>
+            <p className="text-blue-600 mb-3">研发部经理</p>
+            <p className="text-gray-700">硕士学位 ，待补充</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
@@ -120,9 +120,9 @@ export default function RdCenterPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold mb-1">李工</h3>
-            <p className="text-blue-600 mb-3">硬件部经理</p>
-            <p className="text-gray-700">硕士学位，15年硬件设计经验，精通各类电子电路设计与PCB布局。</p>
+            <h3 className="text-xl font-bold mb-1">*工</h3>
+            <p className="text-blue-600 mb-3">**</p>
+            <p className="text-gray-700">**</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
@@ -134,9 +134,9 @@ export default function RdCenterPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold mb-1">王工</h3>
-            <p className="text-blue-600 mb-3">软件部经理</p>
-            <p className="text-gray-700">硕士学位，12年嵌入式软件开发经验，精通多种嵌入式平台与通信协议。</p>
+            <h3 className="text-xl font-bold mb-1">*工</h3>
+            <p className="text-blue-600 mb-3">**</p>
+            <p className="text-gray-700">**</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
@@ -148,9 +148,9 @@ export default function RdCenterPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold mb-1">陈工</h3>
-            <p className="text-blue-600 mb-3">测试部经理</p>
-            <p className="text-gray-700">硕士学位，10年产品测试经验，精通各类测试方法与可靠性验证。</p>
+            <h3 className="text-xl font-bold mb-1">*工</h3>
+            <p className="text-blue-600 mb-3">**</p>
+            <p className="text-gray-700">**</p>
           </div>
         </div>
       </div>
@@ -166,8 +166,8 @@ export default function RdCenterPage() {
               height={300}
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">电路设计与仿真平台</h3>
-            <p className="text-gray-700">配备先进的电路设计软件和仿真工具，支持复杂电路的设计与验证。</p>
+            <h3 className="text-xl font-bold mb-2">高精度模拟电池</h3>
+            <p className="text-gray-700">**</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <Image
@@ -177,8 +177,8 @@ export default function RdCenterPage() {
               height={300}
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">电池测试系统</h3>
-            <p className="text-gray-700">高精度电池测试系统，支持电池参数测量、充放电测试、循环寿命测试等。</p>
+            <h3 className="text-xl font-bold mb-2">电池老化测试</h3>
+            <p className="text-gray-700">**</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <Image
@@ -188,9 +188,9 @@ export default function RdCenterPage() {
               height={300}
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">环境测试设备</h3>
+            <h3 className="text-xl font-bold mb-2">**设备</h3>
             <p className="text-gray-700">
-              温湿度循环测试箱、振动测试台、盐雾测试箱等环境测试设备，验证产品在各种环境下的可靠性。
+              *******。
             </p>
           </div>
         </div>
