@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
   output: 'standalone',
   allowedDevOrigins: ["http://localhost:3000", "http://192.168.8.96:3000"],
   images: {
-    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,7 +11,8 @@ const nextConfig = {
         pathname: '/**',
       }
     ],
+    unoptimized: false,
   }
 }
 
-module.exports = nextConfig 
+export default config 
