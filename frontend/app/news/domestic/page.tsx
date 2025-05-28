@@ -2,7 +2,7 @@ import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight } from "lucide-react"
-
+import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 const STRAPI_URL = "http://localhost:1337"
 
 export default async function DomesticNewsPage() {
