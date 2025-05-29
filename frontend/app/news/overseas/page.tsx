@@ -25,6 +25,7 @@ export default async function OverseasNewsPage() {
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
+      <NewsCategoryTabs />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((item: any) => (
           <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden">

@@ -41,18 +41,7 @@ export default async function NewsPage() {
       breadcrumbs={[{ label: "新闻中心", href: "/news" }]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
-      {/* 新闻分类标签 */}
-      <div className="flex flex-wrap gap-4 mb-8 bg-white p-4 rounded-lg shadow-sm">
-        <Link href="/news" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-          全部新闻
-        </Link>
-        <Link href="/news/domestic" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-          国内新闻
-        </Link>
-        <Link href="/news/overseas" className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">
-          海外新闻
-        </Link>
-      </div>
+      <NewsCategoryTabs />
 
       {/* 置顶新闻 */}
       {allNews.length > 0 && (
