@@ -12,7 +12,12 @@ const nextConfig = {
         pathname: '/**',
       }
     ],
-  }
+  },
+  // i18n: {
+  //   locales: ['zh-Hans', 'en'],
+  //   defaultLocale: 'zh-Hans',
+  //   localeDetection: false,
+  // }
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig

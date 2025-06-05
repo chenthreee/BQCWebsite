@@ -5,6 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, Menu, X, Globe } from "lucide-react"
 import { useLanguage } from "./language-context"
+import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export function MainNavigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,6 +17,10 @@ export function MainNavigation() {
   const subDropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const { language, setLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname();
+  // 获取当前 locale，默认 zh-Hans
+  const currentLocale = pathname.split("/")[1] || "zh-Hans";
+  const isNewsSection = pathname.startsWith("/news") || pathname.startsWith("/zh-Hans/news") || pathname.startsWith("/en/news");
 
   useEffect(() => {
     setMounted(true)
@@ -124,7 +130,7 @@ export function MainNavigation() {
     {
       key: "news",
       label: mounted ? t("新闻中心") : "新闻中心",
-      href: "/news",
+      href: `/${currentLocale}/news`,
       children: [
         { label: mounted ? t("国内新闻") : "国内新闻", href: "/news/domestic" },
         { label: mounted ? t("海外新闻") : "海外新闻", href: "/news/overseas" },
@@ -221,13 +227,17 @@ export function MainNavigation() {
 
           {/* Language Switcher - 放在最右边 */}
           <div className="hidden md:flex flex-shrink-0">
-            <button
-              onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
-            >
-              <Globe className="mr-1 h-4 w-4" />
-              {language === "zh" ? "EN" : "中文"}
-            </button>
+            {isNewsSection ? (
+              <LanguageSwitcher />
+            ) : (
+              <button
+                onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
+                className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
+              >
+                <Globe className="mr-1 h-4 w-4" />
+                {language === "zh" ? "EN" : "中文"}
+              </button>
+            )}
           </div>
 
           {/* Mobile menu button */}

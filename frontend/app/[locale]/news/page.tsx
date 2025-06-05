@@ -3,44 +3,50 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Calendar, User } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
+import { headers } from "next/headers";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
-
-async function getAllNews() {
+console.log('SSR NewsPage loaded');
+async function getAllNews(locale: string) {
   const query = `
-    query {
-      articles {
+    query GetAllNews($locale: I18NLocaleCode) {
+      articles(locale: $locale) {
         documentId
         title
         slug
+        description
+        cover { url }
         category { name }
         author { name }
         publishedAt
-        description
-        cover { url }
       }
     }
   `
   const res = await fetch(GRAPHQL_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query }),
+    body: JSON.stringify({ query, variables: { locale } }),
     cache: "no-store"
   })
   const { data } = await res.json()
   return data.articles
 }
 
-export default async function NewsPage() {
-  const allNews = await getAllNews()
+export default async function NewsPage({ params }: { params: { locale: string } }) {
+    console.log('params.locale:', params.locale);
+  const locale = params.locale === "en" ? "en" : "zh-Hans";
+  const allNews = await getAllNews(locale);
 
   return (
     <PageLayout
-      title="新闻中心"
-      subtitle="了解百千成电子最新动态与行业资讯"
-      breadcrumbs={[{ label: "新闻中心", href: "/news" }]}
+      title={locale === "en" ? "News Center" : "新闻中心"}
+      subtitle={locale === "en" ? "Learn about the latest news and industry information of BQC Electronics" : "了解百千成电子最新动态与行业资讯"}
+      breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news" }]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
+      <LanguageSwitcher />
       <NewsCategoryTabs />
 
       {/* 置顶新闻 */}
@@ -58,7 +64,7 @@ export default async function NewsPage() {
                 />
               ) : (
                 <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <span className="text-gray-400">无封面</span>
+                  <span className="text-gray-400">{locale === "en" ? "No Cover" : "无封面"}</span>
                 </div>
               )}
             </div>
@@ -82,7 +88,7 @@ export default async function NewsPage() {
                 href={`/news/${allNews[0].category?.name === 'overseas' ? 'overseas' : 'domestic'}/${allNews[0].slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
-                阅读全文
+                {locale === "en" ? "Read More" : "阅读全文"}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -105,7 +111,7 @@ export default async function NewsPage() {
                 />
               ) : (
                 <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <span className="text-gray-400">无封面</span>
+                  <span className="text-gray-400">{locale === "en" ? "No Cover" : "无封面"}</span>
                 </div>
               )}
             </div>
@@ -125,7 +131,7 @@ export default async function NewsPage() {
                 href={`/news/${news.category?.name === 'overseas' ? 'overseas' : 'domestic'}/${news.slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
-                阅读全文
+                {locale === "en" ? "Read More" : "阅读全文"}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -134,4 +140,4 @@ export default async function NewsPage() {
       </div>
     </PageLayout>
   )
-}
+} 

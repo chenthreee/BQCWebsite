@@ -3,6 +3,7 @@
 import type { ReactNode } from "react"
 import { MainNavigation } from "./main-navigation"
 import Link from "next/link"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 interface PageLayoutProps {
   title: string
@@ -22,7 +23,7 @@ export default function PageLayout({
   extraHeaderContent,
 }: PageLayoutProps) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <MainNavigation />
       <header
         className="relative py-24 bg-cover bg-center text-white"
@@ -46,6 +47,9 @@ export default function PageLayout({
           )}
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
           {subtitle && <p className="text-xl md:text-2xl">{subtitle}</p>}
+          {/* <div className="absolute top-4 right-8 z-20">
+            <LanguageSwitcher />
+          </div> */}
         </div>
       </header>
       <main className="container mx-auto px-4 py-12">{children}</main>
