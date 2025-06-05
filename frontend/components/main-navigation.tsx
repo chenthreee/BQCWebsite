@@ -18,8 +18,8 @@ export function MainNavigation() {
   const { language, setLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
   const pathname = usePathname();
-  // 获取当前 locale，默认 zh-Hans
-  const currentLocale = pathname.split("/")[1] || "zh-Hans";
+  const firstSegment = pathname.split("/")[1];
+  const currentLocale = (firstSegment === "en" || firstSegment === "zh-Hans") ? firstSegment : "zh-Hans";
   const isNewsSection = pathname.startsWith("/news") || pathname.startsWith("/zh-Hans/news") || pathname.startsWith("/en/news");
 
   useEffect(() => {
@@ -98,18 +98,9 @@ export function MainNavigation() {
           href: "/products/energy-storage-bms",
           children: [
             { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: "/products/energy-storage-bms/power-storage" },
-            {
-              label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS",
-              href: "/products/energy-storage-bms/large-ship",
-            },
-            {
-              label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS",
-              href: "/products/energy-storage-bms/small-ship",
-            },
-            {
-              label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS",
-              href: "/products/energy-storage-bms/communication-base",
-            },
+            { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: "/products/energy-storage-bms/large-ship" },
+            { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: "/products/energy-storage-bms/small-ship" },
+            { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: "/products/energy-storage-bms/communication-base" },
             { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: "/products/energy-storage-ems" },
           ],
         },
@@ -132,8 +123,8 @@ export function MainNavigation() {
       label: mounted ? t("新闻中心") : "新闻中心",
       href: `/${currentLocale}/news`,
       children: [
-        { label: mounted ? t("国内新闻") : "国内新闻", href: "/news/domestic" },
-        { label: mounted ? t("海外新闻") : "海外新闻", href: "/news/overseas" },
+        { label: mounted ? t("国内新闻") : "国内新闻", href: `/${currentLocale}/news/domestic` },
+        { label: mounted ? t("海外新闻") : "海外新闻", href: `/${currentLocale}/news/overseas` },
       ],
     },
     {
@@ -177,6 +168,7 @@ export function MainNavigation() {
               >
                 <Link
                   href={item.href}
+                  onClick={() => console.log('一级菜单跳转到:', item.href)}
                   className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
                 >
                   {item.label}
@@ -195,6 +187,7 @@ export function MainNavigation() {
                         >
                           <Link
                             href={child.href}
+                            onClick={() => console.log('二级菜单跳转到:', child.href)}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
                           >
                             {child.label}
