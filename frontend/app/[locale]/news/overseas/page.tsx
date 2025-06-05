@@ -1,23 +1,18 @@
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
-import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 import { Calendar, User, ArrowRight } from "lucide-react"
-import { headers } from "next/headers";
+import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
-
-function getLocaleFromPath(path: string) {
-  return path.startsWith("/en") ? "en" : "zh-Hans";
-}
 
 async function getOverseasNews(locale: string) {
   const query = `
     query GetOverseasNews($locale: I18NLocaleCode) {
       articles(
         locale: $locale,
-        filters: { category: { name: { eq: "overseas" } } }
+        filters: { category: { name: { eq: \"overseas\" } } }
       ) {
         documentId
         title
@@ -40,11 +35,8 @@ async function getOverseasNews(locale: string) {
   return data.articles
 }
 
-export default async function OverseasNewsPage() {
-  const headersList = await headers();
-  const path = headersList.get("x-invoke-path") || "";
-  const locale = getLocaleFromPath(path);
-
+export default async function OverseasNewsPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale === "en" ? "en" : "zh-Hans";
   const articles = await getOverseasNews(locale);
 
   return (
@@ -52,8 +44,8 @@ export default async function OverseasNewsPage() {
       title={locale === "en" ? "Overseas News" : "海外新闻"}
       subtitle={locale === "en" ? "Learn about BQC Electronics' latest overseas news" : "了解百千成电子海外最新动态"}
       breadcrumbs={[
-        { label: locale === "en" ? "News Center" : "新闻中心", href: "/news" },
-        { label: locale === "en" ? "Overseas News" : "海外新闻", href: "/news/overseas" },
+        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
+        { label: locale === "en" ? "Overseas News" : "海外新闻", href: `/${locale}/news/overseas` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -78,7 +70,7 @@ export default async function OverseasNewsPage() {
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
               <Link
-                href={`/news/overseas/${item.slug}`}
+                href={`/${locale}/news/overseas/${item.slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
@@ -90,4 +82,4 @@ export default async function OverseasNewsPage() {
       </div>
     </PageLayout>
   )
-}
+} 
