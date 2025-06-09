@@ -115,64 +115,64 @@ export function ProductSection() {
         },
       ],
     },
-    {
-      id: 4,
-      title: "OEM代工服务",
-      description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，拥有先进的生产线和严格的质量控制体系",
-      image: "/placeholder.svg?height=600&width=1200",
-      products: [
-        {
-          id: 401,
-          title: "PCB设计服务",
-          description: "专业电路设计与PCB布局服务",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 402,
-          title: "SMT贴片服务",
-          description: "高精度SMT贴片与焊接服务",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 403,
-          title: "整机组装服务",
-          description: "整机组装与测试服务",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 404,
-          title: "质量控制服务",
-          description: "全流程质量控制与测试服务",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "ODM研发服务（BMS）",
-      description: "基于客户需求提供定制化的产品设计与开发服务，从方案设计、原型制作到量产支持的全流程ODM服务",
-      image: "/placeholder.svg?height=600&width=1200",
-      products: [
-        {
-          id: 501,
-          title: "储能系统设计",
-          description: "定制化储能系统解决方案",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 502,
-          title: "BMS定制开发",
-          description: "针对特殊应用场景的BMS定制开发",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 503,
-          title: "智能控制系统",
-          description: "工业级智能控制系统开发",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-      ],
-    },
+    // {
+    //   id: 4,
+    //   title: "OEM代工服务",
+    //   description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，拥有先进的生产线和严格的质量控制体系",
+    //   image: "/placeholder.svg?height=600&width=1200",
+    //   products: [
+    //     {
+    //       id: 401,
+    //       title: "PCB设计服务",
+    //       description: "专业电路设计与PCB布局服务",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //     {
+    //       id: 402,
+    //       title: "SMT贴片服务",
+    //       description: "高精度SMT贴片与焊接服务",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //     {
+    //       id: 403,
+    //       title: "整机组装服务",
+    //       description: "整机组装与测试服务",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //     {
+    //       id: 404,
+    //       title: "质量控制服务",
+    //       description: "全流程质量控制与测试服务",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 5,
+    //   title: "ODM研发服务（BMS）",
+    //   description: "基于客户需求提供定制化的产品设计与开发服务，从方案设计、原型制作到量产支持的全流程ODM服务",
+    //   image: "/placeholder.svg?height=600&width=1200",
+    //   products: [
+    //     {
+    //       id: 501,
+    //       title: "储能系统设计",
+    //       description: "定制化储能系统解决方案",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //     {
+    //       id: 502,
+    //       title: "BMS定制开发",
+    //       description: "针对特殊应用场景的BMS定制开发",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //     {
+    //       id: 503,
+    //       title: "智能控制系统",
+    //       description: "工业级智能控制系统开发",
+    //       image: "/placeholder.svg?height=400&width=400",
+    //     },
+    //   ],
+    // },
   ]
 
   const handleCategoryChange = (index: number) => {
