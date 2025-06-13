@@ -28,7 +28,7 @@ export default function HomePage() {
 
         {/* 服务中心 - 包含OEM代工和ODM研发 */}
         {/* <ServicesSection /> */}
-
+        <ServicesSection />
         {/* 关于我们 */}
         <AboutSection />
       </main>
