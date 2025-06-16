@@ -28,20 +28,20 @@ export default function CoreValuesPage() {
       ],
       values: [
         {
-          title: "诚实",
-          description: "不欺骗顾客，不欺骗同事，不欺骗供应商。"
+          title: "诚信",
+          description: "不欺客户，不欺同事，不欺供方"
         },
         {
           title: "分享",
-          description: "与全体员工分享利润，欢迎优秀的管理人员持有公司股份。"
+          description: "员工共享企业盈利，企业欢迎优秀员工持股"
         },
         {
-          title: "反馈",
-          description: "以碳峰值和碳中和为目标，以创新为动力，以储能为基础，回馈国家和社会。"
+          title: "回馈",
+          description: "以双碳为目标,以创新为动力，以储能为根基，反哺国家及社会"
         },
         {
-          title: "顾客至上",
-          description: "反对以老板、研发、制造为中心。对内以客户代表为中心，对外以客户为中心。"
+          title: "客户第一",
+          description: "反对上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
         }
       ]
     },
@@ -54,12 +54,12 @@ export default function CoreValuesPage() {
       ],
       values: [
         {
-          title: "Be Honest",
-          description: <span className="text-lg font-medium">Don't cheat customers, Don't cheat colleagues, Don't cheat suppliers.</span>
+          title: "Integrity",
+          description: <span className="text-lg font-medium"> Sincere dealings with customers, colleagues & suppliers.</span>
         },
         {
           title: "Share",
-          description: <span className="text-lg font-medium">Share profit with all employees, and welcome excellent management staff to hold share of the company.</span>
+          description: <span className="text-lg font-medium">Profit-sharing benefits all employees; outstanding managers are</span>
         },
         {
           title: "Feedback",

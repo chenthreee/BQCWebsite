@@ -81,7 +81,7 @@ export function MainNavigation() {
       children: [
         { label: mounted ? t("公司介绍") : "公司介绍", href: "/about/introduction" },
         { label: mounted ? t("核心价值观") : "核心价值观", href: "/about/core-values" },
-        { label: mounted ? t("战略定位") : "战略定位", href: "/about/strategic-positioning" },
+        //{ label: mounted ? t("战略定位") : "战略定位", href: "/about/strategic-positioning" },
         { label: mounted ? t("发展历程") : "发展历程", href: "/about/development-history" },
         { label: mounted ? t("管理系统") : "管理系统", href: "/about/management-system" },
         { label: mounted ? t("制造能力") : "制造能力", href: "/about/manufacturing-capabilities" },
@@ -152,7 +152,7 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <Image src="/BQCLogo.png" alt="百千成电子" width={40} height={40} className="mr-2" />
+              <Image src="/BQCLogo.png" alt="百千成电子" width={40} height={60} className="mr-2" />
               <span className="text-xl font-bold text-white">百千成电子</span>
             </Link>
           </div>

@@ -17,13 +17,13 @@ export function HeroSection() {
   const slides = [
     {
       id: 1,
-      title: t("company.name"),
-      subtitle: t("company.slogan"),
-      description: t("company.description"),
+      title: "OEM代工服务",
+      subtitle: "一站式电子制造解决方案",
+      description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
       buttonText: t("button.learnMore"),
-      buttonLink: "/about",
-      image: "/images/hero-circuit-board.png",
-      mobileImage: "/images/hero-circuit-board.png",
+      buttonLink: "/services",
+      image: "/images/image_OEM.png",
+      mobileImage: "/placeholder.svg?height=800&width=600",
     },
     {
       id: 2,
@@ -35,15 +35,16 @@ export function HeroSection() {
       image: "/images/image_BMS.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
+    
     {
       id: 3,
-      title: "OEM代工服务",
-      subtitle: "一站式电子制造解决方案",
-      description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
+      title: t("company.name"),
+      subtitle: t("company.slogan"),
+      description: t("company.description"),
       buttonText: t("button.learnMore"),
-      buttonLink: "/services",
-      image: "/images/image_OEM.png",
-      mobileImage: "/placeholder.svg?height=800&width=600",
+      buttonLink: "/about",
+      image: "/images/hero-circuit-board.png",
+      mobileImage: "/images/hero-circuit-board.png",
     },
   ]
 
