@@ -59,15 +59,15 @@ export default function CoreValuesPage() {
         },
         {
           title: "Share",
-          description: <span className="text-lg font-medium">Profit-sharing benefits all employees; outstanding managers are</span>
+          description: <span className="text-lg font-medium">Profit-sharing benefits all employees; outstanding managers are invited to participate in equity ownership.</span>
         },
         {
-          title: "Feedback",
-          description: <span className="text-lg font-medium">Take carbon peaking and carbon neutrality as the goal, powered by innovation and based on energy storage to feed back the country and society.</span>
+          title: "Contribution",
+          description: <span className="text-lg font-medium">Strive to achieve carbon peaking and neutrality through technological innovation and energy storage advancements, thereby contributing to sustainable development and social well-being.</span>
         },
         {
           title: "Customer-first",
-          description: <span className="text-lg font-medium">Opposing taking the boss, R&D, and manufacturing as the center. Taking customers representative as the center internally, and taking customers as the center externally.</span>
+          description: <span className="text-lg font-medium">we center on internal customer representatives for internal alignment and real customers for decision-making, rather than prioritizing leadership, R&D, and manufacturing. </span>
         }
       ]
     }
