@@ -34,6 +34,31 @@ export default function ManufacturingCapabilitiesPage() {
       //     "我们严格执行IPC标准和ISO9001质量管理体系，从原材料进厂到成品出货的全过程进行严格控制，确保产品品质。"
       //   ]
       // },
+      workshops: {
+        title: "生产车间",
+        items: [
+          {
+            count: "22",
+            title: "SMT车间",
+            description: "BQC拥有22个自动化SMT生产线，日生产能力4500万点每天"
+          },
+          {
+            count: "8",
+            title: "DIP车间",
+            description: "后焊线4条，手工焊线4条"
+          },
+          {
+            count: "3",
+            title: "产品组装线",
+            description: "成品组装生产线3条"
+          },
+          {
+            count: "4",
+            title: "功能测试线",
+            description: "功能测试生产线4条"
+          }
+        ]
+      },
       equipment: {
         title: "主要设备",
         items: [
@@ -97,31 +122,7 @@ export default function ManufacturingCapabilitiesPage() {
           ]
         }
       },
-      workshops: {
-        title: "生产车间",
-        items: [
-          {
-            count: "22",
-            title: "SMT车间",
-            description: "BQC拥有22个自动化SMT生产线，日生产能力4500万点每天"
-          },
-          {
-            count: "8",
-            title: "DIP车间",
-            description: "后焊线4条，手工焊线4条"
-          },
-          {
-            count: "3",
-            title: "产品组装线",
-            description: "成品组装生产线3条"
-          },
-          {
-            count: "4",
-            title: "功能测试线",
-            description: "功能测试生产线4条"
-          }
-        ]
-      }
+      
     },
     en: {
       title: "Manufacturing Capabilities",
@@ -138,6 +139,31 @@ export default function ManufacturingCapabilitiesPage() {
       //     "We strictly implement IPC standards and ISO9001 quality management system, controlling the entire process from raw material entry to finished product delivery to ensure product quality."
       //   ]
       // },
+      workshops: {
+        title: "Production Workshops",
+        items: [
+          {
+            count: "22",
+            title: "SMT Workshop",
+            description: "BQC possesses of 22 completely automated SMT production lines, the daily production capacity of which is 45 million dots per day"
+          },
+          {
+            count: "8",
+            title: "DIP Workshop",
+            description: "THT (4) and Manual Soldering (4)"
+          },
+          {
+            count: "3",
+            title: "Product Assembly",
+            description: "Finished product assembling (3)"
+          },
+          {
+            count: "4",
+            title: "Testing Lines",
+            description: "Functional Test (4)"
+          }
+        ]
+      },
       equipment: {
         title: "Major Equipment",
         items: [
@@ -201,31 +227,7 @@ export default function ManufacturingCapabilitiesPage() {
           ]
         }
       },
-      workshops: {
-        title: "Production Workshops",
-        items: [
-          {
-            count: "22",
-            title: "SMT Workshop",
-            description: "BQC possesses of 22 completely automated SMT production lines, the daily production capacity of which is 45 million dots per day"
-          },
-          {
-            count: "8",
-            title: "DIP Workshop",
-            description: "THT (4) and Manual Soldering (4)"
-          },
-          {
-            count: "3",
-            title: "Product Assembly",
-            description: "Finished product assembling (3)"
-          },
-          {
-            count: "4",
-            title: "Testing Lines",
-            description: "Functional Test (4)"
-          }
-        ]
-      }
+      
     }
   }
 
@@ -256,6 +258,19 @@ export default function ManufacturingCapabilitiesPage() {
             className="rounded-lg shadow-lg"
           />
         </div> */}
+      </div>
+
+      <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.workshops.title}</h2>
+      <div className="bg-white p-6 rounded-lg shadow-md mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {currentContent.workshops.items.map((item, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">{item.count}</div>
+              <div className="text-xl font-bold mb-1">{item.title}</div>
+              <p className="text-gray-700">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mb-16">
@@ -307,19 +322,6 @@ export default function ManufacturingCapabilitiesPage() {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
-
-      <h2 className="text-3xl font-bold mb-8 mt-16 text-center">{currentContent.workshops.title}</h2>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {currentContent.workshops.items.map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">{item.count}</div>
-              <div className="text-xl font-bold mb-1">{item.title}</div>
-              <p className="text-gray-700">{item.description}</p>
-            </div>
-          ))}
         </div>
       </div>
     </PageLayout>

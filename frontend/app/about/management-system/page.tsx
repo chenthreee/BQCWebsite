@@ -120,7 +120,7 @@ export default function ManagementSystemPage() {
       </div>
 
 
-      <div className="max-w-4xl mx-auto mb-16">
+      {/* <div className="max-w-4xl mx-auto mb-16">
         <div>
           <Image
             src="/images/image_Management_platform.png?height=600&width=800 items-center"
@@ -130,7 +130,7 @@ export default function ManagementSystemPage() {
             className="rounded-lg shadow-lg w-full h-auto"
           />
         </div>
-      </div>
+      </div> */}
 
     </PageLayout>
   )
