@@ -31,7 +31,7 @@ export default function DevelopmentHistoryPage() {
       },
       future: {
         title: "未来展望",
-        description: "百千成电子将继续秉承诚实、分享、反馈、顾客至上的核心价值观，不断提升技术实力和产品品质，为全球客户提供更优质的产品和服务，为清洁能源的发展贡献力量。"
+        description: "百千成电子将继续秉承诚信、分享、回馈、客户第一的核心价值观，不断提升技术实力和产品品质，为全球客户提供更优质的产品和服务，为清洁能源的发展贡献力量。"
       },
       milestones: [
         {
@@ -139,7 +139,7 @@ export default function DevelopmentHistoryPage() {
       },
       future: {
         title: "Future Outlook",
-        description: "BQC Electronics will continue to uphold its core values of 'Honesty, Sharing, Feedback, and Customer First', continuously improving technical capabilities and product quality to provide better products and services for global customers and contribute to the development of clean energy."
+        description: "BQC Electronics will continue to uphold its core values of 'Integrity, Share, Contribution, and Customer-first', continuously improving technical capabilities and product quality to provide better products and services for global customers and contribute to the development of clean energy."
       },
       milestones: [
         {
