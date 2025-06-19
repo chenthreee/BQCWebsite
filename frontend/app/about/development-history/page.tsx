@@ -37,92 +37,92 @@ export default function DevelopmentHistoryPage() {
         {
           year: "2003.07",
           title: "百千成在龙岗坂田成立",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2004.01",
           title: "为德国客户设计制造太阳能光伏逆变器",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2005.01",
           title: "通过ISO9001质量认证",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2006.06",
           title: "太阳能光伏逆变器销售额占比超50%",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2007.12",
           title: "迁入长圳新工厂",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2009.03",
           title: "开始为欧洲客户设计制造小型电动船推进系统电池BMS",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2012.08",
           title: "开始为海外客户设计制造猫砂盆机器人",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2013.03",
           title: "开始为欧洲客户设计制造船舶储能BMS",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2015.04",
           title: "通过 ISO13485认证",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2015.06",
           title: "开始为北美客户设计制造储能BMS",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2016.01",
           title: "开始为国内客户制造猫砂盆机器人",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2016.08",
           title: "开始为酒店机器人客户制造PCBA",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2017.05",
           title: "开始为国内客户制造扫地机器人",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2018.07",
           title: "通过ISO14001认证",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2018.11",
           title: "开始为国内客户制造割草机器人",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2019.01",
           title: "通过IATF16949 认证",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2019.03",
           title: "为北欧客户设计制造船舶储能BMS",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2023.12",
           title: "储能BMS客户累计装机量35GWh+",
-          image: "/placeholder.svg?height=300&width=400",
+         // image: "/placeholder.svg?height=300&width=400",
         }
       ]
     },
@@ -145,92 +145,92 @@ export default function DevelopmentHistoryPage() {
         {
           year: "2003.07",
           title: "BQC was established in Bantian Shenzhen",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2004.01",
           title: "Design & Manufacture solar PV (DE)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2005.01",
           title: "Approved by ISO9001",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2006.06",
           title: "PV inverters hit 50% turnover",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2007.12",
           title: "Moved to new workshop in Changzhen, Guangming district",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2009.03",
           title: "Design & Manufacture Small Electric Boat Propulsion Systems BMS (EU)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2012.08",
           title: "Design & Manufacture Cat Litter Robots for overseas customers",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2013.03",
           title: "Design & Manufacture marine BESS BMS (EU)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2015.04",
           title: "Approved by ISO13485",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2015.06",
           title: "Design & Manufacture industrial BESS BMS(North American)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2016.01",
           title: "Manufacture Cat Litter Robots (CN)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2016.08",
           title: "Manufacture Hotel Robots PCBA",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2017.05",
           title: "Manufacture Floor Sweeping Robots (CN)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2018.07",
           title: "Approved by ISO14001",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2018.11",
           title: "Manufacture Robot Lawn Mowers (CN)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2019.01",
           title: "Approved by IATF16949",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2019.03",
           title: "Design & Manufacture marine BESS BMS (North EU)",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         },
         {
           year: "2023.12",
           title: "BMS related yield: 35GWh+",
-          image: "/placeholder.svg?height=300&width=400",
+          //image: "/placeholder.svg?height=300&width=400",
         }
       ]
     }
@@ -265,14 +265,14 @@ export default function DevelopmentHistoryPage() {
               </div>
               <div className="md:w-1/2 md:px-8">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="h-48 overflow-hidden">
-                    <Image
-                      src={milestone.image || "/placeholder.svg"}
+                  <div className="overflow-hidden">
+                    {/* <Image
+                      //src={milestone.image || "/placeholder.svg"}
                       alt={milestone.title}
                       width={400}
                       height={300}
                       className="w-full h-full object-cover"
-                    />
+                    /> */}
                   </div>
                   <div className="p-6">
                     <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full font-bold mb-3">
