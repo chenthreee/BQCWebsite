@@ -51,6 +51,12 @@ export default function ProductsPage() {
       href: "/products/industrial-control-boards",
       image: "/placeholder.svg?height=400&width=600",
     },
+    {
+      title: "医疗设备",
+      description: "专业可靠的医疗设备控制解决方案",
+      href: "/products/medical-devices",
+      image: "/placeholder.svg?height=400&width=600",
+    },
   ]
 
   return (

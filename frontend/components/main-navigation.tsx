@@ -94,7 +94,7 @@ export function MainNavigation() {
       href: "/products",
       children: [
         {
-          label: mounted ? t("储能BMS") : "储能BMS",
+          label: mounted ? t("储能BMS/储能PCS") : "储能BMS/储能PCS",
           href: "/products/energy-storage-bms",
           children: [
             { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: "/products/energy-storage-bms/power-storage" },
@@ -102,11 +102,13 @@ export function MainNavigation() {
             { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: "/products/energy-storage-bms/small-ship" },
             { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: "/products/energy-storage-bms/communication-base" },
             { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: "/products/energy-storage-ems" },
+            { label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
           ],
         },
-        { label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
+        //{ label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
         { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: "/products/intelligent-robot-systems" },
         { label: mounted ? t("工业控制板") : "工业控制板", href: "/products/industrial-control-boards" },
+        { label: mounted ? t("医疗设备") : "医疗设备", href: "/products/medical-devices" },
       ],
     },
     {
