@@ -126,7 +126,7 @@ export function MainNavigation() {
       href: `/${currentLocale}/news`,
       children: [
         { label: mounted ? t("国内新闻") : "国内新闻", href: `/${currentLocale}/news/domestic` },
-        { label: mounted ? t("海外新闻") : "海外新闻", href: `/${currentLocale}/news/overseas` },
+        { label: mounted ? t("行业新闻") : "行业新闻", href: `/${currentLocale}/news/industry` },
       ],
     },
     {

@@ -41,11 +41,11 @@ export default async function OverseasNewsPage({ params }: { params: { locale: s
 
   return (
     <PageLayout
-      title={locale === "en" ? "Overseas News" : "海外新闻"}
-      subtitle={locale === "en" ? "Learn about BQC Electronics' latest overseas news" : "了解百千成电子海外最新动态"}
+      title={locale === "en" ? "Trade news" : "行业新闻"}
+      subtitle={locale === "en" ? "Learn about BQC Electronics' latest trade news" : "了解百千成电子海外最新动态"}
       breadcrumbs={[
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
-        { label: locale === "en" ? "Overseas News" : "海外新闻", href: `/${locale}/news/overseas` },
+        { label: locale === "en" ? "Trade News" : "行业新闻", href: `/${locale}/news/overseas` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >

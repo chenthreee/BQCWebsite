@@ -27,7 +27,7 @@ export default function DevelopmentHistoryPage() {
       ],
       overview: {
         title: "我们的历程",
-        // description: "百千成电子自2003年成立以来，经过二十余年的发展，已成为储能领域的领先企业，这是我们不断创新、不断进取的历程。"
+        // `description: "百千成电子自2003年成立以来，经过二十余年的发展，已成为储能领域的领先企业，这是我们不断创新、不断进取的历程。"
       },
       future: {
         title: "未来展望",
