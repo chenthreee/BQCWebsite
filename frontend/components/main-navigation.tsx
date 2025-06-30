@@ -135,6 +135,10 @@ export function MainNavigation() {
         "zh-Hans": "马来西亚工厂",
         "en": "Malaysia Factory",
       },
+      "首页": {
+        "zh-Hans": "首页",
+        "en": "Home",
+      },
     }
     return translations[key]?.[currentLocale] || key
   }
@@ -191,6 +195,11 @@ export function MainNavigation() {
   }
 
   const menuItems = [
+    {
+      key: "home",
+      label: mounted ? t("首页") : "首页",
+      href: `/${currentLocale}`,
+    },
     {
       key: "about",
       label: mounted ? t("关于我们") : "关于我们",
