@@ -112,7 +112,7 @@ export function HeroSection() {
             <div className="hidden md:block absolute inset-0">
               <Image
                 src={slide.image || "/placeholder.svg"}
-                alt=""
+                alt={slide.title}
                 fill
                 className="object-cover"
                 priority={index === 0}
@@ -123,7 +123,7 @@ export function HeroSection() {
             <div className="block md:hidden absolute inset-0">
               <Image
                 src={slide.mobileImage || "/placeholder.svg"}
-                alt=""
+                alt={slide.title}
                 fill
                 className="object-cover"
                 priority={index === 0}
