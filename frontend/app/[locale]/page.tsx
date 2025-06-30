@@ -65,7 +65,7 @@ const translations: Record<string, Record<string, string>> = {
   "footer.products.pcs": { "zh-Hans": "储能PCS", "en": "Energy Storage PCS" },
   "footer.products.robot": { "zh-Hans": "智能机器人系统", "en": "Intelligent Robot System" },
   // Footer 关于我们
-  "footer.about.intro": { "zh-Hans": "简介", "en": "Introduction" },
+  "footer.about.intro": { "zh-Hans": "公司介绍", "en": "Introduction" },
   "footer.about.values": { "zh-Hans": "核心价值观", "en": "Core Values" },
   "footer.about.history": { "zh-Hans": "发展历程", "en": "Development History" },
   "footer.about.management": { "zh-Hans": "管理系统", "en": "Management System" },
@@ -77,6 +77,43 @@ const translations: Record<string, Record<string, string>> = {
   "news.center.title": { "zh-Hans": "新闻中心", "en": "News Center" },
   "news.center.subtitle": { "zh-Hans": "了解最新动态", "en": "Stay Updated" },
   "news.center.description": { "zh-Hans": "获取百千成电子最新资讯、行业动态和技术分享", "en": "Get the latest news, industry trends and technical insights from BQC Electronics" },
+  // mainNav 相关 key
+  "mainNav.about.manufacturing": {
+    "zh-Hans": "制造能力",
+    "en": "Manufacturing Capabilities"
+  },
+  "mainNav.about.certificates": {
+    "zh-Hans": "资质证书",
+    "en": "Certificates"
+  },
+  "mainNav.products.industrial": {
+    "zh-Hans": "工业控制板",
+    "en": "Industrial Control Boards"
+  },
+  "mainNav.products.medical": {
+    "zh-Hans": "医疗设备",
+    "en": "Medical Devices"
+  },
+  "mainNav.services": {
+    "zh-Hans": "服务",
+    "en": "Services"
+  },
+  "mainNav.services.odm": {
+    "zh-Hans": "ODM研发服务（围绕储能）",
+    "en": "ODM Development Services (Energy Storage)"
+  },
+  "mainNav.services.oem": {
+    "zh-Hans": "OEM代工服务",
+    "en": "OEM Manufacturing Services"
+  },
+  "mainNav.news.company": {
+    "zh-Hans": "公司新闻",
+    "en": "Company News"
+  },
+  "mainNav.news.industry": {
+    "zh-Hans": "行业资讯",
+    "en": "Industry Information"
+  },
 }
 
 export default function HomePage({ params }: { params: { locale: string } }) {
@@ -140,9 +177,9 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       {/* 页脚 */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
             {/* 公司信息 */}
-            <div className="lg:col-span-2">
+            <div>
               <Link href={`/${locale}`} className="inline-block mb-6">
                 <Image src="/BQCLogo.png" alt={t("company.name")}
                   width={50} height={50} className="h-10 w-auto" />
@@ -157,15 +194,45 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 <li><Link href={`/${locale}/about/core-values`} className="text-gray-400 hover:text-white">{t("footer.about.values")}</Link></li>
                 <li><Link href={`/${locale}/about/development-history`} className="text-gray-400 hover:text-white">{t("footer.about.history")}</Link></li>
                 <li><Link href={`/${locale}/about/management-system`} className="text-gray-400 hover:text-white">{t("footer.about.management")}</Link></li>
+                <li><Link href={`/${locale}/about/manufacturing-capabilities`} className="text-gray-400 hover:text-white">{t("mainNav.about.manufacturing") || "制造能力"}</Link></li>
+                <li><Link href={`/${locale}/about/certificates`} className="text-gray-400 hover:text-white">{t("mainNav.about.certificates") || "资质证书"}</Link></li>
+              </ul>
+            </div>
+            {/* 产品中心 */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
+              <ul className="space-y-2">
+                <li><Link href={`/${locale}/products/energy-storage-bms`} className="text-gray-400 hover:text-white">{t("footer.products.bms")}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-ems`} className="text-gray-400 hover:text-white">{t("footer.products.ems")}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-pcs`} className="text-gray-400 hover:text-white">{t("footer.products.pcs")}</Link></li>
+                <li><Link href={`/${locale}/products/intelligent-robot-systems`} className="text-gray-400 hover:text-white">{t("footer.products.robot")}</Link></li>
+                <li><Link href={`/${locale}/products/industrial-control-boards`} className="text-gray-400 hover:text-white">{t("mainNav.products.industrial") || "工业控制板"}</Link></li>
+                <li><Link href={`/${locale}/products/medical-devices`} className="text-gray-400 hover:text-white">{t("mainNav.products.medical") || "医疗设备"}</Link></li>
+              </ul>
+            </div>
+            {/* 服务 */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">{t("mainNav.services") || "服务"}</h3>
+              <ul className="space-y-2">
+                <li><Link href={`/${locale}/services/odm`} className="text-gray-400 hover:text-white">{t("mainNav.services.odm") || "ODM研发服务（围绕储能）"}</Link></li>
+                <li><Link href={`/${locale}/services/oem`} className="text-gray-400 hover:text-white">{t("mainNav.services.oem") || "OEM代工服务"}</Link></li>
+              </ul>
+            </div>
+            {/* 新闻中心 */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">{t("news.center.title")}</h3>
+              <ul className="space-y-2">
+                <li><Link href={`/${locale}/news/company`} className="text-gray-400 hover:text-white">{t("mainNav.news.company") || "公司新闻"}</Link></li>
+                <li><Link href={`/${locale}/news/industry`} className="text-gray-400 hover:text-white">{t("mainNav.news.industry") || "行业资讯"}</Link></li>
               </ul>
             </div>
             {/* 联系我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.contact")}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/contact/rd`} className="text-gray-400 hover:text-white">{t("footer.contact.rd")}</Link></li>
-                <li><Link href={`/${locale}/contact/factorycn`} className="text-gray-400 hover:text-white">{t("footer.contact.factorycn")}</Link></li>
-                <li><Link href={`/${locale}/contact/factorymy`} className="text-gray-400 hover:text-white">{t("footer.contact.factorymy")}</Link></li>
+                <li><Link href={`/${locale}/contact#rd-center`} className="text-gray-400 hover:text-white">{t("footer.contact.rd")}</Link></li>
+                <li><Link href={`/${locale}/contact#shenzhen-factory`} className="text-gray-400 hover:text-white">{t("footer.contact.factorycn")}</Link></li>
+                <li><Link href={`/${locale}/contact#malaysia-factory`} className="text-gray-400 hover:text-white">{t("footer.contact.factorymy")}</Link></li>
               </ul>
             </div>
           </div>
