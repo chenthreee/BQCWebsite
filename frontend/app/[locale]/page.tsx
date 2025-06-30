@@ -10,7 +10,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Mail, MessageCircle, ArrowUp } from "lucide-react"
 import { NewsSection } from "@/components/NewsSection"
-import { useLanguage } from "@/components/language-context"
+import { CertificatesSection } from "@/components/certificates-section"
 
 // 翻译字典
 const translations: Record<string, Record<string, string>> = {
@@ -109,47 +109,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         <AboutSection />
 
         {/* 资质证书板块 */}
-        {(() => {
-          const { t, language } = useLanguage();
-          // 证书数据
-          const certificates = [
-            {
-              image: "/images/about/certificates/IATF16949.png",
-              title: language === "en" ? "IATF16949" : "IATF16949",
-            },
-            {
-              image: "/images/about/certificates/ISO9001.png",
-              title: language === "en" ? "ISO9001" : "ISO9001",
-            },
-            {
-              image: "/images/about/certificates/ISO13485.png",
-              title: language === "en" ? "ISO13485" : "ISO13485",
-            },
-            {
-              image: "/images/about/certificates/ISO14001.png",
-              title: language === "en" ? "ISO14001" : "ISO14001",
-            },
-          ];
-          return (
-            <section className="py-20 bg-white">
-              <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t("about.certificates.title")}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {certificates.map((cert, idx) => (
-                    <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center">
-                      <div className="h-48 w-full flex items-center justify-center bg-gray-100">
-                        <img src={cert.image} alt={cert.title} className="object-contain h-full p-4" />
-                      </div>
-                      <div className="p-4 text-center">
-                        <h3 className="text-lg font-bold mb-2">{cert.title}</h3>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          );
-        })()}
+        <CertificatesSection />
       </main>
 
       {/* 侧边栏联系方式 */}

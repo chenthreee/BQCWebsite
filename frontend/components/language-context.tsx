@@ -204,6 +204,11 @@ const translations: Record<string, Record<Language, string>> = {
     "zh-Hans": "百千成电子的资质认证与荣誉",
     en: "BQC Electronics Certifications and Honors"
   },
+  "about.certificates.desc": {
+    zh: "公司通过多项国际权威认证，彰显了在质量管理和技术创新方面的实力。",
+    "zh-Hans": "公司通过多项国际权威认证，彰显了在质量管理和技术创新方面的实力。",
+    en: "The company has obtained multiple international authoritative certifications, demonstrating its strength in quality management and technological innovation.",
+  },
 
   // Products submenu
   "products.bms": {
