@@ -74,6 +74,10 @@ export function AboutSection() {
       "about.stat3.bottom": { "zh-Hans": "家合作伙伴", "en": "Partners" },
       "about.stat4.title": { "zh-Hans": "研发人员", "en": "R&D Staff" },
       "about.stat4.bottom": { "zh-Hans": "占比", "en": "Proportion" },
+      "about.mission.title": { "zh-Hans": "占位置 要填充内容", "en": "have something to fill" },
+      "about.mission.desc": { "zh-Hans": "占位置 要填充内容", "en": "have something to fill" },
+      
+      "about.learnMore": { "zh-Hans": "了解更多", "en": "Learn More" },
     }
     return translations[key]?.[locale] || key
   }
@@ -153,6 +157,20 @@ export function AboutSection() {
               <Counter end={30} suffix="%" className="text-white" />
               <p className="text-gray-300 mt-2">{t("about.stat4.bottom")}</p>
             </div>
+          </div>
+
+          {/* 新增公司使命与愿景模块 */}
+          <div className="mt-16 bg-white/80 rounded-lg p-8 max-w-3xl mx-auto text-center shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">{t("about.mission.title")}</h3>
+            <p className="text-gray-700 mb-4">{t("about.mission.desc")}</p>
+            {/* <h4 className="text-xl font-semibold mb-2 text-gray-900">{t("about.vision.title")}</h4>
+            <p className="text-gray-700 mb-6">{t("about.vision.desc")}</p> */}
+            <a
+              href="/about/introduction"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+            >
+              {t("about.learnMore")}
+            </a>
           </div>
         </div>
       </div>
