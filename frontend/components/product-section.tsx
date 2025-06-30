@@ -52,152 +52,53 @@ export function ProductSection() {
   const categories: ProductCategory[] = [
     {
       id: 1,
-      title: locale === "en" ? "Power Storage BMS" : "电力储能BMS",
-      description: locale === "en" 
-        ? "High-reliability BMS solution designed for large-scale power storage systems, supporting multi-string parallel battery pack management with high-precision SOC estimation and balancing functions"
-        : "专为大型电力储能系统设计的高可靠性BMS解决方案，支持多串并联电池组管理，具备高精度SOC估算和均衡功能",
+      title: locale === "en" ? "Energy Storage BMS/PCS" : "储能BMS/储能PCS",
+      description: locale === "en"
+        ? "Comprehensive BMS/PCS solutions for energy storage, including Power Storage BMS, Large Ship BMS, Small Ship BMS, Communication Base Station BMS, Energy Storage EMS, and PCS."
+        : "储能BMS/PCS全系列解决方案，包括电力大储BMS、大型船舶储能BMS、小型船舶储能BMS、通讯基站储能BMS、储能EMS（总控）、储能PCS等。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        {
-          id: 101,
-          title: "BMS-P100",
-          description: locale === "en" ? "100kWh Power Storage Battery Management System" : "100kWh电力储能电池管理系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 102,
-          title: "BMS-P500",
-          description: locale === "en" ? "500kWh Large-scale Energy Storage Battery Management System" : "500kWh大型储能电池管理系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 103,
-          title: "BMS-P1000",
-          description: locale === "en" ? "1MWh Container Energy Storage Battery Management System" : "1MWh集装箱式储能电池管理系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 104,
-          title: "BMS-PH100",
-          description: locale === "en" ? "Home Energy Storage Battery Management System" : "家用储能电池管理系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
+        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/placeholder.svg?height=400&width=400" },
       ],
     },
     {
       id: 2,
-      title: locale === "en" ? "Ship Energy Storage BMS" : "船舶储能BMS",
+      title: locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统",
       description: locale === "en"
-        ? "Ship energy storage BMS system designed for special requirements of marine environment, featuring high protection level, vibration resistance, salt spray corrosion resistance and other characteristics to meet various ship power system requirements"
-        : "针对海洋环境特殊要求设计的船舶储能BMS系统，具备高防护等级、抗震动、抗盐雾腐蚀等特性，满足各类船舶电力系统需求",
+        ? "Intelligent robot system solutions for various industries."
+        : "面向各行业的智能机器人系统解决方案。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        {
-          id: 201,
-          title: "BMS-M500",
-          description: locale === "en" ? "Large Ship 500kWh Energy Storage System" : "大型船舶500kWh储能系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 202,
-          title: "BMS-M200",
-          description: locale === "en" ? "Medium Ship 200kWh Energy Storage System" : "中型船舶200kWh储能系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 203,
-          title: "BMS-M50",
-          description: locale === "en" ? "Small Ship 50kWh Energy Storage System" : "小型船舶50kWh储能系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
+        { id: 201, title: locale === "en" ? "Robot Control Board" : "机器人控制板", description: "", image: "/placeholder.svg?height=400&width=400" },
       ],
     },
     {
       id: 3,
-      title: locale === "en" ? "Communication Base Station BMS" : "通讯基站BMS",
+      title: locale === "en" ? "Industrial Control Boards" : "工业控制板",
       description: locale === "en"
-        ? "High-reliability BMS designed for communication base station backup power systems, featuring remote monitoring, fault warning and intelligent maintenance functions to ensure continuous and stable operation of communication systems"
-        : "为通讯基站备电系统设计的高可靠性BMS，具备远程监控、故障预警和智能维护功能，确保通讯系统持续稳定运行",
+        ? "Industrial control board solutions for automation and control."
+        : "自动化与控制领域的工业控制板解决方案。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        {
-          id: 301,
-          title: "BMS-T48",
-          description: locale === "en" ? "48V Communication Base Station Backup Power System" : "48V通讯基站备电系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 302,
-          title: "BMS-T96",
-          description: locale === "en" ? "96V High-voltage Communication Base Station Backup Power System" : "96V高压通讯基站备电系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          id: 303,
-          title: "BMS-T48-R",
-          description: locale === "en" ? "Outdoor Rainproof Communication Base Station Backup Power System" : "户外型防雨通讯基站备电系统",
-          image: "/placeholder.svg?height=400&width=400",
-        },
+        { id: 301, title: locale === "en" ? "Industrial Control Board" : "工业控制板", description: "", image: "/placeholder.svg?height=400&width=400" },
       ],
     },
-    // {
-    //   id: 4,
-    //   title: "OEM代工服务",
-    //   description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，拥有先进的生产线和严格的质量控制体系",
-    //   image: "/placeholder.svg?height=600&width=1200",
-    //   products: [
-    //     {
-    //       id: 401,
-    //       title: "PCB设计服务",
-    //       description: "专业电路设计与PCB布局服务",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //     {
-    //       id: 402,
-    //       title: "SMT贴片服务",
-    //       description: "高精度SMT贴片与焊接服务",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //     {
-    //       id: 403,
-    //       title: "整机组装服务",
-    //       description: "整机组装与测试服务",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //     {
-    //       id: 404,
-    //       title: "质量控制服务",
-    //       description: "全流程质量控制与测试服务",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 5,
-    //   title: "ODM研发服务（BMS）",
-    //   description: "基于客户需求提供定制化的产品设计与开发服务，从方案设计、原型制作到量产支持的全流程ODM服务",
-    //   image: "/placeholder.svg?height=600&width=1200",
-    //   products: [
-    //     {
-    //       id: 501,
-    //       title: "储能系统设计",
-    //       description: "定制化储能系统解决方案",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //     {
-    //       id: 502,
-    //       title: "BMS定制开发",
-    //       description: "针对特殊应用场景的BMS定制开发",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //     {
-    //       id: 503,
-    //       title: "智能控制系统",
-    //       description: "工业级智能控制系统开发",
-    //       image: "/placeholder.svg?height=400&width=400",
-    //     },
-    //   ],
-    // },
+    {
+      id: 4,
+      title: locale === "en" ? "Medical Devices" : "医疗设备",
+      description: locale === "en"
+        ? "Medical device solutions for healthcare industry."
+        : "医疗行业的医疗设备解决方案。",
+      image: "/placeholder.svg?height=600&width=1200",
+      products: [
+        { id: 401, title: locale === "en" ? "Medical Device" : "医疗设备", description: "", image: "/placeholder.svg?height=400&width=400" },
+      ],
+    },
   ]
 
   const handleCategoryChange = (index: number) => {
