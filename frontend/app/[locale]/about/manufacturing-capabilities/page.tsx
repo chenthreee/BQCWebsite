@@ -5,14 +5,22 @@ import Image from "next/image"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function ManufacturingCapabilitiesPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -22,10 +30,6 @@ export default function ManufacturingCapabilitiesPage() {
     zh: {
       title: "制造能力",
       subtitle: "百千成电子的生产设备与制造工艺",
-      breadcrumbs: [
-        { label: "关于我们", href: "/zh-Hans/about" },
-        { label: "制造能力", href: "/zh-Hans/about/manufacturing-capabilities" },
-      ],
       workshops: {
         title: "生产车间",
         items: [
@@ -118,10 +122,6 @@ export default function ManufacturingCapabilitiesPage() {
     en: {
       title: "Manufacturing Capabilities",
       subtitle: "BQC Electronics Production Equipment and Manufacturing Process",
-      breadcrumbs: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Manufacturing Capabilities", href: "/en/about/manufacturing-capabilities" },
-      ],
       workshops: {
         title: "Production Workshops",
         items: [
@@ -215,11 +215,16 @@ export default function ManufacturingCapabilitiesPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.manufacturingCapabilities"), href: language === "en" ? "/en/about/manufacturing-capabilities" : "/zh-Hans/about/manufacturing-capabilities" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      subtitle={currentContent.subtitle}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.manufacturingCapabilities.title")}
+      subtitle={t("about.manufacturingCapabilities.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="space-y-16">

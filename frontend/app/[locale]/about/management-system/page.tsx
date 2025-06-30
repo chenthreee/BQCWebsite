@@ -5,14 +5,22 @@ import Image from "next/image"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function ManagementSystemPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -21,10 +29,7 @@ export default function ManagementSystemPage() {
   const content = {
     zh: {
       title: "管理系统",
-      breadcrumbs: [
-        { label: "关于我们", href: "/zh-Hans/about" },
-        { label: "管理系统", href: "/zh-Hans/about/management-system" },
-      ],
+      subtitle: "百千成电子的数字化管理平台",
       digitalPlatform: {
         title: "数字化管理平台",
         description: "百千成电子建立了完整的数字化管理平台，实现企业管理的信息化、智能化和高效化。",
@@ -46,10 +51,7 @@ export default function ManagementSystemPage() {
     },
     en: {
       title: "Management System",
-      breadcrumbs: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Management System", href: "/en/about/management-system" },
-      ],
+      subtitle: "BQC Electronics Digital Management Platform",
       digitalPlatform: {
         title: "Digital Management Platform",
         description: "BQC Electronics has established a comprehensive digital management platform to achieve informatization, intelligence, and efficiency in enterprise management.",
@@ -73,10 +75,16 @@ export default function ManagementSystemPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.managementSystem"), href: language === "en" ? "/en/about/management-system" : "/zh-Hans/about/management-system" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.managementSystem.title")}
+      subtitle={t("about.managementSystem.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-16">

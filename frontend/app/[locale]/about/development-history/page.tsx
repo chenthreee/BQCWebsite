@@ -4,14 +4,22 @@ import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function DevelopmentHistoryPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -21,10 +29,6 @@ export default function DevelopmentHistoryPage() {
     zh: {
       title: "发展历程",
       subtitle: "百千成电子的成长与发展",
-      breadcrumbs: [
-        { label: "关于我们", href: "/zh-Hans/about" },
-        { label: "发展历程", href: "/zh-Hans/about/development-history" },
-      ],
       overview: {
         title: "我们的历程",
       },
@@ -110,10 +114,6 @@ export default function DevelopmentHistoryPage() {
     en: {
       title: "Development History",
       subtitle: "Growth and Development of BQC Electronics",
-      breadcrumbs: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Development History", href: "/en/about/development-history" },
-      ],
       overview: {
         title: "Our Journey",
       },
@@ -200,11 +200,16 @@ export default function DevelopmentHistoryPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.developmentHistory"), href: language === "en" ? "/en/about/development-history" : "/zh-Hans/about/development-history" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      subtitle={currentContent.subtitle}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.developmentHistory.title")}
+      subtitle={t("about.developmentHistory.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="max-w-4xl mx-auto">

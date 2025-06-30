@@ -5,14 +5,22 @@ import Image from "next/image"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function CoreValuesPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -22,10 +30,6 @@ export default function CoreValuesPage() {
     zh: {
       title: "核心价值观",
       subtitle: "我们的企业文化与价值理念",
-      breadcrumbs: [
-        { label: "关于我们", href: "/zh-Hans/about" },
-        { label: "核心价值观", href: "/zh-Hans/about/core-values" },
-      ],
       values: [
         {
           title: "诚信",
@@ -48,10 +52,6 @@ export default function CoreValuesPage() {
     en: {
       title: "Core Values",
       subtitle: "Our Corporate Culture and Value Principles",
-      breadcrumbs: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Core Values", href: "/en/about/core-values" },
-      ],
       values: [
         {
           title: "Integrity",
@@ -75,11 +75,16 @@ export default function CoreValuesPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.coreValues"), href: language === "en" ? "/en/about/core-values" : "/zh-Hans/about/core-values" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      subtitle={currentContent.subtitle}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.coreValues.title")}
+      subtitle={t("about.coreValues.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">

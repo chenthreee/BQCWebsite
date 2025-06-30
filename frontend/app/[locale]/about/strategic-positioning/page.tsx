@@ -5,14 +5,22 @@ import Image from "next/image"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function StrategicPositioningPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -22,10 +30,6 @@ export default function StrategicPositioningPage() {
     zh: {
       title: "战略定位",
       subtitle: "百千成电子的发展战略与市场定位",
-      breadcrumbs: [
-        { label: "关于我们", href: "/zh-Hans/about" },
-        { label: "战略定位", href: "/zh-Hans/about/strategic-positioning" },
-      ],
       strategic: {
         title: "战略定位",
         sections: [
@@ -50,10 +54,6 @@ export default function StrategicPositioningPage() {
     en: {
       title: "Strategic Positioning",
       subtitle: "Development Strategy and Market Positioning of BQC Electronics",
-      breadcrumbs: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Strategic Positioning", href: "/en/about/strategic-positioning" },
-      ],
       strategic: {
         title: "Strategic Positioning",
         sections: [
@@ -79,11 +79,16 @@ export default function StrategicPositioningPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.strategicPositioning"), href: language === "en" ? "/en/about/strategic-positioning" : "/zh-Hans/about/strategic-positioning" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      subtitle={currentContent.subtitle}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.strategicPositioning.title")}
+      subtitle={t("about.strategicPositioning.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">

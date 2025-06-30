@@ -4,27 +4,30 @@ import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export default function CertificatesPage() {
-  const { language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  // 根据 URL 自动切换语言
+  useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en")
+    else setLanguage("zh")
+  }, [pathname, setLanguage])
+
   if (!mounted) {
     return null
   }
 
+  // 证书内容（中英文）
   const content = {
     zh: {
-      title: "资质证书",
-      subtitle: "百千成电子的资质认证与荣誉",
-      breadcrumbs: [
-        { label: "关于我们", href: "/about" },
-        { label: "资质证书", href: "/about/certificates" },
-      ],
       overview: {
         title: "我们的资质",
         description: "百千成电子通过了多项国际认证和资质认定，证明了公司在质量管理、环境保护、职业健康安全等方面的卓越表现，以及在技术创新方面的实力。"
@@ -58,34 +61,6 @@ export default function CertificatesPage() {
           issueDate: "2018年",
           validUntil: "2027年",
         },
-        // {
-        //   title: "CE认证",
-        //   description: "欧盟强制性产品认证标志，表示产品符合欧盟相关指令的要求，可在欧盟市场自由流通。",
-        //   image: "/placeholder.svg?height=400&width=600&text=CE",
-        //   issueDate: "2016年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "UL认证",
-        //   description: "美国保险商试验所认证，是美国最有权威的安全认证标志之一，表示产品符合美国安全标准。",
-        //   image: "/placeholder.svg?height=400&width=600&text=UL",
-        //   issueDate: "2018年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "RoHS认证",
-        //   description: "欧盟关于限制在电子电气设备中使用某些有害物质的指令，表示产品符合环保要求。",
-        //   image: "/placeholder.svg?height=400&width=600&text=RoHS",
-        //   issueDate: "2016年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "REACH认证",
-        //   description: "欧盟关于化学品注册、评估、授权和限制的法规，表示产品符合化学品安全要求。",
-        //   image: "/placeholder.svg?height=400&width=600&text=REACH",
-        //   issueDate: "2017年",
-        //   validUntil: "持续有效",
-        // },
       ],
       honors: {
         title: "企业荣誉",
@@ -113,12 +88,6 @@ export default function CertificatesPage() {
       }
     },
     en: {
-      title: "Certificates",
-      subtitle: "BQC Electronics Certifications and Honors",
-      breadcrumbs: [
-        { label: "About Us", href: "/about" },
-        { label: "Certificates", href: "/about/certificates" },
-      ],
       overview: {
         title: "Our Qualifications",
         description: "BQC Electronics has obtained multiple international certifications, demonstrating our excellence in quality management, environmental protection, occupational health and safety, as well as our strength in technological innovation."
@@ -152,34 +121,6 @@ export default function CertificatesPage() {
           issueDate: "2018",
           validUntil: "2027",
         },
-        // {
-        //   title: "CE认证",
-        //   description: "欧盟强制性产品认证标志，表示产品符合欧盟相关指令的要求，可在欧盟市场自由流通。",
-        //   image: "/placeholder.svg?height=400&width=600&text=CE",
-        //   issueDate: "2016年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "UL认证",
-        //   description: "美国保险商试验所认证，是美国最有权威的安全认证标志之一，表示产品符合美国安全标准。",
-        //   image: "/placeholder.svg?height=400&width=600&text=UL",
-        //   issueDate: "2018年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "RoHS认证",
-        //   description: "欧盟关于限制在电子电气设备中使用某些有害物质的指令，表示产品符合环保要求。",
-        //   image: "/placeholder.svg?height=400&width=600&text=RoHS",
-        //   issueDate: "2016年",
-        //   validUntil: "持续有效",
-        // },
-        // {
-        //   title: "REACH认证",
-        //   description: "欧盟关于化学品注册、评估、授权和限制的法规，表示产品符合化学品安全要求。",
-        //   image: "/placeholder.svg?height=400&width=600&text=REACH",
-        //   issueDate: "2017年",
-        //   validUntil: "持续有效",
-        // },
       ],
       honors: {
         title: "Enterprise Honors",
@@ -210,11 +151,16 @@ export default function CertificatesPage() {
 
   const currentContent = language === "zh" ? content.zh : content.en
 
+  const breadcrumbs = [
+    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: t("about.breadcrumbs.certificates"), href: language === "en" ? "/en/about/certificates" : "/zh-Hans/about/certificates" },
+  ]
+
   return (
     <PageLayout
-      title={currentContent.title}
-      subtitle={currentContent.subtitle}
-      breadcrumbs={currentContent.breadcrumbs}
+      title={t("about.certificates.title")}
+      subtitle={t("about.certificates.subtitle")}
+      breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="max-w-3xl mx-auto text-center mb-16">
@@ -264,4 +210,4 @@ export default function CertificatesPage() {
       </div>
     </PageLayout>
   )
-}
+} 
