@@ -1,6 +1,8 @@
 "use client"
 
 import { createContext, useContext, useState, type ReactNode } from "react"
+import { usePathname } from "next/navigation"
+import React from "react"
 
 type Language = "zh" | "zh-Hans" | "en"
 
@@ -280,6 +282,36 @@ const translations: Record<string, Record<Language, string>> = {
     "zh-Hans": "技术分享",
     en: "Technology Insights",
   },
+  "news.company.desc": {
+    zh: "了解百千成电子公司最新动态、产品发布和合作伙伴关系",
+    "zh-Hans": "了解百千成电子公司最新动态、产品发布和合作伙伴关系",
+    en: "Learn about the latest company news, product releases, and partnerships of BQC Electronics",
+  },
+  "news.industry.desc": {
+    zh: "关注储能行业发展趋势、技术创新和市场分析",
+    "zh-Hans": "关注储能行业发展趋势、技术创新和市场分析",
+    en: "Focus on energy storage industry trends, technological innovation, and market analysis",
+  },
+  "news.center.title": {
+    zh: "新闻中心",
+    "zh-Hans": "新闻中心",
+    en: "News Center",
+  },
+  "news.center.subtitle": {
+    zh: "了解最新动态",
+    "zh-Hans": "了解最新动态",
+    en: "Get the latest news",
+  },
+  "news.center.description": {
+    zh: "获取百千成电子最新资讯、行业动态和技术分享",
+    "zh-Hans": "获取百千成电子最新资讯、行业动态和技术分享",
+    en: "Get the latest news, industry trends and technical insights from BQC Electronics",
+  },
+  "news.readMore": {
+    zh: "查看更多",
+    "zh-Hans": "查看更多",
+    en: "Read More",
+  },
 
   // Contact submenu
   "contact.rdCenter": {
@@ -401,11 +433,23 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("zh")
+  const pathname = usePathname();
+  // 根据 URL 自动切换语言
+  React.useEffect(() => {
+    if (pathname.startsWith("/en")) setLanguage("en");
+    else if (pathname.startsWith("/zh-Hans")) setLanguage("zh-Hans");
+    else setLanguage("zh");
+  }, [pathname]);
 
   const t = (key: string): string => {
-    // 兼容 zh-Hans
-    const lang = language === "zh-Hans" ? "zh" : language;
-    return translations[key]?.[lang] || translations[key]?.["zh"] || key;
+    // 优先级：当前语言 > zh-Hans > zh > en > key
+    return (
+      translations[key]?.[language] ||
+      translations[key]?.["zh-Hans"] ||
+      translations[key]?.["zh"] ||
+      translations[key]?.["en"] ||
+      key
+    );
   }
 
   return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
