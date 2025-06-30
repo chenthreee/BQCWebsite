@@ -180,7 +180,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
             {/* 公司信息 */}
             <div>
-              <Link href={`/${locale}`} className="inline-block mb-6">
+              <Link href={`/${locale}`} rel="nofollow" className="inline-block mb-6">
                 <Image src="/BQCLogo.png" alt={t("company.name")}
                   width={50} height={50} className="h-10 w-auto" />
               </Link>
@@ -190,56 +190,56 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/about/introduction`} className="text-gray-400 hover:text-white">{t("footer.about.intro")}</Link></li>
-                <li><Link href={`/${locale}/about/core-values`} className="text-gray-400 hover:text-white">{t("footer.about.values")}</Link></li>
-                <li><Link href={`/${locale}/about/development-history`} className="text-gray-400 hover:text-white">{t("footer.about.history")}</Link></li>
-                <li><Link href={`/${locale}/about/management-system`} className="text-gray-400 hover:text-white">{t("footer.about.management")}</Link></li>
-                <li><Link href={`/${locale}/about/manufacturing-capabilities`} className="text-gray-400 hover:text-white">{t("mainNav.about.manufacturing") || "制造能力"}</Link></li>
-                <li><Link href={`/${locale}/about/certificates`} className="text-gray-400 hover:text-white">{t("mainNav.about.certificates") || "资质证书"}</Link></li>
+                <li><Link href={`/${locale}/about/introduction`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.about.intro")}</Link></li>
+                <li><Link href={`/${locale}/about/core-values`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.about.values")}</Link></li>
+                <li><Link href={`/${locale}/about/development-history`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.about.history")}</Link></li>
+                <li><Link href={`/${locale}/about/management-system`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.about.management")}</Link></li>
+                <li><Link href={`/${locale}/about/manufacturing-capabilities`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.about.manufacturing") || "制造能力"}</Link></li>
+                <li><Link href={`/${locale}/about/certificates`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.about.certificates") || "资质证书"}</Link></li>
               </ul>
             </div>
             {/* 产品中心 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/products/energy-storage-bms`} className="text-gray-400 hover:text-white">{t("footer.products.bms")}</Link></li>
-                <li><Link href={`/${locale}/products/energy-storage-ems`} className="text-gray-400 hover:text-white">{t("footer.products.ems")}</Link></li>
-                <li><Link href={`/${locale}/products/energy-storage-pcs`} className="text-gray-400 hover:text-white">{t("footer.products.pcs")}</Link></li>
-                <li><Link href={`/${locale}/products/intelligent-robot-systems`} className="text-gray-400 hover:text-white">{t("footer.products.robot")}</Link></li>
-                <li><Link href={`/${locale}/products/industrial-control-boards`} className="text-gray-400 hover:text-white">{t("mainNav.products.industrial") || "工业控制板"}</Link></li>
-                <li><Link href={`/${locale}/products/medical-devices`} className="text-gray-400 hover:text-white">{t("mainNav.products.medical") || "医疗设备"}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-bms`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.bms")}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-ems`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.ems")}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-pcs`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.pcs")}</Link></li>
+                <li><Link href={`/${locale}/products/intelligent-robot-systems`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.robot")}</Link></li>
+                <li><Link href={`/${locale}/products/industrial-control-boards`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.products.industrial") || "工业控制板"}</Link></li>
+                <li><Link href={`/${locale}/products/medical-devices`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.products.medical") || "医疗设备"}</Link></li>
               </ul>
             </div>
             {/* 服务 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("mainNav.services") || "服务"}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/services/odm`} className="text-gray-400 hover:text-white">{t("mainNav.services.odm") || "ODM研发服务（围绕储能）"}</Link></li>
-                <li><Link href={`/${locale}/services/oem`} className="text-gray-400 hover:text-white">{t("mainNav.services.oem") || "OEM代工服务"}</Link></li>
+                <li><Link href={`/${locale}/services/odm`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.odm") || "ODM研发服务（围绕储能）"}</Link></li>
+                <li><Link href={`/${locale}/services/oem`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.oem") || "OEM代工服务"}</Link></li>
               </ul>
             </div>
             {/* 新闻中心 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("news.center.title")}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/news/company`} className="text-gray-400 hover:text-white">{t("mainNav.news.company") || "公司新闻"}</Link></li>
-                <li><Link href={`/${locale}/news/industry`} className="text-gray-400 hover:text-white">{t("mainNav.news.industry") || "行业资讯"}</Link></li>
+                <li><Link href={`/${locale}/news/company`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.news.company") || "公司新闻"}</Link></li>
+                <li><Link href={`/${locale}/news/industry`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.news.industry") || "行业资讯"}</Link></li>
               </ul>
             </div>
             {/* 联系我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.contact")}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/contact#rd-center`} className="text-gray-400 hover:text-white">{t("footer.contact.rd")}</Link></li>
-                <li><Link href={`/${locale}/contact#shenzhen-factory`} className="text-gray-400 hover:text-white">{t("footer.contact.factorycn")}</Link></li>
-                <li><Link href={`/${locale}/contact#malaysia-factory`} className="text-gray-400 hover:text-white">{t("footer.contact.factorymy")}</Link></li>
+                <li><Link href={`/${locale}/contact#rd-center`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.contact.rd")}</Link></li>
+                <li><Link href={`/${locale}/contact#shenzhen-factory`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.contact.factorycn")}</Link></li>
+                <li><Link href={`/${locale}/contact#malaysia-factory`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.contact.factorymy")}</Link></li>
               </ul>
             </div>
           </div>
           <div className="mt-8 text-center">
             <p className="text-gray-400">{t("footer.copyright")}</p>
-            <Link href={`/${locale}/legal`} className="text-gray-400 hover:text-white ml-4">{t("footer.legal")}</Link>
-            <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-white ml-4">{t("footer.privacy")}</Link>
+            <Link href={`/${locale}/legal`} rel="nofollow" className="text-gray-400 hover:text-white ml-4">{t("footer.legal")}</Link>
+            <Link href={`/${locale}/privacy`} rel="nofollow" className="text-gray-400 hover:text-white ml-4">{t("footer.privacy")}</Link>
           </div>
         </div>
       </footer>
