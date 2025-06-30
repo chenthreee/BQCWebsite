@@ -54,8 +54,8 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       subtitle={article.description || ""}
       breadcrumbs={[
         { label: "新闻中心", href: "/news" },
-        { label: "国内新闻", href: "/news/domestic" },
-        { label: article.title, href: `/news/domestic/${params.slug}` },
+        { label: "公司新闻", href: "/news/company" },
+        { label: article.title, href: `/news/company/${params.slug}` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -103,9 +103,9 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
-          <Link href="/news/domestic" className="text-blue-600 hover:text-blue-800 flex items-center">
+          <Link href="/news/company" className="text-blue-600 hover:text-blue-800 flex items-center">
             <ArrowLeft className="mr-1 h-4 w-4" />
-            返回国内新闻列表
+            返回公司新闻列表
           </Link>
         </div>
       </div>

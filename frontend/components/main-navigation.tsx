@@ -112,12 +112,12 @@ export function MainNavigation() {
         "en": "News Center",
       },
       "国内新闻": {
-        "zh-Hans": "国内新闻",
-        "en": "Domestic News",
+        "zh-Hans": "公司新闻",
+        "en": "Company News",
       },
       "行业新闻": {
-        "zh-Hans": "行业新闻",
-        "en": "Industry News",
+        "zh-Hans": "行业资讯",
+        "en": "Industry Information",
       },
       "联系我们": {
         "zh-Hans": "联系我们",
@@ -240,8 +240,8 @@ export function MainNavigation() {
       label: mounted ? t("新闻中心") : "新闻中心",
       href: `/${currentLocale}/news`,
       children: [
-        { label: mounted ? t("国内新闻") : "国内新闻", href: `/${currentLocale}/news/domestic` },
-        { label: mounted ? t("行业新闻") : "行业新闻", href: `/${currentLocale}/news/industry` },
+        { label: mounted ? t("公司新闻") : "公司新闻", href: `/${currentLocale}/news/company` },
+        { label: mounted ? t("行业资讯") : "行业资讯", href: `/${currentLocale}/news/industry` },
       ],
     },
     {

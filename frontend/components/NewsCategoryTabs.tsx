@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
   { label: "全部新闻", subpath: "" },
-  { label: "国内新闻", subpath: "/domestic" },
-  { label: "行业新闻", subpath: "/overseas" },
+  { label: "公司新闻", subpath: "/company" },
+  { label: "行业资讯", subpath: "/industry" },
 ];
 
 export default function NewsCategoryTabs() {

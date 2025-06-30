@@ -7,12 +7,12 @@ import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
 
-async function getDomesticNews(locale: string) {
+async function getCompanyNews(locale: string) {
   const query = `
-    query GetDomesticNews($locale: I18NLocaleCode) {
+    query GetCompanyNews($locale: I18NLocaleCode) {
       articles(
         locale: $locale,
-        filters: { category: { name: { eq: \"domestic\" } } }
+        filters: { category: { name: { eq: "company" } } }
       ) {
         documentId
         title
@@ -35,17 +35,17 @@ async function getDomesticNews(locale: string) {
   return data.articles
 }
 
-export default async function DomesticNewsPage({ params }: { params: { locale: string } }) {
+export default async function CompanyNewsPage({ params }: { params: { locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
-  const articles = await getDomesticNews(locale);
+  const articles = await getCompanyNews(locale);
 
   return (
     <PageLayout
-      title={locale === "en" ? "Domestic News" : "国内新闻"}
-      subtitle={locale === "en" ? "Learn about BQC Electronics' latest domestic news" : "了解百千成电子国内最新动态"}
+      title={locale === "en" ? "Company News" : "公司新闻"}
+      subtitle={locale === "en" ? "Learn about BQC Electronics' latest company news" : "了解百千成电子公司最新动态"}
       breadcrumbs={[
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
-        { label: locale === "en" ? "Domestic News" : "国内新闻", href: `/${locale}/news/domestic` },
+        { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -70,7 +70,7 @@ export default async function DomesticNewsPage({ params }: { params: { locale: s
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
               <Link
-                href={`/${locale}/news/domestic/${item.slug}`}
+                href={`/${locale}/news/company/${item.slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}

@@ -7,12 +7,12 @@ import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
 
-async function getOverseasNews(locale: string) {
+async function getIndustryNews(locale: string) {
   const query = `
-    query GetOverseasNews($locale: I18NLocaleCode) {
+    query GetIndustryNews($locale: I18NLocaleCode) {
       articles(
         locale: $locale,
-        filters: { category: { name: { eq: \"overseas\" } } }
+        filters: { category: { name: { eq: "industry" } } }
       ) {
         documentId
         title
@@ -35,17 +35,17 @@ async function getOverseasNews(locale: string) {
   return data.articles
 }
 
-export default async function OverseasNewsPage({ params }: { params: { locale: string } }) {
+export default async function IndustryNewsPage({ params }: { params: { locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
-  const articles = await getOverseasNews(locale);
+  const articles = await getIndustryNews(locale);
 
   return (
     <PageLayout
-      title={locale === "en" ? "Trade news" : "行业新闻"}
-      subtitle={locale === "en" ? "Learn about BQC Electronics' latest trade news" : "了解百千成电子海外最新动态"}
+      title={locale === "en" ? "Industry Information" : "行业资讯"}
+      subtitle={locale === "en" ? "Learn about latest industry information" : "了解行业最新动态"}
       breadcrumbs={[
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
-        { label: locale === "en" ? "Trade News" : "行业新闻", href: `/${locale}/news/overseas` },
+        { label: locale === "en" ? "Industry Information" : "行业资讯", href: `/${locale}/news/industry` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -70,7 +70,7 @@ export default async function OverseasNewsPage({ params }: { params: { locale: s
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
               <Link
-                href={`/${locale}/news/overseas/${item.slug}`}
+                href={`/${locale}/news/industry/${item.slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}

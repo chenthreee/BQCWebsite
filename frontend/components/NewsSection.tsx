@@ -22,11 +22,11 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale, t }) => (
             <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
               <Calendar className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">国内新闻</h3>
+            <h3 className="text-2xl font-bold text-gray-900">公司新闻</h3>
           </div>
-          <p className="text-gray-600 mb-6">了解百千成电子在国内市场的最新动态、产品发布和合作伙伴关系</p>
+          <p className="text-gray-600 mb-6">了解百千成电子公司最新动态、产品发布和合作伙伴关系</p>
           <Link
-            href={`/${locale}/news/domestic`}
+            href={`/${locale}/news/company`}
             className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             查看更多 →

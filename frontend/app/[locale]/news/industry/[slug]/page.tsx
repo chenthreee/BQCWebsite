@@ -55,8 +55,8 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       subtitle={article.description || ""}
       breadcrumbs={[
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
-        { label: locale === "en" ? "Trade News" : "行业新闻", href: `/${locale}/news/overseas` },
-        { label: article.title, href: `/${locale}/news/overseas/${params.slug}` },
+        { label: locale === "en" ? "Industry News" : "行业资讯", href: `/${locale}/news/industry` },
+        { label: article.title, href: `/${locale}/news/industry/${params.slug}` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -104,9 +104,9 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
-          <Link href={`/${locale}/news/overseas`} className="text-blue-600 hover:text-blue-800 flex items-center">
+          <Link href={`/${locale}/news/industry`} className="text-blue-600 hover:text-blue-800 flex items-center">
             <ArrowLeft className="mr-1 h-4 w-4" />
-            {locale === "en" ? "Back to Overseas News" : "返回海外新闻列表"}
+            {locale === "en" ? "Back to Industry News" : "返回行业资讯列表"}
           </Link>
         </div>
       </div>

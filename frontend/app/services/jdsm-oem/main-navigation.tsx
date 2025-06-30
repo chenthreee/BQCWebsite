@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, Menu, X, Globe } from "lucide-react"
-import { useLanguage } from "./language-context"
+import { useLanguage } from "@/components/language-context"
 import { usePathname } from "next/navigation";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export function MainNavigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -124,7 +124,7 @@ export function MainNavigation() {
       href: `/${currentLocale}/news`,
       children: [
         { label: mounted ? t("国内新闻") : "国内新闻", href: `/${currentLocale}/news/domestic` },
-        { label: mounted ? t("海外新闻") : "海外新闻", href: `/${currentLocale}/news/overseas` },
+        { label: mounted ? t("行业资讯") : "行业资讯", href: `/${currentLocale}/news/industry` },
       ],
     },
     {

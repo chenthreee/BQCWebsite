@@ -85,7 +85,7 @@ export default async function NewsPage({ params }: { params: { locale: string } 
               <h2 className="text-2xl font-bold mb-4">{allNews[0].title}</h2>
               <p className="text-gray-700 mb-6">{allNews[0].description}</p>
               <Link
-                href={`/news/${allNews[0].category?.name === 'overseas' ? 'overseas' : 'domestic'}/${allNews[0].slug}`}
+                href={`/news/${allNews[0].category?.name === 'industry' ? 'industry' : 'company'}/${allNews[0].slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
@@ -128,7 +128,7 @@ export default async function NewsPage({ params }: { params: { locale: string } 
               <h3 className="text-xl font-bold mb-3">{news.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{news.description}</p>
               <Link
-                href={`/news/${news.category?.name === 'overseas' ? 'overseas' : 'domestic'}/${news.slug}`}
+                href={`/news/${news.category?.name === 'industry' ? 'industry' : 'company'}/${news.slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
