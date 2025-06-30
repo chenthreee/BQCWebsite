@@ -9,6 +9,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher"
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, MessageCircle, ArrowUp } from "lucide-react"
+import { NewsSection } from "@/components/NewsSection"
 
 // 翻译字典
 const translations: Record<string, Record<string, string>> = {
@@ -71,6 +72,10 @@ const translations: Record<string, Record<string, string>> = {
   "footer.contact.rd": { "zh-Hans": "研发中心", "en": "R&D Center" },
   "footer.contact.factorycn": { "zh-Hans": "深圳工厂", "en": "Shenzhen Factory" },
   "footer.contact.factorymy": { "zh-Hans": "马来西亚工厂", "en": "Malaysia Factory" },
+  // 新闻中心板块
+  "news.center.title": { "zh-Hans": "新闻中心", "en": "News Center" },
+  "news.center.subtitle": { "zh-Hans": "了解最新动态", "en": "Stay Updated" },
+  "news.center.description": { "zh-Hans": "获取百千成电子最新资讯、行业动态和技术分享", "en": "Get the latest news, industry trends and technical insights from BQC Electronics" },
 }
 
 export default function HomePage({ params }: { params: { locale: string } }) {
@@ -96,8 +101,13 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         {/* 服务中心 - 包含OEM代工和ODM研发 */}
         <ServicesSection />
         
+        {/* 新闻中心 */}
+        <NewsSection locale={locale} t={t} />
+        
         {/* 关于我们 */}
         <AboutSection />
+
+        
       </main>
 
       {/* 侧边栏联系方式 */}
@@ -128,117 +138,42 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       {/* 页脚 */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+            {/* 公司信息 */}
+            <div className="lg:col-span-2">
               <Link href={`/${locale}`} className="inline-block mb-6">
-                <Image
-                  src="/placeholder.svg?height=50&width=50"
-                  alt={t("company.name")}
-                  width={50}
-                  height={50}
-                  className="h-10 w-auto"
-                />
+                <Image src="/BQCLogo.png" alt={t("company.name")}
+                  width={50} height={50} className="h-10 w-auto" />
               </Link>
               <p className="text-gray-400 mb-4">{t("company.description")}</p>
             </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/products/bms`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.bms")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.ems")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/pcs`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.pcs")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/robot`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.robot")}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
+            {/* 关于我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/about/introduction`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.intro")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/values`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.values")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/history`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.history")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/management`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.management")}
-                  </Link>
-                </li>
+                <li><Link href={`/${locale}/about/introduction`} className="text-gray-400 hover:text-white">{t("footer.about.intro")}</Link></li>
+                <li><Link href={`/${locale}/about/core-values`} className="text-gray-400 hover:text-white">{t("footer.about.values")}</Link></li>
+                <li><Link href={`/${locale}/about/development-history`} className="text-gray-400 hover:text-white">{t("footer.about.history")}</Link></li>
+                <li><Link href={`/${locale}/about/management-system`} className="text-gray-400 hover:text-white">{t("footer.about.management")}</Link></li>
               </ul>
             </div>
-
+            {/* 联系我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.contact")}</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/contact/rd`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.rd")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/contact/factory-cn`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.factorycn")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/contact/factory-my`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.factorymy")}
-                  </Link>
-                </li>
+                <li><Link href={`/${locale}/contact/rd`} className="text-gray-400 hover:text-white">{t("footer.contact.rd")}</Link></li>
+                <li><Link href={`/${locale}/contact/factorycn`} className="text-gray-400 hover:text-white">{t("footer.contact.factorycn")}</Link></li>
+                <li><Link href={`/${locale}/contact/factorymy`} className="text-gray-400 hover:text-white">{t("footer.contact.factorymy")}</Link></li>
               </ul>
             </div>
           </div>
-
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <div className="flex items-center mb-2">
-                <span className="text-gray-400 text-sm">
-                  {locale === "en" ? "Global / English" : "中国大陆 / 简体中文"}
-                </span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                {t("footer.copyright")}
-              </p>
-            </div>
-
-            <div className="flex space-x-4">
-              <Link href={`/${locale}/legal`} className="text-gray-400 hover:text-white text-sm">
-                {t("footer.legal")}
-              </Link>
-              <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-white text-sm">
-                {t("footer.privacy")}
-              </Link>
-            </div>
+          <div className="mt-8 text-center">
+            <p className="text-gray-400">{t("footer.copyright")}</p>
+            <Link href={`/${locale}/legal`} className="text-gray-400 hover:text-white ml-4">{t("footer.legal")}</Link>
+            <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-white ml-4">{t("footer.privacy")}</Link>
           </div>
         </div>
       </footer>
     </div>
   )
-} 
+}
