@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, Menu, X, Globe } from "lucide-react"
-import { useLanguage } from "./language-context"
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -15,12 +14,130 @@ export function MainNavigation() {
   const [scrolled, setScrolled] = useState(false)
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const subDropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const { language, setLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
   const pathname = usePathname();
   const firstSegment = pathname.split("/")[1];
   const currentLocale = (firstSegment === "en" || firstSegment === "zh-Hans") ? firstSegment : "zh-Hans";
   const isNewsSection = pathname.startsWith("/news") || pathname.startsWith("/zh-Hans/news") || pathname.startsWith("/en/news");
+
+  // 翻译函数
+  const t = (key: string): string => {
+    const translations: Record<string, Record<string, string>> = {
+      "关于我们": {
+        "zh-Hans": "关于我们",
+        "en": "About Us",
+      },
+      "公司介绍": {
+        "zh-Hans": "公司介绍",
+        "en": "Company Introduction",
+      },
+      "核心价值观": {
+        "zh-Hans": "核心价值观",
+        "en": "Core Values",
+      },
+      "发展历程": {
+        "zh-Hans": "发展历程",
+        "en": "Development History",
+      },
+      "管理系统": {
+        "zh-Hans": "管理系统",
+        "en": "Management System",
+      },
+      "制造能力": {
+        "zh-Hans": "制造能力",
+        "en": "Manufacturing Capabilities",
+      },
+      "资质证书": {
+        "zh-Hans": "资质证书",
+        "en": "Certificates",
+      },
+      "产品中心": {
+        "zh-Hans": "产品中心",
+        "en": "Products",
+      },
+      "储能BMS/储能PCS": {
+        "zh-Hans": "储能BMS/储能PCS",
+        "en": "Energy Storage BMS/PCS",
+      },
+      "电力大储BMS": {
+        "zh-Hans": "电力大储BMS",
+        "en": "Power Storage BMS",
+      },
+      "大型船舶储能BMS": {
+        "zh-Hans": "大型船舶储能BMS",
+        "en": "Large Ship Energy Storage BMS",
+      },
+      "小型船舶储能BMS": {
+        "zh-Hans": "小型船舶储能BMS",
+        "en": "Small Ship Energy Storage BMS",
+      },
+      "通讯基站储能BMS": {
+        "zh-Hans": "通讯基站储能BMS",
+        "en": "Communication Base Station BMS",
+      },
+      "储能EMS（总控）": {
+        "zh-Hans": "储能EMS（总控）",
+        "en": "Energy Storage EMS (Master Control)",
+      },
+      "储能PCS": {
+        "zh-Hans": "储能PCS",
+        "en": "Energy Storage PCS",
+      },
+      "智能机器人系统": {
+        "zh-Hans": "智能机器人系统",
+        "en": "Intelligent Robot Systems",
+      },
+      "工业控制板": {
+        "zh-Hans": "工业控制板",
+        "en": "Industrial Control Boards",
+      },
+      "医疗设备": {
+        "zh-Hans": "医疗设备",
+        "en": "Medical Devices",
+      },
+      "服务": {
+        "zh-Hans": "服务",
+        "en": "Services",
+      },
+      "ODM研发服务（围绕储能）": {
+        "zh-Hans": "ODM研发服务（围绕储能）",
+        "en": "ODM Development Services (Energy Storage)",
+      },
+      "OEM代工服务": {
+        "zh-Hans": "OEM代工服务",
+        "en": "OEM Manufacturing Services",
+      },
+      "新闻中心": {
+        "zh-Hans": "新闻中心",
+        "en": "News Center",
+      },
+      "国内新闻": {
+        "zh-Hans": "国内新闻",
+        "en": "Domestic News",
+      },
+      "行业新闻": {
+        "zh-Hans": "行业新闻",
+        "en": "Industry News",
+      },
+      "联系我们": {
+        "zh-Hans": "联系我们",
+        "en": "Contact Us",
+      },
+      "研发中心": {
+        "zh-Hans": "研发中心",
+        "en": "R&D Center",
+      },
+      "深圳工厂": {
+        "zh-Hans": "深圳工厂",
+        "en": "Shenzhen Factory",
+      },
+      "马来西亚工厂": {
+        "zh-Hans": "马来西亚工厂",
+        "en": "Malaysia Factory",
+      },
+    }
+    return translations[key]?.[currentLocale] || key
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -77,47 +194,45 @@ export function MainNavigation() {
     {
       key: "about",
       label: mounted ? t("关于我们") : "关于我们",
-      href: "/about",
+      href: `/${currentLocale}/about`,
       children: [
-        { label: mounted ? t("公司介绍") : "公司介绍", href: "/about/introduction" },
-        { label: mounted ? t("核心价值观") : "核心价值观", href: "/about/core-values" },
-        //{ label: mounted ? t("战略定位") : "战略定位", href: "/about/strategic-positioning" },
-        { label: mounted ? t("发展历程") : "发展历程", href: "/about/development-history" },
-        { label: mounted ? t("管理系统") : "管理系统", href: "/about/management-system" },
-        { label: mounted ? t("制造能力") : "制造能力", href: "/about/manufacturing-capabilities" },
-        { label: mounted ? t("资质证书") : "资质证书", href: "/about/certificates" },
+        { label: mounted ? t("公司介绍") : "公司介绍", href: `/${currentLocale}/about/introduction` },
+        { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values` },
+        { label: mounted ? t("发展历程") : "发展历程", href: `/${currentLocale}/about/development-history` },
+        { label: mounted ? t("管理系统") : "管理系统", href: `/${currentLocale}/about/management-system` },
+        { label: mounted ? t("制造能力") : "制造能力", href: `/${currentLocale}/about/manufacturing-capabilities` },
+        { label: mounted ? t("资质证书") : "资质证书", href: `/${currentLocale}/about/certificates` },
       ],
     },
     {
       key: "products",
       label: mounted ? t("产品中心") : "产品中心",
-      href: "/products",
+      href: `/${currentLocale}/products`,
       children: [
         {
           label: mounted ? t("储能BMS/储能PCS") : "储能BMS/储能PCS",
-          href: "/products/energy-storage-bms",
+          href: `/${currentLocale}/products/energy-storage-bms`,
           children: [
-            { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: "/products/energy-storage-bms/power-storage" },
-            { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: "/products/energy-storage-bms/large-ship" },
-            { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: "/products/energy-storage-bms/small-ship" },
-            { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: "/products/energy-storage-bms/communication-base" },
-            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: "/products/energy-storage-ems" },
-            { label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
+            { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: `/${currentLocale}/products/energy-storage-bms/power-storage` },
+            { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/large-ship` },
+            { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/small-ship` },
+            { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: `/${currentLocale}/products/energy-storage-bms/communication-base` },
+            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: `/${currentLocale}/products/energy-storage-ems` },
+            { label: mounted ? t("储能PCS") : "储能PCS", href: `/${currentLocale}/products/energy-storage-pcs` },
           ],
         },
-        //{ label: mounted ? t("储能PCS") : "储能PCS", href: "/products/energy-storage-pcs" },
-        { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: "/products/intelligent-robot-systems" },
-        { label: mounted ? t("工业控制板") : "工业控制板", href: "/products/industrial-control-boards" },
-        { label: mounted ? t("医疗设备") : "医疗设备", href: "/products/medical-devices" },
+        { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: `/${currentLocale}/products/intelligent-robot-systems` },
+        { label: mounted ? t("工业控制板") : "工业控制板", href: `/${currentLocale}/products/industrial-control-boards` },
+        { label: mounted ? t("医疗设备") : "医疗设备", href: `/${currentLocale}/products/medical-devices` },
       ],
     },
     {
       key: "services",
       label: mounted ? t("服务") : "服务",
-      href: "/services",
+      href: `/${currentLocale}/services`,
       children: [
-        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: "/services/odm" },
-        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: "/services/oem" },
+        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: `/${currentLocale}/services/odm` },
+        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: `/${currentLocale}/services/oem` },
       ],
     },
     {
@@ -132,11 +247,11 @@ export function MainNavigation() {
     {
       key: "contact",
       label: mounted ? t("联系我们") : "联系我们",
-      href: "/contact",
+      href: `/${currentLocale}/contact`,
       children: [
-        { label: mounted ? t("研发中心") : "研发中心", href: "/contact#rd-center" },
-        { label: mounted ? t("深圳工厂") : "深圳工厂", href: "/contact#shenzhen-factory" },
-        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: "/contact#malaysia-factory" },
+        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact#rd-center` },
+        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact#shenzhen-factory` },
+        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact#malaysia-factory` },
       ],
     },
   ]
@@ -153,9 +268,11 @@ export function MainNavigation() {
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href={`/${currentLocale}`} className="flex items-center">
               <Image src="/BQCLogo.png" alt="百千成电子" width={40} height={60} className="mr-2" />
-              <span className="text-xl font-bold text-white">百千成电子</span>
+              <span className="text-xl font-bold text-white">
+                {currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}
+              </span>
             </Link>
           </div>
 
@@ -222,17 +339,7 @@ export function MainNavigation() {
 
           {/* Language Switcher - 放在最右边 */}
           <div className="hidden md:flex flex-shrink-0">
-            {isNewsSection ? (
-              <LanguageSwitcher />
-            ) : (
-              <button
-                onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
-                className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
-              >
-                <Globe className="mr-1 h-4 w-4" />
-                {language === "zh" ? "EN" : "中文"}
-              </button>
-            )}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
@@ -307,13 +414,9 @@ export function MainNavigation() {
             ))}
 
             {/* Mobile Language Switcher */}
-            <button
-              onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
-              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex items-center"
-            >
-              <Globe className="mr-1 h-4 w-4" />
-              {language === "zh" ? "English" : "中文"}
-            </button>
+            <div className="px-3 py-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}

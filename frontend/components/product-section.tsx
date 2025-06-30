@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useLanguage } from "./language-context"
+import { usePathname } from "next/navigation"
 
 interface Product {
   id: number
@@ -22,95 +22,120 @@ interface ProductCategory {
 }
 
 export function ProductSection() {
-  const { t } = useLanguage()
+  const pathname = usePathname()
+  const locale = pathname.split("/")[1] === "en" ? "en" : "zh-Hans"
+  
   const [activeCategory, setActiveCategory] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const categorySliderRef = useRef<HTMLDivElement>(null)
+
+  // 翻译函数
+  const t = (key: string): string => {
+    const translations: Record<string, Record<string, string>> = {
+      "section.title": {
+        "zh-Hans": "产品中心",
+        "en": "Products",
+      },
+      "section.subtitle": {
+        "zh-Hans": "智能储能系统解决方案",
+        "en": "Intelligent Energy Storage System Solutions",
+      },
+      "button.viewMore": {
+        "zh-Hans": "查看更多",
+        "en": "View More",
+      },
+    }
+    return translations[key]?.[locale] || key
+  }
 
   // 产品分类数据
   const categories: ProductCategory[] = [
     {
       id: 1,
-      title: "电力储能BMS",
-      description: "专为大型电力储能系统设计的高可靠性BMS解决方案，支持多串并联电池组管理，具备高精度SOC估算和均衡功能",
+      title: locale === "en" ? "Power Storage BMS" : "电力储能BMS",
+      description: locale === "en" 
+        ? "High-reliability BMS solution designed for large-scale power storage systems, supporting multi-string parallel battery pack management with high-precision SOC estimation and balancing functions"
+        : "专为大型电力储能系统设计的高可靠性BMS解决方案，支持多串并联电池组管理，具备高精度SOC估算和均衡功能",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
         {
           id: 101,
           title: "BMS-P100",
-          description: "100kWh电力储能电池管理系统",
+          description: locale === "en" ? "100kWh Power Storage Battery Management System" : "100kWh电力储能电池管理系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 102,
           title: "BMS-P500",
-          description: "500kWh大型储能电池管理系统",
+          description: locale === "en" ? "500kWh Large-scale Energy Storage Battery Management System" : "500kWh大型储能电池管理系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 103,
           title: "BMS-P1000",
-          description: "1MWh集装箱式储能电池管理系统",
+          description: locale === "en" ? "1MWh Container Energy Storage Battery Management System" : "1MWh集装箱式储能电池管理系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 104,
           title: "BMS-PH100",
-          description: "家用储能电池管理系统",
+          description: locale === "en" ? "Home Energy Storage Battery Management System" : "家用储能电池管理系统",
           image: "/placeholder.svg?height=400&width=400",
         },
       ],
     },
     {
       id: 2,
-      title: "船舶储能BMS",
-      description:
-        "针对海洋环境特殊要求设计的船舶储能BMS系统，具备高防护等级、抗震动、抗盐雾腐蚀等特性，满足各类船舶电力系统需求",
+      title: locale === "en" ? "Ship Energy Storage BMS" : "船舶储能BMS",
+      description: locale === "en"
+        ? "Ship energy storage BMS system designed for special requirements of marine environment, featuring high protection level, vibration resistance, salt spray corrosion resistance and other characteristics to meet various ship power system requirements"
+        : "针对海洋环境特殊要求设计的船舶储能BMS系统，具备高防护等级、抗震动、抗盐雾腐蚀等特性，满足各类船舶电力系统需求",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
         {
           id: 201,
           title: "BMS-M500",
-          description: "大型船舶500kWh储能系统",
+          description: locale === "en" ? "Large Ship 500kWh Energy Storage System" : "大型船舶500kWh储能系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 202,
           title: "BMS-M200",
-          description: "中型船舶200kWh储能系统",
+          description: locale === "en" ? "Medium Ship 200kWh Energy Storage System" : "中型船舶200kWh储能系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 203,
           title: "BMS-M50",
-          description: "小型船舶50kWh储能系统",
+          description: locale === "en" ? "Small Ship 50kWh Energy Storage System" : "小型船舶50kWh储能系统",
           image: "/placeholder.svg?height=400&width=400",
         },
       ],
     },
     {
       id: 3,
-      title: "通讯基站BMS",
-      description:
-        "为通讯基站备电系统设计的高可靠性BMS，具备远程监控、故障预警和智能维护功能，确保通讯系统持续稳定运行",
+      title: locale === "en" ? "Communication Base Station BMS" : "通讯基站BMS",
+      description: locale === "en"
+        ? "High-reliability BMS designed for communication base station backup power systems, featuring remote monitoring, fault warning and intelligent maintenance functions to ensure continuous and stable operation of communication systems"
+        : "为通讯基站备电系统设计的高可靠性BMS，具备远程监控、故障预警和智能维护功能，确保通讯系统持续稳定运行",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
         {
           id: 301,
           title: "BMS-T48",
-          description: "48V通讯基站备电系统",
+          description: locale === "en" ? "48V Communication Base Station Backup Power System" : "48V通讯基站备电系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 302,
           title: "BMS-T96",
-          description: "96V高压通讯基站备电系统",
+          description: locale === "en" ? "96V High-voltage Communication Base Station Backup Power System" : "96V高压通讯基站备电系统",
           image: "/placeholder.svg?height=400&width=400",
         },
         {
           id: 303,
           title: "BMS-T48-R",
-          description: "户外型防雨通讯基站备电系统",
+          description: locale === "en" ? "Outdoor Rainproof Communication Base Station Backup Power System" : "户外型防雨通讯基站备电系统",
           image: "/placeholder.svg?height=400&width=400",
         },
       ],
@@ -203,7 +228,7 @@ export function ProductSection() {
   return (
     <section id="product-section" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">产品中心</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t("section.title")}</h2>
 
         {/* 分类选项卡 */}
         <div className="relative mb-8">
@@ -281,7 +306,7 @@ export function ProductSection() {
                       </div>
                       <div className="px-4 pb-4">
                         <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
-                          了解更多
+                          {t("button.viewMore")}
                           <ChevronRight className="ml-1 h-4 w-4" />
                         </a>
                       </div>

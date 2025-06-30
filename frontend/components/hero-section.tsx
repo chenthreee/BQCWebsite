@@ -3,46 +3,78 @@
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { useLanguage } from "./language-context"
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { usePathname } from "next/navigation"
 
 export function HeroSection() {
-  const { t } = useLanguage()
+  const pathname = usePathname()
+  const locale = pathname.split("/")[1] === "en" ? "en" : "zh-Hans"
+  
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null)
+
+  // 翻译函数
+  const t = (key: string): string => {
+    const translations: Record<string, Record<string, string>> = {
+      "company.name": {
+        "zh-Hans": "百千成电子",
+        "en": "BAIQIANCHENG Electronics",
+      },
+      "company.slogan": {
+        "zh-Hans": "智能储能系统解决方案专家",
+        "en": "Expert in Intelligent Energy Storage Solutions",
+      },
+      "company.description": {
+        "zh-Hans": "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
+        "en": "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
+      },
+      "button.learnMore": {
+        "zh-Hans": "了解更多",
+        "en": "Learn More",
+      },
+      "scroll.down": {
+        "zh-Hans": "向下滚动",
+        "en": "Scroll Down",
+      },
+    }
+    return translations[key]?.[locale] || key
+  }
 
   // 轮播图数据
   const slides = [
     {
       id: 1,
-      title: "OEM代工服务",
-      subtitle: "一站式电子制造解决方案",
-      description: "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
+      title: locale === "en" ? "OEM Manufacturing Services" : "OEM代工服务",
+      subtitle: locale === "en" ? "One-stop Electronic Manufacturing Solutions" : "一站式电子制造解决方案",
+      description: locale === "en" 
+        ? "Providing full-process OEM manufacturing services from PCB design, SMT assembly to complete unit assembly"
+        : "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
       buttonText: t("button.learnMore"),
-      buttonLink: "/services",
+      buttonLink: `/${locale}/services`,
       image: "/images/image_OEM.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
     {
       id: 2,
-      title: "储能BMS系统专家",
-      subtitle: "安全可靠，智能高效",
-      description: "专注于电力储能、船舶储能、通讯基站等领域的BMS系统研发与生产",
+      title: locale === "en" ? "Energy Storage BMS System Expert" : "储能BMS系统专家",
+      subtitle: locale === "en" ? "Safe, Reliable, Smart and Efficient" : "安全可靠，智能高效",
+      description: locale === "en"
+        ? "Focusing on BMS system development and production for power storage, ship storage, communication base stations and other fields"
+        : "专注于电力储能、船舶储能、通讯基站等领域的BMS系统研发与生产",
       buttonText: t("button.learnMore"),
-      buttonLink: "/products",
+      buttonLink: `/${locale}/products`,
       image: "/images/image_BMS.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
-    
     {
       id: 3,
       title: t("company.name"),
       subtitle: t("company.slogan"),
       description: t("company.description"),
       buttonText: t("button.learnMore"),
-      buttonLink: "/about",
+      buttonLink: `/${locale}/about`,
       image: "/images/hero-circuit-board.png",
       mobileImage: "/images/hero-circuit-board.png",
     },

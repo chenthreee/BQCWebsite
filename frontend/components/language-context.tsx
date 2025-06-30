@@ -53,6 +53,22 @@ const translations: Record<string, Record<Language, string>> = {
     zh: "公司介绍",
     en: "Company Introduction",
   },
+  "about.introduction.title": {
+    zh: "公司介绍",
+    en: "Company Introduction"
+  },
+  "about.introduction.subtitle": {
+    zh: "了解百千成电子的发展历程与企业文化",
+    en: "Learn about Baiqiancheng Electronics' development history and corporate culture"
+  },
+  "about.breadcrumbs.main": {
+    zh: "关于我们",
+    en: "About Us"
+  },
+  "about.breadcrumbs.intro": {
+    zh: "公司介绍",
+    en: "Company Introduction"
+  },
   "about.coreValues": {
     zh: "核心价值观",
     en: "Core Values",
