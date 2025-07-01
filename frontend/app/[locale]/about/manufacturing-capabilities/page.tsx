@@ -16,12 +16,11 @@ export default function ManufacturingCapabilitiesPage() {
     setMounted(true)
   }, [])
 
-  // 根据 URL 自动切换语言
   useEffect(() => {
     if (pathname.startsWith("/en")) setLanguage("en")
     else setLanguage("zh")
   }, [pathname, setLanguage])
-
+  
   if (!mounted) {
     return null
   }
@@ -32,6 +31,7 @@ export default function ManufacturingCapabilitiesPage() {
       subtitle: "百千成电子的生产设备与制造工艺",
       workshops: {
         title: "生产车间",
+        desc: "自动化生产线，保障高效与高品质。",
         items: [
           {
             count: "22",
@@ -57,6 +57,7 @@ export default function ManufacturingCapabilitiesPage() {
       },
       equipment: {
         title: "主要设备",
+        desc: "先进设备提升生产效率与产品一致性。",
         items: [
           {
             title: "松下&雅马哈贴片机30台",
@@ -94,10 +95,12 @@ export default function ManufacturingCapabilitiesPage() {
       },
       mountingRange: {
         title: "有效安装组件封装范围",
+        desc: "支持多种封装类型，满足不同产品需求。",
         description: "01005 to 2512; QFP, QFN, CSP, TSOP, SOJ, BGA, uBGA, etc."
       },
       parameters: {
         title: "装片运载能力参数",
+        desc: "高精度与高速度兼备，适应多样化生产。",
         pcb: {
           title: "PCB参数",
           items: [
@@ -124,6 +127,7 @@ export default function ManufacturingCapabilitiesPage() {
       subtitle: "BQC Electronics Production Equipment and Manufacturing Process",
       workshops: {
         title: "Production Workshops",
+        desc: "Automated production lines ensure efficiency and quality.",
         items: [
           {
             count: "22",
@@ -149,6 +153,7 @@ export default function ManufacturingCapabilitiesPage() {
       },
       equipment: {
         title: "Major Equipment",
+        desc: "Advanced equipment improves efficiency and consistency.",
         items: [
           {
             title: "Panasonic&YAMAHA Chip Mounter 30 sets",
@@ -186,10 +191,12 @@ export default function ManufacturingCapabilitiesPage() {
       },
       mountingRange: {
         title: "Effective Mounting Component Package Range",
+        desc: "Supports various package types to meet diverse product needs.",
         description: "01005 to 2512; QFP, QFN, CSP, TSOP, SOJ, BGA, uBGA, etc."
       },
       parameters: {
         title: "Mounting Capacity Parameters",
+        desc: "Combines high precision and speed for versatile production.",
         pcb: {
           title: "PCB Parameters",
           items: [
@@ -213,7 +220,7 @@ export default function ManufacturingCapabilitiesPage() {
     }
   }
 
-  const currentContent = language === "zh" ? content.zh : content.en
+  const currentContent = language === "en" ? content.en : content.zh
 
   const breadcrumbs = [
     { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
@@ -231,6 +238,7 @@ export default function ManufacturingCapabilitiesPage() {
         {/* 生产车间 */}
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.workshops.title}</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">{currentContent.workshops.desc}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {currentContent.workshops.items.map((workshop, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
@@ -245,6 +253,7 @@ export default function ManufacturingCapabilitiesPage() {
         {/* 主要设备 */}
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.equipment.title}</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">{currentContent.equipment.desc}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {currentContent.equipment.items.map((equipment, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -258,12 +267,14 @@ export default function ManufacturingCapabilitiesPage() {
         {/* 有效安装组件封装范围 */}
         <div className="bg-gray-50 p-8 rounded-lg">
           <h2 className="text-3xl font-bold mb-6 text-center">{currentContent.mountingRange.title}</h2>
+          <p className="text-center text-gray-500 text-sm mb-4">{currentContent.mountingRange.desc}</p>
           <p className="text-lg text-center text-gray-700">{currentContent.mountingRange.description}</p>
         </div>
 
         {/* 装片运载能力参数 */}
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">{currentContent.parameters.desc}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">{currentContent.parameters.pcb.title}</h3>
