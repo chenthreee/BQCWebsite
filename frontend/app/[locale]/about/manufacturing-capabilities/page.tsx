@@ -61,35 +61,43 @@ export default function ManufacturingCapabilitiesPage() {
         items: [
           {
             title: "松下&雅马哈贴片机30台",
-            description: "配备高精度贴片机，可实现高速、高精度的元器件贴装。"
+            description: "配备高精度贴片机，可实现高速、高精度的元器件贴装。",
+            image: "/panasonic-yama-chip-mounter.jpg"
           },
           {
             title: "回流焊炉10台",
-            description: "采用先进的回流焊设备，确保焊接质量。"
+            description: "采用先进的回流焊设备，确保焊接质量。",
+            image: "/reflow-soldering-oven.jpg"
           },
           {
             title: "PCB自动上料机22台和自动印刷机22台",
-            description: "自动化设备提高生产效率和产品一致性。"
+            description: "自动化设备提高生产效率和产品一致性。",
+            image: "/pcb-auto-load-machine-and-auto-printing-machine.jpg"
           },
           {
             title: "波峰焊4台",
-            description: "用于通孔元器件的焊接，确保焊接质量。"
+            description: "用于通孔元器件的焊接，确保焊接质量。",
+            image: "/wave-soldering-oven.jpg"
           },
           {
             title: "AOI探测器36台",
-            description: "自动光学检测设备，用于检查焊接质量。"
+            description: "自动光学检测设备，用于检查焊接质量。",
+            image: "/aoi-detector.jpg"
           },
           {
             title: "X-RAY测试仪",
-            description: ""
+            description: "",
+            image: "/x-ray-test-machine.jpg"
           },
           {
             title: "SPI焊膏检测12套",
-            description: "用于检测锡膏印刷质量，确保焊接可靠性。"
+            description: "用于检测锡膏印刷质量，确保焊接可靠性。",
+            image: "/spi-solder-paste-inspection.jpg"
           },
           {
             title: "ICT机器",
-            description: ""
+            description: "",
+            image: "/ict-machine.jpg"
           }
         ]
       },
@@ -157,35 +165,43 @@ export default function ManufacturingCapabilitiesPage() {
         items: [
           {
             title: "Panasonic&YAMAHA Chip Mounter 30 sets",
-            description: "Equipped with high-precision mounting machines for high-speed, precise component placement."
+            description: "Equipped with high-precision mounting machines for high-speed, precise component placement.",
+            image: "/panasonic-yama-chip-mounter.jpg"
           },
           {
             title: "Reflow Soldering Oven 10 sets",
-            description: "Using advanced reflow soldering equipment to ensure soldering quality."
+            description: "Using advanced reflow soldering equipment to ensure soldering quality.",
+            image: "/reflow-soldering-oven.jpg"
           },
           {
             title: "PCB Auto Load machine 22 sets&Auto-Printing Machine 22 sets",
-            description: "Automated equipment improves production efficiency and product consistency."
+            description: "Automated equipment improves production efficiency and product consistency.",
+            image: "/pcb-auto-load-machine-and-auto-printing-machine.jpg"
           },
           {
             title: "Wave soldering oven 4 sets",
-            description: "Used for through-hole component soldering, ensuring soldering quality."
+            description: "Used for through-hole component soldering, ensuring soldering quality.",
+            image: "/wave-soldering-oven.jpg"
           },
           {
             title: "AOI Detector 36 sets",
-            description: "Automated optical inspection equipment for checking soldering quality."
+            description: "Automated optical inspection equipment for checking soldering quality.",
+            image: "/aoi-detector.jpg"
           },
           {
             title: "X-RAY test machine",
-            description: ""
+            description: "",
+            image: "/x-ray-test-machine.jpg"
           },
           {
             title: "SPI Solder Paste Inspection 12 sets",
-            description: "Used for inspecting solder paste printing quality to ensure soldering reliability."
+            description: "Used for inspecting solder paste printing quality to ensure soldering reliability.",
+            image: "/spi-solder-paste-inspection.jpg"
           },
           {
             title: "ICT machine",
-            description: ""
+            description: "",
+            image: "/ict-machine.jpg"
           }
         ]
       },
@@ -254,11 +270,20 @@ export default function ManufacturingCapabilitiesPage() {
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.equipment.title}</h2>
           <p className="text-center text-gray-500 text-sm mb-6">{currentContent.equipment.desc}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {currentContent.equipment.items.map((equipment, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold mb-3">{equipment.title}</h3>
-                {equipment.description && <p className="text-gray-600">{equipment.description}</p>}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {currentContent.equipment.items.map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="h-48 overflow-hidden mb-4">
+                  <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+              <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
           </div>
