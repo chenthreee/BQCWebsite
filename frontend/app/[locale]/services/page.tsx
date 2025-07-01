@@ -4,6 +4,7 @@ import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const content = {
   "zh-Hans": {
@@ -34,7 +35,13 @@ const content = {
       { title: "先进设备", desc: "配备先进的研发设备和生产线，确保产品设计与制造的高品质。", image: "/placeholder.svg?height=40&width=40", alt: "先进设备" },
       { title: "质量保证", desc: "严格的质量控制体系，从设计到生产的每一个环节都精益求精。", image: "/placeholder.svg?height=40&width=40", alt: "质量保证" },
       { title: "快速响应", desc: "高效的项目管理和快速响应机制，确保项目按时交付。", image: "/placeholder.svg?height=40&width=40", alt: "快速响应" },
-    ]
+    ],
+    contact: {
+      title: "联系我们",
+      description: "如果您有产品开发需求，欢迎联系我们的服务团队，我们将为您提供专业的技术咨询和解决方案。",
+      buttonText: "联系我们讨论您的项目",
+      href: "/zh-Hans/contact"
+    }
   },
   en: {
     title: "Services",
@@ -64,7 +71,13 @@ const content = {
       { title: "Advanced Equipment", desc: "Equipped with advanced R&D equipment and production lines to ensure high-quality design and manufacturing.", image: "/placeholder.svg?height=40&width=40", alt: "Advanced Equipment" },
       { title: "Quality Assurance", desc: "Strict quality control system, excellence in every step from design to production.", image: "/placeholder.svg?height=40&width=40", alt: "Quality Assurance" },
       { title: "Quick Response", desc: "Efficient project management and quick response mechanism to ensure on-time delivery.", image: "/placeholder.svg?height=40&width=40", alt: "Quick Response" },
-    ]
+    ],
+    contact: {
+      title: "Contact Us",
+      description: "If you have product development needs, please contact our service team. We will provide you with professional technical consultation and solutions.",
+      buttonText: "Contact Us to Discuss Your Project",
+      href: "/en/contact"
+    }
   }
 }
 
@@ -128,6 +141,18 @@ export default function ServicesPage({ params }: { params: { locale: string } })
             </div>
           ))}
         </div>
+      </div>
+      <div className="bg-gray-100 p-8 rounded-lg text-center">
+        <h2 className="text-3xl font-bold mb-6">{currentContent.contact.title}</h2>
+        <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          {currentContent.contact.description}
+        </p>
+        <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Link href={currentContent.contact.href}>
+            {currentContent.contact.buttonText}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
       </div>
     </PageLayout>
   )

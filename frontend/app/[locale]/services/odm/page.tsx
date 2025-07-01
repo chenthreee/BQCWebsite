@@ -5,8 +5,11 @@ import Image from "next/image"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import { useParams } from "next/navigation"
+import Link from "next/link"
 
-export default function OdmServicePage({ params }: { params: { locale: string } }) {
+export default function OdmServicePage() {
+  const params = useParams()
   const locale = params.locale === "en" ? "en" : "zh-Hans"
   const [mounted, setMounted] = useState(false)
 
@@ -99,7 +102,8 @@ export default function OdmServicePage({ params }: { params: { locale: string } 
       contact: {
         title: "联系我们",
         description: "如果您有产品开发需求，欢迎联系我们的ODM服务团队，我们将为您提供专业的技术咨询和解决方案。",
-        buttonText: "联系我们讨论您的项目"
+        buttonText: "联系我们讨论您的项目",
+        href: "/zh-Hans/contact"
       }
     },
     en: {
@@ -182,7 +186,8 @@ export default function OdmServicePage({ params }: { params: { locale: string } 
       contact: {
         title: "Contact Us",
         description: "If you have product development needs, please contact our ODM service team. We will provide you with professional technical consultation and solutions.",
-        buttonText: "Contact Us to Discuss Your Project"
+        buttonText: "Contact Us to Discuss Your Project",
+        href: "/en/contact"
       }
     }
   }
@@ -334,9 +339,11 @@ export default function OdmServicePage({ params }: { params: { locale: string } 
         <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
           {currentContent.contact.description}
         </p>
-        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-          {currentContent.contact.buttonText}
-          <ArrowRight className="ml-2 h-5 w-5" />
+        <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Link href={currentContent.contact.href}>
+            {currentContent.contact.buttonText}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </Button>
       </div>
     </PageLayout>

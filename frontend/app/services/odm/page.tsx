@@ -1,13 +1,17 @@
 "use client"
 
-import  PageLayout  from "@/components/page-layout"
+import { useParams } from "next/navigation"
+import PageLayout  from "@/components/page-layout"
 import Image from "next/image"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-context"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function OdmServicePage() {
+  const params = useParams()
+  const locale = params.locale === "en" ? "en" : "zh"
   const { language } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
@@ -100,7 +104,8 @@ export default function OdmServicePage() {
       contact: {
         title: "联系我们",
         description: "如果您有产品开发需求，欢迎联系我们的ODM服务团队，我们将为您提供专业的技术咨询和解决方案。",
-        buttonText: "联系我们讨论您的项目"
+        buttonText: "联系我们讨论您的项目",
+        href: "/contact"
       }
     },
     en: {
@@ -183,32 +188,35 @@ export default function OdmServicePage() {
       contact: {
         title: "Contact Us",
         description: "If you have product development needs, please contact our ODM service team. We will provide you with professional technical consultation and solutions.",
-        buttonText: "Contact Us to Discuss Your Project"
+        buttonText: "Contact Us to Discuss Your Project",
+        href: "/en/contact"
       }
     }
   }
 
+  const currentContent = content[locale]
+
   return (
     <PageLayout
-      title={content[language].title}
-      subtitle={content[language].subtitle}
-      breadcrumbs={content[language].breadcrumbs}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
           <div>
             <h2 className="text-3xl font-bold mb-6">
-              {content[language].intro.title}
+              {currentContent.intro.title}
             </h2>
             <p className="text-lg text-gray-700 mb-4">
-              {content[language].intro.description}
+              {currentContent.intro.description}
             </p>
           </div>
           <div>
             <Image
               src="/placeholder.svg?height=600&width=800"
-              alt={content[language].intro.title}
+              alt={currentContent.intro.title}
               width={800}
               height={600}
               className="rounded-lg shadow-lg"
@@ -219,10 +227,10 @@ export default function OdmServicePage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {content[language].hardware.title}
+          {currentContent.hardware.title}
         </h2>
         <div className="space-y-12">
-          {content[language].hardware.sections.map((section, index) => (
+          {currentContent.hardware.sections.map((section, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">{section.title}</h3>
               <div className="flex justify-center">
@@ -241,13 +249,13 @@ export default function OdmServicePage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {content[language].software.title}
+          {currentContent.software.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">{content[language].software.steps.title}</h3>
+            <h3 className="text-xl font-bold mb-4">{currentContent.software.steps.title}</h3>
             <ul className="space-y-2">
-              {content[language].software.steps.items.map((item, index) => (
+              {currentContent.software.steps.items.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
                   <span>{item}</span>
@@ -256,9 +264,9 @@ export default function OdmServicePage() {
             </ul>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">{content[language].software.advantages.title}</h3>
+            <h3 className="text-xl font-bold mb-4">{currentContent.software.advantages.title}</h3>
             <ul className="space-y-2">
-              {content[language].software.advantages.items.map((item, index) => (
+              {currentContent.software.advantages.items.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
                   <span>{item}</span>
@@ -271,10 +279,10 @@ export default function OdmServicePage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {content[language].enclosure.title}
+          {currentContent.enclosure.title}
         </h2>
         <div className="space-y-12">
-          {content[language].enclosure.sections.map((section, index) => (
+          {currentContent.enclosure.sections.map((section, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">{section.title}</h3>
               <div className="flex justify-center">
@@ -293,16 +301,16 @@ export default function OdmServicePage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {content[language].automation.title}
+          {currentContent.automation.title}
         </h2>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <p className="text-lg text-gray-700 mb-6 text-center">
-            {content[language].automation.description}
+            {currentContent.automation.description}
           </p>
           <div className="flex justify-center">
             <Image
               src="/images/about/services/odm/automatic_programming_zh_en.png"
-              alt={content[language].automation.title}
+              alt={currentContent.automation.title}
               width={600}
               height={500}
               className="rounded-lg shadow-md"
@@ -313,13 +321,13 @@ export default function OdmServicePage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {content[language].dfm.title}
+          {currentContent.dfm.title}
         </h2>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex justify-center">
             <Image
-              src={content[language].dfm.image}
-              alt={content[language].dfm.title}
+              src={currentContent.dfm.image}
+              alt={currentContent.dfm.title}
               width={800}
               height={500}
               className="rounded-lg shadow-md"
@@ -329,13 +337,15 @@ export default function OdmServicePage() {
       </div>
 
       <div className="bg-gray-100 p-8 rounded-lg text-center">
-        <h2 className="text-3xl font-bold mb-6">{content[language].contact.title}</h2>
+        <h2 className="text-3xl font-bold mb-6">{currentContent.contact.title}</h2>
         <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-          {content[language].contact.description}
+          {currentContent.contact.description}
         </p>
-        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-          {content[language].contact.buttonText}
-          <ArrowRight className="ml-2 h-5 w-5" />
+        <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Link href={currentContent.contact.href}>
+            {currentContent.contact.buttonText}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </Button>
       </div>
     </PageLayout>

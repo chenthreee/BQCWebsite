@@ -258,9 +258,9 @@ export function MainNavigation() {
       label: mounted ? t("联系我们") : "联系我们",
       href: `/${currentLocale}/contact`,
       children: [
-        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact#rd-center` },
-        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact#shenzhen-factory` },
-        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact#malaysia-factory` },
+        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact` },
+        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact` },
+        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact` },
       ],
     },
   ]

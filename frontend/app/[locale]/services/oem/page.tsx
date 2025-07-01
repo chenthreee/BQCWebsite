@@ -2,9 +2,10 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle, ArrowRight} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function OemServicePage({ params }: { params: { locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans"
@@ -75,6 +76,12 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         title: "服务类型",
         oem: "OEM代工服务",
         jdsm: "JDSM代工"
+      },
+      contact: {
+        title: "联系我们",
+        description: "如果您有产品开发需求，欢迎联系我们的OEM服务团队，我们将为您提供专业的技术咨询和解决方案。",
+        buttonText: "联系我们讨论您的项目",
+        href: "/zh-Hans/contact"
       }
     },
     en: {
@@ -122,6 +129,12 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         title: "Service Types",
         oem: "OEM Services",
         jdsm: "JDSM Services"
+      },
+      contact: {
+        title: "Contact Us",
+        description: "If you have product development needs, please contact our OEM service team. We will provide you with professional technical consultation and solutions.",
+        buttonText: "Contact Us to Discuss Your Project",
+        href: "/en/contact"
       }
     }
   }
@@ -232,6 +245,20 @@ export default function OemServicePage({ params }: { params: { locale: string } 
           </>
         )}
       </div>
+    
+      <div className="bg-gray-100 p-8 rounded-lg text-center">
+        <h2 className="text-3xl font-bold mb-6">{currentContent.contact.title}</h2>
+        <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          {currentContent.contact.description}
+        </p>
+        <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Link href={currentContent.contact.href}>
+            {currentContent.contact.buttonText}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
+      </div>
+
     </PageLayout>
   )
 } 
