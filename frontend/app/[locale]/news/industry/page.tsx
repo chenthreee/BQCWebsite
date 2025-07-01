@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
+import { redirect } from "next/navigation";
 
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
@@ -35,9 +36,19 @@ async function getIndustryNews(locale: string) {
   return data.articles
 }
 
-export default async function IndustryNewsPage({ params }: { params: { locale: string } }) {
+export default async function IndustryNewsPage({ params, searchParams }: { params: { locale: string }, searchParams: { page?: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const articles = await getIndustryNews(locale);
+  const pageSize = 50;
+  const total = articles.length;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const page = Math.max(1, Math.min(totalPages, parseInt(searchParams?.page || "1", 10)));
+  const startIdx = (page - 1) * pageSize;
+  const endIdx = startIdx + pageSize;
+  const pageArticles = articles.slice(startIdx, endIdx);
+  if (page > totalPages) {
+    redirect(`/${locale}/news/industry?page=1`);
+  }
 
   return (
     <PageLayout
@@ -51,7 +62,7 @@ export default async function IndustryNewsPage({ params }: { params: { locale: s
     >
       <NewsCategoryTabs />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((item: any) => (
+        {pageArticles.map((item: any) => (
           <div key={item.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
               {item.cover?.url ? (
@@ -74,11 +85,38 @@ export default async function IndustryNewsPage({ params }: { params: { locale: s
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
-                <ArrowRight className="ml-1 h-4 w-4" />
+                <ArrowRight className="ml-1 h-5 w-5" />
               </Link>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center items-center gap-2 mt-12">
+        {page > 1 && (
+          <Link
+            href={`/${locale}/news/industry?page=${page - 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Previous" : "上一页"}
+          </Link>
+        )}
+        {Array.from({ length: totalPages }, (_, i) => (
+          <Link
+            key={i + 1}
+            href={`/${locale}/news/industry?page=${i + 1}`}
+            className={`px-3 py-2 rounded ${page === i + 1 ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+          >
+            {i + 1}
+          </Link>
+        ))}
+        {page < totalPages && (
+          <Link
+            href={`/${locale}/news/industry?page=${page + 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Next" : "下一页"}
+          </Link>
+        )}
       </div>
     </PageLayout>
   )

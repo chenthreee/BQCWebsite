@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, User } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 import { headers } from "next/headers";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { redirect } from "next/navigation";
 
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
@@ -34,10 +35,20 @@ async function getAllNews(locale: string) {
   return data.articles
 }
 
-export default async function NewsPage({ params }: { params: { locale: string } }) {
-    console.log('params.locale:', params.locale);
+export default async function NewsPage({ params, searchParams }: { params: { locale: string }, searchParams: { page?: string } }) {
+  console.log('params.locale:', params.locale);
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const allNews = await getAllNews(locale);
+  const pageSize = 50;
+  const total = allNews.length;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const page = Math.max(1, Math.min(totalPages, parseInt(searchParams?.page || "1", 10)));
+  const startIdx = (page - 1) * pageSize;
+  const endIdx = startIdx + pageSize;
+  const pageNews = allNews.slice(startIdx, endIdx);
+  if (page > totalPages) {
+    redirect(`/${locale}/news?page=1`);
+  }
 
   return (
     <PageLayout
@@ -50,14 +61,14 @@ export default async function NewsPage({ params }: { params: { locale: string } 
       <NewsCategoryTabs />
 
       {/* 置顶新闻 */}
-      {allNews.length > 0 && (
+      {page === 1 && pageNews.length > 0 && (
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="h-full">
-              {allNews[0].cover?.url ? (
+              {pageNews[0].cover?.url ? (
                 <Image
-                  src={STRAPI_URL + allNews[0].cover.url}
-                  alt={allNews[0].title}
+                  src={STRAPI_URL + pageNews[0].cover.url}
+                  alt={pageNews[0].title}
                   width={800}
                   height={600}
                   className="w-full h-full object-cover"
@@ -71,21 +82,21 @@ export default async function NewsPage({ params }: { params: { locale: string } 
             <div className="p-8 flex flex-col justify-center">
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium mr-3">
-                  {allNews[0].category?.name}
+                  {pageNews[0].category?.name}
                 </span>
                 <div className="flex items-center mr-4">
                   <Calendar className="h-4 w-4 mr-1" />
-                  <span>{allNews[0].publishedAt?.slice(0, 10)}</span>
+                  <span>{pageNews[0].publishedAt?.slice(0, 10)}</span>
                 </div>
                 <div className="flex items-center">
                   <User className="h-4 w-4 mr-1" />
-                  <span>{allNews[0].author?.name}</span>
+                  <span>{pageNews[0].author?.name}</span>
                 </div>
               </div>
-              <h2 className="text-2xl font-bold mb-4">{allNews[0].title}</h2>
-              <p className="text-gray-700 mb-6">{allNews[0].description}</p>
+              <h2 className="text-2xl font-bold mb-4">{pageNews[0].title}</h2>
+              <p className="text-gray-700 mb-6">{pageNews[0].description}</p>
               <Link
-                href={`/${locale}/news/${allNews[0].category?.name === 'industry' ? 'industry' : 'company'}/${allNews[0].slug}`}
+                href={`/${locale}/news/${pageNews[0].category?.name === 'industry' ? 'industry' : 'company'}/${pageNews[0].slug}`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
@@ -98,7 +109,7 @@ export default async function NewsPage({ params }: { params: { locale: string } 
 
       {/* 新闻列表 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {allNews.slice(1).map((news: any) => (
+        {pageNews.slice(page === 1 ? 1 : 0).map((news: any) => (
           <div key={news.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="h-48 overflow-hidden">
               {news.cover?.url ? (
@@ -137,6 +148,36 @@ export default async function NewsPage({ params }: { params: { locale: string } 
             </div>
           </div>
         ))}
+      </div>
+
+      {/* 分页器 */}
+      <div className="flex justify-center items-center gap-2 mt-12">
+        {page > 1 && (
+          <Link
+            href={`/${locale}/news?page=${page - 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Previous" : "上一页"}
+          </Link>
+        )}
+        {/* 页码显示 */}
+        {Array.from({ length: totalPages }, (_, i) => (
+          <Link
+            key={i + 1}
+            href={`/${locale}/news?page=${i + 1}`}
+            className={`px-3 py-2 rounded ${page === i + 1 ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+          >
+            {i + 1}
+          </Link>
+        ))}
+        {page < totalPages && (
+          <Link
+            href={`/${locale}/news?page=${page + 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Next" : "下一页"}
+          </Link>
+        )}
       </div>
     </PageLayout>
   )

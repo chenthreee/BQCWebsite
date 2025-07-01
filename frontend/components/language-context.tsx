@@ -272,6 +272,11 @@ const translations: Record<string, Record<Language, string>> = {
   },
 
   // News submenu
+  "news.all":{
+    zh:"全部新闻",
+    "zh-Hans":"全部新闻",
+    en: "All News",
+  },
   "news.company": {
     zh: "公司新闻",
     "zh-Hans": "公司新闻",

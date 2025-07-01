@@ -139,6 +139,18 @@ export function MainNavigation() {
         "zh-Hans": "首页",
         "en": "Home",
       },
+      "news.all": {
+        "zh-Hans": "全部新闻",
+        "en": "All News"
+      },
+      "news.company": {
+        "zh-Hans": "公司新闻",
+        "en": "Company News"
+      },
+      "news.industry": {
+        "zh-Hans": "行业资讯",
+        "en": "Industry Information"
+      },
     }
     return translations[key]?.[currentLocale] || key
   }

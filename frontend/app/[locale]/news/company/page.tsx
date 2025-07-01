@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
+import { redirect } from "next/navigation";
 
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
@@ -35,9 +36,19 @@ async function getCompanyNews(locale: string) {
   return data.articles
 }
 
-export default async function CompanyNewsPage({ params }: { params: { locale: string } }) {
+export default async function CompanyNewsPage({ params, searchParams }: { params: { locale: string }, searchParams: { page?: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const articles = await getCompanyNews(locale);
+  const pageSize = 50;
+  const total = articles.length;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const page = Math.max(1, Math.min(totalPages, parseInt(searchParams?.page || "1", 10)));
+  const startIdx = (page - 1) * pageSize;
+  const endIdx = startIdx + pageSize;
+  const pageArticles = articles.slice(startIdx, endIdx);
+  if (page > totalPages) {
+    redirect(`/${locale}/news/company?page=1`);
+  }
 
   return (
     <PageLayout
@@ -51,7 +62,7 @@ export default async function CompanyNewsPage({ params }: { params: { locale: st
     >
       <NewsCategoryTabs />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((item: any) => (
+        {pageArticles.map((item: any) => (
           <div key={item.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
               {item.cover?.url ? (
@@ -79,6 +90,33 @@ export default async function CompanyNewsPage({ params }: { params: { locale: st
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center items-center gap-2 mt-12">
+        {page > 1 && (
+          <Link
+            href={`/${locale}/news/company?page=${page - 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Previous" : "上一页"}
+          </Link>
+        )}
+        {Array.from({ length: totalPages }, (_, i) => (
+          <Link
+            key={i + 1}
+            href={`/${locale}/news/company?page=${i + 1}`}
+            className={`px-3 py-2 rounded ${page === i + 1 ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+          >
+            {i + 1}
+          </Link>
+        ))}
+        {page < totalPages && (
+          <Link
+            href={`/${locale}/news/company?page=${page + 1}`}
+            className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
+          >
+            {locale === "en" ? "Next" : "下一页"}
+          </Link>
+        )}
       </div>
     </PageLayout>
   )
