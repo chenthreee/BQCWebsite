@@ -3,9 +3,10 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck } from "lucide-react"
+import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck} from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 export function ServicesSection() {
   const pathname = usePathname()
@@ -150,8 +151,8 @@ export function ServicesSection() {
         "en": "Service Content:",
       },
       "odm.button": {
-        "zh-Hans": "联系我们讨论您的项目需求",
-        "en": "Contact Us to Discuss Your Project",
+        "zh-Hans": "了解更多ODM研发服务",
+        "en": "Learn More about OEM Services",
       },
       "odm.cases.title": {
         "zh-Hans": "成功案例",
@@ -430,10 +431,12 @@ export function ServicesSection() {
                 ))}
 
                 <div className="mt-8 text-center">
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                <Button asChild className="bg-blue-600 hover:bg-blue-700">
+                  <Link href={`/${locale}/services/oem`}>
                     {t("oem.button")}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  </Link>
+                </Button>
                 </div>
               </div>
             </div>
@@ -575,10 +578,12 @@ export function ServicesSection() {
                 ))}
 
                 <div className="mt-8 text-center">
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                <Button asChild className="bg-blue-600 hover:bg-blue-700">
+                  <Link href={`/${locale}/services/odm`}>
                     {t("odm.button")}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  </Link>
+                </Button>
                 </div>
               </div>
             </div>

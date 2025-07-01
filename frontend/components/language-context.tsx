@@ -209,6 +209,11 @@ const translations: Record<string, Record<Language, string>> = {
     "zh-Hans": "公司通过多项国际权威认证，彰显了在质量管理和技术创新方面的实力。",
     en: "The company has obtained multiple international authoritative certifications, demonstrating its strength in quality management and technological innovation.",
   },
+  "about.certificates.more": {
+    zh:"了解更多",
+    "zh-Hans": "了解更多",
+    "en": "Learn More"
+  },
 
   // Products submenu
   "products.bms": {

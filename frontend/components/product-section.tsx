@@ -5,12 +5,15 @@ import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 interface Product {
   id: number
   title: string
   description: string
   image: string
+  link: string
 }
 
 interface ProductCategory {
@@ -58,12 +61,12 @@ export function ProductSection() {
         : "储能BMS/PCS全系列解决方案，包括电力大储BMS、大型船舶储能BMS、小型船舶储能BMS、通讯基站储能BMS、储能EMS（总控）、储能PCS等。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
-        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
-        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
-        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/placeholder.svg?height=400&width=400" },
-        { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/placeholder.svg?height=400&width=400" },
-        { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/power-storage" },
+        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/large-ship" },
+        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/small-ship" },
+        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/communication-base" },
+        { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/energy-storage-ems" },
+        { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-pcs" },
       ],
     },
     {
@@ -74,7 +77,7 @@ export function ProductSection() {
         : "面向各行业的智能机器人系统解决方案。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        { id: 201, title: locale === "en" ? "Robot Control Board" : "机器人控制板", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 201, title: locale === "en" ? "Robot Control Board" : "机器人控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/intelligent-robot-systems" },
       ],
     },
     {
@@ -85,7 +88,7 @@ export function ProductSection() {
         : "自动化与控制领域的工业控制板解决方案。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        { id: 301, title: locale === "en" ? "Industrial Control Board" : "工业控制板", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 301, title: locale === "en" ? "Industrial Control Board" : "工业控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/industrial-control-boards" },
       ],
     },
     {
@@ -96,7 +99,7 @@ export function ProductSection() {
         : "医疗行业的医疗设备解决方案。",
       image: "/placeholder.svg?height=600&width=1200",
       products: [
-        { id: 401, title: locale === "en" ? "Medical Device" : "医疗设备", description: "", image: "/placeholder.svg?height=400&width=400" },
+        { id: 401, title: locale === "en" ? "Medical Device" : "医疗设备", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/medical-devices" },
       ],
     },
   ]
@@ -206,10 +209,13 @@ export function ProductSection() {
                         <p className="text-gray-600">{product.description}</p>
                       </div>
                       <div className="px-4 pb-4">
-                        <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+                        <Link
+                          href={`/${locale}${product.link}`}
+                          className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                        >
                           {t("button.viewMore")}
                           <ChevronRight className="ml-1 h-4 w-4" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   ))}
@@ -217,6 +223,14 @@ export function ProductSection() {
               </div>
             </div>
           ))}
+        </div>
+        {/* 底部查看更多按钮 */}
+        <div className="flex justify-center mt-12">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
+            <Link href="/${locale}/products">
+              {t("button.viewMore")}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

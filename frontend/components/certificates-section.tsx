@@ -1,4 +1,6 @@
 import { useLanguage } from "@/components/language-context"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export function CertificatesSection() {
   const { t, language } = useLanguage();
@@ -20,6 +22,7 @@ export function CertificatesSection() {
       title: language === "en" ? "ISO14001" : "ISO14001",
     },
   ];
+  const locale = language === "en" ? "en" : "zh-Hans";
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -36,6 +39,13 @@ export function CertificatesSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
+            <Link href={`/${locale}/about/certificates`}>
+              {t("about.certificates.more") || (language === "en" ? "Learn More" : "了解更多")}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
