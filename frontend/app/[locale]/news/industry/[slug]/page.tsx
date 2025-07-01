@@ -41,6 +41,29 @@ async function getArticleBySlug(slug: string, locale: string) {
   return data.articles[0]
 }
 
+async function getAllIndustryNewsSlugs(locale: string) {
+  const query = `
+    query($locale: I18NLocaleCode) {
+      articles(
+        locale: $locale,
+        filters: { category: { name: { eq: "industry" } } },
+        sort: "publishedAt:desc"
+      ) {
+        slug
+        title
+      }
+    }
+  `;
+  const res = await fetch(GRAPHQL_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query, variables: { locale } }),
+    cache: "no-store"
+  });
+  const { data } = await res.json();
+  return data.articles || [];
+}
+
 export default async function NewsDetailPage({ params }: { params: { slug: string, locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const article = await getArticleBySlug(params.slug, locale);
@@ -48,6 +71,12 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
   if (!article) {
     return <div>{locale === "en" ? "Article not found" : "未找到该新闻"}</div>
   }
+
+  // 获取所有行业资讯slug和title
+  const allArticles = await getAllIndustryNewsSlugs(locale);
+  const currentIndex = allArticles.findIndex((a: any) => a.slug === params.slug);
+  const prev = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
+  const next = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
 
   return (
     <PageLayout
@@ -104,10 +133,32 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
-          <Link href={`/${locale}/news/industry`} className="text-blue-600 hover:text-blue-800 flex items-center">
-            <ArrowLeft className="mr-1 h-4 w-4" />
-            {locale === "en" ? "Back to Industry News" : "返回行业资讯列表"}
-          </Link>
+          <div className="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-0">
+            {prev && (
+              <div className="md:w-1/2 md:text-left mb-2 md:mb-0 flex items-center">
+                <Link
+                  href={`/${locale}/news/industry/${prev.slug}`}
+                  className="inline-flex items-center px-5 py-3 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all text-base font-medium shadow-sm"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                  {locale === "en" ? "Previous" : "上一篇"}：{prev.title}
+                </Link>
+              </div>
+            )}
+            {/* 分隔线，仅桌面端显示且有上一篇和下一篇时显示 */}
+            {prev && next && <div className="hidden md:block w-px bg-gray-200 mx-4" />}
+            {next && (
+              <div className={`md:w-1/2 md:text-right flex items-center ${prev ? "justify-end" : "md:justify-end justify-end md:ml-auto"}`}>
+                <Link
+                  href={`/${locale}/news/industry/${next.slug}`}
+                  className="inline-flex items-center px-5 py-3 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all text-base font-medium shadow-sm"
+                >
+                  {locale === "en" ? "Next" : "下一篇"}：{next.title}
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </PageLayout>
