@@ -75,7 +75,7 @@ export function HeroSection() {
       subtitle: t("company.slogan"),
       description: t("company.description"),
       buttonText: t("button.learnMore"),
-      buttonLink: `/${locale}/about/introduction`,
+      buttonLink: `/${locale}/about`,
       image: "/images/hero-circuit-board.png",
       mobileImage: "/images/hero-circuit-board.png",
     },
