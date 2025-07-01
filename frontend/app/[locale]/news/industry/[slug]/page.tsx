@@ -96,7 +96,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
           </span>
           <div className="flex items-center mr-4">
             <Calendar className="h-4 w-4 mr-1" />
-            <span>{article.publishedAt?.slice(0, 10)}</span>
+            <span>{article.publishedAt ? new Date(article.publishedAt).toLocaleString("zh-CN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }) : ""}</span>
           </div>
           <div className="flex items-center">
             <User className="h-4 w-4 mr-1" />
