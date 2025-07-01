@@ -10,6 +10,12 @@ import { redirect } from "next/navigation";
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
 console.log('SSR NewsPage loaded');
+
+const categoryMap = {
+  company: { "zh-Hans": "公司新闻", en: "Company News" },
+  industry: { "zh-Hans": "行业资讯", en: "Industry Information" }
+}
+
 async function getAllNews(locale: string) {
   const query = `
     query GetAllNews($locale: I18NLocaleCode) {
@@ -82,7 +88,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
             <div className="p-8 flex flex-col justify-center">
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium mr-3">
-                  {pageNews[0].category?.name}
+                  {categoryMap[pageNews[0].category?.name as "company" | "industry"]?.[locale] || pageNews[0].category?.name}
                 </span>
                 <div className="flex items-center mr-4">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -129,7 +135,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
             <div className="p-6">
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium mr-3">
-                  {news.category?.name}
+                  {categoryMap[news.category?.name as "company" | "industry"]?.[locale] || news.category?.name}
                 </span>
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-1" />
