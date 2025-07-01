@@ -180,8 +180,10 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
             {/* 公司信息 */}
             <div>
+              <h1 className="sr-only">{t("company.name")}</h1>
               <Link href={`/${locale}`} rel="nofollow" className="inline-block mb-6">
                 <Image src="/BQCLogo.png" alt={t("company.name")}
+                  title={t("company.name")}
                   width={50} height={50} className="h-10 w-auto" />
               </Link>
               <p className="text-gray-400 mb-4">{t("company.description")}</p>
