@@ -1,7 +1,7 @@
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, User, ArrowLeft } from "lucide-react"
+import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react"
 
 const STRAPI_URL = "http://localhost:1337"
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`
@@ -64,6 +64,35 @@ async function getAllIndustryNewsSlugs(locale: string) {
   return data.articles || [];
 }
 
+async function getRelatedArticles(category: string, slug: string, locale: string) {
+  const query = `
+    query($category: String!, $slug: String!, $locale: I18NLocaleCode) {
+      articles(
+        filters: {
+          category: { name: { eq: $category } }
+          slug: { ne: $slug }
+        }
+        locale: $locale
+        sort: "publishedAt:desc"
+        pagination: { limit: 1 }
+      ) {
+        slug
+        title
+        description
+        cover { url }
+      }
+    }
+  `;
+  const res = await fetch(GRAPHQL_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query, variables: { category, slug, locale } }),
+    cache: "no-store"
+  });
+  const { data } = await res.json();
+  return data.articles || [];
+}
+
 export default async function NewsDetailPage({ params }: { params: { slug: string, locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const article = await getArticleBySlug(params.slug, locale);
@@ -77,6 +106,10 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
   const currentIndex = allArticles.findIndex((a: any) => a.slug === params.slug);
   const prev = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
   const next = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
+
+  // 获取同分类推荐
+  const category = article.category?.name;
+  const relatedArticles = category ? await getRelatedArticles(category, params.slug, locale) : [];
 
   return (
     <PageLayout
@@ -161,6 +194,42 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
           </div>
         </div>
       </div>
+      {/* 推荐新闻区块 */}
+      {relatedArticles && relatedArticles.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-xl font-bold mb-6">{locale === "en" ? "Related News" : "同分类推荐"}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {relatedArticles.map((item: any) => (
+              <div key={item.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
+                  {item.cover?.url ? (
+                    <Image
+                      src={STRAPI_URL + item.cover.url}
+                      alt={item.title}
+                      width={400}
+                      height={200}
+                      className="object-contain w-full h-full"
+                    />
+                  ) : (
+                    <span className="text-gray-400">{locale === "en" ? "No Cover" : "无封面"}</span>
+                  )}
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
+                  <Link
+                    href={`/${locale}/news/industry/${item.slug}`}
+                    className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                  >
+                    {locale === "en" ? "Read More" : "阅读全文"}
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </PageLayout>
   )
 } 
