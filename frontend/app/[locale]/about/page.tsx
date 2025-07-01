@@ -66,6 +66,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
+  const currentContent = locale === "en" ? translations : translations["zh-Hans"]
   return (
     <div className="min-h-screen flex flex-col">
       <MainNavigation />

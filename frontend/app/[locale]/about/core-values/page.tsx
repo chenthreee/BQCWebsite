@@ -73,7 +73,7 @@ export default function CoreValuesPage() {
     }
   }
 
-  const currentContent = language === "zh" ? content.zh : content.en
+  const currentContent = language === "en" ? content.en : content.zh
 
   const breadcrumbs = [
     { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },

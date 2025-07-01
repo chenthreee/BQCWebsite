@@ -85,5 +85,39 @@ export const productsData = {
       },
     ],
   },
+  "main-control-board": {
+    model: "船舶BMS主控制板",
+    title: "船舶BMS主控制板",
+    description: "船舶BMS主控制板是大型船舶储能系统的核心部件，具备高可靠性、高防护等级和多路CAN通信能力，适用于恶劣海洋环境。",
+    image: "/placeholder.svg?height=500&width=500",
+    features: [
+      "32位ARM Cortex-M7高性能处理器",
+      "4路CAN接口，支持多设备通信",
+      "IP65防护等级，防水防尘",
+      "24V DC宽电压输入",
+      "抗震动、抗盐雾腐蚀设计",
+      "支持远程监控和固件升级"
+    ],
+    specifications: [
+      { name: "处理器", value: "32位ARM Cortex-M7" },
+      { name: "CAN接口", value: "4路" },
+      { name: "防护等级", value: "IP65" },
+      { name: "供电电压", value: "24V DC" },
+      { name: "工作温度", value: "-40℃~+70℃" },
+      { name: "尺寸", value: "300mm x 200mm x 50mm" },
+      { name: "重量", value: "约3kg" }
+    ],
+    applications: ["大型船舶储能系统", "邮轮电力系统", "货轮智能管理"],
+    faqs: [
+      {
+        question: "主控制板支持哪些通信协议？",
+        answer: "支持CAN、RS485等多种通信协议，满足船舶多系统集成需求。"
+      },
+      {
+        question: "主控制板能否在海洋环境下长期工作？",
+        answer: "具备IP65防护等级和抗盐雾腐蚀设计，可在恶劣海洋环境下稳定运行。"
+      }
+    ]
+  },
   // ... 其余产品同理 ...
 } 

@@ -18,6 +18,7 @@ export default function DevelopmentHistoryPage() {
   // 根据 URL 自动切换语言
   useEffect(() => {
     if (pathname.startsWith("/en")) setLanguage("en")
+    else if (pathname.startsWith("/zh-Hans")) setLanguage("zh-Hans")
     else setLanguage("zh")
   }, [pathname, setLanguage])
 
@@ -31,6 +32,11 @@ export default function DevelopmentHistoryPage() {
       subtitle: "百千成电子的成长与发展",
       overview: {
         title: "我们的历程",
+        desc: {
+          zh: "见证百千成电子的发展与成长，了解我们的重要里程碑和创新历程。",
+          "zh-Hans": "见证百千成电子的发展与成长，了解我们的重要里程碑和创新历程。",
+          en: "Witness the development and growth of BAIQIANCHENG Electronics, and learn about our key milestones and innovations."
+        }
       },
       future: {
         title: "未来展望",
@@ -116,6 +122,10 @@ export default function DevelopmentHistoryPage() {
       subtitle: "Growth and Development of BQC Electronics",
       overview: {
         title: "Our Journey",
+        desc: {
+          zh: "见证百千成电子的发展与成长，了解我们的重要里程碑和创新历程。",
+          en: "Witness the development and growth of BAIQIANCHENG Electronics, and learn about our key milestones and innovations."
+        }
       },
       future: {
         title: "Future Outlook",
@@ -198,7 +208,7 @@ export default function DevelopmentHistoryPage() {
     }
   }
 
-  const currentContent = language === "zh" ? content.zh : content.en
+  const currentContent = language === "en" ? content.en : content.zh
 
   const breadcrumbs = [
     { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
@@ -214,16 +224,23 @@ export default function DevelopmentHistoryPage() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.overview.title}</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">{currentContent.overview.title}</h2>
+          <p className="text-gray-500 text-center mb-8 text-sm">
+              {currentContent.overview.desc[language as keyof typeof currentContent.overview.desc]}
+          </p> 
         </div>
 
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-600"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-blue-600 -translate-x-1/2"></div>
           <div className="space-y-12">
             {currentContent.milestones.map((milestone, index) => (
-              <div key={index} className="relative flex items-start">
-                <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                <div className="ml-16">
+              <div
+                key={index}
+                className={`relative flex items-start ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+              >
+                <div className="w-1/2"></div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg top-8"></div>
+                <div className="w-1/2 px-8">
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div className="text-blue-600 font-bold text-lg mb-2">{milestone.year}</div>
                     <h3 className="text-xl font-bold text-gray-800">{milestone.title}</h3>
