@@ -187,7 +187,19 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                   width={50} height={50} className="h-10 w-auto" />
               </Link>
               <p className="text-gray-400 mb-4">{t("company.description")}</p>
+              <div className="mt-4">
+              <a
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-gray-400 hover:text-white hover:font-bold transition"
+                title="Sitemap"
+              >
+                sitemap.xml
+              </a>
             </div>
+            </div>
+            
             {/* 关于我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
