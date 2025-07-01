@@ -1,214 +1,182 @@
 "use client"
 
-import { HeroSection } from "@/components/hero-section"
-import { MainNavigation } from "@/components/main-navigation"
-import { ProductSection } from "@/components/product-section"
-import { AboutSection } from "@/components/about-section"
-import { ServicesSection } from "@/components/services-section"
+import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, MessageCircle, ArrowUp } from "lucide-react"
+import { ArrowRight, Users, Award, TrendingUp, Shield, Globe, CheckCircle } from "lucide-react"
 
-const translations: Record<string, Record<string, string>> = {
-  "company.name": {
-    "zh-Hans": "百千成电子",
-    "en": "BAIQIANCHENG Electronics",
-  },
-  "company.description": {
-    "zh-Hans": "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
-    "en": "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
-  },
-  "footer.products": {
-    "zh-Hans": "产品与服务",
-    "en": "Products & Services",
-  },
-  "footer.about": {
-    "zh-Hans": "关于我们",
-    "en": "About Us",
-  },
-  "footer.contact": {
-    "zh-Hans": "联系我们",
-    "en": "Contact Us",
-  },
-  "footer.copyright": {
-    "zh-Hans": "版权所有.",
-    "en": "All rights reserved.",
-  },
-  "footer.legal": {
-    "zh-Hans": "法律声明",
-    "en": "Legal",
-  },
-  "footer.privacy": {
-    "zh-Hans": "隐私政策",
-    "en": "Privacy Policy",
-  },
-  // Footer 产品与服务
-  "footer.products.bms": { "zh-Hans": "储能BMS", "en": "Energy Storage BMS" },
-  "footer.products.ems": { "zh-Hans": "储能EMS（总控）", "en": "Energy Storage EMS (Master Control)" },
-  "footer.products.pcs": { "zh-Hans": "储能PCS", "en": "Energy Storage PCS" },
-  "footer.products.robot": { "zh-Hans": "智能机器人系统", "en": "Intelligent Robot System" },
-  // Footer 关于我们
-  "footer.about.intro": { "zh-Hans": "简介", "en": "Introduction" },
-  "footer.about.values": { "zh-Hans": "核心价值观", "en": "Core Values" },
-  "footer.about.history": { "zh-Hans": "发展历程", "en": "Development History" },
-  "footer.about.management": { "zh-Hans": "管理系统", "en": "Management System" },
-  // Footer 联系我们
-  "footer.contact.rd": { "zh-Hans": "研发中心", "en": "R&D Center" },
-  "footer.contact.factorycn": { "zh-Hans": "深圳工厂", "en": "Shenzhen Factory" },
-  "footer.contact.factorymy": { "zh-Hans": "马来西亚工厂", "en": "Malaysia Factory" },
-}
+export default function AboutPage() {
+  const sections = [
+    {
+      title: "公司介绍",
+      description: "了解百千成电子的发展历程与企业文化",
+      link: "/about/introduction",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: Users,
+      color: "from-blue-500 to-blue-600",
+    },
+    {
+      title: "核心价值观",
+      description: "我们的企业文化与价值理念",
+      link: "/about/core-values",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: Award,
+      color: "from-green-500 to-green-600",
+    },
+    {
+      title: "战略定位",
+      description: "公司的发展战略与市场定位",
+      link: "/about/strategic-positioning",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: TrendingUp,
+      color: "from-purple-500 to-purple-600",
+    },
+    {
+      title: "发展历程",
+      description: "百千成电子的成长与发展历程",
+      link: "/about/development-history",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: Globe,
+      color: "from-orange-500 to-orange-600",
+    },
+    {
+      title: "管理系统",
+      description: "公司的管理体系与质量控制",
+      link: "/about/management-system",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: Shield,
+      color: "from-teal-500 to-teal-600",
+    },
+    {
+      title: "制造能力",
+      description: "先进的生产设备与制造工艺",
+      link: "/about/manufacturing-capabilities",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: CheckCircle,
+      color: "from-red-500 to-red-600",
+    },
+    {
+      title: "资质证书",
+      description: "公司获得的各类资质认证",
+      link: "/about/certificates",
+      image: "/placeholder.svg?height=400&width=600",
+      icon: Award,
+      color: "from-indigo-500 to-indigo-600",
+    },
+  ]
 
-export default function AboutPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-  const t = (key: string): string => {
-    return translations[key]?.[locale] || key
-  }
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-  const currentContent = locale === "en" ? translations : translations["zh-Hans"]
+  const stats = [
+    { number: "21+", label: "年行业经验", description: "深耕储能BMS领域" },
+    { number: "35GWh+", label: "累计装机量", description: "储能BMS产品装机容量" },
+    { number: "800+", label: "员工团队", description: "高素质技术人员" },
+    { number: "50+", label: "知名客户", description: "国内外储能客户" },
+  ]
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <MainNavigation />
-      <HeroSection />
-      <main className="flex-1">
-        <ProductSection />
-        <ServicesSection />
-        <AboutSection />
-      </main>
-      {/* 侧边栏联系方式 */}
-      <div className="fixed right-4 bottom-20 z-40 flex flex-col gap-2">
-        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
-          <Mail className="h-6 w-6 text-blue-600" />
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
-            <p className="font-bold text-sm">电子邮箱</p>
-            <p className="text-sm">contact@baiqiancheng.com</p>
+    <PageLayout
+      title="关于我们"
+      subtitle="了解百千成电子的企业文化与发展历程"
+      breadcrumbs={[{ label: "关于我们", href: "/about" }]}
+      backgroundImage="/placeholder.svg?height=1080&width=1920"
+    >
+      {/* 公司概览 */}
+      <div className="mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">百千成电子</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              深圳市百千成电子有限公司成立于2003年，是专业从事储能锂电池BMS设计制造，PCS/逆变器、智能机器人电路板PCBA设计制造代工企业。
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              公司已通过ISO9001、IATF16949、ISO14001管理体系认证，拥有完整的数字化管理平台，确保每片PCBA板高品质交付。
+            </p>
+            <div className="flex items-center">
+              <Link
+                href="/about/introduction"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+              >
+                了解更多详情
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/placeholder.svg?height=500&width=700"
+              alt="百千成电子公司"
+              width={700}
+              height={500}
+              className="rounded-lg shadow-lg"
+            />
           </div>
         </div>
-        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
-          <MessageCircle className="h-6 w-6 text-blue-600" />
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block">
-            <p className="font-bold text-sm">微信公众号</p>
-            <div className="w-24 h-24 bg-gray-200"></div>
-          </div>
+
+        {/* 数据统计 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center bg-white p-6 rounded-lg shadow-md">
+              <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+              <div className="text-xl font-semibold mb-2">{stat.label}</div>
+              <div className="text-gray-600">{stat.description}</div>
+            </div>
+          ))}
         </div>
-        <button
-          onClick={scrollToTop}
-          className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50"
-          aria-label="回到顶部"
-        >
-          <ArrowUp className="h-6 w-6 text-blue-600" />
-        </button>
       </div>
-      {/* 页脚 */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div>
-              <Link href={`/${locale}`} className="inline-block mb-6">
-                <Image
-                  src="/placeholder.svg?height=50&width=50"
-                  alt={t("company.name")}
-                  width={50}
-                  height={50}
-                  className="h-10 w-auto"
-                />
-              </Link>
-              <p className="text-gray-400 mb-4">{t("company.description")}</p>
+
+      {/* 核心优势 */}
+      <div className="mb-20">
+        <h2 className="text-3xl font-bold text-center mb-12">核心优势</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Shield className="h-8 w-8 text-blue-600" />
             </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/products/bms`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.bms")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.ems")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/pcs`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.pcs")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/products/robot`} className="text-gray-400 hover:text-white">
-                    {t("footer.products.robot")}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/about/introduction`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.intro")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/values`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.values")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/history`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.history")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/about/management`} className="text-gray-400 hover:text-white">
-                    {t("footer.about.management")}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">{t("footer.contact")}</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href={`/${locale}/contact/rd`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.rd")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/contact/factory-cn`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.factorycn")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/contact/factory-my`} className="text-gray-400 hover:text-white">
-                    {t("footer.contact.factorymy")}
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-bold mb-3">技术领先</h3>
+            <p className="text-gray-600">拥有经验丰富的研发团队，专注储能BMS、EMS、PCS等核心产品创新</p>
           </div>
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <div className="flex items-center mb-2">
-                <span className="text-gray-400 text-sm">
-                  {locale === "en" ? "Global / English" : "中国大陆 / 简体中文"}
-                </span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                © 2024 {t("company.name")}. {t("footer.copyright")}
-              </p>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="h-8 w-8 text-green-600" />
             </div>
-            <div className="flex space-x-4">
-              <Link href={`/${locale}/legal`} className="text-gray-400 hover:text-white text-sm">
-                {t("footer.legal")}
-              </Link>
-              <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-white text-sm">
-                {t("footer.privacy")}
-              </Link>
+            <h3 className="text-xl font-bold mb-3">品质保证</h3>
+            <p className="text-gray-600">通过多项国际认证，建立完整的质量管理体系和数字化追溯系统</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Globe className="h-8 w-8 text-purple-600" />
             </div>
+            <h3 className="text-xl font-bold mb-3">全球布局</h3>
+            <p className="text-gray-600">深圳和马来西亚两大制造基地，服务全球50+知名储能客户</p>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+
+      {/* 详细板块 */}
+      <div>
+        <h2 className="text-3xl font-bold text-center mb-12">了解更多</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sections.map((section, index) => {
+            const IconComponent = section.icon
+            return (
+              <Link key={index} href={section.link} className="group">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
+                  <div className={`h-48 bg-gradient-to-r ${section.color} flex items-center justify-center`}>
+                    <IconComponent className="h-16 w-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{section.title}</h3>
+                    <p className="text-gray-700 mb-4">{section.description}</p>
+                    <div className="text-blue-600 flex items-center font-medium group-hover:text-blue-800">
+                      了解更多
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </PageLayout>
   )
-} 
+}
