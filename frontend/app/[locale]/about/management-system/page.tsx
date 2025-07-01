@@ -87,6 +87,7 @@ export default function ManagementSystemPage() {
       breadcrumbs={breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
+     
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.digitalPlatform.title}</h2>
         <p className="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">
@@ -109,6 +110,18 @@ export default function ManagementSystemPage() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center mb-12">
+        <Image
+          src="/about/management-system-banner.jpg"
+          alt="管理系统平台图片"
+          width={800}
+          height={320}
+          className="rounded-lg shadow-lg object-cover mb-6"
+        />
+        <p className="text-gray-600 text-lg text-center max-w-2xl">
+          这里是管理系统平台的整体介绍文案（可自定义）。
+        </p>
       </div>
     </PageLayout>
   )
