@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 export function HeroSection() {
   const pathname = usePathname()
@@ -52,7 +53,7 @@ export function HeroSection() {
         ? "Providing full-process OEM manufacturing services from PCB design, SMT assembly to complete unit assembly"
         : "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
       buttonText: t("button.learnMore"),
-      buttonLink: `/${locale}/services`,
+      buttonLink: `/${locale}/services/oem`,
       image: "/images/image_OEM.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
@@ -64,7 +65,7 @@ export function HeroSection() {
         ? "Focusing on BMS system development and production for power storage, ship storage, communication base stations and other fields"
         : "专注于电力储能、船舶储能、通讯基站等领域的BMS系统研发与生产",
       buttonText: t("button.learnMore"),
-      buttonLink: `/${locale}/products`,
+      buttonLink: `/${locale}/products/energy-storage-bms`,
       image: "/images/image_BMS.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
@@ -74,7 +75,7 @@ export function HeroSection() {
       subtitle: t("company.slogan"),
       description: t("company.description"),
       buttonText: t("button.learnMore"),
-      buttonLink: `/${locale}/about`,
+      buttonLink: `/${locale}/about/introduction`,
       image: "/images/hero-circuit-board.png",
       mobileImage: "/images/hero-circuit-board.png",
     },
@@ -85,7 +86,7 @@ export function HeroSection() {
     const startAutoPlay = () => {
       autoPlayRef.current = setInterval(() => {
         nextSlide()
-      }, 7000) // 7秒切换一次
+      }, 5000) // 5秒切换一次
     }
 
     startAutoPlay()
@@ -246,9 +247,11 @@ export function HeroSection() {
                     index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0",
                   )}
                 >
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 group relative overflow-hidden">
-                    <span className="relative z-10">{slide.buttonText}</span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-[length:200%_100%] animate-gradient-x"></span>
+                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 group relative overflow-hidden">
+                    <Link href={slide.buttonLink}>
+                      <span className="relative z-10">{slide.buttonText}</span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-[length:200%_100%] animate-gradient-x"></span>
+                    </Link>
                   </Button>
                 </div>
               </div>
