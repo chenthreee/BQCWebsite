@@ -133,6 +133,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       <HeroSection />
 
       <main className="flex-1">
+        
         {/* 产品中心 */}
         <ProductSection />
 
