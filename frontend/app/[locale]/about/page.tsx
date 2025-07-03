@@ -97,7 +97,6 @@ export default function AboutPage() {
               >
                 了解更多详情
                 <ArrowRight className="ml-2 h-4 w-4" />
-                
               </Link>
             </div>
           </div>
