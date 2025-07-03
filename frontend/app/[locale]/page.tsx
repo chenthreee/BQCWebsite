@@ -131,7 +131,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
     <div className="min-h-screen flex flex-col">
       <MainNavigation />
       <HeroSection />
-
       <main className="flex-1">
         {/* 产品中心 */}
         <ProductSection />
