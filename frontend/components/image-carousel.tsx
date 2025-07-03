@@ -15,6 +15,7 @@ interface ImageCarouselProps {
   className?: string
 }
 
+
 export function ImageCarousel({ images, autoPlay = true, interval = 5000, className }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
