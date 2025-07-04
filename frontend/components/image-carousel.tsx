@@ -33,7 +33,7 @@ export function ImageCarousel({ images, autoPlay = true, interval = 5000, classN
     setCurrentIndex(index)
   }
 
-  // Auto play functionality
+  //  Auto play functionality 
   useEffect(() => {
     if (autoPlay && !isHovering) {
       timerRef.current = setInterval(() => {
