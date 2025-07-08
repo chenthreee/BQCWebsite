@@ -164,7 +164,7 @@ export default function LargeShipBmsPage() {
               为某国际知名邮轮公司提供的3MWh船舶储能系统BMS解决方案，实现邮轮电力系统的峰值负荷管理和能源优化，降低燃油消耗30%以上。
             </p>
             <Link
-              href="/products/energy-storage-bms/large-ship/case-cruise"
+              href="/products/energy-storage-bms/large-ship/case-cruise.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情
@@ -186,7 +186,7 @@ export default function LargeShipBmsPage() {
               为某国际航运公司提供的1.5MWh船舶储能系统BMS解决方案，实现货轮电力系统的智能管理和能源优化，降低运营成本25%以上。
             </p>
             <Link
-              href="/products/energy-storage-bms/large-ship/case-cargo"
+              href="/products/energy-storage-bms/large-ship/case-cargo.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情

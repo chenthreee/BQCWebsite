@@ -91,8 +91,8 @@ export default function MedicalDevicesPage({ params }: { params: { locale: strin
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_medical"), href: `/${locale}/products/medical-devices` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_medical"), href: `/${locale}/products/medical-devices.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >

@@ -94,7 +94,7 @@ export default function CommunicationBaseBmsPage() {
                 48V通讯基站备电系统，适用于小型基站和微波站，支持16串磷酸铁锂电池组管理。
               </p>
               <Link
-                href="/products/energy-storage-bms/communication-base/bms-t48"
+                href="/products/energy-storage-bms/communication-base/bms-t48.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -118,7 +118,7 @@ export default function CommunicationBaseBmsPage() {
                 96V高压通讯基站备电系统，适用于大型基站和数据中心，支持32串磷酸铁锂电池组管理。
               </p>
               <Link
-                href="/products/energy-storage-bms/communication-base/bms-t96"
+                href="/products/energy-storage-bms/communication-base/bms-t96.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -142,7 +142,7 @@ export default function CommunicationBaseBmsPage() {
                 户外型防雨通讯基站备电系统，IP67防护等级，适用于恶劣环境下的户外基站。
               </p>
               <Link
-                href="/products/energy-storage-bms/communication-base/bms-t48-r"
+                href="/products/energy-storage-bms/communication-base/bms-t48-r.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -171,7 +171,7 @@ export default function CommunicationBaseBmsPage() {
               为某通讯运营商提供的5G基站备电系统BMS解决方案，实现基站8小时以上的备电能力，确保通讯网络的高可靠性。
             </p>
             <Link
-              href="/products/energy-storage-bms/communication-base/case-5g"
+              href="/products/energy-storage-bms/communication-base/case-5g.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情
@@ -193,7 +193,7 @@ export default function CommunicationBaseBmsPage() {
               为某大型数据中心提供的备电系统BMS解决方案，实现数据中心关键设备的不间断电源供应，确保数据安全和业务连续性。
             </p>
             <Link
-              href="/products/energy-storage-bms/communication-base/case-data-center"
+              href="/products/energy-storage-bms/communication-base/case-data-center.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情

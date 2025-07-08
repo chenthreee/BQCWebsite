@@ -139,7 +139,7 @@ export default function EnergyStorageEmsPage() {
               为某大型工业园区提供的100MWh级储能EMS解决方案，实现园区配电网智能调度，年节省电费超过1000万元。
             </p>
             <Link
-              href="/products/energy-storage-bms/energy-storage-ems/case-industrial"
+              href="/products/energy-storage-bms/energy-storage-ems/case-industrial.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情
@@ -161,7 +161,7 @@ export default function EnergyStorageEmsPage() {
               为某省电网公司提供的500MWh储能调度EMS系统，实现电网削峰填谷、调频调压等功能，提高电网运行效率。
             </p>
             <Link
-              href="/products/energy-storage-bms/energy-storage-ems/case-grid"
+              href="/products/energy-storage-bms/energy-storage-ems/case-grid.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情

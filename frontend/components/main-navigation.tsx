@@ -210,69 +210,69 @@ export function MainNavigation() {
     {
       key: "home",
       label: mounted ? t("首页") : "首页",
-      href: `/${currentLocale}`,
+      href: `/${currentLocale}.html`,
     },
     {
       key: "about",
       label: mounted ? t("关于我们") : "关于我们",
-      href: `/${currentLocale}/about`,
+      href: `/${currentLocale}/about.html`,
       children: [
-        { label: mounted ? t("公司介绍") : "公司介绍", href: `/${currentLocale}/about/introduction` },
-        { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values` },
-        { label: mounted ? t("发展历程") : "发展历程", href: `/${currentLocale}/about/development-history` },
-        { label: mounted ? t("管理系统") : "管理系统", href: `/${currentLocale}/about/management-system` },
-        { label: mounted ? t("制造能力") : "制造能力", href: `/${currentLocale}/about/manufacturing-capabilities` },
-        { label: mounted ? t("资质证书") : "资质证书", href: `/${currentLocale}/about/certificates` },
+        { label: mounted ? t("公司介绍") : "公司介绍", href: `/${currentLocale}/about/introduction.html` },
+        { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values.html` },
+        { label: mounted ? t("发展历程") : "发展历程", href: `/${currentLocale}/about/development-history.html` },
+        { label: mounted ? t("管理系统") : "管理系统", href: `/${currentLocale}/about/management-system.html` },
+        { label: mounted ? t("制造能力") : "制造能力", href: `/${currentLocale}/about/manufacturing-capabilities.html` },
+        { label: mounted ? t("资质证书") : "资质证书", href: `/${currentLocale}/about/certificates.html` },
       ],
     },
     {
       key: "products",
       label: mounted ? t("产品中心") : "产品中心",
-      href: `/${currentLocale}/products`,
+      href: `/${currentLocale}/products.html`,
       children: [
         {
           label: mounted ? t("储能BMS/储能PCS") : "储能BMS/储能PCS",
-          href: `/${currentLocale}/products/energy-storage-bms`,
+          href: `/${currentLocale}/products/energy-storage-bms.html`,
           children: [
-            { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: `/${currentLocale}/products/energy-storage-bms/power-storage` },
-            { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/large-ship` },
-            { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/small-ship` },
-            { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: `/${currentLocale}/products/energy-storage-bms/communication-base` },
-            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: `/${currentLocale}/products/energy-storage-bms/energy-storage-ems` },
-            { label: mounted ? t("储能PCS") : "储能PCS", href: `/${currentLocale}/products/energy-storage-pcs` },
+            { label: mounted ? t("电力大储BMS") : "电力大储BMS", href: `/${currentLocale}/products/energy-storage-bms/power-storage.html` },
+            { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/large-ship.html` },
+            { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/small-ship.html` },
+            { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: `/${currentLocale}/products/energy-storage-bms/communication-base.html` },
+            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: `/${currentLocale}/products/energy-storage-bms/energy-storage-ems.html` },
+            { label: mounted ? t("储能PCS") : "储能PCS", href: `/${currentLocale}/products/energy-storage-pcs.html` },
           ],
         },
-        { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: `/${currentLocale}/products/intelligent-robot-systems` },
-        { label: mounted ? t("工业控制板") : "工业控制板", href: `/${currentLocale}/products/industrial-control-boards` },
-        { label: mounted ? t("医疗设备") : "医疗设备", href: `/${currentLocale}/products/medical-devices` },
+        { label: mounted ? t("智能机器人系统") : "智能机器人系统", href: `/${currentLocale}/products/intelligent-robot-systems.html` },
+        { label: mounted ? t("工业控制板") : "工业控制板", href: `/${currentLocale}/products/industrial-control-boards.html` },
+        { label: mounted ? t("医疗设备") : "医疗设备", href: `/${currentLocale}/products/medical-devices.html` },
       ],
     },
     {
       key: "services",
       label: mounted ? t("服务") : "服务",
-      href: `/${currentLocale}/services`,
+      href: `/${currentLocale}/services.html`,
       children: [
-        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: `/${currentLocale}/services/odm` },
-        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: `/${currentLocale}/services/oem` },
+        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: `/${currentLocale}/services/odm.html` },
+        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: `/${currentLocale}/services/oem.html` },
       ],
     },
     {
       key: "news",
       label: mounted ? t("新闻中心") : "新闻中心",
-      href: `/${currentLocale}/news`,
+      href: `/${currentLocale}/news.html`,
       children: [
-        { label: mounted ? t("公司新闻") : "company news", href: `/${currentLocale}/news/company` },
-        { label: mounted ? t("行业资讯") : "industry information", href: `/${currentLocale}/news/industry` },
+        { label: mounted ? t("公司新闻") : "company news", href: `/${currentLocale}/news/company.html` },
+        { label: mounted ? t("行业资讯") : "industry information", href: `/${currentLocale}/news/industry.html` },
       ],
     },
     {
       key: "contact",
       label: mounted ? t("联系我们") : "联系我们",
-      href: `/${currentLocale}/contact`,
+      href: `/${currentLocale}/contact.html`,
       children: [
-        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact` },
-        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact` },
-        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact` },
+        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact.html` },
+        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact.html` },
+        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact.html` },
       ],
     },
   ]
@@ -290,7 +290,7 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="sr-only">{currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}</h1>
-            <Link href={`/${currentLocale}`} className="flex items-center">
+            <Link href={`/${currentLocale}.html`} className="flex items-center">
               <Image src="/BQCLogo.png" alt={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} title={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} width={40} height={60} className="mr-2" />
               <span className="text-xl font-bold text-white">
                 {currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}

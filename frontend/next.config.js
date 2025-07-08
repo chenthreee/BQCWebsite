@@ -18,6 +18,14 @@ const nextConfig = {
   //   defaultLocale: 'zh-Hans',
   //   localeDetection: false,
   // }
+  async rewrites() {
+    return [
+      {
+        source: '/:path*.html',
+        destination: '/:path*',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

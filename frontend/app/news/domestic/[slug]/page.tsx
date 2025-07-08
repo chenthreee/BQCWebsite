@@ -103,7 +103,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
-          <Link href="/news/company" className="text-blue-600 hover:text-blue-800 flex items-center">
+          <Link href="/news/company.html" className="text-blue-600 hover:text-blue-800 flex items-center">
             <ArrowLeft className="mr-1 h-4 w-4" />
             返回公司新闻列表
           </Link>

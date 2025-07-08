@@ -35,8 +35,8 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       title: "OEM代工服务",
       subtitle: "一站式电子产品制造解决方案",
       breadcrumbs: [
-        { label: "服务", href: "/zh-Hans/services" },
-        { label: "OEM代工服务", href: "/zh-Hans/services/oem" },
+        { label: "服务", href: "/zh-Hans/services.html" },
+        { label: "OEM代工服务", href: "/zh-Hans/services/oem.html" },
       ],
       oem: {
         description: [
@@ -81,15 +81,15 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         title: "联系我们",
         description: "如果您有产品开发需求，欢迎联系我们的OEM服务团队，我们将为您提供专业的技术咨询和解决方案。",
         buttonText: "联系我们讨论您的项目",
-        href: "/zh-Hans/contact"
+        href: "/zh-Hans/contact.html"
       }
     },
     en: {
       title: "OEM Manufacturing Services",
       subtitle: "One-stop electronic product manufacturing solution",
       breadcrumbs: [
-        { label: "Services", href: "/en/services" },
-        { label: "OEM Manufacturing Services", href: "/en/services/oem" },
+        { label: "Services", href: "/en/services.html" },
+        { label: "OEM Manufacturing Services", href: "/en/services/oem.html" },
       ],
       oem: {
         description: [
@@ -134,7 +134,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         title: "Contact Us",
         description: "If you have product development needs, please contact our OEM service team. We will provide you with professional technical consultation and solutions.",
         buttonText: "Contact Us to Discuss Your Project",
-        href: "/en/contact"
+        href: "/en/contact.html"
       }
     }
   }

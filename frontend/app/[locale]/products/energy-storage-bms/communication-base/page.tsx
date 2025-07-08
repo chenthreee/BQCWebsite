@@ -56,9 +56,9 @@ export default function CommunicationBaseBmsPage({ params }: { params: { locale:
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms` },
-        { label: t("breadcrumb_comm"), href: `/${locale}/products/energy-storage-bms/communication-base` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms.html` },
+        { label: t("breadcrumb_comm"), href: `/${locale}/products/energy-storage-bms/communication-base.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -132,7 +132,7 @@ export default function CommunicationBaseBmsPage({ params }: { params: { locale:
                 <h3 className="text-2xl font-bold mb-3">{product.model}</h3>
                 <p className="text-gray-700 mb-4">{product.desc}</p>
                 <Link
-                  href={`/${locale}/products/energy-storage-bms/communication-base/${product.id}`}
+                  href={`/${locale}/products/energy-storage-bms/communication-base/${product.id}.html`}
                   className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
                 >
                   {t("details")}
@@ -159,7 +159,7 @@ export default function CommunicationBaseBmsPage({ params }: { params: { locale:
             <h3 className="text-xl font-bold mb-3">{t("case_5g")}</h3>
             <p className="text-gray-700 mb-4">{t("case_5g_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/communication-base/case-5g`}
+              href={`/${locale}/products/energy-storage-bms/communication-base/case-5g.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}
@@ -179,7 +179,7 @@ export default function CommunicationBaseBmsPage({ params }: { params: { locale:
             <h3 className="text-xl font-bold mb-3">{t("case_data")}</h3>
             <p className="text-gray-700 mb-4">{t("case_data_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/communication-base/case-data-center`}
+              href={`/${locale}/products/energy-storage-bms/communication-base/case-data-center.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}

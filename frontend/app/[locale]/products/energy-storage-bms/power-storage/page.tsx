@@ -51,9 +51,9 @@ export default function PowerStorageBmsPage({ params }: { params: { locale: stri
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms` },
-        { label: t("breadcrumb_power"), href: `/${locale}/products/energy-storage-bms/power-storage` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms.html` },
+        { label: t("breadcrumb_power"), href: `/${locale}/products/energy-storage-bms/power-storage.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -78,7 +78,7 @@ export default function PowerStorageBmsPage({ params }: { params: { locale: stri
           {localizedProducts.map((product) => (
             <Link
               key={product.id}
-              href={`/${locale}/products/energy-storage-bms/power-storage/${product.id}`}
+              href={`/${locale}/products/energy-storage-bms/power-storage/${product.id}.html`}
               className="block group"
             >
               <div className="bg-gray-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
@@ -123,7 +123,7 @@ export default function PowerStorageBmsPage({ params }: { params: { locale: stri
             <h3 className="text-xl font-bold mb-3">{t("case_grid")}</h3>
             <p className="text-gray-700 mb-4">{t("case_grid_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/power-storage/case-grid`}
+              href={`/${locale}/products/energy-storage-bms/power-storage/case-grid.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}
@@ -143,7 +143,7 @@ export default function PowerStorageBmsPage({ params }: { params: { locale: stri
             <h3 className="text-xl font-bold mb-3">{t("case_renewable")}</h3>
             <p className="text-gray-700 mb-4">{t("case_renewable_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/power-storage/case-renewable`}
+              href={`/${locale}/products/energy-storage-bms/power-storage/case-renewable.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}

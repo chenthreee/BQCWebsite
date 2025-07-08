@@ -40,31 +40,31 @@ export default function ProductsPage({ params }: { params: { locale: string } })
     {
       title: t("bms.title"),
       description: t("bms.desc"),
-      href: `/${locale}/products/energy-storage-bms`,
+      href: `/${locale}/products/energy-storage-bms.html`,
       image: "/placeholder.svg",
     },
     {
       title: t("pcs.title"),
       description: t("pcs.desc"),
-      href: `/${locale}/products/energy-storage-pcs`,
+      href: `/${locale}/products/energy-storage-pcs.html`,
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       title: t("robot.title"),
       description: t("robot.desc"),
-      href: `/${locale}/products/intelligent-robot-systems`,
+      href: `/${locale}/products/intelligent-robot-systems.html`,
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       title: t("icb.title"),
       description: t("icb.desc"),
-      href: `/${locale}/products/industrial-control-boards`,
+      href: `/${locale}/products/industrial-control-boards.html`,
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       title: t("medical.title"),
       description: t("medical.desc"),
-      href: `/${locale}/products/medical-devices`,
+      href: `/${locale}/products/medical-devices.html`,
       image: "/placeholder.svg?height=400&width=600",
     },
   ]
@@ -73,7 +73,7 @@ export default function ProductsPage({ params }: { params: { locale: string } })
     <PageLayout
       title={t("title")}
       subtitle={t("subtitle")}
-      breadcrumbs={[{ label: t("title"), href: `/${locale}/products` }]}
+      breadcrumbs={[{ label: t("title"), href: `/${locale}/products.html` }]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

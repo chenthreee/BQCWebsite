@@ -133,7 +133,7 @@ export default function ContactPage() {
 
       {/* 位置卡片 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Link href="/contact/shenzhen-factory" className="block">
+        <Link href="/contact/shenzhen-factory.html" className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -156,7 +156,7 @@ export default function ContactPage() {
           </div>
         </Link>
 
-        <Link href="/contact/rd-center" className="block">
+        <Link href="/contact/rd-center.html" className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -179,7 +179,7 @@ export default function ContactPage() {
           </div>
         </Link>
 
-        <Link href="/contact/malaysia-factory" className="block">
+        <Link href="/contact/malaysia-factory.html" className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image

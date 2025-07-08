@@ -66,7 +66,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
             </div>
             <p className="text-gray-600 mb-6">{t("news.company.desc")}</p>
             <Link
-              href={`/${locale}/news/company`}
+              href={`/${locale}/news/company.html`}
               className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
             >
               {t("news.readMore")} →
@@ -81,7 +81,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
             </div>
             <p className="text-gray-600 mb-6">{t("news.industry.desc")}</p>
             <Link
-              href={`/${locale}/news/industry`}
+              href={`/${locale}/news/industry.html`}
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300"
             >
               {t("news.readMore")} →
@@ -106,7 +106,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
                   <Calendar className="h-4 w-4 mr-1" />
                   <span>{companyNews.publishedAt?.slice(0, 10)}</span>
                 </div>
-                <Link href={`/${locale}/news/company/${companyNews.slug}`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+                <Link href={`/${locale}/news/company/${companyNews.slug}.html`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
                   {t("news.readMore")} &rarr;
                 </Link>
               </div>
@@ -129,7 +129,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
                   <Calendar className="h-4 w-4 mr-1" />
                   <span>{industryNews.publishedAt?.slice(0, 10)}</span>
                 </div>
-                <Link href={`/${locale}/news/industry/${industryNews.slug}`} className="text-green-600 hover:text-green-800 flex items-center text-sm font-medium">
+                <Link href={`/${locale}/news/industry/${industryNews.slug}.html`} className="text-green-600 hover:text-green-800 flex items-center text-sm font-medium">
                   {t("news.readMore")} &rarr;
                 </Link>
               </div>

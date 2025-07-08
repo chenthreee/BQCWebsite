@@ -50,8 +50,8 @@ export default function EnergyStoragePcsPage({ params }: { params: { locale: str
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_pcs"), href: `/${locale}/products/energy-storage-pcs` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_pcs"), href: `/${locale}/products/energy-storage-pcs.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -111,7 +111,7 @@ export default function EnergyStoragePcsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("commercial")}</h3>
               <p className="text-gray-700 mb-4">{t("commercial_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-pcs/commercial`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-pcs/commercial.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -124,7 +124,7 @@ export default function EnergyStoragePcsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("power")}</h3>
               <p className="text-gray-700 mb-4">{t("power_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-pcs/power`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-pcs/power.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -137,7 +137,7 @@ export default function EnergyStoragePcsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("home")}</h3>
               <p className="text-gray-700 mb-4">{t("home_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-pcs/home`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-pcs/home.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -150,7 +150,7 @@ export default function EnergyStoragePcsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("microgrid")}</h3>
               <p className="text-gray-700 mb-4">{t("microgrid_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-pcs/microgrid`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-pcs/microgrid.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>

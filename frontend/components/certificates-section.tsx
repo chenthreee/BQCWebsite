@@ -42,7 +42,7 @@ export function CertificatesSection() {
         </div>
         <div className="flex justify-center mt-10">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
-            <Link href={`/${locale}/about/certificates`}>
+            <Link href={`/${locale}/about/certificates.html`}>
               {t("about.certificates.more") || (language === "en" ? "Learn More" : "了解更多")}
             </Link>
           </Button>

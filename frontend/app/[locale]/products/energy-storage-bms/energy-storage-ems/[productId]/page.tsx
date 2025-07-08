@@ -33,15 +33,15 @@ export default function ProductDetailPage({ params }: { params: { locale: string
       title={product.title}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms` },
-        { label: t("breadcrumb_ems"), href: `/${locale}/products/energy-storage-bms/energy-storage-ems` },
-        { label: product.model, href: `/${locale}/products/energy-storage-bms/energy-storage-ems/${productId}` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms.html` },
+        { label: t("breadcrumb_ems"), href: `/${locale}/products/energy-storage-bms/energy-storage-ems.html` },
+        { label: product.model, href: `/${locale}/products/energy-storage-bms/energy-storage-ems/${productId}.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-6">
-        <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems`} className="inline-flex items-center text-blue-600 hover:text-blue-800">
+        <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems.html`} className="inline-flex items-center text-blue-600 hover:text-blue-800">
           <ArrowLeft className="mr-2 h-4 w-4" />
           {t("back")}
         </Link>

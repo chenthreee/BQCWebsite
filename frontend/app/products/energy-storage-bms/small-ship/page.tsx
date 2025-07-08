@@ -94,7 +94,7 @@ export default function SmallShipBmsPage() {
                 50kWh小型船舶储能系统，适用于游艇、小型渔船等，支持16串锂电池组管理。
               </p>
               <Link
-                href="/products/energy-storage-bms/small-ship/bms-m50"
+                href="/products/energy-storage-bms/small-ship/bms-m50.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -118,7 +118,7 @@ export default function SmallShipBmsPage() {
                 100kWh小型船舶储能系统，适用于中型渔船、小型客船等，支持16-32串锂电池组管理。
               </p>
               <Link
-                href="/products/energy-storage-bms/small-ship/bms-m100"
+                href="/products/energy-storage-bms/small-ship/bms-m100.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -142,7 +142,7 @@ export default function SmallShipBmsPage() {
                 200kWh中型船舶储能系统，适用于中型客船、工作船等，支持32串锂电池组管理。
               </p>
               <Link
-                href="/products/energy-storage-bms/small-ship/bms-m200"
+                href="/products/energy-storage-bms/small-ship/bms-m200.html"
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 查看详情
@@ -171,7 +171,7 @@ export default function SmallShipBmsPage() {
               为某豪华游艇制造商提供的100kWh船舶储能系统BMS解决方案，实现游艇的全电动推进系统，零排放、低噪音，提升用户体验。
             </p>
             <Link
-              href="/products/energy-storage-bms/small-ship/case-yacht"
+              href="/products/energy-storage-bms/small-ship/case-yacht.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情
@@ -193,7 +193,7 @@ export default function SmallShipBmsPage() {
               为某渔业公司提供的50kWh船舶储能系统BMS解决方案，实现渔船的混合动力系统，降低燃油消耗40%以上，减少运营成本。
             </p>
             <Link
-              href="/products/energy-storage-bms/small-ship/case-fishing"
+              href="/products/energy-storage-bms/small-ship/case-fishing.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情

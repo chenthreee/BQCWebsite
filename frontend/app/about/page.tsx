@@ -90,22 +90,22 @@ export default function HomePage() {
               <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/products/bms" className="text-gray-400 hover:text-white">
+                  <Link href="/products/bms.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "储能BMS" : "Energy Storage BMS"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/energy-storage-bms/energy-storage-ems" className="text-gray-400 hover:text-white">
+                  <Link href="/products/energy-storage-bms/energy-storage-ems.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "储能EMS（总控）" : "Energy Storage EMS"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/pcs" className="text-gray-400 hover:text-white">
+                  <Link href="/products/pcs.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "储能PCS" : "Energy Storage PCS"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/robot" className="text-gray-400 hover:text-white">
+                  <Link href="/products/robot.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "智能机器人系统" : "Intelligent Robot Systems"}
                   </Link>
                 </li>
@@ -116,22 +116,22 @@ export default function HomePage() {
               <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/about/introduction" className="text-gray-400 hover:text-white">
+                  <Link href="/about/introduction.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "简介" : "Introduction"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/values" className="text-gray-400 hover:text-white">
+                  <Link href="/about/values.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "核心价值观" : "Core Values"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/history" className="text-gray-400 hover:text-white">
+                  <Link href="/about/history.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "发展历程" : "History"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/management" className="text-gray-400 hover:text-white">
+                  <Link href="/about/management.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "管理系统" : "Management System"}
                   </Link>
                 </li>
@@ -142,17 +142,17 @@ export default function HomePage() {
               <h3 className="text-lg font-bold mb-4">{t("footer.contact")}</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/contact/rd" className="text-gray-400 hover:text-white">
+                  <Link href="/contact/rd.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "研发中心" : "R&D Center"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact/factory-cn" className="text-gray-400 hover:text-white">
+                  <Link href="/contact/factory-cn.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "深圳工厂" : "Shenzhen Factory"}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact/factory-my" className="text-gray-400 hover:text-white">
+                  <Link href="/contact/factory-my.html" className="text-gray-400 hover:text-white">
                     {language === "zh" ? "马来西亚工厂" : "Malaysia Factory"}
                   </Link>
                 </li>
@@ -173,10 +173,10 @@ export default function HomePage() {
             </div>
 
             <div className="flex space-x-4">
-              <Link href="/legal" className="text-gray-400 hover:text-white text-sm">
+              <Link href="/legal.html" className="text-gray-400 hover:text-white text-sm">
                 {t("footer.legal")}
               </Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">
+              <Link href="/privacy.html" className="text-gray-400 hover:text-white text-sm">
                 {t("footer.privacy")}
               </Link>
             </div>

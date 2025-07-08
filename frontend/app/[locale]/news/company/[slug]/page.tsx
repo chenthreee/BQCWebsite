@@ -111,9 +111,9 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       title={article.title}
       subtitle={article.description || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
-        { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company` },
-        { label: article.title, href: `/${locale}/news/company/${params.slug}` },
+        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news.html` },
+        { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company.html` },
+        { label: article.title, href: `/${locale}/news/company/${params.slug}.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -165,7 +165,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
             {prev && (
               <div className="md:w-1/2 md:text-left mb-2 md:mb-0 flex items-center">
                 <Link
-                  href={`/${locale}/news/company/${prev.slug}`}
+                  href={`/${locale}/news/company/${prev.slug}.html`}
                   className="inline-flex items-center px-5 py-3 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all text-base font-medium shadow-sm"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
@@ -178,7 +178,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
             {next && (
               <div className={`md:w-1/2 md:text-right flex items-center ${prev ? "justify-end" : "md:justify-end justify-end md:ml-auto"}`}>
                 <Link
-                  href={`/${locale}/news/company/${next.slug}`}
+                  href={`/${locale}/news/company/${next.slug}.html`}
                   className="inline-flex items-center px-5 py-3 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all text-base font-medium shadow-sm"
                 >
                   {locale === "en" ? "Next" : "下一篇"}：{next.title}
@@ -213,7 +213,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
                   <Link
-                    href={`/${locale}/news/company/${item.slug}`}
+                    href={`/${locale}/news/company/${item.slug}.html`}
                     className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
                   >
                     {locale === "en" ? "Read More" : "阅读全文"}

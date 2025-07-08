@@ -277,7 +277,7 @@ export default function ProductDetailPage({ params }: { params: { productId: str
     >
       <div className="mb-6">
         <Link
-          href="/products/energy-storage-bms/power-storage"
+          href="/products/energy-storage-bms/power-storage.html"
           className="inline-flex items-center text-blue-600 hover:text-blue-800"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />

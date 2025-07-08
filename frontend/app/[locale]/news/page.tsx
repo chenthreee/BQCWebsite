@@ -60,7 +60,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
     <PageLayout
       title={locale === "en" ? "News Center" : "新闻中心"}
       subtitle={locale === "en" ? "Learn about the latest news and industry information of BQC Electronics" : "了解百千成电子最新动态与行业资讯"}
-      breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news" }]}
+      breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news.html" }]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <LanguageSwitcher />
@@ -102,7 +102,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
               <h2 className="text-2xl font-bold mb-4">{pageNews[0].title}</h2>
               <p className="text-gray-700 mb-6">{pageNews[0].description}</p>
               <Link
-                href={`/${locale}/news/${pageNews[0].category?.name === 'industry' ? 'industry' : 'company'}/${pageNews[0].slug}`}
+                href={`/${locale}/news/${pageNews[0].category?.name === 'industry' ? 'industry' : 'company'}/${pageNews[0].slug}.html`}
                 className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
@@ -145,7 +145,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
               <h3 className="text-xl font-bold mb-3">{news.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{news.description}</p>
               <Link
-                href={`/${locale}/news/${news.category?.name === 'industry' ? 'industry' : 'company'}/${news.slug}`}
+                href={`/${locale}/news/${news.category?.name === 'industry' ? 'industry' : 'company'}/${news.slug}.html`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
               >
                 {locale === "en" ? "Read More" : "阅读全文"}
@@ -160,7 +160,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
       <div className="flex justify-center items-center gap-2 mt-12">
         {page > 1 && (
           <Link
-            href={`/${locale}/news?page=${page - 1}`}
+            href={`/${locale}/news?page=${page - 1}.html`}
             className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
           >
             {locale === "en" ? "Previous" : "上一页"}
@@ -170,7 +170,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
         {Array.from({ length: totalPages }, (_, i) => (
           <Link
             key={i + 1}
-            href={`/${locale}/news?page=${i + 1}`}
+            href={`/${locale}/news?page=${i + 1}.html`}
             className={`px-3 py-2 rounded ${page === i + 1 ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
           >
             {i + 1}
@@ -178,7 +178,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
         ))}
         {page < totalPages && (
           <Link
-            href={`/${locale}/news?page=${page + 1}`}
+            href={`/${locale}/news?page=${page + 1}.html`}
             className="px-4 py-2 rounded bg-gray-200 text-gray-700 hover:bg-gray-300"
           >
             {locale === "en" ? "Next" : "下一页"}

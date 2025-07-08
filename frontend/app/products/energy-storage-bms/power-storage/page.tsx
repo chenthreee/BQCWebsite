@@ -191,7 +191,7 @@ export default function PowerStorageBmsPage() {
               为某省电网公司提供的100MWh电力储能系统BMS解决方案，实现电网削峰填谷、调频调压等功能，提高电网稳定性和经济性。
             </p>
             <Link
-              href="/products/energy-storage-bms/power-storage/case-grid"
+              href="/products/energy-storage-bms/power-storage/case-grid.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情
@@ -213,7 +213,7 @@ export default function PowerStorageBmsPage() {
               为某光伏发电站提供的50MWh电力储能系统BMS解决方案，解决光伏发电波动性问题，提高可再生能源并网质量和利用率。
             </p>
             <Link
-              href="/products/energy-storage-bms/power-storage/case-renewable"
+              href="/products/energy-storage-bms/power-storage/case-renewable.html"
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               查看详情

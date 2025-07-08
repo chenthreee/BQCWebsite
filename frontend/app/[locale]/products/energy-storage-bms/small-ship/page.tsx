@@ -132,7 +132,7 @@ export default function SmallShipBmsPage({ params }: { params: { locale: string 
                 <h3 className="text-2xl font-bold mb-3">{product.model}</h3>
                 <p className="text-gray-700 mb-4">{product.desc}</p>
                 <Link
-                  href={`/${locale}/products/energy-storage-bms/small-ship/${product.id}`}
+                  href={`/${locale}/products/energy-storage-bms/small-ship/${product.id}.html`}
                   className="text-blue-600 hover:text-blue-800 flex items-center font-medium"
                 >
                   {t("details")}
@@ -159,7 +159,7 @@ export default function SmallShipBmsPage({ params }: { params: { locale: string 
             <h3 className="text-xl font-bold mb-3">{t("case_yacht")}</h3>
             <p className="text-gray-700 mb-4">{t("case_yacht_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/small-ship/case-yacht`}
+              href={`/${locale}/products/energy-storage-bms/small-ship/case-yacht.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}
@@ -179,7 +179,7 @@ export default function SmallShipBmsPage({ params }: { params: { locale: string 
             <h3 className="text-xl font-bold mb-3">{t("case_fishing")}</h3>
             <p className="text-gray-700 mb-4">{t("case_fishing_desc")}</p>
             <Link
-              href={`/${locale}/products/energy-storage-bms/small-ship/case-fishing`}
+              href={`/${locale}/products/energy-storage-bms/small-ship/case-fishing.html`}
               className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
             >
               {t("details")}

@@ -50,8 +50,8 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_icb"), href: `/${locale}/products/industrial-control-boards` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_icb"), href: `/${locale}/products/industrial-control-boards.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -111,7 +111,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("general")}</h3>
               <p className="text-gray-700 mb-4">{t("general_desc")}</p>
-              <Link href={`/${locale}/products/industrial-control-boards/general`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/industrial-control-boards/general.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -124,7 +124,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("motion")}</h3>
               <p className="text-gray-700 mb-4">{t("motion_desc")}</p>
-              <Link href={`/${locale}/products/industrial-control-boards/motion`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/industrial-control-boards/motion.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -137,7 +137,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("communication")}</h3>
               <p className="text-gray-700 mb-4">{t("communication_desc")}</p>
-              <Link href={`/${locale}/products/industrial-control-boards/communication`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/industrial-control-boards/communication.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -150,7 +150,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("iot")}</h3>
               <p className="text-gray-700 mb-4">{t("iot_desc")}</p>
-              <Link href={`/${locale}/products/industrial-control-boards/iot`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/industrial-control-boards/iot.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -167,7 +167,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             </div>
             <h3 className="text-xl font-bold mb-3">{t("case_industrial")}</h3>
             <p className="text-gray-700 mb-4">{t("case_industrial_desc")}</p>
-            <Link href={`/${locale}/products/industrial-control-boards/case-industrial`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+            <Link href={`/${locale}/products/industrial-control-boards/case-industrial.html`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
               {t("details")}
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
@@ -178,7 +178,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             </div>
             <h3 className="text-xl font-bold mb-3">{t("case_equipment")}</h3>
             <p className="text-gray-700 mb-4">{t("case_equipment_desc")}</p>
-            <Link href={`/${locale}/products/industrial-control-boards/case-equipment`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+            <Link href={`/${locale}/products/industrial-control-boards/case-equipment.html`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
               {t("details")}
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
@@ -189,7 +189,7 @@ export default function IndustrialControlBoardsPage({ params }: { params: { loca
             </div>
             <h3 className="text-xl font-bold mb-3">{t("case_iot")}</h3>
             <p className="text-gray-700 mb-4">{t("case_iot_desc")}</p>
-            <Link href={`/${locale}/products/industrial-control-boards/case-iot`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+            <Link href={`/${locale}/products/industrial-control-boards/case-iot.html`} className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
               {t("details")}
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>

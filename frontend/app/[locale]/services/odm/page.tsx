@@ -26,8 +26,8 @@ export default function OdmServicePage() {
       title: "ODM研发服务（BMS）",
       subtitle: "一站式电子产品研发解决方案",
       breadcrumbs: [
-        { label: "服务", href: "/zh-Hans/services" },
-        { label: "ODM研发服务（BMS）", href: "/zh-Hans/services/odm" },
+        { label: "服务", href: "/zh-Hans/services.html" },
+        { label: "ODM研发服务（BMS）", href: "/zh-Hans/services/odm.html" },
       ],
       intro: {
         title: "BQC 提供BMS PCBA ODM服务",
@@ -103,15 +103,15 @@ export default function OdmServicePage() {
         title: "联系我们",
         description: "如果您有产品开发需求，欢迎联系我们的ODM服务团队，我们将为您提供专业的技术咨询和解决方案。",
         buttonText: "联系我们讨论您的项目",
-        href: "/zh-Hans/contact"
+        href: "/zh-Hans/contact.html"
       }
     },
     en: {
       title: "ODM R&D Services（BMS）",
       subtitle: "One-stop electronic product R&D solution",
       breadcrumbs: [
-        { label: "Services", href: "/en/services" },
-        { label: "ODM R&D Services", href: "/en/services/odm" },
+        { label: "Services", href: "/en/services.html" },
+        { label: "ODM R&D Services", href: "/en/services/odm.html" },
       ],
       intro: {
         title: "BQC Provides BMS PCBA ODM Services",
@@ -187,7 +187,7 @@ export default function OdmServicePage() {
         title: "Contact Us",
         description: "If you have product development needs, please contact our ODM service team. We will provide you with professional technical consultation and solutions.",
         buttonText: "Contact Us to Discuss Your Project",
-        href: "/en/contact"
+        href: "/en/contact.html"
       }
     }
   }

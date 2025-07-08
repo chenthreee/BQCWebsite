@@ -52,8 +52,8 @@ export default function EnergyStorageBmsPage({ params }: { params: { locale: str
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -113,7 +113,7 @@ export default function EnergyStorageBmsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("power_bms")}</h3>
               <p className="text-gray-700 mb-4">{t("power_bms_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-bms/power-storage`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-bms/power-storage.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -127,11 +127,11 @@ export default function EnergyStorageBmsPage({ params }: { params: { locale: str
               <h3 className="text-2xl font-bold mb-3">{t("ship_bms")}</h3>
               <p className="text-gray-700 mb-4">{t("ship_bms_desc")}</p>
               <div className="flex space-x-4">
-                <Link href={`/${locale}/products/energy-storage-bms/large-ship`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+                <Link href={`/${locale}/products/energy-storage-bms/large-ship.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                   {t("large_ship")}
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
-                <Link href={`/${locale}/products/energy-storage-bms/small-ship`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+                <Link href={`/${locale}/products/energy-storage-bms/small-ship.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                   {t("small_ship")}
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
@@ -145,7 +145,7 @@ export default function EnergyStorageBmsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("base_bms")}</h3>
               <p className="text-gray-700 mb-4">{t("base_bms_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-bms/communication-base`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-bms/communication-base.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -158,7 +158,7 @@ export default function EnergyStorageBmsPage({ params }: { params: { locale: str
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{t("ems")}</h3>
               <p className="text-gray-700 mb-4">{t("ems_desc")}</p>
-              <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+              <Link href={`/${locale}/products/energy-storage-bms/energy-storage-ems.html`} className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
                 {t("details")}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>

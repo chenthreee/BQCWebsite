@@ -33,15 +33,15 @@ export default function ProductDetailPage({ params }: { params: { locale: string
       title={product.title}
       subtitle={t("subtitle")}
       breadcrumbs={[
-        { label: t("breadcrumb_products"), href: `/${locale}/products` },
-        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms` },
-        { label: t("breadcrumb_large"), href: `/${locale}/products/energy-storage-bms/large-ship` },
-        { label: product.model, href: `/${locale}/products/energy-storage-bms/large-ship/${productId}` },
+        { label: t("breadcrumb_products"), href: `/${locale}/products.html` },
+        { label: t("breadcrumb_bms"), href: `/${locale}/products/energy-storage-bms.html` },
+        { label: t("breadcrumb_large"), href: `/${locale}/products/energy-storage-bms/large-ship.html` },
+        { label: product.model, href: `/${locale}/products/energy-storage-bms/large-ship/${productId}.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
       <div className="mb-6">
-        <Link href={`/${locale}/products/energy-storage-bms/large-ship`} className="inline-flex items-center text-blue-600 hover:text-blue-800">
+        <Link href={`/${locale}/products/energy-storage-bms/large-ship.html`} className="inline-flex items-center text-blue-600 hover:text-blue-800">
           <ArrowLeft className="mr-2 h-4 w-4" />
           {t("back")}
         </Link>

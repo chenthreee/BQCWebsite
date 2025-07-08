@@ -432,7 +432,7 @@ export function ServicesSection() {
 
                 <div className="mt-8 text-center">
                 <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                  <Link href={`/${locale}/services/oem`}>
+                  <Link href={`/${locale}/services/oem.html`}>
                     {t("oem.button")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -579,7 +579,7 @@ export function ServicesSection() {
 
                 <div className="mt-8 text-center">
                 <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                  <Link href={`/${locale}/services/odm`}>
+                  <Link href={`/${locale}/services/odm.html`}>
                     {t("odm.button")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

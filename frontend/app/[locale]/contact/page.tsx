@@ -22,7 +22,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     "zh-Hans": {
       title: "联系我们",
       subtitle: "欢迎通过以下方式与我们联系",
-      breadcrumbs: [{ label: "联系我们", href: "/zh-Hans/contact" }],
+      breadcrumbs: [{ label: "联系我们", href: "/zh-Hans/contact.html" }],
       generalContact: {
         title: "联系方式",
         description: "欢迎通过以下方式与我们联系，或致电获取即时帮助：",
@@ -49,7 +49,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     en: {
       title: "Contact Us",
       subtitle: "Get in touch with us",
-      breadcrumbs: [{ label: "Contact Us", href: "/en/contact" }],
+      breadcrumbs: [{ label: "Contact Us", href: "/en/contact.html" }],
       generalContact: {
         title: "General Contact",
         description: "Send us a general inquiry through below info or contact by phone for immediate assistance:",
@@ -76,7 +76,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
   }
 
   const currentContent = content[locale]
-  const baseHref = `/${locale}/contact`
+  const baseHref = `/${locale}/contact.html`
 
   return (
     <PageLayout
@@ -133,7 +133,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
 
       {/* 位置卡片 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Link href={`${baseHref}/shenzhen-factory`} className="block">
+        <Link href={`${baseHref}`} className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -156,7 +156,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           </div>
         </Link>
 
-        <Link href={`${baseHref}/rd-center`} className="block">
+        <Link href={`${baseHref}`} className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -179,7 +179,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           </div>
         </Link>
 
-        <Link href={`${baseHref}/malaysia-factory`} className="block">
+        <Link href={`${baseHref}`} className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image

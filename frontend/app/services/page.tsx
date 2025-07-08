@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <p className="text-gray-700 mb-6">
               百千成电子拥有专业的研发团队，提供从需求分析、方案设计到样机制作、量产支持的一站式ODM研发服务，帮助客户快速实现产品创新。
             </p>
-            <Link href="/services/odm" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+            <Link href="/services/odm.html" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
               了解详情
               <ArrowRight className="ml-1 h-5 w-5" />
             </Link>
@@ -48,7 +48,7 @@ export default function ServicesPage() {
             <p className="text-gray-700 mb-6">
               百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。
             </p>
-            <Link href="/services/jdsm-oem" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
+            <Link href="/services/jdsm-oem.html" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
               了解详情
               <ArrowRight className="ml-1 h-5 w-5" />
             </Link>

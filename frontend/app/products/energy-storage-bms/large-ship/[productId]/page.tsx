@@ -675,7 +675,7 @@ export default function ProductDetailPage({ params }: { params: { productId: str
     >
       <div className="mb-8">
         <Link
-          href="/products/energy-storage-bms/large-ship"
+          href="/products/energy-storage-bms/large-ship.html"
           className="inline-flex items-center text-blue-600 hover:text-blue-800"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />

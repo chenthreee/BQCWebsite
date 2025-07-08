@@ -166,7 +166,7 @@ export function AboutSection() {
             {/* <h4 className="text-xl font-semibold mb-2 text-gray-900">{t("about.vision.title")}</h4>
             <p className="text-gray-700 mb-6">{t("about.vision.desc")}</p> */}
             <a
-              href="/about/introduction"
+              href="/about/introduction.html"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
             >
               {t("about.learnMore")}
