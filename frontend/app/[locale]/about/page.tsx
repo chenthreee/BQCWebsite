@@ -23,14 +23,14 @@ export default function AboutPage() {
       icon: Award,
       color: "from-green-500 to-green-600",
     },
-    {
-      title: "战略定位",
-      description: "公司的发展战略与市场定位",
-      link: "/about/strategic-positioning",
-      image: "/placeholder.svg?height=400&width=600",
-      icon: TrendingUp,
-      color: "from-purple-500 to-purple-600",
-    },
+    // {
+    //   title: "战略定位",
+    //   description: "公司的发展战略与市场定位",
+    //   link: "/about/strategic-positioning",
+    //   image: "/placeholder.svg?height=400&width=600",
+    //   icon: TrendingUp,
+    //   color: "from-purple-500 to-purple-600",
+    // },
     {
       title: "发展历程",
       description: "百千成电子的成长与发展历程",
