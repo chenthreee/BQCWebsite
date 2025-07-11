@@ -43,6 +43,7 @@ async function getAllNews(locale: string) {
 
 export default async function NewsPage({ params, searchParams }: { params: { locale: string }, searchParams: { page?: string } }) {
   console.log('params.locale:', params.locale);
+
   const locale = params.locale === "en" ? "en" : "zh-Hans";
   const allNews = await getAllNews(locale);
   const pageSize = 50;
