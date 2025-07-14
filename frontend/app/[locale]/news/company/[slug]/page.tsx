@@ -173,7 +173,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
                 </Link>
               </div>
             )}
-            {/* 分隔线，仅桌面端显示且有上一篇和下一篇时显示 */}
+            {/* 分隔线，仅桌面端显示且有上一篇和下一篇时显示  */}
             {prev && next && <div className="hidden md:block w-px bg-gray-200 mx-4" />}
             {next && (
               <div className={`md:w-1/2 md:text-right flex items-center ${prev ? "justify-end" : "md:justify-end justify-end md:ml-auto"}`}>
