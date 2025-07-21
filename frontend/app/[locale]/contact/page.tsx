@@ -85,7 +85,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
-      {/* 联系方式 */}
+      {/* 联系方式  */}
       <div className="mb-16">
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-6">{currentContent.generalContact.title}</h2>
