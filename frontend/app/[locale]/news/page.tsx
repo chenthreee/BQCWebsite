@@ -57,6 +57,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
     redirect(`/${locale}/news?page=1`);
   }
 
+  
   return (
     <PageLayout
       title={locale === "en" ? "News Center" : "新闻中心"}
