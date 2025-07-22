@@ -27,3 +27,7 @@ yarn-error.log*
 next-env.d.ts
 
 readme
+*.mp4
+*.png
+*.jpg
+

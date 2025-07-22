@@ -23,169 +23,253 @@ export default function OdmServicePage() {
 
   const content = {
     "zh-Hans": {
-      title: "ODM研发服务（BMS）",
-      subtitle: "一站式电子产品研发解决方案",
+      title: "百千成JDSM联合设计制造服务",
+      subtitle: "Join Design Smart Manufacture 深度协作服务",
       breadcrumbs: [
         { label: "服务", href: "/zh-Hans/services.html" },
-        { label: "ODM研发服务（BMS）", href: "/zh-Hans/services/odm.html" },
+        { label: "JDSM联合设计制造服务", href: "/zh-Hans/services/odm.html" },
       ],
-      intro: {
-        title: "BQC 提供BMS PCBA ODM服务",
-        description: "深圳市百千成电子有限公司是全球最大的BMS ODM制造商，是国际电力大储前5、船舶储能前3指定供应商，拥有超过21年的经验。我们为电力大储提供定制设计服务，我们强大的研发能力帮助客户拥有自己的BMS和研发团队，更好更快地解决现场问题。"
+      whyChoose: {
+        title: "为何选择百千成？",
+        items: [
+          "联合设计优势：早期介入设计阶段，避免后期变更成本",
+          "全流程效率：从设计到认证的闭环服务，缩短产品上市周期30%+",
+          "成本竞争力：器件替代方案+原厂级供应链，降低BOM成本15%-30%",
+          "行业背书：成功服务新能源/医疗/智能家居等高端制造领域"
+        ]
       },
-      hardware: {
-        title: "硬件设计能力",
-        sections: [
+      serviceOverview: {
+        title: "服务概述",
+        subtitle: "JDSM模式：Join Design Smart Manufacture深度协作服务",
+        description: "服务本质：",
+        phases: [
           {
-            title: "1. 核心器件选型及框图",
-            alt: "核心器件选型及框图",
-            image: "/images/about/services/odm/key_components_zh.png"
+            title: "设计阶段",
+            content: "共同定义产品方案（需求分析→方案设计）"
           },
           {
-            title: "2. 原理图",
-            alt: "原理图",
-            image: "/images/about/services/odm/schematic_zh_en.png"
-          },
-          {
-            title: "3. PCB 布局",
-            alt: "PCB 布局",
-            image: "/images/about/services/odm/PCB_layout_zh_en.png"
+            title: "制造阶段", 
+            content: "开发制造一体化（DFM同步工程→量产支持）"
           }
         ]
       },
-      software: {
-        title: "软件开发",
-        steps: {
-          title: "开发步骤",
+      team: {
+        title: "专业团队保障",
+        description: "30+人资深研发技术团队"
+      },
+      coreCapabilities: {
+        title: "核心能力",
+        subtitle: "全生命周期技术支持",
+        sections: [
+          {
+            title: "电子开发",
+            items: [
+              {
+                category: "硬件",
+                details: "原理图设计、元器件选型与Pin-to-Pin替代"
+              },
+              {
+                category: "嵌入式开发",
+                details: "单片机固件、蓝牙/Wi-Fi等无线方案"
+              }
+            ]
+          },
+          {
+            title: "结构开发",
+            items: [
+              {
+                category: "塑料/金属件ID/MD设计",
+                details: ""
+              },
+              {
+                category: "模具开发与注塑工艺优化",
+                details: ""
+              }
+            ]
+          },
+          {
+            title: "精密制造",
+            items: [
+              {
+                category: "DFM可制造性分析",
+                details: ""
+              },
+              {
+                category: "自动化烧录及测试设备开发",
+                details: ""
+              }
+            ]
+          }
+        ],
+        certification: {
+          title: "支持全球认证，助力产品合规上市",
           items: [
-            "需求分析：确定电池监测、管理策略、安全要求等",
-            "系统设计：设计软件架构、数据流程和用户界面",
-            "编码实现：编写代码，数据采集、状态评估、控制算法等",
-            "测试验证：单元测试、集成测试和系统测试",
-            "集成调试：集成并调试，确保软件与硬件良好协作",
-            "部署维护：部署并进行定期的软件维护和更新"
-          ]
-        },
-        advantages: {
-          title: "开发优势",
-          items: [
-            "高安全性：精度3%，确保电池在安全的工作范围内",
-            "延长寿命：优化充放电策略，平衡电池组单体，延长使用寿命",
-            "提升性能：自动监测和调整电池状态，优化性能，提高能量利用率",
-            "减少成本：有效的电池管理，减少维护成本",
-            "用户友好：提供界面，实时监控电池状态和性能",
-            "适应性强：电池系统定制开发，满足特定需求"
+            "CE/FCC/UL（安全）",
+            "RoHS/REACH（环保）",
+            "FDA（医疗）等"
           ]
         }
       },
-      enclosure: {
-        title: "外壳设计",
-        sections: [
+      industryExpertise: {
+        title: "重点行业解决方案",
+        industries: [
           {
-            title: "1. 外观设计",
-            alt: "外观设计1"
+            field: "新能源",
+            products: "储能BMS（电力大储/通讯基站/工商业/船舶/家储）等"
           },
           {
-            title: "2. MD设计",
-            alt: "MD设计"
+            field: "医疗电子",
+            products: "呼吸机/血糖仪/体温计/心率检测仪等"
+          },
+          {
+            field: "智能家居",
+            products: "扫地机器人/猫砂盆等"
           }
         ]
       },
-      automation: {
-        title: "自动化烧录和测试设备",
-        description: "用气动顶针替代手动插拔连接器，通过编程实现自动烧录和测试，用电脑程序替代人工操作，缩短生产时间和减少人为不良"
-      },
-      dfm: {
-        title: "DFM可制造性设计分析",
-        image: "/images/about/services/odm/DFM_zh.png"
+      cooperationMode: {
+        title: "合作模式（灵活引导）",
+        modes: [
+          "全案交付：需求→设计→制造→认证 全程托管",
+          "模块化服务（可自由组合）：制造赋能"
+        ],
+        services: [
+          "快速打样/PCB设计→原型验证",
+          "批量生产→成品交付"
+        ],
+        image: "/images/services/odm/moudleservice_zh.png"
       },
       contact: {
         title: "联系我们",
-        description: "如果您有产品开发需求，欢迎联系我们的ODM服务团队，我们将为您提供专业的技术咨询和解决方案。",
+        description: "如果您有产品开发需求，欢迎联系我们的JDSM服务团队，我们将为您提供专业的技术咨询和解决方案。",
         buttonText: "联系我们讨论您的项目",
         href: "/zh-Hans/contact.html"
       }
     },
     en: {
-      title: "ODM R&D Services（BMS）",
-      subtitle: "One-stop electronic product R&D solution",
+      title: "BQC JDSM Joint Design & Manufacturing Services",
+      subtitle: "Join Design & Manufacture - Deep Collaboration Service",
       breadcrumbs: [
         { label: "Services", href: "/en/services.html" },
-        { label: "ODM R&D Services", href: "/en/services/odm.html" },
+        { label: "JDSM Services", href: "/en/services/odm.html" },
       ],
-      intro: {
-        title: "BQC Provides BMS PCBA ODM Services",
-        description: "Shenzhen Baiqiancheng Electronic Co., Ltd. is one of the world's largest BMS ODM manufacturers, a designated supplier for the top 5 international power energy storage and top 3 marine energy storage companies, with over 21 years of experience. We provide customized design services for power energy storage, and our strong R&D capabilities help customers have their own BMS and R&D teams to better and faster solve on-site problems."
+      whyChoose: {
+        title: "Why Choose BQC?",
+        items: [
+          "Joint Design Advantage: Early involvement in product design to avoid costly late-stage changes",
+          "End-to-End Efficiency: Closed-loop service from design to certification, reducing time-to-market by 30%+",
+          "Cost Competitiveness: Component alternatives + OEM-level supply chain, lowering BOM costs by 15%-30%",
+          "Industry Recognition: Proven expertise in high-end manufacturing (new energy/medical/smart home electronics)"
+        ]
       },
-      hardware: {
-        title: "Hardware Design Capabilities",
-        sections: [
+      serviceOverview: {
+        title: "Service Overview",
+        subtitle: "JDSM Model: Join Design & Manufacture – deep collaboration service",
+        description: "Core Value:",
+        phases: [
           {
-            title: "1. Core Component Selection and Block Diagram",
-            alt: "Core Component Selection and Block Diagram",
-            image: "/images/about/services/odm/key_components_en.png"
+            title: "Design Phase",
+            content: "Co-define product solutions (requirement analysis → design → prototype validation)"
           },
           {
-            title: "2. Schematic Design",
-            alt: "Schematic Design",
-            image: "/images/about/services/odm/schematic_zh_en.png"
-          },
-          {
-            title: "3. PCB Layout",
-            alt: "PCB Layout",
-            image: "/images/about/services/odm/PCB_layout_zh_en.png"
+            title: "Manufacturing Phase",
+            content: "Integrated development & production (DFM concurrent engineering → mass production support)"
           }
         ]
       },
-      software: {
-        title: "Software Development",
-        steps: {
-          title: "Development Steps",
+      team: {
+        title: "Expert Team",
+        description: "30+ senior R&D engineers"
+      },
+      coreCapabilities: {
+        title: "Core Capabilities",
+        subtitle: "Full-Lifecycle Technical Support",
+        sections: [
+          {
+            title: "Electronics Development",
+            items: [
+              {
+                category: "Hardware",
+                details: "Schematic/PCB design, component selection & Pin-to-Pin alternatives"
+              },
+              {
+                category: "Embedded Systems",
+                details: "MCU firmware, Bluetooth/Wi-Fi wireless solutions"
+              }
+            ]
+          },
+          {
+            title: "Mechanical Development",
+            items: [
+              {
+                category: "Plastic/metal part ID/MD design",
+                details: ""
+              },
+              {
+                category: "Mold development & injection molding optimization",
+                details: ""
+              }
+            ]
+          },
+          {
+            title: "Manufacturing Enablement",
+            items: [
+              {
+                category: "Rapid prototyping",
+                details: ""
+              },
+              {
+                category: "DFM analysis",
+                details: ""
+              },
+              {
+                category: "Automated programming & test equipment development",
+                details: ""
+              }
+            ]
+          }
+        ],
+        certification: {
+          title: "Global Certification Support",
           items: [
-            "Requirements Analysis: Determine battery monitoring, management strategies, safety requirements, etc.",
-            "System Design: Design software architecture, data flow, and user interface",
-            "Coding Implementation: Write code for data acquisition, status assessment, control algorithms, etc.",
-            "Testing and Verification: Unit testing, integration testing, and system testing",
-            "Integration and Debugging: Integrate and debug to ensure good cooperation between software and hardware",
-            "Deployment and Maintenance: Deploy and perform regular software maintenance and updates"
-          ]
-        },
-        advantages: {
-          title: "Development Advantages",
-          items: [
-            "High Safety: 3% accuracy, ensuring batteries operate within a safe working range",
-            "Extended Lifespan: Optimize charging and discharging strategies, balance battery cells, extend service life",
-            "Enhanced Performance: Automatically monitor and adjust battery status, optimize performance, improve energy utilization",
-            "Cost Reduction: Effective battery management, reduced maintenance costs",
-            "User-Friendly: Provide interface for real-time monitoring of battery status and performance",
-            "High Adaptability: Customized development of battery systems to meet specific requirements"
+            "CE/FCC/UL (safety)",
+            "RoHS/REACH (compliance)",
+            "FDA (medical)"
           ]
         }
       },
-      enclosure: {
-        title: "Enclosure Design",
-        sections: [
+      industryExpertise: {
+        title: "Key Industry Solutions",
+        industries: [
           {
-            title: "1. Appearance Design",
-            alt: "Appearance Design 1"
+            field: "New Energy",
+            products: "Energy storage BMS (utility-scale/telecom/industrial/marine/home)"
           },
           {
-            title: "2. MD Design",
-            alt: "MD Design"
+            field: "Medical Electronics",
+            products: "Ventilators/glucometers/thermometers/heart rate monitors"
+          },
+          {
+            field: "Smart Home",
+            products: "Robot vacuums/litter robots"
           }
         ]
       },
-      automation: {
-        title: "Automated Programming and Testing Equipment",
-        description: "Using pneumatic pogo pins instead of manual connector insertion and removal, achieving automated programming and testing through programming, replacing manual operations with computer programs, shortening production time and reducing human-caused defects"
-      },
-      dfm: {
-        title: "DFM (Design for Manufacturing) Analysis",
-        image: "/images/about/services/odm/DFM_en.png"
+      cooperationMode: {
+        title: "Collaboration Models",
+        modes: [
+          "Turnkey Solution: End-to-end management (requirements → design → manufacturing → certification)",
+          "Modular Services: Customizable combinations"
+        ],
+        services: [
+          "Design Services: Based on requirements",
+          "Manufacturing: Based on customer designs"
+        ],
+        image: "/images/services/odm/moudleservice_en.png"
       },
       contact: {
         title: "Contact Us",
-        description: "If you have product development needs, please contact our ODM service team. We will provide you with professional technical consultation and solutions.",
+        description: "If you have product development needs, please contact our JDSM service team. We will provide you with professional technical consultation and solutions.",
         buttonText: "Contact Us to Discuss Your Project",
         href: "/en/contact.html"
       }
@@ -201,139 +285,172 @@ export default function OdmServicePage() {
       breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
+      {/* 为何选择百千成 */}
       <div className="mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">
-              {currentContent.intro.title}
-            </h2>
-            <p className="text-lg text-gray-700 mb-4">
-              {currentContent.intro.description}
-            </p>
-          </div>
-          <div>
-            <Image
-              src="/placeholder.svg?height=600&width=800"
-              alt={currentContent.intro.title}
-              width={800}
-              height={600}
-              className="rounded-lg shadow-lg"
-            />
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          {currentContent.whyChoose.title}
+        </h2>
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <ul className="space-y-4">
+            {currentContent.whyChoose.items.map((item, index) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
+                <span className="text-lg">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* 服务概述 */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          {currentContent.serviceOverview.title}
+        </h2>
+        <div className="bg-gray-50 p-8 rounded-lg">
+          <h3 className="text-xl font-bold mb-4 text-center text-blue-600">
+            {currentContent.serviceOverview.subtitle}
+          </h3>
+          <p className="text-lg mb-6 text-center font-medium">
+            {currentContent.serviceOverview.description}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {currentContent.serviceOverview.phases.map((phase, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-lg font-bold mb-3 text-blue-600">{phase.title}</h4>
+                <p className="text-gray-700">{phase.content}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
+      {/* 专业团队保障 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          {currentContent.hardware.title}
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          {currentContent.team.title}
         </h2>
-        <div className="space-y-12">
-          {currentContent.hardware.sections.map((section, index) => (
+        <div className="bg-blue-50 p-8 rounded-lg text-center">
+          <p className="text-xl font-semibold text-blue-800">
+            {currentContent.team.description}
+          </p>
+        </div>
+      </div>
+
+      {/* 核心能力 */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          {currentContent.coreCapabilities.title}
+        </h2>
+        <h3 className="text-xl font-semibold mb-8 text-center text-gray-600">
+          {currentContent.coreCapabilities.subtitle}
+        </h3>
+        
+        <div className="space-y-8 mb-8">
+          {currentContent.coreCapabilities.sections.map((section, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">{section.title}</h3>
-              <div className="flex justify-center">
-                <Image
-                  src={section.image}
-                  alt={section.alt}
-                  width={800}
-                  height={500}
-                  className="rounded-lg shadow-md"
-                />
-              </div>
+              <h4 className="text-xl font-bold mb-4 text-blue-600">{section.title}</h4>
+              <ul className="space-y-3">
+                {section.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start">
+                    <ArrowRight className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold">{item.category}</span>
+                      {item.details && <span className="text-gray-600">：{item.details}</span>}
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
+
+        {/* 全球认证 */}
+        <div className="bg-green-50 p-6 rounded-lg">
+          <h4 className="text-lg font-bold mb-4 text-green-800">
+            {currentContent.coreCapabilities.certification.title}
+          </h4>
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {currentContent.coreCapabilities.certification.items.map((item, index) => (
+              <li key={index} className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
+      {/* 重点行业解决方案 */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          {currentContent.software.title}
+          {currentContent.industryExpertise.title}
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white rounded-lg shadow-md overflow-hidden">
+            <thead className="bg-blue-600 text-white">
+              <tr>
+                <th className="px-6 py-4 text-left font-semibold">行业领域</th>
+                <th className="px-6 py-4 text-left font-semibold">典型产品</th>
+              </tr>
+            </thead>
+            <tbody>
+              {currentContent.industryExpertise.industries.map((industry, index) => (
+                <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                  <td className="px-6 py-4 font-semibold text-blue-600">{industry.field}</td>
+                  <td className="px-6 py-4">{industry.products}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* 合作模式 */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          {currentContent.cooperationMode.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">{currentContent.software.steps.title}</h3>
-            <ul className="space-y-2">
-              {currentContent.software.steps.items.map((item, index) => (
+            <h3 className="text-lg font-bold mb-4 text-blue-600">服务模式</h3>
+            <ul className="space-y-3">
+              {currentContent.cooperationMode.modes.map((mode, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <span>{mode}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">{currentContent.software.advantages.title}</h3>
-            <ul className="space-y-2">
-              {currentContent.software.advantages.items.map((item, index) => (
+            <h3 className="text-lg font-bold mb-4 text-blue-600">核心服务</h3>
+            <ul className="space-y-3">
+              {currentContent.cooperationMode.services.map((service, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
+                  <ArrowRight className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span>{service}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          {currentContent.enclosure.title}
-        </h2>
-        <div className="space-y-12">
-          {currentContent.enclosure.sections.map((section, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">{section.title}</h3>
-              <div className="flex justify-center">
-                <Image
-                  src="/images/about/services/odm/ID_zh_en.png"
-                  alt={section.alt}
-                  width={500}
-                  height={300}
-                  className="rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          {currentContent.automation.title}
-        </h2>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <p className="text-lg text-gray-700 mb-6 text-center">
-            {currentContent.automation.description}
-          </p>
-          <div className="flex justify-center">
-            <Image
-              src="/images/about/services/odm/automatic_programming_zh_en.png"
-              alt={currentContent.automation.title}
-              width={600}
-              height={500}
-              className="rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          {currentContent.dfm.title}
-        </h2>
+        
+        {/* 合作模式图片 */}
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex justify-center">
             <Image
-              src={currentContent.dfm.image}
-              alt={currentContent.dfm.title}
+              src={currentContent.cooperationMode.image}
+              alt={currentContent.cooperationMode.title}
               width={800}
-              height={500}
+              height={600}
               className="rounded-lg shadow-md"
             />
           </div>
         </div>
       </div>
 
+      {/* 联系我们 */}
       <div className="bg-gray-100 p-8 rounded-lg text-center">
         <h2 className="text-3xl font-bold mb-6">{currentContent.contact.title}</h2>
         <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
