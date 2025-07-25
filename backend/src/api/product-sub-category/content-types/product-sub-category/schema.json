@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_sub_categories",
+  "info": {
+    "singularName": "product-sub-category",
+    "pluralName": "product-sub-categories",
+    "displayName": "Product Sub Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "parent_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-category.product-category",
+      "inversedBy": "product_sub_categories"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "sub_category"
+    }
+  }
+}

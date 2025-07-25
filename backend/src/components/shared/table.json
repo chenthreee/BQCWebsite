@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "headers": {
+      "type": "json",
+      "required": true
+    },
+    "rows": {
+      "type": "json",
+      "required": true
+    },
+    "styling": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "striped",
+        "bordered",
+        "compact"
+      ],
+      "default": "default"
+    }
+  }
+}

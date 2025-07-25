@@ -1,0 +1,139 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
+    },
+    "shortDescription": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-category.product-category",
+      "inversedBy": "products"
+    },
+    "modelNumber": {
+      "type": "string"
+    },
+    "specifications": {
+      "type": "json"
+    },
+    "features": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "applications": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.media",
+        "shared.rich-text",
+        "shared.table",
+        "shared.video",
+        "shared.specifications"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "default": 0,
+      "type": "integer"
+    },
+    "metaTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-sub-category.product-sub-category",
+      "inversedBy": "products"
+    }
+  }
+}

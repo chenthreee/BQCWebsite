@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_videos",
+  "info": {
+    "displayName": "Video"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videoFile": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "youtubeUrl": {
+      "type": "string"
+    },
+    "poster": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "controls": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

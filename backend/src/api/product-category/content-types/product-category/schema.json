@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_categories",
+  "info": {
+    "singularName": "product-category",
+    "pluralName": "product-categories",
+    "displayName": "Product Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "order": {
+      "default": 0,
+      "type": "integer"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "category"
+    },
+    "product_sub_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-sub-category.product-sub-category",
+      "mappedBy": "parent_category"
+    }
+  }
+}

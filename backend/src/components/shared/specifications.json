@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_specifications",
+  "info": {
+    "displayName": "Specifications"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "技术规格"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.spec-item"
+    }
+  }
+}

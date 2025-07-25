@@ -558,6 +558,229 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiProductCategoryProductCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'product_categories';
+  info: {
+    description: '';
+    displayName: 'Product Categories';
+    pluralName: 'product-categories';
+    singularName: 'product-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    icon: Schema.Attribute.Media<'images'>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-category.product-category'
+    >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    product_sub_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-sub-category.product-sub-category'
+    >;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductSubCategoryProductSubCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'product_sub_categories';
+  info: {
+    description: '';
+    displayName: 'Product Sub Categories';
+    pluralName: 'product-sub-categories';
+    singularName: 'product-sub-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    icon: Schema.Attribute.Media<'images'>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-sub-category.product-sub-category'
+    >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    parent_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::product-category.product-category'
+    >;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Struct.CollectionTypeSchema {
+  collectionName: 'products';
+  info: {
+    description: '';
+    displayName: 'Products';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    applications: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'shared.media',
+        'shared.rich-text',
+        'shared.table',
+        'shared.video',
+        'shared.specifications',
+      ]
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::product-category.product-category'
+    >;
+    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    gallery: Schema.Attribute.Media<'images', true>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product.product'
+    >;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    modelNumber: Schema.Attribute.String;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    specifications: Schema.Attribute.JSON;
+    sub_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::product-sub-category.product-sub-category'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1072,6 +1295,9 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::product-category.product-category': ApiProductCategoryProductCategory;
+      'api::product-sub-category.product-sub-category': ApiProductSubCategoryProductSubCategory;
+      'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
