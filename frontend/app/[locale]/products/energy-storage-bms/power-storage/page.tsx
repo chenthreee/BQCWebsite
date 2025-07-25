@@ -18,7 +18,7 @@ export default function PowerStorageBmsPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  //  获取产品数据
+  // 获取产品数据
   const fetchProducts = async () => {
     const query = `
       query GetPowerStorageProducts($locale: I18NLocaleCode) {
