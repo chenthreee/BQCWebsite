@@ -173,7 +173,7 @@ export default function PowerStorageBmsPage() {
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
-      {/* 产品列表 */}
+      {/* 产品列表  */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product: any) => (
           <div key={product.documentId} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
