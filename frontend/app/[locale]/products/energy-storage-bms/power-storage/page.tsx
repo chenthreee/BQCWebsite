@@ -66,7 +66,7 @@ export default function PowerStorageBmsPage() {
     }
   }
 
-  // 获取分类信息 
+  // 获取分类信息  
   const fetchCategory = async () => {
     const query = `
       query GetPowerStorageCategory($locale: I18NLocaleCode) {
