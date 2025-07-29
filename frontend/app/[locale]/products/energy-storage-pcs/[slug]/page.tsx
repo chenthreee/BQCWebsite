@@ -86,14 +86,13 @@ async function getProductBySlug(slug: string, locale: string) {
 }
 
 // GraphQL查询：获取同分类的相关产品
-async function getRelatedProducts(categoryName: string, subCategoryName: string, currentSlug: string, locale: string) {
+async function getRelatedProducts(categoryName: string, currentSlug: string, locale: string) {
   const query = `
-    query GetRelatedProducts($categoryName: String!, $subCategoryName: String!, $currentSlug: String!, $locale: I18NLocaleCode) {
+    query GetRelatedProducts($categoryName: String!, $currentSlug: String!, $locale: I18NLocaleCode) {
       products(
         locale: $locale,
         filters: {
           category: { name: { eq: $categoryName } },
-          sub_category: { name: { eq: $subCategoryName } },
           slug: { ne: $currentSlug }
         },
         sort: "order:asc",
@@ -112,7 +111,7 @@ async function getRelatedProducts(categoryName: string, subCategoryName: string,
   const res = await fetch(GRAPHQL_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query, variables: { categoryName, subCategoryName, currentSlug, locale } }),
+    body: JSON.stringify({ query, variables: { categoryName, currentSlug, locale } }),
     cache: "no-store"
   })
   const { data } = await res.json()
@@ -291,7 +290,6 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
   const relatedProducts = await getRelatedProducts(
     product.category?.name || "",
-    product.sub_category?.name || "",
     params.slug,
     locale
   )
@@ -302,9 +300,8 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       subtitle={product.shortDescription || ""}
       breadcrumbs={[
         { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
-        { label: product.category?.title || (locale === "en" ? "Energy Storage BMS" : "储能BMS"), href: `/${locale}/products/energy-storage-bms.html` },
-        { label: product.sub_category?.title || (locale === "en" ? "Power Storage BMS" : "电力储能BMS"), href: `/${locale}/products/energy-storage-bms/power-storage.html` },
-        { label: product.title, href: `/${locale}/products/energy-storage-bms/power-storage/${params.slug}.html` },
+        { label: product.category?.title || (locale === "en" ? "Energy Storage PCS" : "储能PCS"), href: `/${locale}/products/energy-storage-pcs.html` },
+        { label: product.title, href: `/${locale}/products/energy-storage-pcs/${params.slug}.html` },
       ]}
       backgroundImage="/placeholder.svg?height=1080&width=1920"
     >
@@ -425,7 +422,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm mb-3 line-clamp-2">{item.shortDescription}</p>
                   <Link
-                    href={`/${locale}/products/energy-storage-bms/power-storage/${item.slug}.html`}
+                    href={`/${locale}/products/energy-storage-pcs/${item.slug}.html`}
                     className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
                   >
                     {locale === "en" ? "View Details" : "查看详情"}
