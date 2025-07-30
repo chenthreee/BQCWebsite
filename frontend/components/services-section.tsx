@@ -300,6 +300,16 @@ export function ServicesSection() {
   // 获取当前活动的服务数据
   const currentServices = activeService === "oem" ? oemServices : odmServices
 
+  // 合作客户数据
+  const clients = [
+    { id: 1, name: "Nidec", logo: "/images/services/Nidec.png" },
+    { id: 2, name: "CosTco", logo: "/images/services/CosTco.png" },
+    { id: 3, name: "EVE", logo: "/images/services/EVE.png" },
+    { id: 4, name: "PLS", logo: "/images/services/PLS.png" },
+    { id: 5, name: "客户E", logo: "/images/services/e.png" },
+    { id: 6, name: "客户F", logo: "/images/services/f.png" },
+  ]
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -445,14 +455,14 @@ export function ServicesSection() {
             <div className="mt-20">
               <h3 className="text-2xl font-bold text-center mb-10">{t("oem.clients.title")}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                {[1, 2, 3, 4, 5, 6].map((item) => (
-                  <div key={item} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
+                {clients.map((client) => (
+                  <div key={client.id} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
                     <Image
-                      src={`/placeholder.svg?height=60&width=120&text=客户${item}`}
-                      alt={`客户${item}`}
-                      width={120}
-                      height={60}
-                      className="max-h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                      src={client.logo}
+                      alt={client.name}
+                      width={180}
+                      height={65}
+                      className="max-h-24 w-auto object-contain transition-all"
                     />
                   </div>
                 ))}

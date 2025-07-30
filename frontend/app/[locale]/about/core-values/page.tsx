@@ -47,7 +47,8 @@ export default function CoreValuesPage() {
           title: "客户第一",
           description: "反对上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
         }
-      ]
+      ],
+      image: "/images/about/coreValue/coreValue_zh.png"
     },
     en: {
       title: "Core Values",
@@ -69,7 +70,8 @@ export default function CoreValuesPage() {
           title: "Customer-first",
           description: <span className="text-lg font-medium">we center on internal customer representatives for internal alignment and real customers for decision-making, rather than prioritizing leadership, R&D, and manufacturing. </span>
         }
-      ]
+      ],
+      image: "/images/about/coreValue/coreValue_en.png"
     }
   }
 
@@ -90,7 +92,7 @@ export default function CoreValuesPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
         <div>
           <Image
-            src="/placeholder.svg?height=600&width=800"
+            src={currentContent.image}
             alt={language === "zh" ? "企业文化" : "Corporate Culture"}
             width={800}
             height={600}

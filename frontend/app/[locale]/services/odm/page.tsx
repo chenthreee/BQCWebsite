@@ -287,9 +287,15 @@ export default function OdmServicePage() {
     >
       {/* 为何选择百千成 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.whyChoose.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en" 
+            ? "Discover the unique advantages that make BQC your ideal partner for joint design and manufacturing"
+            : "了解百千成在联合设计制造方面的独特优势，成为您理想的合作伙伴"
+          }
+        </p>
         <div className="bg-white p-8 rounded-lg shadow-md">
           <ul className="space-y-4">
             {currentContent.whyChoose.items.map((item, index) => (
@@ -304,9 +310,15 @@ export default function OdmServicePage() {
 
       {/* 服务概述 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.serviceOverview.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en"
+            ? "Comprehensive service model that integrates design and manufacturing for optimal results"
+            : "整合设计与制造的综合服务模式，实现最优效果"
+          }
+        </p>
         <div className="bg-gray-50 p-8 rounded-lg">
           <h3 className="text-xl font-bold mb-4 text-center text-blue-600">
             {currentContent.serviceOverview.subtitle}
@@ -327,9 +339,15 @@ export default function OdmServicePage() {
 
       {/* 专业团队保障 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.team.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en"
+            ? "Experienced professionals dedicated to delivering excellence in every project"
+            : "经验丰富的专业团队，致力于为每个项目提供卓越服务"
+          }
+        </p>
         <div className="bg-blue-50 p-8 rounded-lg text-center">
           <p className="text-xl font-semibold text-blue-800">
             {currentContent.team.description}
@@ -339,9 +357,15 @@ export default function OdmServicePage() {
 
       {/* 核心能力 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.coreCapabilities.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en"
+            ? "Comprehensive technical capabilities covering the entire product development lifecycle"
+            : "覆盖产品开发全生命周期的综合技术能力"
+          }
+        </p>
         <h3 className="text-xl font-semibold mb-8 text-center text-gray-600">
           {currentContent.coreCapabilities.subtitle}
         </h3>
@@ -383,9 +407,15 @@ export default function OdmServicePage() {
 
       {/* 重点行业解决方案 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.industryExpertise.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en"
+            ? "Tailored solutions for key industries with proven track record and expertise"
+            : "针对重点行业的定制化解决方案，拥有丰富的经验和专业能力"
+          }
+        </p>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-lg shadow-md overflow-hidden">
             <thead className="bg-blue-600 text-white">
@@ -408,9 +438,15 @@ export default function OdmServicePage() {
 
       {/* 合作模式 */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           {currentContent.cooperationMode.title}
         </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          {locale === "en"
+            ? "Flexible collaboration models to meet diverse customer needs and project requirements"
+            : "灵活的合作模式，满足不同客户需求和项目要求"
+          }
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-4 text-blue-600">服务模式</h3>

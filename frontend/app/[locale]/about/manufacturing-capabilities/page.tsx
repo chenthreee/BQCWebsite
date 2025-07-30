@@ -34,25 +34,30 @@ export default function ManufacturingCapabilitiesPage() {
         desc: "自动化生产线，保障高效与高品质。",
         items: [
           {
-            count: "22",
+            count: "24",
             title: "SMT车间",
-            description: "BQC拥有22个自动化SMT生产线，日生产能力4500万点每天"
+            description: "BQC拥有24个自动化SMT生产线，日生产能力5800,000点每天"
+          },
+          {
+            count: "12",
+            title: "涂料车间",
+            description: "涂料线12条，日生产能力每天2万件产品"
           },
           {
             count: "8",
             title: "DIP车间",
-            description: "后焊线4条，手工焊线4条"
+            description: "插件线4条，日生产能力1500,000点每天；后焊焊线44条，日生产能力500,000点每天"
           },
           {
-            count: "3",
-            title: "产品组装线",
-            description: "成品组装生产线3条"
+            count: "5",
+            title: "功能测试线",
+            description: "功能测试生产线5条，每天2万件产品"
           },
           {
             count: "4",
-            title: "功能测试线",
-            description: "功能测试生产线4条"
-          }
+            title: "产品组装线",
+            description: "成品组装生产线4条,每天2万件产品"
+          },
         ]
       },
       equipment: {
@@ -60,45 +65,80 @@ export default function ManufacturingCapabilitiesPage() {
         desc: "先进设备提升生产效率与产品一致性。",
         items: [
           {
-            title: "松下&雅马哈贴片机30台",
-            description: "配备高精度贴片机，可实现高速、高精度的元器件贴装。",
-            image: "/panasonic-yama-chip-mounter.jpg"
+            title: "高速贴片机50台",
+            description: "写描述",
+            image: "/images/about/manufacturing/High-speed-mounter.png"
           },
           {
-            title: "回流焊炉10台",
-            description: "采用先进的回流焊设备，确保焊接质量。",
-            image: "/reflow-soldering-oven.jpg"
+            title: "自动印刷机20台",
+            description: "写描述",
+            image: "/images/about/manufacturing/Automatic printing machine.png"
           },
           {
-            title: "PCB自动上料机22台和自动印刷机22台",
-            description: "自动化设备提高生产效率和产品一致性。",
-            image: "/pcb-auto-load-machine-and-auto-printing-machine.jpg"
+            title: "10温区热风回流焊（可加氮气）12台",
+            description: "写描述",
+            image: "/images/about/manufacturing/temperature zone hot air reflow soldering.png"
           },
           {
             title: "波峰焊4台",
-            description: "用于通孔元器件的焊接，确保焊接质量。",
-            image: "/wave-soldering-oven.jpg"
+            description: "写描述",
+            image: "/images/about/manufacturing/Wave soldering.png"
           },
           {
-            title: "AOI探测器36台",
-            description: "自动光学检测设备，用于检查焊接质量。",
-            image: "/aoi-detector.jpg"
+            title: "自动插件机1台",
+            description: "写描述",
+            image: "/images/about/manufacturing/Automatic plug-in machine.png"
           },
           {
-            title: "X-RAY测试仪",
-            description: "",
-            image: "/x-ray-test-machine.jpg"
+            title: "3D X-RAY",
+            description: "写描述",
+            image: "/images/about/manufacturing/3D X-RAY.png"
           },
           {
-            title: "SPI焊膏检测12套",
-            description: "用于检测锡膏印刷质量，确保焊接可靠性。",
-            image: "/spi-solder-paste-inspection.jpg"
+            title: "3D SPI 8台",
+            description: "写描述",
+            image: "/images/about/manufacturing/3D SPI.png"
           },
           {
-            title: "ICT机器",
-            description: "",
-            image: "/ict-machine.jpg"
-          }
+            title: "FAI首件检测仪4台",
+            description: "写描述",
+            image: "/images/about/manufacturing/FAI First Article Tester.png"
+          },
+          {
+            title: "视觉高精度点胶机",
+            description: "写描述",
+            image: "/images/about/manufacturing/Vision High Precision Dispenser.png"
+          },
+          {
+            title: "3D AOI",
+            description: "写描述",
+            image: "/images/about/manufacturing/3D AOI.png"
+          },
+          {
+            title: "在线AOI 6台",
+            description: "写描述",
+            image: "/images/about/manufacturing/Online AOI.png"
+          },
+          {
+            title: "离线AOI 20台",
+            description: "写描述",
+            image: "/images/about/manufacturing/Offline AOI.png"
+          },
+          {
+            title: "影像测量仪（二次元）",
+            description: "写描述",
+            image: "/images/about/manufacturing/Image Measuring Instruments.png"
+          },
+          {
+            title: "恒温恒湿试验箱",
+            description: "写描述",
+            image: "/images/about/manufacturing/Constant temperature and humidity test chamber.png"
+          },
+          {
+            title: "ROHS测试仪",
+            description: "写描述",
+            image: "/images/about/manufacturing/ROHS Tester.png"
+          },
         ]
       },
       mountingRange: {
@@ -110,11 +150,23 @@ export default function ManufacturingCapabilitiesPage() {
         title: "装片运载能力参数",
         desc: "高精度与高速度兼备，适应多样化生产。",
         pcb: {
-          title: "PCB参数",
+          title: "PCB参数基本信息",
           items: [
-            "PCB电路板尺寸: 50 * 50 mm-L630mm * W490mm",
-            "PCB层: 1 ~ 16层",
-            "PCB厚度: 0.3mm-6.0mm"
+            "•	PCB电路板最大生产板尺寸:",
+            "     -1.	常规制程能力：545*650",
+            "     -2.	极限制程能力：620*2300",
+            "•	PCB层数:",
+            "     -1.	常规制程能力：26层",
+            "     -2.	极限制程能力：48层",
+            "•	PCB厚度:",
+            "     -1.	最小完成板厚(mm)：常规制程能力-0.1, 极限制程能力-0.05",
+            "     -2.	最小完成板厚(mm)：常规制程能力-6.3, 极限制程能力-8.0",
+            "•	内层最小芯板厚度(mm):",
+            "     -1.	常规制程能力：0.075",
+            "     -2.	极限制程能力：0.05",
+            "•	最小介质层厚度(mm):",
+            "     -1.	常规制程能力：0.075",
+            "     -2.	极限制程能力：0.05",
           ]
         },
         component: {
@@ -138,24 +190,29 @@ export default function ManufacturingCapabilitiesPage() {
         desc: "Automated production lines ensure efficiency and quality.",
         items: [
           {
-            count: "22",
+            count: "24",
             title: "SMT Workshop",
-            description: "BQC possesses of 22 completely automated SMT production lines, the daily production capacity of which is 45 million dots per day"
+            description: "BQC has 24 automated SMT lines with a daily production capacity of 58 million points per day"
+          },
+          {
+            count: "12",
+            title: "Conformal Coating Lines",
+            description: "12 coating lines with a daily production capacity of 20,000 pieces/day"
           },
           {
             count: "8",
             title: "DIP Workshop",
-            description: "THT (4) and Manual Soldering (4)"
+            description: "4 THT Production Lines, 1.5million points per day. 4 Hand Soldering Lines, 0.5million points per day."
           },
           {
-            count: "3",
-            title: "Product Assembly",
-            description: "Finished product assembling (3)"
+            count: "5",
+            title: "Functional Test Lines",
+            description: "Functional test line 4 pcs, 20,000 pieces/day"
           },
           {
             count: "4",
-            title: "Testing Lines",
-            description: "Functional Test (4)"
+            title: "Product assembly line",
+            description: "4 assembly lines for finished products, 20,000 pieces/day"
           }
         ]
       },
@@ -164,45 +221,80 @@ export default function ManufacturingCapabilitiesPage() {
         desc: "Advanced equipment improves efficiency and consistency.",
         items: [
           {
-            title: "Panasonic&YAMAHA Chip Mounter 30 sets",
-            description: "Equipped with high-precision mounting machines for high-speed, precise component placement.",
-            image: "/panasonic-yama-chip-mounter.jpg"
+            title: "High-speed mounter 50 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/High-speed-mounter.png"
           },
           {
-            title: "Reflow Soldering Oven 10 sets",
-            description: "Using advanced reflow soldering equipment to ensure soldering quality.",
-            image: "/reflow-soldering-oven.jpg"
+            title: "Automatic printing machine 20 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/Automatic printing machine.png"
           },
           {
-            title: "PCB Auto Load machine 22 sets&Auto-Printing Machine 22 sets",
-            description: "Automated equipment improves production efficiency and product consistency.",
-            image: "/pcb-auto-load-machine-and-auto-printing-machine.jpg"
+            title: "10 temperature zone hot air reflow soldering (can add nitrogen) 12 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/temperature zone hot air reflow soldering.png"
           },
           {
-            title: "Wave soldering oven 4 sets",
-            description: "Used for through-hole component soldering, ensuring soldering quality.",
-            image: "/wave-soldering-oven.jpg"
+            title: "Wave soldering 4 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/Wave soldering.png"
           },
           {
-            title: "AOI Detector 36 sets",
-            description: "Automated optical inspection equipment for checking soldering quality.",
-            image: "/aoi-detector.jpg"
+            title: "Automatic plug-in machine 1 set",
+            description: "write something",
+            image: "/images/about/manufacturing/Automatic plug-in machine.png"
           },
           {
-            title: "X-RAY test machine",
-            description: "",
-            image: "/x-ray-test-machine.jpg"
+            title: "3D X-RAY",
+            description: "write something",
+            image: "/images/about/manufacturing/3D X-RAY.png"
           },
           {
-            title: "SPI Solder Paste Inspection 12 sets",
-            description: "Used for inspecting solder paste printing quality to ensure soldering reliability.",
-            image: "/spi-solder-paste-inspection.jpg"
+            title: "3D SPI 8 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/3D SPI.png"
           },
           {
-            title: "ICT machine",
-            description: "",
-            image: "/ict-machine.jpg"
-          }
+            title: "FAI First Article Tester 4 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/FAI First Article Tester.png"
+          },
+          {
+            title: "Vision High Precision Dispenser",
+            description: "write something",
+            image: "/images/about/manufacturing/Vision High Precision Dispenser.png"
+          },
+          {
+            title: "3D AOI",
+            description: "write something",
+            image: "/images/about/manufacturing/3D AOI.png"
+          },
+          {
+            title: "Online AOI 6 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/Online AOI.png"
+          },
+          {
+            title: "Offline AOI 20 sets",
+            description: "write something",
+            image: "/images/about/manufacturing/Offline AOI.png"
+          },
+          {
+            title: "Image Measuring Instruments (Secondary Elements)）",
+            description: "write something",
+            image: "/images/about/manufacturing/Image Measuring Instruments.png"
+          },
+          {
+            title: "Constant temperature and humidity test chamber",
+            description: "write something",
+            image: "/images/about/manufacturing/Constant temperature and humidity test chamber.png"
+          },
+          {
+            title: "ROHS Tester",
+            description: "write something",
+            image: "/images/about/manufacturing/ROHS Tester.png"
+          },
         ]
       },
       mountingRange: {
@@ -214,11 +306,23 @@ export default function ManufacturingCapabilitiesPage() {
         title: "Mounting Capacity Parameters",
         desc: "Combines high precision and speed for versatile production.",
         pcb: {
-          title: "PCB Parameters",
+          title: "PCB Parameter Basic Information",
           items: [
-            "PCB board size: 50 * 50 mm-L630mm * W490mm",
-            "PCB layers: 1 ~ 16 layers",
-            "PCB thickness: 0.3mm-6.0mm"
+            "•	Max Production Panel Size:",
+            "     -1.	Standard Capability：545*650",
+            "     -2.	Best Capability：620*2300",
+            "•	Layer Count(max):",
+            "     -1.	Standard Capability：26 layers",
+            "     -2.	Best Capability：48 layers",
+            "•	Board Thickness:",
+            "     -1.	Min finished board thickness(mm)：Standard Capability-0.1, Best Capability-0.05",
+            "     -2.	Max finished board thickness(mm)：Standard Capability-6.3, Best Capability-8.0",
+            "•	 Min Core Thickness(I/L)(mm):",
+            "     -1.	Standard Capability：0.075",
+            "     -2.	Best Capability：0.05",
+            "•   Min Core Dielectric Thickness(mm):",
+            "     -1.	Standard Capability：0.075",
+            "     -2.	Best Capability：0.05",
           ]
         },
         component: {
@@ -248,7 +352,7 @@ export default function ManufacturingCapabilitiesPage() {
       title={t("about.manufacturingCapabilities.title")}
       subtitle={t("about.manufacturingCapabilities.subtitle")}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/about/manufacturing/manufacturing-banner.png"
     >
       <div className="space-y-16">
         {/* 生产车间 */}
@@ -275,7 +379,7 @@ export default function ManufacturingCapabilitiesPage() {
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="h-48 overflow-hidden mb-4">
                   <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={item.image}
                   alt={item.title}
                   width={600}
                   height={400}

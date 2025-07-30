@@ -42,6 +42,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       oem: {
         description: [
           "百千成是一家OEM电子印刷电路板组装制造商，营业模式包含OEM和JDSM。在储能BMS/PACK、清洁能源、智能机器人系统、通风设备、工业控制、医疗、汽车电子这些方面都有显著优势。BQC在PCBA制造这一行业从事了21年，拥有成熟的技术，完整的供应链。",
+          "OEM（Original Equipment Manufacturer）是指按照客户的要求和规格，为其设计和制造产品的制造商。在OEM模式下，客户通常提供产品设计图纸、技术规范、原材料或零部件要求等，而OEM制造商则负责按照这些要求进行生产制造。",
           "公司主要与欧美合作，制造的产品都要进行严格质量检验，确保产品符合客户的要求和行业标准。公司提供灵活定制服务，如样品制作，小批量制作，大批量生产，以满足不同客户的个性化要求。",
           "在OEM模式下，百千成根据客户提供的产品设计图纸、技术规范、原材料或零部件要求等进行生产制造。并进行严格的质量测试，确保产品符合标准，并最终将产品交付给客户。并且工厂通过了IS09001, ISO13485, ISO14001, IATF16949等认证体系。"
         ]
@@ -49,7 +50,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       jdsm: {
         intro: {
           title: "JDSM代工服务",
-          description: "JDSM（Join Design Manufacture），又称联合设计。强调与客户共同设计服务制造，即在产品设计阶段就与客户紧密合作，共同确定产品的设计方案和规格。在此模式下，百千成不仅负责生产制造，还参与到产品设计的全过程中，为客户提供更加全面的服务。"
+          description: "JDSM（Join DeSign Manufacture），又称联和设计。强调与客户共同设计服务制造，即在产品设计阶段就与客户紧密合作，共同确定产品的设计方案和规格。JDSM制造商不仅负责生产制造，还参与到产品设计的全过程中，为客户提供更加全面的服务。"
         },
         advantages: {
           title: "JDSM服务优势",
@@ -95,6 +96,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       oem: {
         description: [
           "BQC is an OEM electronic printed circuit board assembly manufacturer, with business models including OEM and JDSM. It has significant advantages in energy storage BMS/PACK, clean energy, intelligent robot systems, ventilation equipment, industrial control, medical, and automotive electronics. BQC has been engaged in the PCBA manufacturing industry for 21 years and has mature technology and a complete supply chain.",
+          "OEM (Original Equipment Manufacturer) refers to a manufacturer that designs and manufactures products according to the requirements and specifications of its customers. In the OEM model, the brand owner (also known as the client or commissioning party) typically provides product design drawings, technical specifications, raw material or component requirements, etc., while the OEM manufacturer is responsible for manufacturing according to these requirements.",
           "The company mainly cooperates with Europe and the United States, and the manufactured products must undergo strict quality inspection to ensure that the products meet customer requirements and industry standards. The company provides flexible customization services such as sample production, small batch production, and large batch production to meet the personalized requirements of different customers.",
           "Under the OEM model, BQC manufactures according to the product design drawings, technical specifications, raw materials or parts requirements provided by customers. And conduct strict quality testing to ensure that the products meet the standards and finally deliver the products to customers. And the factory has passed IS09001, ISO13485, ISO14001, IATF16949 and other certification systems."
         ]
@@ -102,7 +104,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       jdsm: {
         intro: {
           title: "JDSM Services",
-          description: "JDSM (Join Design Manufacture), also known as joint design. It emphasizes joint design service manufacturing with customers, that is, working closely with customers in the product design stage to jointly determine the design plan and specifications of the product. In this model, BQC is not only responsible for production and manufacturing, but also participates in the entire process of product design to provide customers with more comprehensive services."
+          description: "JDSM（Join DeSign Manufacture） emphasizes working closely with customers during the product design stage to jointly determine the product's design plan and specifications. JDSM manufacturers are not only responsible for manufacturing but also participate in the entire process of product design, providing customers with more comprehensive services."
         },
         advantages: {
           title: "JDSM Advantages",

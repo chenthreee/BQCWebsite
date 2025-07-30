@@ -17,7 +17,7 @@ const content = {
         desc: "百千成电子拥有专业的研发团队，提供从需求分析、方案设计到样机制作、量产支持的一站式ODM研发服务，帮助客户快速实现产品创新。",
         link: "/zh-Hans/services/odm.html",
         linkText: "了解详情",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/images/services/odm.png",
         alt: "ODM研发服务"
       },
       {
@@ -25,16 +25,16 @@ const content = {
         desc: "百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。",
         link: "/zh-Hans/services/oem.html",
         linkText: "了解详情",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/images/services/oem.png",
         alt: "OEM代工服务"
       }
     ],
     advantagesTitle: "服务优势",
     advantages: [
-      { title: "专业团队", desc: "拥有一支由博士、硕士等高学历人才组成的专业研发团队，技术实力雄厚。", image: "/placeholder.svg?height=40&width=40", alt: "专业团队" },
-      { title: "先进设备", desc: "配备先进的研发设备和生产线，确保产品设计与制造的高品质。", image: "/placeholder.svg?height=40&width=40", alt: "先进设备" },
-      { title: "质量保证", desc: "严格的质量控制体系，从设计到生产的每一个环节都精益求精。", image: "/placeholder.svg?height=40&width=40", alt: "质量保证" },
-      { title: "快速响应", desc: "高效的项目管理和快速响应机制，确保项目按时交付。", image: "/placeholder.svg?height=40&width=40", alt: "快速响应" },
+      { title: "专业团队", desc: "拥有一支由博士、硕士等高学历人才组成的专业研发团队，技术实力雄厚。", image: "/images/services/team.png", alt: "专业团队" },
+      { title: "先进设备", desc: "配备先进的研发设备和生产线，确保产品设计与制造的高品质。", image: "/images/services/equipment.png", alt: "先进设备" },
+      { title: "质量保证", desc: "严格的质量控制体系，从设计到生产的每一个环节都精益求精。", image: "/images/services/quality.png", alt: "质量保证" },
+      { title: "快速响应", desc: "高效的项目管理和快速响应机制，确保项目按时交付。", image: "/images/services/response.png", alt: "快速响应" },
     ],
     contact: {
       title: "联系我们",
@@ -53,7 +53,7 @@ const content = {
         desc: "BQC Electronics has a professional R&D team, providing one-stop ODM services from requirement analysis, solution design to prototyping and mass production support, helping customers quickly realize product innovation.",
         link: "/en/services/odm.html",
         linkText: "Learn More",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/images/services/odm.png",
         alt: "ODM R&D Service"
       },
       {
@@ -61,16 +61,16 @@ const content = {
         desc: "BQC Electronics provides full-process OEM services from PCB design, SMT to final assembly, with advanced equipment and strict quality control to deliver high-quality electronic manufacturing services.",
         link: "/en/services/jdsm-oem.html",
         linkText: "Learn More",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/images/services/oem.png",
         alt: "OEM Manufacturing Service"
       }
     ],
     advantagesTitle: "Service Advantages",
     advantages: [
-      { title: "Professional Team", desc: "A professional R&D team composed of PhDs and Masters, with strong technical strength.", image: "/placeholder.svg?height=40&width=40", alt: "Professional Team" },
-      { title: "Advanced Equipment", desc: "Equipped with advanced R&D equipment and production lines to ensure high-quality design and manufacturing.", image: "/placeholder.svg?height=40&width=40", alt: "Advanced Equipment" },
-      { title: "Quality Assurance", desc: "Strict quality control system, excellence in every step from design to production.", image: "/placeholder.svg?height=40&width=40", alt: "Quality Assurance" },
-      { title: "Quick Response", desc: "Efficient project management and quick response mechanism to ensure on-time delivery.", image: "/placeholder.svg?height=40&width=40", alt: "Quick Response" },
+      { title: "Professional Team", desc: "A professional R&D team composed of PhDs and Masters, with strong technical strength.", image: "/images/services/team.png", alt: "Professional Team" },
+      { title: "Advanced Equipment", desc: "Equipped with advanced R&D equipment and production lines to ensure high-quality design and manufacturing.", image: "/images/services/equipment.png", alt: "Advanced Equipment" },
+      { title: "Quality Assurance", desc: "Strict quality control system, excellence in every step from design to production.", image: "/images/services/quality.png", alt: "Quality Assurance" },
+      { title: "Quick Response", desc: "Efficient project management and quick response mechanism to ensure on-time delivery.", image: "/images/services/response.png", alt: "Quick Response" },
     ],
     contact: {
       title: "Contact Us",
@@ -134,7 +134,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
           {currentContent.advantages.map((adv, idx) => (
             <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Image src={adv.image} alt={adv.alt} width={40} height={40} />
+                <Image src={adv.image} alt={adv.alt} width={70} height={70} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-center">{adv.title}</h3>
               <p className="text-gray-700 text-center">{adv.desc}</p>

@@ -34,15 +34,18 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       locations: {
         shenzhenFactory: {
           title: "深圳工厂",
-          address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3栋3B号整栋，518132"
+          address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3栋3B号整栋，518132",
+          image: "/images/contact/location-zh.png"
         },
         rdCenter: {
           title: "研发中心",
-          address: "深圳市南山区"
+          address: "深圳市南山区",
+          image: "/images/contact/location-zh.png"
         },
         malaysiaFactory: {
           title: "马来西亚工厂",
-          address: "马来西亚槟城"
+          address: "马来西亚槟城",
+          image: "/images/contact/location-zh.png"
         }
       }
     },
@@ -61,15 +64,18 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       locations: {
         shenzhenFactory: {
           title: "Shenzhen Factory",
-          address: "Complete Building 3, No.3B ShaTouXiang Industrial Zone, ChangZhen Community, Yutang Street, Guangming District, Shenzhen, China. 518132"
+          address: "Complete Building 3, No.3B ShaTouXiang Industrial Zone, ChangZhen Community, Yutang Street, Guangming District, Shenzhen, China. 518132",
+          image: "/images/contact/location-en.png"
         },
         rdCenter: {
           title: "R&D Centre",
-          address: "Nanshan District, Shenzhen, China."
+          address: "Nanshan District, Shenzhen, China.",
+          image: "/images/contact/location-en.png"
         },
         malaysiaFactory: {
           title: "Malaysia Factory",
-          address: "State of Penang, Malaysia."
+          address: "State of Penang, Malaysia.",
+          image: "/images/contact/location-en.png"
         }
       }
     }
@@ -83,7 +89,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       title={currentContent.title}
       subtitle={currentContent.subtitle}
       breadcrumbs={currentContent.breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/contact/contact-us-banner.png"
     >
       {/* 联系方式  */}
       <div className="mb-16">
@@ -137,7 +143,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src={currentContent.locations.shenzhenFactory.image}
                 alt={currentContent.locations.shenzhenFactory.title}
                 width={600}
                 height={400}
@@ -160,7 +166,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src={currentContent.locations.rdCenter.image}
                 alt={currentContent.locations.rdCenter.title}
                 width={600}
                 height={400}
@@ -183,7 +189,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src={currentContent.locations.malaysiaFactory.image}
                 alt={currentContent.locations.malaysiaFactory.title}
                 width={600}
                 height={400}
@@ -201,6 +207,30 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
             </div>
           </div>
         </Link>
+      </div>
+
+      {/* 新增图片板块 */}
+      <div className="mt-16">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">
+            {locale === "en" ? "Our Global Presence" : "我们的全球布局"}
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            {locale === "en" 
+              ? "BQC Electronics operates across multiple locations worldwide, providing comprehensive services to our global customers."
+              : "百千成电子在全球多个地区开展业务，为全球客户提供全面的服务。"
+            }
+          </p>
+        </div>
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src="/images/contact/global.png"
+            alt={locale === "en" ? "BQC Global Presence" : "百千成全球布局"}
+            width={1200}
+            height={600}
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </div>
     </PageLayout>
   )
