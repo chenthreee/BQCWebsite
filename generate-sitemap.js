@@ -21,7 +21,7 @@ const staticRoutes = [
   "/en/contact",
 ];
 
-// 动态产品详情页（可从数据库/接口/本地数据读取，这里举例写死）
+// 动态产品详情页（可从数据库/接口/本地数据读取，）
 const productDetails = [
   // 中文
   "/zh-Hans/products/energy-storage-bms/power-storage",
