@@ -1,7 +1,7 @@
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, User, ArrowRight } from "lucide-react"
+import { Calendar, User, ArrowRight, Eye } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
 import { redirect } from "next/navigation";
 
@@ -23,6 +23,7 @@ async function getIndustryNews(locale: string) {
         publishedAt
         description
         cover { url }
+        clickCount
       }
     }
   `
@@ -80,6 +81,18 @@ export default async function IndustryNewsPage({ params, searchParams }: { param
             <div className="p-6">
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{item.description}</p>
+              
+              {/* 点击量显示 */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center text-sm text-gray-500">
+                  <Eye className="w-4 h-4 mr-1" />
+                  <span>{item.clickCount || 0}</span>
+                </div>
+                <div className="text-sm text-gray-500">
+                  {new Date(item.publishedAt).toLocaleDateString(locale === "en" ? "en-US" : "zh-CN")}
+                </div>
+              </div>
+              
               <Link
                 href={`/${locale}/news/industry/${item.slug}.html`}
                 className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"

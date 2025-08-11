@@ -77,6 +77,9 @@
           "localized": true
         }
       }
+    },
+    "clickCount": {
+      "type": "integer"
     }
   }
 }
