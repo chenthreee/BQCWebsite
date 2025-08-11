@@ -26,6 +26,10 @@ export function ServicesSection() {
         "zh-Hans": "百千成电子提供专业的OEM代工服务和ODM研发服务，满足客户从产品设计到量产的全流程需求",
         "en": "BAIQIANCHENG Electronics provides professional OEM manufacturing services and ODM development services to meet customers' full-process needs from product design to mass production",
       },
+      "section.customet.subtitle":{
+        "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM代工服务，以先进技术引领行业发展。",
+        "en": "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and OEM manufacturing services for global customers, leading the industry with advanced technology.",
+      },
       "oem.title": {
         "zh-Hans": "OEM代工服务",
         "en": "OEM Manufacturing Services",
@@ -454,6 +458,9 @@ export function ServicesSection() {
             {/* 合作客户 */}
             <div className="mt-20">
               <h3 className="text-2xl font-bold text-center mb-10">{t("oem.clients.title")}</h3>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 text-center">
+                {t("section.customet.subtitle")}
+              </p>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
                 {clients.map((client) => (
                   <div key={client.id} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
