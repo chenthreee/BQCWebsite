@@ -92,50 +92,54 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {companyNews && (
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
-                {companyNews.cover?.url ? (
-                  <Image src={STRAPI_URL + companyNews.cover.url} alt={companyNews.title} width={800} height={240} className="object-cover w-full h-full" />
-                ) : (
-                  <span className="text-gray-400">无封面</span>
-                )}
-              </div>
-              <div className="p-6">
-                <span className="text-sm text-blue-600 font-medium">{t("news.company")}</span>
-                <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{companyNews.title}</h4>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">{companyNews.description}</p>
-                <div className="flex items-center text-xs text-gray-400 mb-2">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span>{companyNews.publishedAt?.slice(0, 10)}</span>
+            <Link href={`/${locale}/news/company/${companyNews.slug}.html`} rel="nofollow" className="block">
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  {companyNews.cover?.url ? (
+                    <Image src={STRAPI_URL + companyNews.cover.url} alt={companyNews.title} width={800} height={240} className="object-cover w-full h-full" />
+                  ) : (
+                    <span className="text-gray-400">无封面</span>
+                  )}
                 </div>
-                <Link href={`/${locale}/news/company/${companyNews.slug}.html`} rel="nofollow" className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
-                  {t("news.readMore")} &rarr;
-                </Link>
+                <div className="p-6">
+                  <span className="text-sm text-blue-600 font-medium">{t("news.company")}</span>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{companyNews.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">{companyNews.description}</p>
+                  <div className="flex items-center text-xs text-gray-400 mb-2">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span>{companyNews.publishedAt?.slice(0, 10)}</span>
+                  </div>
+                  <span className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
+                    {t("news.readMore")} &rarr;
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           )}
           {industryNews && (
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
-                {industryNews.cover?.url ? (
-                  <Image src={STRAPI_URL + industryNews.cover.url} alt={industryNews.title} width={800} height={240} className="object-cover w-full h-full" />
-                ) : (
-                  <span className="text-gray-400">无封面</span>
-                )}
-              </div>
-              <div className="p-6">
-                <span className="text-sm text-green-600 font-medium">{t("news.industry")}</span>
-                <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{industryNews.title}</h4>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">{industryNews.description}</p>
-                <div className="flex items-center text-xs text-gray-400 mb-2">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span>{industryNews.publishedAt?.slice(0, 10)}</span>
+            <Link href={`/${locale}/news/industry/${industryNews.slug}.html`} rel="nofollow" className="block">
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  {industryNews.cover?.url ? (
+                    <Image src={STRAPI_URL + industryNews.cover.url} alt={industryNews.title} width={800} height={240} className="object-cover w-full h-full" />
+                  ) : (
+                    <span className="text-gray-400">无封面</span>
+                  )}
                 </div>
-                <Link href={`/${locale}/news/industry/${industryNews.slug}.html`} rel="nofollow" className="text-green-600 hover:text-green-800 flex items-center text-sm font-medium">
-                  {t("news.readMore")} &rarr;
-                </Link>
+                <div className="p-6">
+                  <span className="text-sm text-green-600 font-medium">{t("news.industry")}</span>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{industryNews.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">{industryNews.description}</p>
+                  <div className="flex items-center text-xs text-gray-400 mb-2">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span>{industryNews.publishedAt?.slice(0, 10)}</span>
+                  </div>
+                  <span className="text-green-600 hover:text-green-800 flex items-center text-sm font-medium">
+                    {t("news.readMore")} &rarr;
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           )}
         </div>
       </div>
