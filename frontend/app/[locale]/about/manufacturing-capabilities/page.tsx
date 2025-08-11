@@ -281,7 +281,7 @@ export default function ManufacturingCapabilitiesPage() {
             image: "/images/about/manufacturing/Offline AOI.png"
           },
           {
-            title: "Image Measuring Instruments (Secondary Elements)）",
+            title: "Image Measuring Instruments (Secondary Elements)",
             description: "write something",
             image: "/images/about/manufacturing/Image Measuring Instruments.png"
           },

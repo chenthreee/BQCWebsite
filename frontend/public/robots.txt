@@ -2,5 +2,5 @@ User-agent: *
 Disallow: /legal
 Disallow: /zh-Hans/legal
 Disallow: /en/legal
-
+Disallow:
 Disallow: 

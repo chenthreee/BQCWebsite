@@ -8,7 +8,7 @@ import { ServicesSection } from "@/components/services-section"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, MessageCircle, ArrowUp } from "lucide-react"
+import { Mail, MessageCircle, ArrowUp, PhoneIcon } from "lucide-react"
 import { NewsSection } from "@/components/NewsSection"
 import { CertificatesSection } from "@/components/certificates-section"
 
@@ -48,8 +48,8 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Contact Us",
   },
   "footer.copyright": {
-    "zh-Hans": "© 2024 百千成电子. 版权所有.",
-    "en": "© 2024 BAIQIANCHENG Electronics. All rights reserved.",
+    "zh-Hans": "© 2025 深圳市百千成电子有限公司. 版权所有.",
+    "en": "© 2025 Shenzhen BAIQIANCHENG Electronics Co., Ltd. All rights reserved.",
   },
   "footer.legal": {
     "zh-Hans": "法律声明",
@@ -155,14 +155,15 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           <Mail className="h-6 w-6 text-blue-600" />
           <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
             <p className="font-bold text-sm">电子邮箱</p>
-            <p className="text-sm">contact@baiqiancheng.com</p>
+            <p className="text-sm">pcba@bqcdz.com</p>
           </div>
         </div>
         <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
-          <MessageCircle className="h-6 w-6 text-blue-600" />
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block">
-            <p className="font-bold text-sm">微信公众号</p>
-            <div className="w-24 h-24 bg-gray-200"></div>
+          <PhoneIcon className="h-6 w-6 text-blue-600" />
+          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
+            <p className="font-bold text-sm">电话&传真</p>
+            <div className="text-sm">86-755-26950571</div>
+            <div className="text-sm">86-755-26788245</div>
           </div>
         </div>
         <button
@@ -195,7 +196,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 className=" text-gray-400 hover:text-white hover:font-bold transition"
                 title="Sitemap"
               >
-                sitemap.xml
+                网站地图
               </a>
             </div>
             </div>

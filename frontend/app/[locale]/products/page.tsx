@@ -41,31 +41,31 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       title: t("bms.title"),
       description: t("bms.desc"),
       href: `/${locale}/products/energy-storage-bms.html`,
-      image: "/placeholder.svg",
+      image: "/images/products/energy-storage-bms.png",
     },
     {
       title: t("pcs.title"),
       description: t("pcs.desc"),
       href: `/${locale}/products/energy-storage-pcs.html`,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/products/pcs.png",
     },
     {
       title: t("robot.title"),
       description: t("robot.desc"),
       href: `/${locale}/products/intelligent-robot-systems.html`,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/products/intelligent-robot-systems.png",
     },
     {
       title: t("icb.title"),
       description: t("icb.desc"),
       href: `/${locale}/products/industrial-control-boards.html`,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/products/industrial-control-boards.png",
     },
     {
       title: t("medical.title"),
       description: t("medical.desc"),
       href: `/${locale}/products/medical-devices.html`,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/products/medical-devices.png",
     },
   ]
 

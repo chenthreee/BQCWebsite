@@ -212,6 +212,7 @@ export function ProductSection() {
                         <Link
                           href={`/${locale}${product.link}.html`}
                           className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                          rel="nofollow"
                         >
                           {t("button.viewMore")}
                           <ChevronRight className="ml-1 h-4 w-4" />
@@ -227,7 +228,7 @@ export function ProductSection() {
         {/* 底部查看更多按钮 */}
         <div className="flex justify-center mt-12">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
-            <Link href="/${locale}/products.html">
+            <Link href="/${locale}/products.html" rel="nofollow">
               {t("button.viewMore")}
             </Link>
           </Button>

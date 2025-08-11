@@ -70,7 +70,7 @@ export default function EnergyStorageEmsPage() {
   const fetchCategory = async () => {
     const query = `
       query GetEnergyStorageEmsCategory($locale: I18NLocaleCode) {
-        product_sub_categories(
+        productSubCategories(
           locale: $locale,
           filters: { name: { eq: "energy-storage-ems" } }
         ) {

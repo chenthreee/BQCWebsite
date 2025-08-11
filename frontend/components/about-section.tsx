@@ -167,6 +167,7 @@ export function AboutSection() {
             <p className="text-gray-700 mb-6">{t("about.vision.desc")}</p> */}
             <a
               href="/about/introduction.html"
+              rel="nofollow"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
             >
               {t("about.learnMore")}

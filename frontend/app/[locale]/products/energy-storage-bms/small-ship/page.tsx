@@ -70,7 +70,7 @@ export default function SmallShipBmsPage() {
   const fetchCategory = async () => {
     const query = `
       query GetSmallShipCategory($locale: I18NLocaleCode) {
-        product_sub_categories(
+        productSubCategories(
           locale: $locale,
           filters: { name: { eq: "small-ship" } }
         ) {

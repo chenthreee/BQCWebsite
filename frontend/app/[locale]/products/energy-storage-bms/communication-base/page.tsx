@@ -70,7 +70,7 @@ export default function CommunicationBaseBmsPage() {
   const fetchCategory = async () => {
     const query = `
       query GetCommunicationBaseCategory($locale: I18NLocaleCode) {
-        product_sub_categories(
+        productSubCategories(
           locale: $locale,
           filters: { name: { eq: "communication-base" } }
         ) {

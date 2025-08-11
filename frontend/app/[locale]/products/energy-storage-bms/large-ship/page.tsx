@@ -70,7 +70,7 @@ export default function LargeShipBmsPage() {
   const fetchCategory = async () => {
     const query = `
       query GetLargeShipCategory($locale: I18NLocaleCode) {
-        product_sub_categories(
+        productSubCategories(
           locale: $locale,
           filters: { name: { eq: "large-ship" } }
         ) {
