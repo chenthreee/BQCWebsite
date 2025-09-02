@@ -66,77 +66,77 @@ export default function ManufacturingCapabilitiesPage() {
         items: [
           {
             title: "高速贴片机50台",
-            description: "写描述",
+            description: "配备高速精密贴片机，可实现大批量生产，高速度与高稳定性兼具",
             image: "/images/about/manufacturing/High-speed-mounter.png"
           },
           {
             title: "自动印刷机20台",
-            description: "写描述",
+            description: "采用全自动丝网印刷设备，确保焊膏涂布均匀一致，提高生产效率与良率",
             image: "/images/about/manufacturing/Automatic printing machine.png"
           },
           {
             title: "10温区热风回流焊（可加氮气）12台",
-            description: "写描述",
+            description: "10温区精密控温回流焊炉，支持氮气环境，有效保证焊接质量与可靠性",
             image: "/images/about/manufacturing/temperature zone hot air reflow soldering.png"
           },
           {
             title: "波峰焊4台",
-            description: "写描述",
+            description: "高效节能波峰焊设备，适用于插件类元器件的批量化焊接",
             image: "/images/about/manufacturing/Wave soldering.png"
           },
           {
             title: "自动插件机1台",
-            description: "写描述",
+            description: "实现元器件自动化插件，提升效率并降低人工误差",
             image: "/images/about/manufacturing/Automatic plug-in machine.png"
           },
           {
             title: "3D X-RAY",
-            description: "写描述",
+            description: "三维X光检测系统，精准分析焊点及隐藏缺陷",
             image: "/images/about/manufacturing/3D X-RAY.png"
           },
           {
             title: "3D SPI 8台",
-            description: "写描述",
+            description: "在线三维锡膏检测设备，实时监控印刷品质",
             image: "/images/about/manufacturing/3D SPI.png"
           },
           {
             title: "FAI首件检测仪4台",
-            description: "写描述",
+            description: "快速完成首件检测，确保生产一致性与可靠性",
             image: "/images/about/manufacturing/FAI First Article Tester.png"
           },
           {
             title: "视觉高精度点胶机",
-            description: "写描述",
+            description: "高精度视觉定位系统，实现均匀点胶，适配多种工艺需求",
             image: "/images/about/manufacturing/Vision High Precision Dispenser.png"
           },
           {
             title: "3D AOI",
-            description: "写描述",
+            description: "三维自动光学检测，全面覆盖复杂焊接缺陷识别",
             image: "/images/about/manufacturing/3D AOI.png"
           },
           {
             title: "在线AOI 6台",
-            description: "写描述",
+            description: "生产线实时检测，保障产品高良率",
             image: "/images/about/manufacturing/Online AOI.png"
           },
           {
             title: "离线AOI 20台",
-            description: "写描述",
+            description: "灵活检测，支持多批次、多角度分析",
             image: "/images/about/manufacturing/Offline AOI.png"
           },
           {
             title: "影像测量仪（二次元）",
-            description: "写描述",
+            description: "精密影像测量，确保尺寸与工艺符合标准",
             image: "/images/about/manufacturing/Image Measuring Instruments.png"
           },
           {
             title: "恒温恒湿试验箱",
-            description: "写描述",
+            description: "模拟极端环境，测试产品可靠性与耐用性",
             image: "/images/about/manufacturing/Constant temperature and humidity test chamber.png"
           },
           {
             title: "ROHS测试仪",
-            description: "写描述",
+            description: "快速检测有害物质，符合环保标准",
             image: "/images/about/manufacturing/ROHS Tester.png"
           },
         ]
@@ -222,77 +222,77 @@ export default function ManufacturingCapabilitiesPage() {
         items: [
           {
             title: "High-speed mounter 50 sets",
-            description: "write something",
+            description: "Equipped with high-speed precision mounters, enabling mass production with both speed and stability",
             image: "/images/about/manufacturing/High-speed-mounter.png"
           },
           {
             title: "Automatic printing machine 20 sets",
-            description: "write something",
+            description: "Using fully automatic screen printers to ensure uniform solder paste application, enhancing efficiency and yield",
             image: "/images/about/manufacturing/Automatic printing machine.png"
           },
           {
             title: "10 temperature zone hot air reflow soldering (can add nitrogen) 12 sets",
-            description: "write something",
+            description: "10-zone precise temperature-controlled reflow ovens with nitrogen option, ensuring superior soldering quality and reliability",
             image: "/images/about/manufacturing/temperature zone hot air reflow soldering.png"
           },
           {
             title: "Wave soldering 4 sets",
-            description: "write something",
+            description: "Efficient wave soldering machines, ideal for mass soldering of through-hole components",
             image: "/images/about/manufacturing/Wave soldering.png"
           },
           {
             title: "Automatic plug-in machine 1 set",
-            description: "write something",
+            description: "Automates component insertion, improving efficiency and minimizing manual errors",
             image: "/images/about/manufacturing/Automatic plug-in machine.png"
           },
           {
             title: "3D X-RAY",
-            description: "write something",
+            description: "3D X-ray inspection system for precise analysis of solder joints and hidden defects",
             image: "/images/about/manufacturing/3D X-RAY.png"
           },
           {
             title: "3D SPI 8 sets",
-            description: "write something",
+            description: "In-line 3D solder paste inspection to monitor printing quality in real time",
             image: "/images/about/manufacturing/3D SPI.png"
           },
           {
             title: "FAI First Article Tester 4 sets",
-            description: "write something",
+            description: "Ensures fast first-article inspection to maintain production consistency and reliability",
             image: "/images/about/manufacturing/FAI First Article Tester.png"
           },
           {
             title: "Vision High Precision Dispenser",
-            description: "write something",
+            description: "High-precision vision dispensing system, ensuring uniform adhesive application for diverse processes",
             image: "/images/about/manufacturing/Vision High Precision Dispenser.png"
           },
           {
             title: "3D AOI",
-            description: "write something",
+            description: "3D automated optical inspection for comprehensive detection of complex soldering defects",
             image: "/images/about/manufacturing/3D AOI.png"
           },
           {
             title: "Online AOI 6 sets",
-            description: "write something",
+            description: "Real-time in-line inspection to ensure high product yield",
             image: "/images/about/manufacturing/Online AOI.png"
           },
           {
             title: "Offline AOI 20 sets",
-            description: "write something",
+            description: "Flexible inspection supporting multi-batch and multi-angle analysis",
             image: "/images/about/manufacturing/Offline AOI.png"
           },
           {
             title: "Image Measuring Instruments (Secondary Elements)",
-            description: "write something",
+            description: "High-precision image measuring instruments for dimensional and process verification",
             image: "/images/about/manufacturing/Image Measuring Instruments.png"
           },
           {
             title: "Constant temperature and humidity test chamber",
-            description: "write something",
+            description: "Simulates extreme environments to test product reliability and durability",
             image: "/images/about/manufacturing/Constant temperature and humidity test chamber.png"
           },
           {
             title: "ROHS Tester",
-            description: "write something",
+            description: "Rapid hazardous substance detection to ensure compliance with environmental standards",
             image: "/images/about/manufacturing/ROHS Tester.png"
           },
         ]

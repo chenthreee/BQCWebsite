@@ -65,7 +65,8 @@ export default async function IndustryNewsPage({ params, searchParams }: { param
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pageArticles.map((item: any) => (
           <div key={item.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
+            <Link href={`/${locale}/news/industry/${item.slug}.html`}>
+            <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100" >
               {item.cover?.url ? (
                 <Image
                   src={STRAPI_URL + item.cover.url}
@@ -101,6 +102,7 @@ export default async function IndustryNewsPage({ params, searchParams }: { param
                 <ArrowRight className="ml-1 h-5 w-5" />
               </Link>
             </div>
+          </Link>
           </div>
         ))}
       </div>

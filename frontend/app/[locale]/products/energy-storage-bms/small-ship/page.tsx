@@ -7,8 +7,7 @@ import { ArrowRight } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
 export default function SmallShipBmsPage() {
   const params = useParams()
@@ -117,7 +116,7 @@ export default function SmallShipBmsPage() {
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
           { label: locale === "en" ? "Small Ship BMS" : "小型船舶BMS", href: `/${locale}/products/energy-storage-bms/small-ship.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/smallShipBreadcrumb.png"
       >
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
@@ -139,7 +138,7 @@ export default function SmallShipBmsPage() {
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
           { label: locale === "en" ? "Small Ship BMS" : "小型船舶BMS", href: `/${locale}/products/energy-storage-bms/small-ship.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/smallShipBreadcrumb.png"
       >
         <div className="text-center py-20">
           <div className="text-red-500 mb-4">
@@ -170,12 +169,13 @@ export default function SmallShipBmsPage() {
         { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
         { label: categoryInfo?.title || (locale === "en" ? "Small Ship BMS" : "小型船舶BMS"), href: `/${locale}/products/energy-storage-bms/small-ship.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/smallShipBreadcrumb.png"
     >
       {/* 产品列表 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {products.map((product: any) => (
-          <div key={product.documentId} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <Link key={product.documentId} href={`/${locale}/products/energy-storage-bms/small-ship/${product.slug}.html`}>
+          <div key={product.documentId} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full ">
             <div className="h-48 overflow-hidden">
               {product.cover?.url ? (
                 <Image
@@ -228,6 +228,7 @@ export default function SmallShipBmsPage() {
               </Link>
             </div>
           </div>
+          </Link>
         ))}
       </div>
 

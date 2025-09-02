@@ -2,7 +2,7 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import { CheckCircle, ArrowRight} from "lucide-react"
+import { CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -29,7 +29,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       </PageLayout>
     )
   }
-  
+
 
   const content = {
     "zh-Hans": {
@@ -149,7 +149,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       title={currentContent.title}
       subtitle={currentContent.subtitle}
       breadcrumbs={currentContent.breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/services/oemBreadcrumb.png"
     >
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.serviceType.title}</h2>
@@ -157,17 +157,15 @@ export default function OemServicePage({ params }: { params: { locale: string } 
           <div className="inline-flex rounded-md shadow-sm p-1 bg-white">
             <button
               onClick={() => setActiveService("oem")}
-              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${
-                activeService === "oem" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-              }`}
+              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${activeService === "oem" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
+                }`}
             >
               {currentContent.serviceType.oem}
             </button>
             <button
               onClick={() => setActiveService("jdsm")}
-              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${
-                activeService === "jdsm" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-              }`}
+              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${activeService === "jdsm" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
+                }`}
             >
               {currentContent.serviceType.jdsm}
             </button>
@@ -191,7 +189,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                     </div>
                     <div>
                       <Image
-                        src="/placeholder.svg?height=600&width=800"
+                        src="/images/services/servicesBreadcrumb.png"
                         alt={currentContent.title}
                         width={800}
                         height={600}
@@ -216,7 +214,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                     </div>
                     <div>
                       <Image
-                        src="/placeholder.svg?height=600&width=800"
+                        src="/images/services/oemBreadcrumb.png"
                         alt={currentContent.jdsm.intro.title}
                         width={800}
                         height={600}
@@ -235,9 +233,9 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                     </div>
                     <div className="grid grid-cols-1 gap-4">
                       {currentContent.jdsm.advantages.cards.map((card, idx) => (
-                        <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
-                          <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-                          <p className="text-gray-700">{card.description}</p>
+                        <div key={idx} className="bg-blue-600/10 backdrop-blur-sm p-6 rounded-lg shadow-md border border-blue-200">
+                          <h3 className="text-xl font-bold mb-2 text-blue-700">{card.title}</h3>
+                          <p className="text-gray-800">{card.description}</p>
                         </div>
                       ))}
                     </div>
@@ -248,7 +246,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
           </>
         )}
       </div>
-    
+
       <div className="bg-gray-100 p-8 rounded-lg text-center">
         <h2 className="text-3xl font-bold mb-6">{currentContent.contact.title}</h2>
         <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">

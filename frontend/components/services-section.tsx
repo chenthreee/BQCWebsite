@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck} from "lucide-react"
+import { CheckCircle, ArrowRight, Lightbulb, Code, Cpu, Settings, FileCheck, Layers, Package, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
@@ -202,8 +202,8 @@ export function ServicesSection() {
       description: locale === "en" 
         ? "Provide professional circuit design and PCB layout services, from schematic design to PCB layout, ensuring product performance and reliability"
         : "提供专业的电路设计与PCB布局服务，从原理图设计到PCB布局，确保产品性能与可靠性",
-      icon: "/placeholder.svg?height=80&width=80",
-      features: locale === "en" 
+      icon: <Layers className="h-16 w-16 text-blue-600" />,   // ✅ PCB
+      features: locale === "en"
         ? ["Multi-layer PCB Design & Layout", "High-speed Signal Integrity Analysis", "Power Integrity Analysis", "EMC/EMI Design Optimization", "Thermal Analysis & Heat Dissipation Design"]
         : ["多层PCB设计与布局", "高速信号完整性分析", "电源完整性分析", "EMC/EMI设计优化", "热分析与散热设计"],
     },
@@ -213,7 +213,7 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Using advanced SMT production lines to provide high-precision, high-efficiency surface mount technology services to meet the production needs of various electronic products"
         : "采用先进的SMT生产线，提供高精度、高效率的表面贴装技术服务，满足各类电子产品的生产需求",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: <Cpu className="h-16 w-16 text-blue-600" />,   // ✅ SMT
       features: locale === "en"
         ? ["High-precision SMT Assembly", "BGA/CSP/QFN Complex Package Processing", "Lead-free Process Support", "3D SPI Solder Paste Inspection", "AOI Automatic Optical Inspection"]
         : ["高精度SMT贴片", "BGA/CSP/QFN等复杂封装处理", "无铅工艺支持", "3D SPI锡膏检测", "AOI自动光学检测"],
@@ -224,7 +224,7 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Provide full-process assembly services from PCBA to complete units, including functional testing, aging testing, packaging and other processes to ensure product quality"
         : "提供从PCBA到整机的全流程组装服务，包括功能测试、老化测试、包装等环节，确保产品质量",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: <Package className="h-16 w-16 text-blue-600" />,   // ✅ 组装
       features: locale === "en"
         ? ["Automated Assembly Production Line", "Functional Testing & Aging Testing", "Anti-static Work Environment", "Traceability Management System", "Packaging & Logistics Services"]
         : ["自动化组装生产线", "功能测试与老化测试", "防静电工作环境", "可追溯性管理系统", "包装与物流服务"],
@@ -235,12 +235,13 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Strict quality control system, full-process quality control from raw material entry to finished product shipment, ensuring products meet international standards"
         : "严格的质量控制体系，从原材料进厂到成品出货的全流程质量管控，确保产品符合国际标准",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: <ShieldCheck className="h-16 w-16 text-blue-600" />,   // ✅ 质量
       features: locale === "en"
         ? ["ISO9001 Quality Management System", "IPC Standard Production Process", "Incoming Inspection & Supplier Management", "Process Quality Control", "Finished Product Inspection & Reliability Testing"]
         : ["ISO9001质量管理体系", "IPC标准生产工艺", "来料检验与供应商管理", "过程质量控制", "成品检验与可靠性测试"],
     },
   ]
+  
 
   // ODM服务数据
   const odmServices = [
@@ -416,14 +417,8 @@ export function ServicesSection() {
                   >
                     <div className="flex flex-col md:flex-row items-start gap-8">
                       <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                        <div className="bg-blue-50 rounded-lg p-6 flex justify-center items-center">
-                          <Image
-                            src={service.icon || "/placeholder.svg"}
-                            alt={service.title}
-                            width={80}
-                            height={80}
-                            className="w-24 h-24 object-contain"
-                          />
+                        <div className="bg-blue-50 rounded-lg p-6 flex justify-center items-center h-full">
+                          {service.icon}
                         </div>
                       </div>
                       <div className="w-full md:w-2/3">

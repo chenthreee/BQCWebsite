@@ -103,10 +103,11 @@ export default function ServicesPage({ params }: { params: { locale: string } })
       title={currentContent.title}
       subtitle={currentContent.subtitle}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/services/servicesBreadcrumb.png"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         {services.map((service, idx) => (
+          <Link key={idx} href={service.link}>
           <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="h-64 overflow-hidden">
               <Image
@@ -124,8 +125,9 @@ export default function ServicesPage({ params }: { params: { locale: string } })
                 {service.linkText}
                 <ArrowRight className="ml-1 h-5 w-5" />
               </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="bg-gray-100 p-8 rounded-lg">

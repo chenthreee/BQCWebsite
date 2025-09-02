@@ -65,6 +65,7 @@ export default async function CompanyNewsPage({ params, searchParams }: { params
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pageArticles.map((item: any) => (
           <div key={item.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Link href={`/${locale}/news/company/${item.slug}.html`}>
             <div className="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
               {item.cover?.url ? (
                 <Image
@@ -101,6 +102,7 @@ export default async function CompanyNewsPage({ params, searchParams }: { params
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
+          </Link>
           </div>
         ))}
       </div>

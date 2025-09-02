@@ -3,9 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react"
 import { notFound } from "next/navigation"
-
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
 // GraphQL查询：根据slug获取产品详情
 async function getProductBySlug(slug: string, locale: string) {
@@ -303,7 +301,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
         { label: product.category?.title || (locale === "en" ? "Medical Devices" : "医疗设备"), href: `/${locale}/products/medical-devices.html` },
         { label: product.title, href: `/${locale}/products/medical-devices/${params.slug}.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/medicalDevicesBreadcrumb.png"
     >
       <div className="bg-white rounded-lg shadow-md overflow-hidden p-6 md:p-8">
         {/* 产品基本信息 */}

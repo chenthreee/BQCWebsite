@@ -53,13 +53,13 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       title: t("robot.title"),
       description: t("robot.desc"),
       href: `/${locale}/products/intelligent-robot-systems.html`,
-      image: "/images/products/intelligent-robot-systems.png",
+      image: "/images/products/intelligent-robot-systems.jpg",
     },
     {
       title: t("icb.title"),
       description: t("icb.desc"),
       href: `/${locale}/products/industrial-control-boards.html`,
-      image: "/images/products/industrial-control-boards.png",
+      image: "/images/products/industrialControlBoard.png",
     },
     {
       title: t("medical.title"),
@@ -74,12 +74,12 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       title={t("title")}
       subtitle={t("subtitle")}
       breadcrumbs={[{ label: t("title"), href: `/${locale}/products.html` }]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/BMSPCSBIG.png"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {productCategories.map((category, index) => (
           <Link key={index} href={category.href} className="block">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <Image
                   src={category.image || "/placeholder.svg"}

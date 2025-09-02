@@ -464,7 +464,7 @@ export default function OdmServicePage() {
             <ul className="space-y-3">
               {currentContent.cooperationMode.services.map((service, index) => (
                 <li key={index} className="flex items-start">
-                  <ArrowRight className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
                   <span>{service}</span>
                 </li>
               ))}

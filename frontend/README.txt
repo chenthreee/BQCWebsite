@@ -381,3 +381,36 @@ Upon closer examination towards the changes of populations of New york, 1800, 19
 Moreover, it is also palpable and noteworthy that the percentage of Manhanttan hit the highest point at 1800 
 was 76%, 54% to 1900 and only 19% to 2000. At the same period, other four districts proportion of 
 1800, 1900 and 2000 stood at 24%, 46% and 81%, percentage almost double every decades.
+
+
+Some countries spend a lot of money preparing competitors to take part in major competitions 
+such as Olympic Games or football World Cup. Some people say that it would be better to spend this money 
+encouraging children to take up sports from a young age.  
+
+To what extent do you agree or disagree? 
+
+The growing discourse surrounding countries spending money on taking part in competitions has garnered widespread attention. 
+I firmly support the argument that such actions can positively impact on individuals, a position validated not only
+by well-founded reasoning but also by empirical evidence substantiated in academic research.
+
+To begin with, countries spending money to participate in competitions offers numerous undeniable advantages.
+One primary benefit is fostering cultural communication. Embracing diversity can make people  exposure to 
+varied cultures and perspectives, which fosters creativity and divergent thinking. As a result, this broadened
+outlook inspires individual to question established norms and assumptions, often leading to innovative PE rules.
+Another significant advantage is to lift country energy. Specifically, people watching those races really help them
+to lean not to give up and encouage to cooperate. Such actions not only refelct a strong sense of humanitarian values
+but also foster a environment that promoting people to workout and cooperation.
+
+It is also important to acknowledge the disadvanrages linked to this practice. One major drawback is the excessive
+spending on taking part in competitions dose not yield proportional benefits and can lead to diminishing marginal
+utility. Consequantely, such actions result in inefficiencies and resource waste, thereby diverting resource could
+be better spent on more beneficial activitiesm. As prople say, those money can be better used at encouraging 
+children to exercise. There are also actionable steps in addressing this pressing issue. One effetive solution 
+is to increase investment in exercise setor. Specifically, enhanced funding can use in other exercise events, for 
+instance to improve exercise facilities or to build more free gyms to encourage people to exercise and so on. Such
+actions can enhance overall welfare.
+
+In summary, my support for country need to spend money on preparing competitors to take part in major competitions
+is demonstrated through the analysis of cultural communication and lifting country energy. Although some disadvantages may
+occur, taking some effective measures can reduce them by 70% or even eliminate them.
+

@@ -6,9 +6,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
-
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
 export default function EnergyStorageBmsPage() {
   const params = useParams()
@@ -167,7 +165,7 @@ export default function EnergyStorageBmsPage() {
           { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/powerStorageBreadcrumb.png"
       >
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
@@ -188,7 +186,7 @@ export default function EnergyStorageBmsPage() {
           { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/powerStorageBreadcrumb.png"
       >
         <div className="text-center py-20">
           <div className="text-red-500 mb-4">
@@ -219,12 +217,13 @@ export default function EnergyStorageBmsPage() {
         { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
         { label: categoryInfo?.title || (locale === "en" ? "Energy Storage BMS" : "储能BMS"), href: `/${locale}/products/energy-storage-bms.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/powerStorageBreadcrumb.png"
     >
       {/* BMS子分类和PCS分类列表 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {subCategories.map((category: any) => (
-          <div key={category.name} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <Link key={category.name} href={getCategoryLink(category)}>
+          <div key={category.name} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               {category.cover?.url ? (
                 <Image
@@ -234,6 +233,8 @@ export default function EnergyStorageBmsPage() {
                   height={600}
                   className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                 />
+                
+                
               ) : (
                 <div className="w-full h-full bg-gray-100 flex items-center justify-center">
                   <span className="text-gray-400">{locale === "en" ? "No Image" : "暂无图片"}</span>
@@ -251,8 +252,9 @@ export default function EnergyStorageBmsPage() {
                 {locale === "en" ? "View Details" : "查看详情"}
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

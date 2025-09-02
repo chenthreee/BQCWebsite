@@ -35,30 +35,37 @@ export default function CertificatesPage() {
       certificates: [
         {
           title: "IATF16949",
-          description: "这是IATF16949证书",
+          description: "IATF16949 是国际汽车工作组制定的汽车行业质量管理体系标准，基于 ISO9001，增加行业特定要求。",
           image: "/images/about/certificates/IATF16949.png",
           issueDate: "2022年",
           validUntil: "2025年",
         },
         {
           title: "ISO9001",
-          description: "这是ISO9001证书",
+          description: "ISO9001 是国际标准化组织制定的质量管理体系标准，强调以顾客为中心，注重持续改进。",
           image: "/images/about/certificates/ISO9001.png",
           issueDate: "2019年",
           validUntil: "2025年",
         },
         {
           title: "ISO13485",
-          description: "这是ISO13485证书",
+          description: "ISO13485是适用于医疗器械法规环境的质量管理体系标准，强调风险管控与法规符合。",
           image: "/images/about/certificates/ISO13485.png",
           issueDate: "2015年",
           validUntil: "2027年",
         },
         {
           title: "ISO14001",
-          description: "这是ISO14001证书",
+          description: "ISO14001是国际标准化组织制定的环境管理体系标准，助企业减环境影响，促可持续发展。",
           image: "/images/about/certificates/ISO14001.png",
           issueDate: "2018年",
+          validUntil: "2027年",
+        },
+        {
+          title: "UL895",
+          description: "UL895是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
+          image: "/images/about/certificates/UL895.png",
+          issueDate: "2016年",
           validUntil: "2027年",
         },
       ],
@@ -67,19 +74,19 @@ export default function CertificatesPage() {
         items: [
           {
             title: "高新技术企业",
-            description: "2022年被评为高新技术企业。",
+            description: "国高证书即高新技术企业认定证书，证明企业符合国家高新技术领域要求，含金量高，可享多项政策优惠.",
             image: "/images/about/certificates/高新技术企业证书.png"
           },
           {
-            title: "待填写",
-            description: "待填写",
-            image: "/placeholder.svg"
+            title: "深圳市专精特新中小企业",
+            description: "专精特新中小企业是专注于细分市场、创新能力强、市场占有率高、掌握关键核心技术、质量效益优的排头兵企业。",
+            image: "/images/about/certificates/深圳市专精特新中小企业.png"
           },
-          {
-            title: "待填写",
-            description: "待填写",
-            image: "/placeholder.svg"
-          }
+          // {
+          //   title: "待填写",
+          //   description: "待填写",
+          //   image: "/placeholder.svg"
+          // }
         ]
       },
       dateLabels: {
@@ -95,30 +102,37 @@ export default function CertificatesPage() {
       certificates: [
         {
           title: "IATF16949",
-          description: "This is IATF16949 certificate",
+          description: "IATF16949 is an automotive quality management system standard developed by the International Automotive Task Force, based on ISO9001 and adding industry-specific requirements.",
           image: "/images/about/certificates/IATF16949_en.png",
           issueDate: "2022",
           validUntil: "2025",
         },
         {
           title: "ISO9001",
-          description: "This is ISO9001 certificate",
+          description: "ISO9001 is an international standard for quality management systems, emphasizing customer focus and continuous improvement.",
           image: "/images/about/certificates/ISO9001_en.png",
           issueDate: "2019",
           validUntil: "2025",
         },
         {
           title: "ISO13485",
-          description: "This is ISO13485 certificate",
+          description: "ISO13485 is an international standard for quality management systems for medical devices, emphasizing risk control and compliance with regulations.",
           image: "/images/about/certificates/ISO13485_en.png",
           issueDate: "2015",
           validUntil: "2027",
         },
         {
           title: "ISO14001",
-          description: "This is ISO14001 certificate",
-          image: "/images/about/certificates/ISO14001_en.png",
-          issueDate: "2018",
+          description: "ISO14001 is an international standard for environmental management systems, helping businesses reduce environmental impact and promote sustainable development.",
+            image: "/images/about/certificates/ISO14001_en.png",
+            issueDate: "2018",
+          validUntil: "2027",
+        },
+        {
+          title: "UL895",
+          description: "UL859 is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
+          image: "/images/about/certificates/UL895.png",
+          issueDate: "2016",
           validUntil: "2027",
         },
       ],
@@ -127,19 +141,19 @@ export default function CertificatesPage() {
         items: [
           {
             title: "High-Tech Enterprise",
-            description: "Recognized as High-Tech Enterprise in 2022",
+            description: "The High-Tech Enterprise certificate is a certificate that proves that the enterprise meets the requirements of the national high-tech enterprise field, with high content and can enjoy multiple policy preferential.",
             image: "/images/about/certificates/高新技术企业证书.png"
           },
           {
-            title: "To be filled",
-            description: "To be filled",
-            image: "/placeholder.svg"
+            title: "Shenzhen Special New and Small Enterprises",
+            description: "Specialized, refined, distinctive and innovative small and medium-sized enterprises are leading enterprises that focus on niche markets, have strong innovation capabilities, high market share, master key core technologies, and have excellent quality and efficiency",
+            image: "/images/about/certificates/深圳市专精特新中小企业.png"
           },
-          {
-            title: "To be filled",
-            description: "To be filled",
-            image: "/placeholder.svg"
-          }
+          // {
+          //   title: "To be filled",
+          //   description: "To be filled",
+          //   image: "/placeholder.svg"
+          // }
         ]
       },
       dateLabels: {
@@ -194,13 +208,15 @@ export default function CertificatesPage() {
         ))}
       </div>
 
-      <div className="bg-gray-100 p-8 rounded-lg">
+      <div className="bg-gray-100 p-4 rounded-lg">
         <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.honors.title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {currentContent.honors.items.map((honor, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Image src={honor.image} alt={honor.title} width={40} height={40} />
+            <div key={index} className="bg-white rounded-lg shadow-md  overflow-hidden text-center p-16">
+              <div className="h-40 overflow-hidden ">
+                <Image src={honor.image} alt={honor.title} width={300} height={300}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3 className="text-xl font-bold mb-3">{honor.title}</h3>
               <p className="text-gray-700">{honor.description}</p>

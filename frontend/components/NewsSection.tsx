@@ -57,7 +57,11 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
           <p className="text-gray-500 max-w-3xl mx-auto">{t("news.center.description")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+          <Link
+            href={`/${locale}/news/company.html`}
+            rel="nofollow"
+            className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
+          >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
                 <Calendar className="w-6 h-6 text-white" />
@@ -65,15 +69,15 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
               <h3 className="text-2xl font-bold text-gray-900">{t("news.company")}</h3>
             </div>
             <p className="text-gray-600 mb-6">{t("news.company.desc")}</p>
-            <Link
-              href={`/${locale}/news/company.html`}
-              rel="nofollow"
-              className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
-            >
+            <span className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
               {t("news.readMore")} →
-            </Link>
-          </div>
-          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+            </span>
+          </Link>
+          <Link
+            href={`/${locale}/news/industry.html`}
+            rel="nofollow"
+            className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
+          >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                 <span className="w-6 h-6 block bg-white rounded-full"></span>
@@ -81,14 +85,10 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
               <h3 className="text-2xl font-bold text-gray-900">{t("news.industry")}</h3>
             </div>
             <p className="text-gray-600 mb-6">{t("news.industry.desc")}</p>
-            <Link
-              href={`/${locale}/news/industry.html`}
-              rel="nofollow"
-              className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300"
-            >
+            <span className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300">
               {t("news.readMore")} →
-            </Link>
-          </div>
+            </span>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {companyNews && (

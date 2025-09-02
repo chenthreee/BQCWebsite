@@ -114,7 +114,7 @@ export default function DevelopmentHistoryPage() {
       title={t("about.developmentHistory.title")}
       subtitle={t("about.developmentHistory.subtitle")}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/about/developHistory/developHistoryBreadcrumb.png"
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">

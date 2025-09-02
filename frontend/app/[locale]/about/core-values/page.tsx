@@ -48,7 +48,7 @@ export default function CoreValuesPage() {
           description: "反对上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
         }
       ],
-      image: "/images/about/coreValue/coreValue_zh.png"
+      image: "/images/about/coreValue/coreValue.png"
     },
     en: {
       title: "Core Values",
@@ -71,7 +71,7 @@ export default function CoreValuesPage() {
           description: <span className="text-lg font-medium">we center on internal customer representatives for internal alignment and real customers for decision-making, rather than prioritizing leadership, R&D, and manufacturing. </span>
         }
       ],
-      image: "/images/about/coreValue/coreValue_en.png"
+      image: "/images/about/coreValue/coreValue.png"
     }
   }
 
@@ -87,7 +87,7 @@ export default function CoreValuesPage() {
       title={t("about.coreValues.title")}
       subtitle={t("about.coreValues.subtitle")}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/about/coreValue/breadcrumb.png"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
         <div>

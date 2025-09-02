@@ -440,9 +440,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
-      }> &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<

@@ -69,7 +69,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
       <NewsCategoryTabs />
 
       {/* 置顶新闻 */}
-      {page === 1 && pageNews.length > 0 && (
+      {/* {page === 1 && pageNews.length > 0 && (
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="h-full">
@@ -113,12 +113,13 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* 新闻列表 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pageNews.slice(page === 1 ? 1 : 0).map((news: any) => (
           <div key={news.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Link href={`/${locale}/news/${news.category?.name === 'industry' ? 'industry' : 'company'}/${news.slug}.html`}>
             <div className="h-48 overflow-hidden">
               {news.cover?.url ? (
                 <Image
@@ -154,6 +155,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
+          </Link>
           </div>
         ))}
       </div>

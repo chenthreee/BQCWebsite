@@ -6,9 +6,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
-
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
 export default function IntelligentRobotSystemsPage() {
   const params = useParams()
@@ -114,7 +112,7 @@ export default function IntelligentRobotSystemsPage() {
           { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
           { label: locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统", href: `/${locale}/products/intelligent-robot-systems.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/intelligentRobotBreadcrumb.png"
       >
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
@@ -135,7 +133,7 @@ export default function IntelligentRobotSystemsPage() {
           { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
           { label: locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统", href: `/${locale}/products/intelligent-robot-systems.html` },
         ]}
-        backgroundImage="/placeholder.svg?height=1080&width=1920"
+        backgroundImage="/images/products/intelligentRobotBreadcrumb.png"
       >
         <div className="text-center py-20">
           <div className="text-red-500 mb-4">
@@ -166,12 +164,13 @@ export default function IntelligentRobotSystemsPage() {
         { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
         { label: categoryInfo?.title || (locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统"), href: `/${locale}/products/intelligent-robot-systems.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/intelligentRobotBreadcrumb.png"
     >
       {/* 产品列表 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {products.map((product: any) => (
-          <div key={product.documentId} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <Link key={product.documentId} href={`/${locale}/products/intelligent-robot-systems/${product.slug}.html`}>
+          <div key={product.documentId} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               {product.cover?.url ? (
                 <Image
@@ -210,6 +209,7 @@ export default function IntelligentRobotSystemsPage() {
               </Link>
             </div>
           </div>
+          </Link>
         ))}
       </div>
 

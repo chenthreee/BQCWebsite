@@ -3,9 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react"
 import { notFound } from "next/navigation"
-
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
 // GraphQL查询：根据slug获取产品详情
 async function getProductBySlug(slug: string, locale: string) {
@@ -280,9 +278,10 @@ function renderBlock(block: any, index: number) {
   }
 }
 
-export default async function ProductDetailPage({ params }: { params: { slug: string, locale: string } }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-  const product = await getProductBySlug(params.slug, locale)
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string, locale: string }> }) {
+  const resolvedParams = await params
+  const locale = resolvedParams.locale === "en" ? "en" : "zh-Hans"
+  const product = await getProductBySlug(resolvedParams.slug, locale)
   
   if (!product) {
     notFound()
@@ -290,7 +289,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
   const relatedProducts = await getRelatedProducts(
     product.category?.name || "",
-    params.slug,
+    resolvedParams.slug,
     locale
   )
 
@@ -301,9 +300,9 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       breadcrumbs={[
         { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
         { label: product.category?.title || (locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统"), href: `/${locale}/products/intelligent-robot-systems.html` },
-        { label: product.title, href: `/${locale}/products/intelligent-robot-systems/${params.slug}.html` },
+        { label: product.title, href: `/${locale}/products/intelligent-robot-systems/${resolvedParams.slug}.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/products/intelligentRobotBreadcrumb.png"
     >
       <div className="bg-white rounded-lg shadow-md overflow-hidden p-6 md:p-8">
         {/* 产品基本信息 */}

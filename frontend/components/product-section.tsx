@@ -59,14 +59,14 @@ export function ProductSection() {
       description: locale === "en"
         ? "Comprehensive BMS/PCS solutions for energy storage, including Power Storage BMS, Large Ship BMS, Small Ship BMS, Communication Base Station BMS, Energy Storage EMS, and PCS."
         : "储能BMS/PCS全系列解决方案，包括电力大储BMS、大型船舶储能BMS、小型船舶储能BMS、通讯基站储能BMS、储能EMS（总控）、储能PCS等。",
-      image: "/placeholder.svg?height=600&width=1200",
+      image: "/images/mainPage/BMSPCSBIG.png",
       products: [
-        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/power-storage" },
-        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/large-ship" },
-        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/small-ship" },
-        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/communication-base" },
-        { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-bms/energy-storage-ems" },
-        { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/energy-storage-pcs" },
+        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/images/mainPage/powerStorageBMS.png", link: "/products/energy-storage-bms/power-storage" },
+        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/images/mainPage/largeShip.png", link: "/products/energy-storage-bms/large-ship" },
+        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/images/mainPage/smallShip.png", link: "/products/energy-storage-bms/small-ship" },
+        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/images/mainPage/communicationBase.png", link: "/products/energy-storage-bms/communication-base" },
+        { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/images/mainPage/powerStorageEMS.jpg", link: "/products/energy-storage-bms/energy-storage-ems" },
+        { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/images/mainPage/powerStoragePCS.png", link: "/products/energy-storage-pcs" },
       ],
     },
     {
@@ -75,7 +75,7 @@ export function ProductSection() {
       description: locale === "en"
         ? "Intelligent robot system solutions for various industries."
         : "面向各行业的智能机器人系统解决方案。",
-      image: "/placeholder.svg?height=600&width=1200",
+      image: "/images/mainPage/intelligentRobot.jpg",
       products: [
         { id: 201, title: locale === "en" ? "Robot Control Board" : "机器人控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/intelligent-robot-systems" },
       ],
@@ -86,7 +86,7 @@ export function ProductSection() {
       description: locale === "en"
         ? "Industrial control board solutions for automation and control."
         : "自动化与控制领域的工业控制板解决方案。",
-      image: "/placeholder.svg?height=600&width=1200",
+      image: "/images/mainPage/industrialControlBoard.png",
       products: [
         { id: 301, title: locale === "en" ? "Industrial Control Board" : "工业控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/industrial-control-boards" },
       ],
@@ -97,7 +97,7 @@ export function ProductSection() {
       description: locale === "en"
         ? "Medical device solutions for healthcare industry."
         : "医疗行业的医疗设备解决方案。",
-      image: "/placeholder.svg?height=600&width=1200",
+      image: "/images/mainPage/medicalDevices.png",
       products: [
         { id: 401, title: locale === "en" ? "Medical Device" : "医疗设备", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/medical-devices" },
       ],
@@ -172,15 +172,19 @@ export function ProductSection() {
             >
               {/* 分类图片和描述 */}
               <div className="flex flex-col md:flex-row items-center mb-12">
-                <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                <Link
+                  href={`/${locale}${category.id === 1 ? '/products' : category.products[0].link}.html`}
+                  className="w-full md:w-1/2 mb-6 md:mb-0 block"
+                  rel="nofollow"
+                >
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={category.title}
                     width={600}
                     height={400}
-                    className="rounded-lg shadow-lg object-cover w-full h-[300px]"
+                    className="rounded-lg shadow-lg object-cover w-full h-[300px] hover:shadow-xl transition-shadow"
                   />
-                </div>
+                </Link>
                 <div className="w-full md:w-1/2 md:pl-12">
                   <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
                   <div className="w-16 h-1 bg-blue-600 mb-6"></div>
@@ -188,48 +192,42 @@ export function ProductSection() {
                 </div>
               </div>
 
-              {/* 产品列表 */}
-              <div className="relative">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {category.products.map((product) => (
-                    <div
-                      key={product.id}
-                      className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
-                    >
-                      <div className="h-48 overflow-hidden">
-                        <Image
-                          src={product.image || "/placeholder.svg"}
-                          alt={product.title}
-                          width={400}
-                          height={400}
-                          className="w-full h-full object-contain p-4"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h4 className="text-xl font-bold mb-2">{product.title}</h4>
-                        <p className="text-gray-600">{product.description}</p>
-                      </div>
-                      <div className="px-4 pb-4">
-                        <Link
-                          href={`/${locale}${product.link}.html`}
-                          className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
-                          rel="nofollow"
-                        >
-                          {t("button.viewMore")}
-                          <ChevronRight className="ml-1 h-4 w-4" />
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
+              {/* 产品列表或查看更多按钮 */}
+              {category.id === 1 ? (
+                <div className="relative">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.products.map((product) => (
+                      <Link
+                        key={product.id}
+                        href={`/${locale}${product.link}.html`}
+                        className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1 block"
+                        rel="nofollow"
+                      >
+                        <div className="h-48 overflow-hidden">
+                          <Image
+                            src={product.image || "/placeholder.svg"}
+                            alt={product.title}
+                            width={400}
+                            height={400}
+                            className="w-full h-full object-contain p-4"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h4 className="text-xl font-bold mb-2">{product.title}</h4>
+                          <p className="text-gray-600">{product.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ) : null}
             </div>
           ))}
         </div>
         {/* 底部查看更多按钮 */}
         <div className="flex justify-center mt-12">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
-            <Link href="/${locale}/products.html" rel="nofollow">
+            <Link href={`/${locale}${categories[activeCategory].id === 1 ? '/products' : categories[activeCategory].products[0].link}.html`} rel="nofollow">
               {t("button.viewMore")}
             </Link>
           </Button>
