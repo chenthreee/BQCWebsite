@@ -182,12 +182,12 @@ function renderBlock(block: any, index: number) {
             dangerouslySetInnerHTML={{ __html: processedBody }} 
             className="
               text-base font-medium leading-relaxed text-gray-800
-              [&_h1]:font-black [&_h1]:text-gray-900 [&_h1]:text-2xl [&_h1]:mb-6 [&_h1]:leading-tight
-              [&_h2]:font-black [&_h2]:text-gray-900 [&_h2]:text-2xl [&_h2]:mb-5 [&_h2]:leading-tight
-              [&_h3]:font-black [&_h3]:text-gray-900 [&_h3]:text-2xl [&_h3]:mb-4 [&_h3]:leading-tight
-              [&_h4]:font-black [&_h4]:text-gray-900 [&_h4]:text-2xl [&_h4]:mb-3 [&_h4]:leading-tight
+              [&_h1]:font-black [&_h1]:text-gray-900 [&_h1]:text-2xl [&_h1]:mb-2 [&_h1]:leading-tight
+              [&_h2]:font-black [&_h2]:text-gray-900 [&_h2]:text-2xl [&_h2]:mb-2 [&_h2]:leading-tight
+              [&_h3]:font-black [&_h3]:text-gray-900 [&_h3]:text-2xl [&_h3]:mb-2 [&_h3]:leading-tight
+              [&_h4]:font-black [&_h4]:text-gray-900 [&_h4]:text-2xl [&_h4]:mb-2 [&_h4]:leading-tight
               [&_strong]:font-bold [&_strong]:text-gray-900 [&_strong]:text-base
-              [&_p]:mb-4 [&_p]:leading-relaxed
+              [&_p]:mb-2 [&_p]:leading-relaxed
               [&_br]:mb-2
             "
           />
@@ -377,7 +377,8 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
         </div>
 
         {/* 动态内容块 */}
-        <div className="border-t border-gray-200 pt-12 mt-12">
+        {/* <div className="border-t border-gray-200 pt-12 mt-12"> */}
+        <div>
           <div className="space-y-10">
             {product.blocks && product.blocks.map((block: any, index: number) => 
               renderBlock(block, index)

@@ -59,7 +59,7 @@ export default async function CompanyNewsPage({ params, searchParams }: { params
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news.html` },
         { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/news/newsBreadcrumb.png"
     >
       <NewsCategoryTabs />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

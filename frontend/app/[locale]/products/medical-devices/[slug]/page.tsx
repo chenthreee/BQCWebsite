@@ -373,7 +373,8 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
         </div>
 
         {/* 动态内容块 */}
-        <div className="border-t border-gray-200 pt-12 mt-12">
+        {/* <div className="border-t border-gray-200 pt-12 mt-12"> */}
+        <div>
           <div className="space-y-10">
             {product.blocks && product.blocks.map((block: any, index: number) => 
               renderBlock(block, index)

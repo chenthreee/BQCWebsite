@@ -2,7 +2,6 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import Link from "next/link"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -16,6 +15,52 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
 
   if (!mounted) {
     return null
+  }
+
+  // 导航到高德地图的函数
+  const handleNavigate = (address: string, title: string) => {
+    const encodedAddress = encodeURIComponent(address)
+    
+    // 检测用户设备
+    const userAgent = navigator.userAgent.toLowerCase()
+    const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)
+    
+    if (isMobile) {
+      if (userAgent.includes('android')) {
+        // Android设备：优先高德地图APP，备选高德网页版
+        const amapUrl = `androidamap://route?sourceApplication=webapp&dname=${encodedAddress}&dev=0`
+        
+        // 尝试打开高德地图APP
+        const iframe = document.createElement('iframe')
+        iframe.style.display = 'none'
+        iframe.src = amapUrl
+        document.body.appendChild(iframe)
+        
+        // 延时后删除iframe并打开网页版作为备选
+        setTimeout(() => {
+          document.body.removeChild(iframe)
+          window.open(`https://uri.amap.com/navigation?to=${encodedAddress}`, '_blank')
+        }, 2000)
+        
+        return
+      } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+        // iOS设备：优先高德地图APP，备选高德网页版
+        const amapUrl = `iosamap://path?sourceApplication=webapp&dname=${encodedAddress}&dev=0`
+        
+        // 尝试打开高德地图APP
+        window.location.href = amapUrl
+        
+        // 备选方案：如果APP没有安装，打开网页版
+        setTimeout(() => {
+          window.open(`https://uri.amap.com/navigation?to=${encodedAddress}`, '_blank')
+        }, 2500)
+        
+        return
+      }
+    }
+    
+    // 桌面设备或其他情况：直接使用高德地图网页版
+    window.open(`https://ditu.amap.com/search?query=${encodedAddress}`, '_blank')
   }
 
   const content = {
@@ -39,7 +84,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         },
         rdCenter: {
           title: "研发中心",
-          address: "深圳市南山区",
+          address: "深圳市南山区南山睿园17栋5楼整层",
           image: "/images/contact/location-zh.png"
         },
         malaysiaFactory: {
@@ -69,7 +114,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         },
         rdCenter: {
           title: "R&D Centre",
-          address: "Nanshan District, Shenzhen, China.",
+          address: "17th Floor, Building 17, Nanshan Ruiyuan, Nanshan District, Shenzhen, China.",
           image: "/images/contact/location-en.png"
         },
         malaysiaFactory: {
@@ -138,9 +183,12 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       </div>
 
       {/* 位置卡片 */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Link href={`${baseHref}`} className="block">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.shenzhenFactory.address, currentContent.locations.shenzhenFactory.title)}
+          className="block cursor-pointer"
+        >
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
                 src={currentContent.locations.shenzhenFactory.image}
@@ -160,10 +208,13 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        <Link href={`${baseHref}`} className="block">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.rdCenter.address, currentContent.locations.rdCenter.title)}
+          className="block cursor-pointer"
+        >
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
                 src={currentContent.locations.rdCenter.image}
@@ -183,10 +234,13 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        <Link href={`${baseHref}`} className="block">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.malaysiaFactory.address, currentContent.locations.malaysiaFactory.title)}
+          className="block cursor-pointer"
+        >
+          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
                 src={currentContent.locations.malaysiaFactory.image}
@@ -206,7 +260,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
 
       {/* 新增图片板块 */}

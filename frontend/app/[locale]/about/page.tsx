@@ -71,7 +71,7 @@ export default function AboutPage() {
       title="关于我们"
       subtitle="了解百千成电子的企业文化与发展历程"
       breadcrumbs={[{ label: "关于我们", href: "/about" }]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/about/aboutBreadcrumb.png"
     >
       {/* 公司概览 */}
       <div className="mb-20">

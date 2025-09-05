@@ -115,7 +115,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
         { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company.html` },
         { label: article.title, href: `/${locale}/news/company/${params.slug}.html` },
       ]}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/news/newsBreadcrumb.png"
     >
       <div className="bg-white rounded-lg shadow-md overflow-hidden p-6 md:p-8">
         <div className="flex items-center text-sm text-gray-500 mb-4">

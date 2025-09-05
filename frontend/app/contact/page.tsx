@@ -2,7 +2,6 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import Link from "next/link"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
@@ -17,6 +16,54 @@ export default function ContactPage() {
 
   if (!mounted) {
     return null
+  }
+
+  // 导航到高德地图的函数
+  const handleNavigate = (address: string, title: string) => {
+    const encodedAddress = encodeURIComponent(address)
+    
+    // 检测用户设备
+    const userAgent = navigator.userAgent.toLowerCase()
+    const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)
+    
+    let mapUrl = ''
+    
+    if (isMobile) {
+      if (userAgent.includes('android')) {
+        // Android设备：优先高德地图APP，备选高德网页版
+        mapUrl = `androidamap://route?sourceApplication=webapp&dname=${encodedAddress}&dev=0`
+        
+        // 尝试打开高德地图APP
+        const iframe = document.createElement('iframe')
+        iframe.style.display = 'none'
+        iframe.src = mapUrl
+        document.body.appendChild(iframe)
+        
+        // 延时后删除iframe并打开网页版作为备选
+        setTimeout(() => {
+          document.body.removeChild(iframe)
+          window.open(`https://uri.amap.com/navigation?to=${encodedAddress}`, '_blank')
+        }, 2000)
+        
+        return
+      } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+        // iOS设备：优先高德地图APP，备选高德网页版
+        mapUrl = `iosamap://path?sourceApplication=webapp&dname=${encodedAddress}&dev=0`
+        
+        // 尝试打开高德地图APP
+        window.location.href = mapUrl
+        
+        // 备选方案：如果APP没有安装，打开网页版
+        setTimeout(() => {
+          window.open(`https://uri.amap.com/navigation?to=${encodedAddress}`, '_blank')
+        }, 2500)
+        
+        return
+      }
+    }
+    
+    // 桌面设备或其他情况：直接使用高德地图网页版
+    window.open(`https://ditu.amap.com/search?query=${encodedAddress}`, '_blank')
   }
 
   const content = {
@@ -39,7 +86,7 @@ export default function ContactPage() {
         },
         rdCenter: {
           title: "研发中心",
-          address: "深圳市南山区"
+          address: "深圳市南山区南山睿园17栋5层"
         },
         malaysiaFactory: {
           title: "马来西亚工厂",
@@ -66,7 +113,7 @@ export default function ContactPage() {
         },
         rdCenter: {
           title: "R&D Centre",
-          address: "Nanshan District, Shenzhen, China."
+          address: "Floor 5, Building 17, Nanshan Wisdom Park, Nanshan District, Shenzhen, China."
         },
         malaysiaFactory: {
           title: "Malaysia Factory",
@@ -133,7 +180,10 @@ export default function ContactPage() {
 
       {/* 位置卡片 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Link href="/contact/shenzhen-factory.html" className="block">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.shenzhenFactory.address, currentContent.locations.shenzhenFactory.title)}
+          className="block cursor-pointer"
+        >
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -154,9 +204,12 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        <Link href="/contact/rd-center.html" className="block">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.rdCenter.address, currentContent.locations.rdCenter.title)}
+          className="block cursor-pointer"
+        >
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -177,9 +230,12 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        <Link href="/contact/malaysia-factory.html" className="block">
+        <div 
+          onClick={() => handleNavigate(currentContent.locations.malaysiaFactory.address, currentContent.locations.malaysiaFactory.title)}
+          className="block cursor-pointer"
+        >
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
               <Image
@@ -200,7 +256,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </PageLayout>
   )

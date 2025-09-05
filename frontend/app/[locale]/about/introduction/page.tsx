@@ -192,7 +192,7 @@ export default function CompanyIntroductionPage() {
       title={t("about.introduction.title")}
       subtitle={t("about.introduction.subtitle")}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/images/about/companyIntroduction/Breadcrumb.png"
+      backgroundImage="/images/about/aboutBreadcrumb.png"
     >
       {/* 上半部分：左右分屏 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
