@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_spec_items",
   "info": {
-    "displayName": "Spec Item"
+    "displayName": "Spec Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,7 @@
       "required": true
     },
     "value": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "unit": {

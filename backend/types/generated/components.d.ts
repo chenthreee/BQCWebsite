@@ -65,19 +65,21 @@ export interface SharedSlider extends Struct.ComponentSchema {
 export interface SharedSpecItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_spec_items';
   info: {
+    description: '';
     displayName: 'Spec Item';
   };
   attributes: {
     category: Schema.Attribute.String;
     parameter: Schema.Attribute.String & Schema.Attribute.Required;
     unit: Schema.Attribute.String;
-    value: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
 export interface SharedSpecifications extends Struct.ComponentSchema {
   collectionName: 'components_shared_specifications';
   info: {
+    description: '';
     displayName: 'Specifications';
   };
   attributes: {

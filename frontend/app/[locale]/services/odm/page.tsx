@@ -283,7 +283,7 @@ export default function OdmServicePage() {
       title={currentContent.title}
       subtitle={currentContent.subtitle}
       breadcrumbs={currentContent.breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/services/odmBreadcrumb.png"
     >
       {/* 为何选择百千成 */}
       <div className="mb-16">

@@ -151,7 +151,7 @@ export function AboutSection() {
   return (
     <section
       className="py-16 bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}
+      //style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}
     >
       <div className="bg-black/70 py-16">
         <div className="container mx-auto px-4">

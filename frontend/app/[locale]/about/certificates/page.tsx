@@ -175,7 +175,7 @@ export default function CertificatesPage() {
       title={t("about.certificates.title")}
       subtitle={t("about.certificates.subtitle")}
       breadcrumbs={breadcrumbs}
-      backgroundImage="/placeholder.svg?height=1080&width=1920"
+      backgroundImage="/images/about/aboutBreadcrumb.png"
     >
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-3xl font-bold mb-6">{currentContent.overview.title}</h2>

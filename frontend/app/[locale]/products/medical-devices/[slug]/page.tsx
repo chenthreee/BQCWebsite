@@ -179,11 +179,11 @@ function renderBlock(block: any, index: number) {
           <div 
             dangerouslySetInnerHTML={{ __html: processedBody }} 
             className="
-              text-base font-medium leading-relaxed text-gray-800
-              [&_h1]:font-black [&_h1]:text-gray-900 [&_h1]:text-2xl [&_h1]:mb-6 [&_h1]:leading-tight
-              [&_h2]:font-black [&_h2]:text-gray-900 [&_h2]:text-2xl [&_h2]:mb-5 [&_h2]:leading-tight
-              [&_h3]:font-black [&_h3]:text-gray-900 [&_h3]:text-2xl [&_h3]:mb-4 [&_h3]:leading-tight
-              [&_h4]:font-black [&_h4]:text-gray-900 [&_h4]:text-2xl [&_h4]:mb-3 [&_h4]:leading-tight
+             text-base font-medium leading-relaxed text-gray-800
+              [&_h1]:font-black [&_h1]:text-gray-900 [&_h1]:text-2xl [&_h1]:mt-8 [&_h1]:mb-0 [&_h1]:leading-tight [&_h1:first-child]:mt-0
+              [&_h2]:font-black [&_h2]:text-gray-900 [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-0 [&_h2]:leading-tight [&_h2:first-child]:mt-0
+              [&_h3]:font-black [&_h3]:text-gray-900 [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-0 [&_h3]:leading-tight [&_h3:first-child]:mt-0
+              [&_h4]:font-black [&_h4]:text-gray-900 [&_h4]:text-2xl [&_h4]:mt-6 [&_h4]:mb-0 [&_h4]:leading-tight [&_h4:first-child]:mt-0
               [&_strong]:font-bold [&_strong]:text-gray-900 [&_strong]:text-base
               [&_p]:mb-4 [&_p]:leading-relaxed
               [&_br]:mb-2
@@ -278,9 +278,10 @@ function renderBlock(block: any, index: number) {
   }
 }
 
-export default async function ProductDetailPage({ params }: { params: { slug: string, locale: string } }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-  const product = await getProductBySlug(params.slug, locale)
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string, locale: string }> }) {
+  const resolvedParams = await params
+  const locale = resolvedParams.locale === "en" ? "en" : "zh-Hans"
+  const product = await getProductBySlug(resolvedParams.slug, locale)
   
   if (!product) {
     notFound()
@@ -288,7 +289,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
   const relatedProducts = await getRelatedProducts(
     product.category?.name || "",
-    params.slug,
+    resolvedParams.slug,
     locale
   )
 
@@ -299,7 +300,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       breadcrumbs={[
         { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
         { label: product.category?.title || (locale === "en" ? "Medical Devices" : "医疗设备"), href: `/${locale}/products/medical-devices.html` },
-        { label: product.title, href: `/${locale}/products/medical-devices/${params.slug}.html` },
+        { label: product.title, href: `/${locale}/products/medical-devices/${resolvedParams.slug}.html` },
       ]}
       backgroundImage="/images/products/medicalDevicesBreadcrumb.png"
     >

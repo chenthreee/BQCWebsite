@@ -37,7 +37,7 @@ export default function ManagementSystemPage() {
           {
             title: "ERP系统",
             image:"/images/about/managementSystem/ERP.png",
-            description:"RP系统 是一种集成的、模块化的企业管理软件平台，旨在通过统一的数字化系统，整合企业核心业务流程（如财务、供应链、生产、销售、人力资源等），实现数据的实时共享与流程协同，从而优化资源配置、提升运营效率并支持战略决策。"
+            description:"ERP系统 是一种集成的、模块化的企业管理软件平台，旨在通过统一的数字化系统，整合企业核心业务流程（如财务、供应链、生产、销售、人力资源等），实现数据的实时共享与流程协同，从而优化资源配置、提升运营效率并支持战略决策。"
           },
           {
             title: "Office Anywhere",

@@ -5,6 +5,8 @@ Allow: /
 Disallow: /legal
 Disallow: /zh-Hans/legal
 Disallow: /en/legal
-Disallow:
-Disallow: 
-
+Disallow: /about/development-history
+Disallow: /zh-Hans/about/development-history
+Disallow: /en/about/development-history 
+Disallow: /zh-Hans/contact
+Disallow: /en/about/contact
