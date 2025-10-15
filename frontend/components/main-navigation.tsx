@@ -65,11 +65,11 @@ export function MainNavigation() {
       },
       "大型船舶储能BMS": {
         "zh-Hans": "大型船舶储能BMS",
-        "en": "Large Ship Energy Storage BMS",
+        "en": "Large-scale Marine Energy Storage BMS",
       },
       "小型船舶储能BMS": {
         "zh-Hans": "小型船舶储能BMS",
-        "en": "Small Ship Energy Storage BMS",
+        "en": "Small-scale Marine Energy Storage BMS",
       },
       "通讯基站储能BMS": {
         "zh-Hans": "通讯基站储能BMS",
@@ -99,12 +99,12 @@ export function MainNavigation() {
         "zh-Hans": "服务",
         "en": "Services",
       },
-      "ODM研发服务（围绕储能）": {
-        "zh-Hans": "ODM研发服务（围绕储能）",
-        "en": "ODM Development Services (Energy Storage)",
+      "ODM研发服务": {
+        "zh-Hans": "ODM研发服务",
+        "en": "ODM Development Services ",
       },
-      "OEM代工服务": {
-        "zh-Hans": "OEM代工服务",
+      "OEM制造服务": {
+        "zh-Hans": "OEM制造服务",
         "en": "OEM Manufacturing Services",
       },
       "新闻中心": {
@@ -115,9 +115,9 @@ export function MainNavigation() {
         "zh-Hans": "公司新闻",
         "en": "Company News"
       },
-      "行业资讯": {
-        "zh-Hans": "行业资讯",
-        "en": "Industry Information"
+      "行业知识": {
+        "zh-Hans": "行业知识",
+        "en": "Industry Knowledge"
       },
       "联系我们": {
         "zh-Hans": "联系我们",
@@ -148,8 +148,8 @@ export function MainNavigation() {
         "en": "Company News"
       },
       "news.industry": {
-        "zh-Hans": "行业资讯",
-        "en": "Industry Information"
+        "zh-Hans": "行业知识",
+        "en": "Industry Knowledge"
       },
     }
     return translations[key]?.[currentLocale] || key
@@ -252,8 +252,8 @@ export function MainNavigation() {
       label: mounted ? t("服务") : "服务",
       href: `/${currentLocale}/services.html`,
       children: [
-        { label: mounted ? t("ODM研发服务（围绕储能）") : "ODM研发服务（围绕储能）", href: `/${currentLocale}/services/odm.html` },
-        { label: mounted ? t("OEM代工服务") : "OEM代工服务", href: `/${currentLocale}/services/oem.html` },
+        { label: mounted ? t("ODM研发服务") : "ODM研发服务", href: `/${currentLocale}/services/odm.html` },
+        { label: mounted ? t("OEM制造服务") : "OEM制造服务", href: `/${currentLocale}/services/oem.html` },
       ],
     },
     {
@@ -262,7 +262,7 @@ export function MainNavigation() {
       href: `/${currentLocale}/news.html`,
       children: [
         { label: mounted ? t("公司新闻") : "company news", href: `/${currentLocale}/news/company.html` },
-        { label: mounted ? t("行业资讯") : "industry information", href: `/${currentLocale}/news/industry.html` },
+        { label: mounted ? t("行业知识") : "industry Knowledge", href: `/${currentLocale}/news/industry.html` },
       ],
     },
     {

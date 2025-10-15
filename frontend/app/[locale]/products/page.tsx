@@ -11,8 +11,8 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Products Center",
   },
   "subtitle": {
-    "zh-Hans": "百千成电子的创新产品与解决方案",
-    "en": "Innovative Products & Solutions of BAIQIANCHENG Electronics",
+    "zh-Hans": "为客户提供的高质量制造成果与行业应用案例",
+    "en": "High-quality Manufacturing Achievements and Industry Application Cases for Our Customers",
   },
   "viewProducts": {
     "zh-Hans": "查看产品",
@@ -23,7 +23,7 @@ const translations: Record<string, Record<string, string>> = {
   "bms.desc": { "zh-Hans": "电池管理系统解决方案", "en": "Battery Management System Solutions" },
   "pcs.title": { "zh-Hans": "储能PCS", "en": "Energy Storage PCS" },
   "pcs.desc": { "zh-Hans": "高性能的储能变流器系统", "en": "High-performance Energy Storage Converter System" },
-  "robot.title": { "zh-Hans": "智能控制系统", "en": "Intelligent Control System" },
+  "robot.title": { "zh-Hans": "智能机器人系统", "en": "Intelligent Robot Systems" },
   "robot.desc": { "zh-Hans": "先进的智能控制解决方案", "en": "Advanced Intelligent Control Solutions" },
   "icb.title": { "zh-Hans": "工业控制板", "en": "Industrial Control Boards" },
   "icb.desc": { "zh-Hans": "可靠稳定的工业控制板卡", "en": "Reliable and Stable Industrial Control Boards" },

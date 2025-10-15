@@ -13,7 +13,7 @@ console.log('SSR NewsPage loaded');
 
 const categoryMap = {
   company: { "zh-Hans": "公司新闻", en: "Company News" },
-  industry: { "zh-Hans": "行业资讯", en: "Industry Information" }
+  industry: { "zh-Hans": "行业知识", en: "Industry Knowledge" }
 }
 
 async function getAllNews(locale: string) {
@@ -61,7 +61,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
   return (
     <PageLayout
       title={locale === "en" ? "News Center" : "新闻中心"}
-      subtitle={locale === "en" ? "Learn about the latest news and industry information of BQC Electronics" : "了解百千成电子最新动态与行业资讯"}
+      subtitle={locale === "en" ? "Learn about the latest news and industry knowledge of BQC Electronics" : "了解百千成电子最新动态与行业知识"}
       breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news.html" }]}
       backgroundImage="/images/news/newsBreadcrumb.png"
     >

@@ -8,7 +8,7 @@ import { ServicesSection } from "@/components/services-section"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, MessageCircle, ArrowUp, PhoneIcon } from "lucide-react"
+import { Mail, MessageCircle, ArrowUp, PhoneIcon, GlobeIcon } from "lucide-react"
 import { NewsSection } from "@/components/NewsSection"
 import { CertificatesSection } from "@/components/certificates-section"
 
@@ -24,7 +24,7 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Expert in Intelligent Energy Storage Solutions",
   },
   "company.description": {
-    "zh-Hans": "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
+    "zh-Hans": "专注于储能BMS系统研发与OEM制造服务的高新技术企业",
     "en": "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
   },
   "button.learnMore": {
@@ -99,11 +99,11 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Services"
   },
   "mainNav.services.odm": {
-    "zh-Hans": "ODM研发服务（围绕储能）",
-    "en": "ODM Development Services (Energy Storage)"
+    "zh-Hans": "ODM研发服务",
+    "en": "ODM Development Services"
   },
   "mainNav.services.oem": {
-    "zh-Hans": "OEM代工服务",
+    "zh-Hans": "OEM制造服务",
     "en": "OEM Manufacturing Services"
   },
   "mainNav.news.company": {
@@ -111,14 +111,14 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Company News"
   },
   "mainNav.news.industry": {
-    "zh-Hans": "行业资讯",
-    "en": "Industry Information"
+    "zh-Hans": "行业知识",
+    "en": "Industry Knowledge"
   },
 }
 
 export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans"
-  
+
   const t = (key: string): string => {
     return translations[key]?.[locale] || key
   }
@@ -131,17 +131,17 @@ export default function HomePage({ params }: { params: { locale: string } }) {
     <div className="min-h-screen flex flex-col">
       <MainNavigation />
       <HeroSection />
-      
+
       <main className="flex-1">
         {/* 产品中心 */}
         <ProductSection />
 
         {/* 服务中心 - 包含OEM代工和ODM研发 */}
         <ServicesSection />
-        
+
         {/* 新闻中心 */}
-        <NewsSection locale={locale}/>
-        
+        <NewsSection locale={locale} />
+
         {/* 关于我们 */}
         <AboutSection />
 
@@ -158,12 +158,39 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             <p className="text-sm">pcba@bqcdz.com</p>
           </div>
         </div>
+        {/* LinkedIn 图标按钮 */}
+        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group relative">
+          <a
+            href="https://www.linkedin.com/in/jacky-fan-a63b79137/overlay/contact-info/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* 你可以用 Globe 或 LinkedIn 图标 */}
+            <GlobeIcon className="h-6 w-6 text-blue-600" />
+            {/* 如果你安装了 lucide-react，也可以用 Linkedin 图标 */}
+            {/* <Linkedin className="h-6 w-6 text-blue-600" /> */}
+          </a>
+
+          {/* 悬停提示框 */}
+          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
+            <p className="font-bold text-sm">LinkedIn</p>
+            <a
+              href="https://www.linkedin.com/in/jacky-fan-a63b79137/overlay/contact-info/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm hover:underline"
+            >
+              访问公司 LinkedIn
+            </a>
+          </div>
+        </div>
+
         <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
           <PhoneIcon className="h-6 w-6 text-blue-600" />
           <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
-            <p className="font-bold text-sm">电话&传真</p>
-            <div className="text-sm">86-755-26950571</div>
-            <div className="text-sm">86-755-26788245</div>
+            <p className="font-bold text-sm">电话</p>
+            <div className="text-sm">86-18823428986</div>
+            {/* <div className="text-sm">86-755-26788245</div> */}
           </div>
         </div>
         <button
@@ -189,18 +216,18 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               </Link>
               <p className="text-gray-400 mb-4">{t("company.description")}</p>
               <div className="mt-4">
-              <a
-                href="/sitemap.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" text-gray-400 hover:text-white hover:font-bold transition"
-                title="Sitemap"
-              >
-                网站地图
-              </a>
+                <a
+                  href="/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" text-gray-400 hover:text-white hover:font-bold transition"
+                  title="Sitemap"
+                >
+                  网站地图
+                </a>
+              </div>
             </div>
-            </div>
-            
+
             {/* 关于我们 */}
             <div>
               <h3 className="text-lg font-bold mb-4">{t("footer.about")}</h3>
@@ -229,8 +256,8 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             <div>
               <h3 className="text-lg font-bold mb-4">{t("mainNav.services") || "服务"}</h3>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/services/odm.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.odm") || "ODM研发服务（围绕储能）"}</Link></li>
-                <li><Link href={`/${locale}/services/oem.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.oem") || "OEM代工服务"}</Link></li>
+                <li><Link href={`/${locale}/services/odm.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.odm") || "ODM研发服务"}</Link></li>
+                <li><Link href={`/${locale}/services/oem.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.services.oem") || "OEM制造服务"}</Link></li>
               </ul>
             </div>
             {/* 新闻中心 */}
@@ -238,7 +265,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               <h3 className="text-lg font-bold mb-4">{t("news.center.title")}</h3>
               <ul className="space-y-2">
                 <li><Link href={`/${locale}/news/company.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.news.company") || "公司新闻"}</Link></li>
-                <li><Link href={`/${locale}/news/industry.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.news.industry") || "行业资讯"}</Link></li>
+                <li><Link href={`/${locale}/news/industry.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.news.industry") || "行业知识"}</Link></li>
               </ul>
             </div>
             {/* 联系我们 */}

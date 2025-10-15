@@ -62,8 +62,8 @@ export default function CertificatesPage() {
           validUntil: "2027年",
         },
         {
-          title: "UL895",
-          description: "UL895是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
+          title: "UL",
+          description: "UL是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
           image: "/images/about/certificates/UL895.png",
           issueDate: "2016年",
           validUntil: "2027年",
@@ -97,7 +97,7 @@ export default function CertificatesPage() {
     en: {
       overview: {
         title: "Our Qualifications",
-        description: "BQC Electronics has obtained multiple international certifications, demonstrating our excellence in quality management, environmental protection, occupational health and safety, as well as our strength in technological innovation."
+        description: "BQC Electronics has obtained multiple international certifications, demonstrating our commitment to quality management, environmental protection, occupational health and safety, and technological innovation excellence."
       },
       certificates: [
         {
@@ -129,8 +129,8 @@ export default function CertificatesPage() {
           validUntil: "2027",
         },
         {
-          title: "UL895",
-          description: "UL859 is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
+          title: "UL",
+          description: "UL is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
           image: "/images/about/certificates/UL895.png",
           issueDate: "2016",
           validUntil: "2027",

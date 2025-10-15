@@ -23,15 +23,15 @@ export function ServicesSection() {
         "en": "Our Services",
       },
       "section.subtitle": {
-        "zh-Hans": "百千成电子提供专业的OEM代工服务和ODM研发服务，满足客户从产品设计到量产的全流程需求",
+        "zh-Hans": "百千成电子提供专业的OEM制造服务和ODM研发服务，满足客户从产品设计到量产的全流程需求",
         "en": "BAIQIANCHENG Electronics provides professional OEM manufacturing services and ODM development services to meet customers' full-process needs from product design to mass production",
       },
       "section.customet.subtitle":{
-        "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM代工服务，以先进技术引领行业发展。",
+        "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，以先进技术引领行业发展。",
         "en": "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and OEM manufacturing services for global customers, leading the industry with advanced technology.",
       },
       "oem.title": {
-        "zh-Hans": "OEM代工服务",
+        "zh-Hans": "OEM制造服务",
         "en": "OEM Manufacturing Services",
       },
       "odm.title": {
@@ -75,7 +75,7 @@ export function ServicesSection() {
         "en": "Service Features:",
       },
       "oem.button": {
-        "zh-Hans": "了解更多OEM代工服务",
+        "zh-Hans": "了解更多OEM制造服务",
         "en": "Learn More about OEM Services",
       },
       "oem.clients.title": {
@@ -202,7 +202,7 @@ export function ServicesSection() {
       description: locale === "en" 
         ? "Provide professional circuit design and PCB layout services, from schematic design to PCB layout, ensuring product performance and reliability"
         : "提供专业的电路设计与PCB布局服务，从原理图设计到PCB布局，确保产品性能与可靠性",
-      icon: <Layers className="h-16 w-16 text-blue-600" />,   // ✅ PCB
+      icon: <Layers className="h-16 w-16 text-blue-600" />,   //pcb图标
       features: locale === "en"
         ? ["Multi-layer PCB Design & Layout", "High-speed Signal Integrity Analysis", "Power Integrity Analysis", "EMC/EMI Design Optimization", "Thermal Analysis & Heat Dissipation Design"]
         : ["多层PCB设计与布局", "高速信号完整性分析", "电源完整性分析", "EMC/EMI设计优化", "热分析与散热设计"],
@@ -213,7 +213,7 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Using advanced SMT production lines to provide high-precision, high-efficiency surface mount technology services to meet the production needs of various electronic products"
         : "采用先进的SMT生产线，提供高精度、高效率的表面贴装技术服务，满足各类电子产品的生产需求",
-      icon: <Cpu className="h-16 w-16 text-blue-600" />,   // ✅ SMT
+      icon: <Cpu className="h-16 w-16 text-blue-600" />,   // SMT
       features: locale === "en"
         ? ["High-precision SMT Assembly", "BGA/CSP/QFN Complex Package Processing", "Lead-free Process Support", "3D SPI Solder Paste Inspection", "AOI Automatic Optical Inspection"]
         : ["高精度SMT贴片", "BGA/CSP/QFN等复杂封装处理", "无铅工艺支持", "3D SPI锡膏检测", "AOI自动光学检测"],
@@ -224,7 +224,7 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Provide full-process assembly services from PCBA to complete units, including functional testing, aging testing, packaging and other processes to ensure product quality"
         : "提供从PCBA到整机的全流程组装服务，包括功能测试、老化测试、包装等环节，确保产品质量",
-      icon: <Package className="h-16 w-16 text-blue-600" />,   // ✅ 组装
+      icon: <Package className="h-16 w-16 text-blue-600" />,   // 组装
       features: locale === "en"
         ? ["Automated Assembly Production Line", "Functional Testing & Aging Testing", "Anti-static Work Environment", "Traceability Management System", "Packaging & Logistics Services"]
         : ["自动化组装生产线", "功能测试与老化测试", "防静电工作环境", "可追溯性管理系统", "包装与物流服务"],
@@ -235,7 +235,7 @@ export function ServicesSection() {
       description: locale === "en"
         ? "Strict quality control system, full-process quality control from raw material entry to finished product shipment, ensuring products meet international standards"
         : "严格的质量控制体系，从原材料进厂到成品出货的全流程质量管控，确保产品符合国际标准",
-      icon: <ShieldCheck className="h-16 w-16 text-blue-600" />,   // ✅ 质量
+      icon: <ShieldCheck className="h-16 w-16 text-blue-600" />,   //质量
       features: locale === "en"
         ? ["ISO9001 Quality Management System", "IPC Standard Production Process", "Incoming Inspection & Supplier Management", "Process Quality Control", "Finished Product Inspection & Reliability Testing"]
         : ["ISO9001质量管理体系", "IPC标准生产工艺", "来料检验与供应商管理", "过程质量控制", "成品检验与可靠性测试"],
@@ -305,7 +305,7 @@ export function ServicesSection() {
   // 获取当前活动的服务数据
   const currentServices = activeService === "oem" ? oemServices : odmServices
 
-  // 合作客户数据
+  // 合作客户数据 这里需要修改 pls这个客户不要 海辰也不要
   const clients = [
     { id: 1, name: "Nidec", logo: "/images/services/Nidec.png" },
     { id: 2, name: "CosTco", logo: "/images/services/CosTco.png" },

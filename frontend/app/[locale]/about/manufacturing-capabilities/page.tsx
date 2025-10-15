@@ -36,7 +36,7 @@ export default function ManufacturingCapabilitiesPage() {
           {
             count: "24",
             title: "SMT车间",
-            description: "BQC拥有24个自动化SMT生产线，日生产能力5800,000点每天"
+            description: "BQC拥有24个自动化SMT生产线，日生产能力8,640,000点每天"  
           },
           {
             count: "11",
@@ -67,7 +67,7 @@ export default function ManufacturingCapabilitiesPage() {
           {
             title: "高速贴片机50台",
             description: "配备高速精密贴片机，可实现大批量生产，高速度与高稳定性兼具",
-            image: "/images/about/manufacturing/High-speed-mounter.png"
+            image: "/images/about/manufacturing/High-speed-mounter.jpg"
           },
           {
             title: "自动印刷机20台",
@@ -192,7 +192,7 @@ export default function ManufacturingCapabilitiesPage() {
           {
             count: "24",
             title: "SMT Workshop",
-            description: "BQC has 24 automated SMT lines with a daily production capacity of 58 million points per day"
+            description: "BQC has 24 automated SMT lines with a daily production capacity of 8,640,000 points per day"
           },
           {
             count: "11",
@@ -223,7 +223,7 @@ export default function ManufacturingCapabilitiesPage() {
           {
             title: "High-speed mounter 50 sets",
             description: "Equipped with high-speed precision mounters, enabling mass production with both speed and stability",
-            image: "/images/about/manufacturing/High-speed-mounter.png"
+            image: "/images/about/manufacturing/High-speed-mounter.jpg"
           },
           {
             title: "Automatic printing machine 20 sets",

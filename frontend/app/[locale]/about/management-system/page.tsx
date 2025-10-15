@@ -47,7 +47,7 @@ export default function ManagementSystemPage() {
           {
             title: "制造执行系统MES平台",
             image:"/images/about/managementSystem/mes.png",
-            description:"制造执行系统（MES） 是面向生产车间层级的 实时监控与执行管理平台，通过连接企业计划层（如ERP）与设备控制层（如PLC/SCADA），实现 生产全流程的数字化管控、过程追溯与动态优化，核心目标是缩短制造周期、提升良品率并降低资源浪费。"
+            description:"制造执行系统（MES） 是面向生产车间层级的 实时监控与执行管理平台，通过连接企业计划层（如ERP）与生产设备，实现 生产全流程的数字化管控、过程追溯与动态优化，核心目标是缩短制造周期、提升良品率并降低资源浪费。"
           },
           {
             title: "KPI管理体系",
@@ -67,7 +67,7 @@ export default function ManagementSystemPage() {
           {
             title: "ERP System",
             image:"/images/about/managementSystem/ERP.png",
-            description:"ERP system is an integrated and modular enterprise management software platform, which aims to integrate the core business processes of enterprises (such as finance, supply chain, production, sales, human resources, etc.) through a unified digital system, realize real-time data sharing and process collaboration, so as to optimize resource allocation, improve operational efficiency and support strategic decision-making."
+            description:"ERP System is an integrated and modular enterprise management software platform, which aims to integrate the core business processes of enterprises (such as finance, supply chain, production, sales, human resources, etc.) through a unified digital system, realize real-time data sharing and process collaboration, so as to optimize resource allocation, improve operational efficiency and support strategic decision-making."
           },
           {
             title: "Office Anywhere",
@@ -77,10 +77,10 @@ export default function ManagementSystemPage() {
           {
             title: "MES（Manufacturing Execution System）",
             image:"/images/about/managementSystem/mes.png",
-            description:"Manufacturing Execution System (MES) is a real-time monitoring and execution management platform for the production floor level, which realizes digital control, process traceability and dynamic optimization of the whole production process by connecting the enterprise planning layer (such as ERP) and the equipment control layer (such as PLC/SCADA), with the core goal of shortening the manufacturing cycle, improving the yield rate and reducing resource waste."
+            description:"Manufacturing Execution System (MES) is a real-time monitoring and execution management platform for the production floor level, which realizes digital control, process traceability and dynamic optimization of the whole production process by connecting the enterprise planning layer (such as ERP) and the production equipment, with the core goal of shortening the manufacturing cycle, improving the yield rate and reducing resource waste."
           },
           {
-            title: "KPI management system",
+            title: "KPI Management System",
             image:"/images/about/managementSystem/KPI.png",
             description:"KPI management system is a set of systematic methods based on key performance indicators, through the closed-loop mechanism of objective decomposition→ indicator design→ process monitoring→ performance evaluation → continuous improvement, transforming organizational strategy into quantifiable, executable and traceable operation management tools, driving the team to focus on core value creation and achieve strategic goal."
           },

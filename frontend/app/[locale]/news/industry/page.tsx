@@ -53,11 +53,11 @@ export default async function IndustryNewsPage({ params, searchParams }: { param
 
   return (
     <PageLayout
-      title={locale === "en" ? "Industry Information" : "行业资讯"}
-      subtitle={locale === "en" ? "Learn about latest industry information" : "了解行业最新动态"}
+      title={locale === "en" ? "Industry Knowledge" : "行业知识"}
+      subtitle={locale === "en" ? "Explore the latest industry knowledge" : "了解行业最新知识"}
       breadcrumbs={[
         { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news.html` },
-        { label: locale === "en" ? "Industry Information" : "行业资讯", href: `/${locale}/news/industry.html` },
+        { label: locale === "en" ? "Industry Knowledge" : "行业知识", href: `/${locale}/news/industry.html` },
       ]}
       backgroundImage="/images/news/newsBreadcrumb.png"
     >

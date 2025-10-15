@@ -68,7 +68,7 @@ export function AboutSection() {
       "about.title": { "zh-Hans": "关于我们", en: "About Us" },
       "about.desc": {
         "zh-Hans":
-          "百千成电子是专注于储能BMS系统研发与OEM代工服务的高新技术企业，致力于为全球客户提供安全可靠的储能解决方案。",
+          "百千成电子是专注于储能BMS系统研发与OEM制造服务的高新技术企业，致力于为全球客户提供安全可靠的储能解决方案。",
         en: "BAIQIANCHENG Electronics is a high-tech enterprise focusing on energy storage BMS R&D and OEM manufacturing services, committed to providing safe and reliable energy storage solutions for global customers.",
       },
       "about.stat1.title": { "zh-Hans": "BMS研发经验", en: "BMS R&D Experience" },
@@ -86,7 +86,7 @@ export function AboutSection() {
       },
       "about.advantage1.desc": {
         "zh-Hans":
-          "提供从联合设计（JDSM）、OEM代工到PCBA的一站式服务，覆盖消费电子、储能BMS、机器人、医疗及汽车电子等多领域。",
+          "提供从联合设计（JDSM）、OEM制造到PCBA的一站式服务，覆盖消费电子、储能BMS、机器人、医疗及汽车电子等多领域。",
         en: "We provide one-stop services from joint design (JDSM), OEM manufacturing, to full-range PCBA processes, covering diverse fields such as consumer electronics, energy storage BMS, robotics, medical devices, and automotive electronics.",
       },
       "about.advantage2.title": { "zh-Hans": "深厚的技术与工程实力", en: "Strong Technical and Engineering Expertise" },

@@ -62,8 +62,8 @@ export function ProductSection() {
       image: "/images/mainPage/BMSPCSBIG.png",
       products: [
         { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/images/mainPage/powerStorageBMS.png", link: "/products/energy-storage-bms/power-storage" },
-        { id: 102, title: locale === "en" ? "Large Ship Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/images/mainPage/largeShip.png", link: "/products/energy-storage-bms/large-ship" },
-        { id: 103, title: locale === "en" ? "Small Ship Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/images/mainPage/smallShip.png", link: "/products/energy-storage-bms/small-ship" },
+        { id: 102, title: locale === "en" ? "Large-scale Marine Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/images/mainPage/largeShip.png", link: "/products/energy-storage-bms/large-ship" },
+        { id: 103, title: locale === "en" ? "Small-scale Marine Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/images/mainPage/smallShip.png", link: "/products/energy-storage-bms/small-ship" },
         { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/images/mainPage/communicationBase.png", link: "/products/energy-storage-bms/communication-base" },
         { id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/images/mainPage/powerStorageEMS.jpg", link: "/products/energy-storage-bms/energy-storage-ems" },
         { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/images/mainPage/powerStoragePCS.png", link: "/products/energy-storage-pcs" },

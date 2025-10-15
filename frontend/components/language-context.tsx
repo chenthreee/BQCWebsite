@@ -26,8 +26,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Expert in Intelligent Energy Storage Solutions",
   },
   "company.description": {
-    zh: "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
-    "zh-Hans": "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
+    zh: "专注于储能BMS系统研发与OEM制造服务的高新技术企业",
+    "zh-Hans": "专注于储能BMS系统研发与OEM制造服务的高新技术企业",
     en: "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
   },
 
@@ -171,8 +171,8 @@ const translations: Record<string, Record<Language, string>> = {
   },
   "about.managementSystem.subtitle": {
     zh: "百千成电子的数字化管理平台",
-    "zh-Hans": "百千成电子的数字化管理平台",
-    en: "BQC Electronics Digital Management Platform"
+    "zh-Hans": "数字化管理平台",
+    en: "Digital Management Platform"
   },
   "about.manufacturingCapabilities": {
     zh: "制造能力",
@@ -251,12 +251,12 @@ const translations: Record<string, Record<Language, string>> = {
   "bms.largeShip": {
     zh: "大型船舶储能BMS",
     "zh-Hans": "大型船舶储能BMS",
-    en: "Large Ship Energy Storage BMS",
+    en: "Large-scale Marine Energy Storage BMS",
   },
   "bms.smallShip": {
     zh: "小型船舶储能BMS",
     "zh-Hans": "小型船舶储能BMS",
-    en: "Small Ship Energy Storage BMS",
+    en: "Small-scale Marine Energy Storage BMS",
   },
   "bms.communicationBase": {
     zh: "通讯基站BMS",
@@ -271,8 +271,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "ODM Development Services (BMS)",
   },
   "services.jdsmOem": {
-    zh: "OEM代工服务",
-    "zh-Hans": "OEM代工服务",
+    zh: "OEM制造服务",
+    "zh-Hans": "OEM制造服务",
     en: "OEM Manufacturing Services",
   },
 
@@ -288,9 +288,9 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Company News",
   },
   "news.industry": {
-    zh: "行业资讯",
-    "zh-Hans": "行业资讯",
-    en: "Industry News",
+    zh: "行业知识",
+    "zh-Hans": "行业知识",
+    en: "Industry Knowledge",
   },
   "news.technology": {
     zh: "技术分享",
@@ -362,8 +362,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Innovative Energy Storage Solutions",
   },
   "section.solutionsDescription": {
-    zh: "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM代工服务，以先进技术引领行业发展。",
-    "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM代工服务，以先进技术引领行业发展。",
+    zh: "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，以先进技术引领行业发展。",
+    "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，以先进技术引领行业发展。",
     en: "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and OEM manufacturing services for global customers, leading the industry with advanced technology.",
   },
 

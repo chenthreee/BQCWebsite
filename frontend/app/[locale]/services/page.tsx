@@ -21,12 +21,12 @@ const content = {
         alt: "ODM研发服务"
       },
       {
-        title: "OEM代工服务",
-        desc: "百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。",
+        title: "OEM制造服务",
+        desc: "百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM制造服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。",
         link: "/zh-Hans/services/oem.html",
         linkText: "了解详情",
         image: "/images/services/oem.png",
-        alt: "OEM代工服务"
+        alt: "OEM制造服务"
       }
     ],
     advantagesTitle: "服务优势",

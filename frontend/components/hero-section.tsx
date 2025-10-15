@@ -11,7 +11,7 @@ import Link from "next/link"
 export function HeroSection() {
   const pathname = usePathname()
   const locale = pathname.split("/")[1] === "en" ? "en" : "zh-Hans"
-  
+
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null)
@@ -28,7 +28,7 @@ export function HeroSection() {
         "en": "Expert in Intelligent Energy Storage Solutions",
       },
       "company.description": {
-        "zh-Hans": "专注于储能BMS系统研发与OEM代工服务的高新技术企业",
+        "zh-Hans": "专注于储能BMS系统研发制造服务的高新技术企业",
         "en": "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
       },
       "button.learnMore": {
@@ -47,11 +47,11 @@ export function HeroSection() {
   const slides = [
     {
       id: 1,
-      title: locale === "en" ? "OEM Manufacturing Services" : "OEM代工服务",
+      title: locale === "en" ? "OEM Manufacturing Services" : "OEM制造服务",
       subtitle: locale === "en" ? "One-stop Electronic Manufacturing Solutions" : "一站式电子制造解决方案",
-      description: locale === "en" 
+      description: locale === "en"
         ? "Providing full-process OEM manufacturing services from PCB design, SMT assembly to complete unit assembly"
-        : "提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务",
+        : "提供从PCB设计、SMT贴片到整机组装的全流程OEM制造服务",
       buttonText: t("button.learnMore"),
       buttonLink: `/${locale}/services/oem.html`,
       image: "/images/image_OEM.png",
@@ -69,34 +69,55 @@ export function HeroSection() {
       image: "/images/image_BMS.png",
       mobileImage: "/placeholder.svg?height=800&width=600",
     },
-    {
-      id: 3,
-      title: t("company.name"),
-      subtitle: t("company.slogan"),
-      description: t("company.description"),
-      buttonText: t("button.learnMore"),
-      buttonLink: `/${locale}/about.html`,
-      image: "/images/hero-circuit-board.png",
-      mobileImage: "/images/hero-circuit-board.png",
-    },
+    // {
+    //   id: 3,
+    //   title: t("company.name"),
+    //   subtitle: t("company.slogan"),
+    //   description: t("company.description"),
+    //   buttonText: t("button.learnMore"),
+    //   buttonLink: `/${locale}/about.html`,
+    //   image: "/images/hero-circuit-board.png",
+    //   mobileImage: "/images/hero-circuit-board.png",
+    // },
   ]
 
   // 自动轮播
-  useEffect(() => {
-    const startAutoPlay = () => {
+  // useEffect(() => {
+  //   const startAutoPlay = () => {
+  //     autoPlayRef.current = setInterval(() => {
+  //       nextSlide()
+  //     }, 8000) // 5秒切换一次
+  //   }
+
+  //   startAutoPlay()
+
+  //   return () => {
+  //     if (autoPlayRef.current) {
+  //       clearInterval(autoPlayRef.current)
+  //     }
+  //   }
+  // }, [])
+  // 自动轮播 + 悬停暂停功能
+  const startAutoPlay = () => {
+    if (!autoPlayRef.current) {
       autoPlayRef.current = setInterval(() => {
         nextSlide()
-      }, 5000) // 5秒切换一次
+      }, 5000) // 切换间隔，单位：毫秒
     }
+  }
 
+  const stopAutoPlay = () => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current)
+      autoPlayRef.current = null
+    }
+  }
+
+  useEffect(() => {
     startAutoPlay()
-
-    return () => {
-      if (autoPlayRef.current) {
-        clearInterval(autoPlayRef.current)
-      }
-    }
+    return () => stopAutoPlay()
   }, [])
+
 
   const nextSlide = () => {
     if (!isAnimating) {
@@ -129,8 +150,16 @@ export function HeroSection() {
     }
   }
 
+  // return (
+  //   <section className="relative bg-black text-white overflow-hidden h-screen pt-20" aria-label="主横幅">
   return (
-    <section className="relative bg-black text-white overflow-hidden h-screen pt-20" aria-label="主横幅">
+  <section
+    className="relative bg-black text-white overflow-hidden h-screen pt-20"
+    aria-label="主横幅"
+    onMouseEnter={stopAutoPlay}  //  鼠标移入暂停
+    onMouseLeave={startAutoPlay} // 鼠标移出恢复
+  >
+
       {/* 轮播图容器 */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (

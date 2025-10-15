@@ -37,16 +37,16 @@ export default function ServicesPage() {
           <div className="h-64 overflow-hidden">
             <Image
               src="/placeholder.svg?height=600&width=800"
-              alt="OEM代工服务"
+              alt="OEM制造服务"
               width={800}
               height={600}
               className="w-full h-full object-cover"
             />
           </div>
           <div className="p-8">
-            <h2 className="text-2xl font-bold mb-4">OEM代工服务</h2>
+            <h2 className="text-2xl font-bold mb-4">OEM代制造务</h2>
             <p className="text-gray-700 mb-6">
-              百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM代工服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。
+              百千成电子提供从PCB设计、SMT贴片到整机组装的全流程OEM制造服务，以先进的生产设备和严格的质量控制体系，为客户提供高品质的电子制造服务。
             </p>
             <Link href="/services/jdsm-oem.html" className="text-blue-600 hover:text-blue-800 flex items-center font-medium">
               了解详情

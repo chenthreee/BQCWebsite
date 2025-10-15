@@ -41,11 +41,11 @@ export default function CoreValuesPage() {
         },
         {
           title: "回馈",
-          description: "以双碳为目标,以创新为动力，以储能为根基，反哺国家及社会"
+          description: "以双碳为目标，以创新为动力，以储能为根基，反哺国家及社会"
         },
         {
           title: "客户第一",
-          description: "反对上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
+          description: "反对以上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
         }
       ],
       image: "/images/about/coreValue/coreValue.png"
