@@ -36,8 +36,8 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Scroll Down",
   },
   "footer.products": {
-    "zh-Hans": "产品与服务",
-    "en": "Products & Services",
+    "zh-Hans": "产品中心",
+    "en": "Products",
   },
   "footer.about": {
     "zh-Hans": "关于我们",
@@ -60,8 +60,8 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Privacy Policy",
   },
   // Footer 产品与服务
-  "footer.products.bms": { "zh-Hans": "储能BMS", "en": "Energy Storage BMS" },
-  "footer.products.ems": { "zh-Hans": "储能EMS（总控）", "en": "Energy Storage EMS (Master Control)" },
+  "footer.products.bms": { "zh-Hans": "储能BMS/储能PCS", "en": "Energy Storage BMS/PCS" },
+  // "footer.products.ems": { "zh-Hans": "储能EMS（总控）", "en": "Energy Storage EMS (Master Control)" },
   "footer.products.pcs": { "zh-Hans": "储能PCS", "en": "Energy Storage PCS" },
   "footer.products.robot": { "zh-Hans": "智能机器人系统", "en": "Intelligent Robot System" },
   // Footer 关于我们
@@ -245,8 +245,8 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               <h3 className="text-lg font-bold mb-4">{t("footer.products")}</h3>
               <ul className="space-y-2">
                 <li><Link href={`/${locale}/products/energy-storage-bms.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.bms")}</Link></li>
-                <li><Link href={`/${locale}/products/energy-storage-ems.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.ems")}</Link></li>
-                <li><Link href={`/${locale}/products/energy-storage-pcs.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.pcs")}</Link></li>
+                {/* <li><Link href={`/${locale}/products/energy-storage-ems.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.ems")}</Link></li>
+                <li><Link href={`/${locale}/products/energy-storage-pcs.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.pcs")}</Link></li> */}
                 <li><Link href={`/${locale}/products/intelligent-robot-systems.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("footer.products.robot")}</Link></li>
                 <li><Link href={`/${locale}/products/industrial-control-boards.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.products.industrial") || "工业控制板"}</Link></li>
                 <li><Link href={`/${locale}/products/medical-devices.html`} rel="nofollow" className="text-gray-400 hover:text-white">{t("mainNav.products.medical") || "医疗设备"}</Link></li>

@@ -98,17 +98,17 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       locations: {
         shenzhenFactory: {
           title: "深圳工厂",
-          address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3栋3B号整栋，518132",
+          address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3B3栋整套 518132",
           image: "/images/contact/location-zh.png",
         },
         rdCenter: {
           title: "研发中心",
-          address: "深圳市南山区南山睿园17栋5楼整层",
+          address: "深圳市南山区西丽桃源街道龙珠三路45号南山睿园17栋慧泽楼5层 518055",
           image: "/images/contact/location-zh.png",
         },
         malaysiaFactory: {
           title: "马来西亚工厂",
-          address: "马来西亚槟城",
+          address: "PMT 828, PERSIARAN CASSIA SELATAN 4, TAMAN PERINDUSTRIAN BATU KAWAN, 14110 BANDAR CASSIA.",
           image: "/images/contact/location-zh.png",
         },
       },
@@ -153,12 +153,12 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         },
         rdCenter: {
           title: "R&D Centre",
-          address: "17th Floor, Building 17, Nanshan Ruiyuan, Nanshan District, Shenzhen, China.",
+          address: "5th Floor, Huize Building, Unit 17th The Sage Innopark, Longzhu 3rd Road No.45, Nanshan District, Shenzhen. 518055",
           image: "/images/contact/location-en.png",
         },
         malaysiaFactory: {
           title: "Malaysia Factory",
-          address: "State of Penang, Malaysia.",
+          address: "PMT 828, PERSIARAN CASSIA SELATAN 4, TAMAN PERINDUSTRIAN BATU KAWAN, 14110 BANDAR CASSIA.",
           image: "/images/contact/location-en.png",
         },
       },
@@ -382,7 +382,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         </div>
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <Image
-            src="/images/contact/global.png"
+            src="/images/contact/global.jpg"
             alt={locale === "en" ? "BQC Global Presence" : "百千成全球布局"}
             width={1200}
             height={600}
