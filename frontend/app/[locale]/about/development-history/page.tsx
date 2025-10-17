@@ -1,26 +1,24 @@
 "use client"
 
 import PageLayout from "@/components/page-layout"
-import Image from "next/image"
-import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 
-export default function DevelopmentHistoryPage() {
-  const { t, language, setLanguage } = useLanguage()
+
+export default function DevelopmentHistoryPage({ params }: { params: { locale: string } }) {
+  //const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
 
+  const locale = params.locale === "en" ? "en" : "zh-Hans"
   useEffect(() => {
     setMounted(true)
   }, [])
 
   // 根据 URL 自动切换语言
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else if (pathname.startsWith("/zh-Hans")) setLanguage("zh-Hans")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
+  // useEffect(() => {
+  //   if (pathname.startsWith("/en")) setLanguage("en")
+  //   else if (pathname.startsWith("/zh-Hans")) setLanguage("zh-Hans")
+  //   else setLanguage("zh")
+  // }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -30,29 +28,18 @@ export default function DevelopmentHistoryPage() {
     zh: {
       title: "发展历程",
       subtitle: "百千成电子的成长与发展",
+      breadcrumb:[
+        {label:"关于我们",href:"/zh-Hans/about.html"},
+        {label:"发展历程",href:"/zh-Hans/about/development-history.html"}
+      ],
       overview: {
         title: "我们的历程",
-        desc: {
-          zh: [
+        desc: [
             "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器能人领域二十余载，是兼具技术实力与国际视野的综合型企业。",
             "公司早期聚焦太阳能光伏逆变器研发制造，2006年相关业务占比超五成，并成功通过ISO9001国际认证，夯实品质根基。",
             "随着行业趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
             "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破35GWh+，彰显在储能领域的核心竞争力。"
-          ],
-          "zh-Hans": [
-            "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器能人领域二十余载，是兼具技术实力与国际视野的综合型企业。",
-            "公司早期聚焦太阳能光伏逆变器研发制造，2006年相关业务占比超五成，并成功通过ISO9001国际认证，夯实品质根基。",
-            "随着行业趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
-            "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破35GWh+，彰显在储能领域的核心竞争力。"
-          ],
-          en: [
-            "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years, evolving into a comprehensive enterprise with strong technical capabilities and global vision.",
-            "In our early phase, we focused on R&D and manufacturing of solar PV inverters. By 2006, this business accounted for over 50% of our total, and we obtained ISO 9001 certifications to solidify our quality foundation.",
-            "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
-            "We have continuously upgraded our management system, successively obtaining certifications including ISO 13485, ISO 14001, and IATF 16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage.",
-
-          ]
-        }
+        ]
       },
       future: {
         title: "未来展望",
@@ -84,22 +71,18 @@ export default function DevelopmentHistoryPage() {
     en: {
       title: "Development History",
       subtitle: "Growth and Development of BQC Electronics",
+      breadcrumb:[
+        {label:"About Us",href:"/en/about.html"},
+        {label:"Development History",href:"/en/about/development-history.html"}
+      ],
       overview: {
         title: "Our Journey",
-        desc: {
-          zh: [
-            "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器人领域二十余载，是兼具技术实力与国际视野的综合型企业。",
-            "公司早期聚焦太阳能光伏逆变器研发制造，2006年相关业务占比超五成，并成功通过ISO9001国际认证，夯实品质根基。",
-            "随着行业趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
-            "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破35GWh+，彰显在储能领域的核心竞争力。"
-          ],
-          en: [
+        desc: [
             "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years, evolving into a comprehensive enterprise with strong technical capabilities and global vision.",
             "In our early phase, we focused on R&D and manufacturing of solar PV inverters. By 2006, this business accounted for over 50% of our total, and we obtained ISO 9001 certifications to solidify our quality foundation.",
             "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
-            "We have continuously upgraded our management system, successively obtaining certifications including ISO 13485, ISO 14001, and IATF 16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage."
-          ]
-        }
+
+        ]
       },
       future: {
         title: "Future Outlook",
@@ -130,25 +113,26 @@ export default function DevelopmentHistoryPage() {
     }
   }
 
-  const currentContent = language === "en" ? content.en : content.zh
+  // const currentContent = language === "en" ? content.en : content.zh
+  const currentContent=locale=="en"?content.en:content.zh
 
-  const breadcrumbs = [
-    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.developmentHistory"), href: language === "en" ? "/en/about/development-history" : "/zh-Hans/about/development-history" },
-  ]
+  // const breadcrumbs = [
+  //   { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+  //   { label: t("about.breadcrumbs.developmentHistory"), href: language === "en" ? "/en/about/development-history" : "/zh-Hans/about/development-history" },
+  // ]
 
   return (
     <PageLayout
-      title={t("about.developmentHistory.title")}
-      subtitle={t("about.developmentHistory.subtitle")}
-      breadcrumbs={breadcrumbs}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumb}
       backgroundImage="/images/about/developHistory/developHistoryBreadcrumb.png"
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-4 text-center">{currentContent.overview.title}</h2>
           <div className="space-y-3 text-gray-500 text-sm max-w-3xl mx-auto text-left">
-            {(currentContent.overview.desc[language as keyof typeof currentContent.overview.desc] as string[]).map((paragraph, index) => (
+            {(currentContent.overview.desc as string[]).map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>

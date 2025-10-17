@@ -2,24 +2,24 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 
-export default function CertificatesPage() {
-  const { t, language, setLanguage } = useLanguage()
+
+export default function CertificatesPage({params}:{params:{locale:string }}) {
+  // const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
+  // const pathname = usePathname()
+  const locale=params.locale==="en"?"en":"zh-Hans"
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   // 根据 URL 自动切换语言
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
+  // useEffect(() => {
+  //   if (pathname.startsWith("/en")) setLanguage("en")
+  //   else setLanguage("zh")
+  // }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -28,6 +28,12 @@ export default function CertificatesPage() {
   // 证书内容（中英文）
   const content = {
     zh: {
+      title:"资质证书",
+      subtitle:"百千成电子的资质认证与荣誉",
+      breadcrumbs:[
+        {label:"关于我们",href:"/zh-Hans/about.html"},
+        {label:"资质证书",href:"/zh-Hans/about/certificates.html"}
+      ],
       overview: {
         title: "我们的资质",
         description: "百千成电子通过了多项国际认证和资质认定，证明了公司在质量管理、环境保护、职业健康安全等方面的卓越表现，以及在技术创新方面的实力。"
@@ -95,6 +101,12 @@ export default function CertificatesPage() {
       }
     },
     en: {
+      title:"Certificates",
+      subtitle:"BQC Electronics Certifications and Honors",
+      breadcrumbs:[
+        {label:"About us",href:"/en/about.html"},
+        {label:"Certificates",href:"/en/about/certificates.html"}
+      ],
       overview: {
         title: "Our Qualifications",
         description: "BQC Electronics has obtained multiple international certifications, demonstrating our commitment to quality management, environmental protection, occupational health and safety, and technological innovation excellence."
@@ -163,18 +175,16 @@ export default function CertificatesPage() {
     }
   }
 
-  const currentContent = language === "en" ? content.en : content.zh
 
-  const breadcrumbs = [
-    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.certificates"), href: language === "en" ? "/en/about/certificates" : "/zh-Hans/about/certificates" },
-  ]
+  const currentContent=locale==="en" ? content.en : content.zh
+
+
 
   return (
     <PageLayout
-      title={t("about.certificates.title")}
-      subtitle={t("about.certificates.subtitle")}
-      breadcrumbs={breadcrumbs}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/images/about/aboutBreadcrumb.png"
     >
       <div className="max-w-3xl mx-auto text-center mb-16">

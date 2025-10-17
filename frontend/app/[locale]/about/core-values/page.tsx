@@ -7,20 +7,21 @@ import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 
-export default function CoreValuesPage() {
-  const { t, language, setLanguage } = useLanguage()
+export default function CoreValuesPage({params}:{params:{locale:string}}) {
+  // const { t, language, setLanguage } = useLanguage()
   const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
+  // const pathname = usePathname()
+  const locale=params.locale==="en"?"en":"zh-Hans"
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   // 根据 URL 自动切换语言
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
+  // useEffect(() => {
+  //   if (pathname.startsWith("/en")) setLanguage("en")
+  //   else setLanguage("zh")
+  // }, [pathname, setLanguage])
 
   if (!mounted) {
     return null
@@ -30,6 +31,10 @@ export default function CoreValuesPage() {
     zh: {
       title: "核心价值观",
       subtitle: "我们的企业文化与价值理念",
+      breadcrumbs:[
+        {label:"关于我们",href:"/zh-Hans/about.html"},
+        {label:"核心价值观",href:"/zh-Hans/about/core-values.html"}
+      ],
       values: [
         {
           title: "诚信",
@@ -53,6 +58,10 @@ export default function CoreValuesPage() {
     en: {
       title: "Core Values",
       subtitle: "Our Corporate Culture and Value Principles",
+      breadcrumbs:[
+        {label:"About us",href:"/en/about.html"},
+        {label:"Core Values",href:"/en/about/core-values.html"}
+      ],
       values: [
         {
           title: "Integrity",
@@ -75,25 +84,21 @@ export default function CoreValuesPage() {
     }
   }
 
-  const currentContent = language === "en" ? content.en : content.zh
+  const currentContent=locale==="en"?content.en:content.zh
 
-  const breadcrumbs = [
-    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.coreValues"), href: language === "en" ? "/en/about/core-values" : "/zh-Hans/about/core-values" },
-  ]
 
   return (
     <PageLayout
-      title={t("about.coreValues.title")}
-      subtitle={t("about.coreValues.subtitle")}
-      breadcrumbs={breadcrumbs}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/images/about/coreValue/breadcrumb.png"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
         <div>
           <Image
             src={currentContent.image}
-            alt={language === "zh" ? "企业文化" : "Corporate Culture"}
+            alt={locale === "zh-Hans" ? "企业文化" : "Corporate Culture"}
             width={800}
             height={600}
             className="rounded-lg shadow-lg"
