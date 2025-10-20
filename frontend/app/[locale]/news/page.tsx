@@ -3,8 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Calendar, User } from "lucide-react"
 import NewsCategoryTabs from "@/components/NewsCategoryTabs";
-import { headers } from "next/headers";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+
 import { redirect } from "next/navigation";
 
 const STRAPI_URL = "http://localhost:1337"
@@ -65,7 +64,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
       breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news.html" }]}
       backgroundImage="/images/news/newsBreadcrumb.png"
     >
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher /> */}
       <NewsCategoryTabs />
 
       {/* 置顶新闻 */}
