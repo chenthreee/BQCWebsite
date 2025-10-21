@@ -62,8 +62,8 @@ export function HeroSection() {
       title: locale === "en" ? "Energy Storage BMS System Expert" : "储能BMS系统专家",
       subtitle: locale === "en" ? "Safe, Reliable, Smart and Efficient" : "安全可靠，智能高效",
       description: locale === "en"
-        ? "Focusing on BMS system development and production for power storage, ship storage, communication base stations and other fields"
-        : "专注于电力储能、船舶储能、通讯基站等领域的BMS系统研发与生产",
+        ? "Focusing on BMS system development and production for power storage, ship storage, communication base stations, data centers and other fields"
+        : "专注于电力储能、船舶储能、通讯基站、数据中心等领域的BMS系统研发与生产",
       buttonText: t("button.learnMore"),
       buttonLink: `/${locale}/products/energy-storage-bms.html`,
       image: "/images/image_BMS.png",
