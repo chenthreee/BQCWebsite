@@ -151,28 +151,33 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
       {/* 侧边栏联系方式 */}
       <div className="fixed right-4 bottom-20 z-40 flex flex-col gap-2">
-        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
-          <Mail className="h-6 w-6 text-blue-600" />
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
+        {/* 邮箱 */}
+        <div className="relative group">
+          <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer">
+            <Mail className="h-6 w-6 text-blue-600" />
+          </div>
+          {/* 扩大hover区域，包含按钮到悬浮框之间的间隙 */}
+          <div className="absolute right-0 top-0 bottom-0 -left-[250px] group-hover:block hidden"></div>
+          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-10">
             <p className="font-bold text-sm">电子邮箱</p>
             <p className="text-sm">pcba@bqcdz.com</p>
           </div>
         </div>
+
         {/* LinkedIn 图标按钮 */}
-        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group relative">
+        <div className="relative group">
           <a
             href="https://www.linkedin.com/in/jacky-fan-a63b79137/overlay/contact-info/"
             target="_blank"
             rel="noopener noreferrer"
+            className="block bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer"
           >
-            {/* 你可以用 Globe 或 LinkedIn 图标 */}
             <GlobeIcon className="h-6 w-6 text-blue-600" />
-            {/* 如果你安装了 lucide-react，也可以用 Linkedin 图标 */}
-            {/* <Linkedin className="h-6 w-6 text-blue-600" /> */}
           </a>
-
+          {/* 扩大hover区域 */}
+          <div className="absolute right-0 top-0 bottom-0 -left-[250px] group-hover:block hidden"></div>
           {/* 悬停提示框 */}
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
+          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-10">
             <p className="font-bold text-sm">LinkedIn</p>
             <a
               href="https://www.linkedin.com/in/jacky-fan-a63b79137/overlay/contact-info/"
@@ -185,14 +190,21 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           </div>
         </div>
 
-        <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer group">
-          <PhoneIcon className="h-6 w-6 text-blue-600" />
-          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-lg hidden group-hover:block whitespace-nowrap">
+        {/* 电话 */}
+        <div className="relative group">
+          <div className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 cursor-pointer">
+            <PhoneIcon className="h-6 w-6 text-blue-600" />
+          </div>
+          {/* 扩大hover区域 */}
+          <div className="absolute right-0 top-0 bottom-0 -left-[250px] group-hover:block hidden"></div>
+          <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-10">
             <p className="font-bold text-sm">电话</p>
             <div className="text-sm">86-18823428986</div>
             {/* <div className="text-sm">86-755-26788245</div> */}
           </div>
         </div>
+
+        {/* 回到顶部 */}
         <button
           onClick={scrollToTop}
           className="bg-white rounded-full p-3 shadow-lg hover:bg-blue-50"

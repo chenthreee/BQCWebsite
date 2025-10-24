@@ -284,7 +284,7 @@ export function ServicesSection() {
       icon: <CodeXml className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Real-time Operating System (RTOS) Application Development", "Underlying Driver Development", "Communication Protocol Stack Implementation", "Algorithm Optimization & Porting", "Software Architecture Design"]
-        : ["实时操作系统(RTOS)应用开发", "底层驱动开发", "通信协议栈实现", "算法优化与移植", "软件架构设计"],
+        : ["方案与架构设计", "驱动开发与硬件适配", "中间件与协议栈开发", "应用于算法实现", "工具与云端软件开发","整机调试与验证","产品认证与合规支持","生产导入与维护支持"],
     },
     {
       id: 4,

@@ -30,7 +30,6 @@ export default function OemServicePage({ params }: { params: { locale: string } 
     )
   }
 
-
   const content = {
     "zh-Hans": {
       title: "OEM制造服务",
@@ -40,70 +39,51 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         { label: "OEM制造服务", href: "/zh-Hans/services/oem.html" },
       ],
       oem: {
-        description: [
-          "百千成（BQC）是一家拥有22年经验的专业电子制造服务（EMS）提供商，我们以\"强研发 + 强制造\"的闭环能力，帮助客户把产品从设计验证快速推进到稳定量产。",
-          "我们专注电子制造服务（EMS），提供从PCBA到整机组装与功能测试的一站式OEM/ODM交付，覆盖储能系统、智能机器人、医疗电子、汽车电子等高可靠领域。",
-          "质量与认证：",
-          "ISO9001｜ISO13485｜ISO14001｜IATF16949，严格过程控制与可持续制造。",
-          "双基地产能：",
-          "• 深圳总部（15,000㎡）：24条全自动SMT、4条插件、3条组装、11条三防、4条功能测试及老化房。",
-          "• 马来西亚槟城（6,000㎡）：4条SMT、插件/手焊/功能测试/三防线/组装线，满足东南亚与欧美原产地与本地化需求。",
-          "工艺与检测能力：",
-          "SPI、AOI、X-Ray、ICT、BGA返修、自动点胶、回流/波峰焊、镭雕、老化、三防喷涂——全流程质量把关，面向高可靠应用。",
-          "智能制造与可追溯：",
-          "• MES：实时采集生产/测试数据，整机级追溯与质量可视化。",
-          "• ERP/KPI/OA/U9：供应链与项目并行管理，提升交付效率。",
-          "增值服务（区别于传统EMS）：",
-          "• DFM可制造性分析 • 核心器件选型与风险评估 ",
-          "• 长交期物料免费备货（基于年度预测与出货计划）",
-          "• 自主测试系统：定制上位机与全自动化测试架，自动烧录与测试，降低人为误差。",
-          "• 成本优化：在不改动设计的前提下，以PIN TO PIN国产/国际替代，平均节省BOM 20%–30%。",
-          "供应链与规模背书：",
-          "BMS累计装机量 35GWh+；与 NXP、ST、TI 等原厂建立稳定合作，获得价格与交期支持，保障计划可控、交付准时。",
-          "我们做的不是单点加工，而是\"设计导入—制造—测试—交付—持续优化\"的闭环 EMS 方案，让产品更快、更稳、更具性价比地量产落地。"
+        sections: [
+          {
+            image: "/images/services/1.png",
+            imagePosition: "right",
+            content: [
+              "百千成（BQC）成立于2003年，是一家深耕22年的专业电子制造服务（EMS）供应商。我们以\"强研发 + 强制造\"的闭环能力，帮助客户将产品从设计验证快速推进到稳定量产。现有员工1000+，厂区总面积20,000㎡+（深圳15,000㎡、马来西亚槟城6,000㎡）。提供从元器件采购、PCBA贴片/插件到整机装配与功能/老化测试的一站式 OEM/ODM 交付，覆盖储能系统、AI智能机器人、医疗电子、汽车电子等高可靠领域，持续为海内外客户交付稳定、高质量的量产方案。",
+              "产能与布局：",
+              "• 中国·深圳（15,000㎡）：24 条 SMT、配套插件/手焊/测试/三防/组装/老化/包装一站式服务",
+              "• 马来西亚·槟城（6,000㎡）：4 条 SMT，配套自动化插件机/手焊/测试/三防/组装/老化/包装一站式服务。",
+              "满足东南亚、欧盟与美国的原产地与本地化交付需求，灵活应对关务与时效。"
+            ]
+          },
+          {
+            image: "/images/services/2.png",
+            imagePosition: "left",
+            content: [
+              "质量与智能制造：",
+              "我们以“设计即质量、制造即数据”为原则，贯穿 DFM→来料→贴片→焊接→测试→组装→老化→包装→出货全流程。工厂采用 SPI/AOI/X-Ray、ICT/FCT、自动化测试治具与 MES 追溯体系，批次级追踪物料、工序与参数，确保高一致性与可复制的量产品质。",
+              "全面认证体系： ISO 9001｜IATF 16949｜ISO 13485｜ISO 14001｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关"
+            ]
+          },
+          {
+            image: "/images/services/3.png",
+            imagePosition: "right",
+            content: [
+              "增值服务（区别于传统EMS）：",
+              "• DFM可制造性分析 ",
+              "• 关键器件选型与风险评估 ",
+              "• 长交期物料免费备货（基于年度预测与出货计划）",
+              "• 定制测试系统：上位机+全自动测试治具，自动烧录与功能测试，降低认为误差",
+              "• 灵活付款：基于保险批复提供更灵活的账期方案",
+              "• 成本优化：在不改动设计的前提下进行PIN-to-PIN 国产/国际替代，BOM平均降本20-30%",
+              "供应链与背书：",
+              "服务覆盖AI 机器人与新能源等行业生态，量产验证充分；BMS 累计装机 35GWh+。与 NXP、ST、TI 等原厂及 Arrow / Future / Avnet 等全球代理深度合作，价格与交期更可控，计划更可预期,交付更准时。"
+            ]
+          }
         ]
       },
-      // jdsm: {
-      //   intro: {
-      //     title: "JDSM代工服务",
-      //     description: [
-      //       "JDSM（Joint Design & Manufacturing，联合设计制造），是一种强调“设计+制造”一体化的服务模式。与传统的代工不同，JDSM不仅仅是单纯的生产制造，而是从产品的概念与设计阶段就与客户紧密协作。制造商会深入了解客户的需求与应用场景，在产品规划、功能定义、结构设计、材料选择等环节提供专业建议和技术支持。",
-      //       "在这一模式下，客户与制造商共同确定产品的设计方案和技术规格。制造商凭借自身的工程能力和制造经验，能够在设计早期就提出优化建议，帮助客户避免潜在的设计缺陷，提升产品的可制造性和可靠性。",
-      //       "同时，JDSM制造商不仅负责后续的生产制造，还会在样机验证、试产、批量生产以及质量管控等全过程中参与其中。这种模式可以显著缩短研发周期，降低产品开发风险，并确保最终产品能够快速、高效地推向市场。",
-      //       "简而言之，JDSM是一种覆盖 设计、验证、制造、量产 的全流程协作服务，为客户提供更加全面和高附加值的解决方案。"
-      //     ]
-
-      //   },
-      //   advantages: {
-      //     title: "JDSM服务优势",
-      //     description: [
-      //       "百千成与客户共同设计产品，凭借丰富的技术经验和专业知识提供技术支持和定制化生产服务。百千成得到了TI、 Microchip 、 Silergy等原厂的以及Avnet、Arrow等代理商的特别优先支持。为您提供核心器件选型替代，帮您找到pin对pin的替代，解决元件停产、缺货等问题，在保证质量的同时降低生产成本缩短交货时间。",
-      //       "同时，百千成的研发团队配备软件，硬件及结构工程师：可根据客户需求产出原理图和进行PCB的layout布局设计；同时可产品做塑料或五金外壳ID及MD设计。满足市场需求和个性化要求，提升产品竞争力。"
-      //     ],
-      //     cards: [
-      //       {
-      //         title: "优化设计",
-      //         description: "结合制造经验优化产品设计，提高产品性能和可靠性，降低生产成本。"
-      //       },
-      //       {
-      //         title: "缩短周期",
-      //         description: "设计和制造并行进行，缩短产品开发周期，加快产品上市时间。"
-      //       },
-      //       {
-      //         title: "降低风险",
-      //         description: "早期发现并解决设计问题，降低后期修改成本和风险。"
-      //       }
-      //     ]
-      //   }
-      // },
       serviceType: {
         title: "服务类型",
         oem: "OEM制造服务",
-        //jdsm: "JDSM代工"
       },
       contact: {
         title: "联系我们",
-        description: "如果您有产品开发需求，欢迎联系我们的OEM服务团队，我们将为您提供专业的技术咨询和解决方案。",
+        description: "如果您有产品生产需求，欢迎联系我们OEM服务团队，我们将为您提供专业的技术咨询和有竞争力的报价。",
         buttonText: "联系我们讨论您的项目",
         href: "/zh-Hans/contact.html"
       }
@@ -116,29 +96,42 @@ export default function OemServicePage({ params }: { params: { locale: string } 
         { label: "OEM Manufacturing Services", href: "/en/services/oem.html" },
       ],
       oem: {
-        description: [
-          "BQC is a professional Electronics Manufacturing Services (EMS) provider with 22 years of industry experience.With a “Strong R&D + Strong Manufacturing” closed-loop capability, we help customers accelerate their products from design validation to stable mass production efficiently and reliably.",
-          "We specialize in end-to-end EMS solutions, offering one-stop OEM/ODM services from PCBA manufacturing to full box build and functional testing.",
-          "Our expertise covers energy storage systems, intelligent robotics, medical electronics, and automotive electronics — all high-reliability sectors requiring precision and consistency.",
-          "Quality & Certifications：",
-          "ISO9001｜ISO13485｜ISO14001｜IATF16949,ensuring strict process control, traceable quality, and sustainable manufacturing practices.",
-          "Dual Manufacturing Bases：",
-          "• Shenzhen Headquarters (15,000㎡)： 24 SMT lines (fully automated), 4 DIP lines, 3 assembly lines, 11 conformal coating lines, 4 functional testing & aging rooms.",
-          "• Penang, Malaysia (6,000㎡)： 4 SMT lines, DIP / hand soldering / functional testing / conformal coating / assembly, Serving localization and origin requirements for Southeast Asia, Europe, and the U.S.",
-          "Process & Inspection Capabilities：",
-          "SPI | AOI | X-Ray | ICT | BGA Rework | Auto Dispensing | Reflow & Wave Soldering | Laser Marking | Aging | Conformal Coating --Ensuring end-to-end quality control for high-reliability applications.",
-          "Smart Manufacturing & Traceability：",
-          "• MES：Real-time production and testing data collection with full product traceability and visualized quality management.",
-          "• ERP/KPI/OA/U9：Integrated systems for synchronized supply chain and project management — ensuring on-time and efficient delivery.",
-          "Value-Added Services (Beyond Traditional EMS)：",
-          "• DFM & manufacturability analysis.",
-          "• Critical component selection and risk assessment. ",
-          "• Free buffer stock for long lead-time materials (based on forecast & shipment plan).",
-          "• Custom test systems: upper computer + automated fixtures for auto-programming and testing, minimizing human error.",
-          "•Cost optimization: PIN-to-PIN local/international part substitution without design change — saving 20-30% on BOM cost on average.",
-          "Supply Chain & Proven Experience：",
-          "Over 35 GWh of BMS shipments in total. Long-term cooperation with semiconductor leaders such as NXP, STMicroelectronics, and Texas Instruments. Strong supply chain support for price stability and predictable lead times.",
-          "We don’t just provide single-point processing  — we deliver a closed-loop EMS solution that covers Design Integration → Manufacturing → Testing → Delivery → Continuous Optimization, helping your products reach mass production faster, more reliably, and more cost-effectively."
+        sections: [
+          {
+            image: "/images/services/1.png",
+            imagePosition: "right",
+            content: [
+              "BQC, founded in 2003, is a professional Electronics Manufacturing Services (EMS) provider with 22 years of experience. With a “Strong R&D × Strong Manufacturing” closed-loop capability, we help customers accelerate products from design validation to stable mass production. We have 1,000+ employees and 20,000+ m² of manufacturing space (Shenzhen 15,000 m², Penang, Malaysia 6,000 m²). Our one-stop OEM/ODM offering covers component sourcing, PCBA SMT/THT, and box-build assembly with functional and burn-in testing, serving energy storage systems, intelligent AI robotics, medical electronics, and automotive electronics—consistently delivering reliable, high-quality volume production for customers worldwide.",
+              "Capacity & Footprint：",
+              "• Shenzhen, China (15,000 m²): 24 SMT lines, with end-to-end services including THT/insertion, hand soldering, testing, conformal coating, assembly, burn-in, and packing.",
+              "• Penang, Malaysia (6,000 m²): 4 SMT lines, with automated THT insertion, hand soldering, testing, conformal coating, assembly, burn-in, and packing in a one-stop flow.",
+              "Our dual-site setup meets country-of-origin and localization requirements for Southeast Asia, the European Union, and the United States, enabling flexible responses to customs, compliance, and lead-time needs."
+            ]
+          },
+          {
+            image: "/images/services/2.png",
+            imagePosition: "left",
+            content: [
+              "Quality & Smart Manufacturing：",
+              "We follow the principle of “quality by design, manufacturing by data” across the entire lifecycle: DFM → incoming inspection → SMT → soldering → testing → assembly → burn-in → packing → shipment. Our plants deploy SPI/AOI/X-Ray, ICT/FCT, automated test jigs, and an MES traceability system to track materials, processes, and parameters at the lot/batch level, ensuring high consistency and repeatable mass-production quality.",
+              "Comprehensive Certifications: ISO 9001 | IATF 16949 | ISO 13485 | ISO 14001 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control.",
+            ]
+          },
+          {
+            image: "/images/services/3.png",
+            imagePosition: "right",
+            content: [
+              "Value-Added Services (Beyond Traditional EMS)：",
+              "• DFM (Design for Manufacturability) analys",
+              "• Key component selection & risk assessment",
+              "• Free stocking of long-lead materials (based on annual forecasts and shipment plans)",
+              "• Custom test systems: host software + fully automatic test jigs for auto programming & functional testing, reducing human error",
+              "• Flexible payment terms enabled by trade-credit/insurance approvals",
+              "• Cost optimization: PIN-to-PIN domestic/international alternates without design changes, delivering 20-30% BOM savings",
+              "Supply Chain & Endorsements：",
+              "Our services span the AI-robotics and new-energy ecosystems and are fully validated in mass production; BMS deployments exceed 35 GWh cumulatively. We maintain deep partnerships with NXP, ST, TI, and global distributors such as Arrow, Future, and Avnet, enabling more controllable pricing and lead times, more predictable planning, and more on-time delivery."
+            ]
+          }
         ]
       },
       // jdsm: {
@@ -192,105 +185,67 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       backgroundImage="/images/services/oemBreadcrumb.png"
     >
       <div className="mb-16">
-        {/* <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.serviceType.title}</h2> */}
-        {/* <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-md shadow-sm p-1 bg-white">
-            <button
-              onClick={() => setActiveService("oem")}
-              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${activeService === "oem" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-            >
-              {currentContent.serviceType.oem}
-            </button>
-            <button
-              onClick={() => setActiveService("jdsm")}
-              className={`px-6 py-3 text-lg font-medium rounded-md transition-colors ${activeService === "jdsm" ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-            >
-              {currentContent.serviceType.jdsm}
-            </button>
-          </div>
-        </div> */}
-
         {/* 只在 activeService 有值时渲染内容 */}
         {activeService && (
           <>
             {/* OEM代工服务内容 */}
             {activeService === "oem" && (
               <>
-                <div className="mb-16">
-                  <div className="mb-12">
-                    <div className="relative">
-                      <Image
-                        src="/images/services/servicesBreadcrumb.png"
-                        alt={currentContent.title}
-                        width={700}
-                        height={500}
-                        className="rounded-lg shadow-lg float-right ml-6 mb-4"
-                      />
-                      {currentContent.oem.description.map((paragraph, index) => {
-                        const isSubtitle = paragraph.endsWith('：') && paragraph.length < 50
-                        return (
-                          <p
-                            key={index}
-                            className={`text-lg ${isSubtitle
-                                ? 'font-bold text-gray-900 mb-2 mt-6 first:mt-0'
-                                : 'text-gray-700 mb-4'
-                              }`}
-                          >
-                            {paragraph}
-                          </p>
-                        )
-                      })}
-                    </div>
-                  </div>
+                <div className="space-y-16 lg:space-y-24 max-w-7xl mx-auto">
+                  {currentContent.oem.sections.map((section, index) => (
+                    <div
+                      key={index}
+                      className={`
+                        ${index % 2 === 0 ? 'bg-gradient-to-r from-blue-50/30 to-transparent' : 'bg-gradient-to-l from-gray-50/50 to-transparent'}
+                        rounded-2xl p-6 sm:p-8 lg:p-12
+                        transition-all duration-500 hover:shadow-xl
+                      `}
+                    >
+                      <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                        section.imagePosition === "left" ? "lg:flex-row-reverse" : ""
+                      }`}>
+                        {/* 文字内容 */}
+                        <div className={`${section.imagePosition === "left" ? "lg:order-2" : "lg:order-1"} space-y-3 lg:space-y-4`}>
+                          {section.content.map((paragraph, pIndex) => {
+                            const isSubtitle = paragraph.endsWith('：') && paragraph.length < 50
 
+                            return (
+                              <p
+                                key={pIndex}
+                                className={`
+                                  ${isSubtitle
+                                    ? 'text-xl sm:text-2xl font-bold text-blue-700 mb-3 lg:mb-4 mt-6 lg:mt-8 first:mt-0 border-l-4 border-blue-500 pl-3 lg:pl-4'
+                                    : 'text-base sm:text-lg text-gray-800 leading-relaxed hover:text-gray-900 transition-colors'
+                                  }
+                                `}
+                              >
+                                {paragraph}
+                              </p>
+                            )
+                          })}
+                        </div>
+
+                        {/* 图片 */}
+                        <div className={`${section.imagePosition === "left" ? "lg:order-1" : "lg:order-2"} relative group`}>
+                          <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500"></div>
+                          <div className="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl ring-1 ring-gray-200">
+                            <Image
+                              src={section.image}
+                              alt={`OEM Service ${index + 1}`}
+                              width={700}
+                              height={500}
+                              className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                              priority={index === 0}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </>
             )}
 
-            {/* JDSM代工服务内容 */}
-            {/* {activeService === "jdsm" && (
-              <>
-                <div className="mb-16">
-                  <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.jdsm.intro.title}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                      <p className="text-lg text-gray-700 mb-4">
-                        {currentContent.jdsm.intro.description}
-                      </p>
-                    </div>
-                    <div>
-                      <Image
-                        src="/images/services/oemBreadcrumb.png"
-                        alt={currentContent.jdsm.intro.title}
-                        width={800}
-                        height={600}
-                        className="rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-16">
-                  <h2 className="text-2xl font-bold mb-6 text-center">{currentContent.jdsm.advantages.title}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      {currentContent.jdsm.advantages.description.map((desc, idx) => (
-                        <p key={idx} className="text-lg text-gray-700 mb-4">{desc}</p>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-1 gap-4">
-                      {currentContent.jdsm.advantages.cards.map((card, idx) => (
-                        <div key={idx} className="bg-blue-600/10 backdrop-blur-sm p-6 rounded-lg shadow-md border border-blue-200">
-                          <h3 className="text-xl font-bold mb-2 text-blue-700">{card.title}</h3>
-                          <p className="text-gray-800">{card.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </>
-            )} */}
           </>
         )}
       </div>
@@ -307,7 +262,6 @@ export default function OemServicePage({ params }: { params: { locale: string } 
           </Link>
         </Button>
       </div>
-
     </PageLayout>
   )
 } 

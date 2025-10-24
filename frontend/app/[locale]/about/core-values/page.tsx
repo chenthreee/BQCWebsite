@@ -37,6 +37,10 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
       ],
       values: [
         {
+          title: "客户第一",
+          description: "反对以上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
+        },
+        {
           title: "诚信",
           description: "不欺客户，不欺同事，不欺供方"
         },
@@ -46,11 +50,7 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
         },
         {
           title: "回馈",
-          description: "以双碳为目标，以创新为动力，以储能为根基，反哺国家及社会"
-        },
-        {
-          title: "客户第一",
-          description: "反对以上司、研发、制造为中心，内部以客户代表为中心，外部以客户为中心"
+          description: "以双碳为目标，以创新为动力，以储能为根基，反哺人类社会"
         }
       ],
       image: "/images/about/coreValue/coreValue.png"
@@ -64,6 +64,10 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
       ],
       values: [
         {
+          title: "Customer-first",
+          description: <span className="text-lg font-medium">we center on internal customer representatives for internal alignment and real customers for decision-making, rather than prioritizing leadership, R&D, and manufacturing. </span>
+        },
+        {
           title: "Integrity",
           description: <span className="text-lg font-medium"> Sincere dealings with customers, colleagues & suppliers.</span>
         },
@@ -74,11 +78,8 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
         {
           title: "Contribution",
           description: <span className="text-lg font-medium">Strive to achieve carbon peaking and neutrality through technological innovation and energy storage advancements, thereby contributing to sustainable development and social well-being.</span>
-        },
-        {
-          title: "Customer-first",
-          description: <span className="text-lg font-medium">we center on internal customer representatives for internal alignment and real customers for decision-making, rather than prioritizing leadership, R&D, and manufacturing. </span>
         }
+        
       ],
       image: "/images/about/coreValue/coreValue.png"
     }
