@@ -64,7 +64,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
       breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news.html" }]}
       backgroundImage="/images/news/newsBreadcrumb.png"
     >
-      {/* <LanguageSwitcher /> */}
+
       <NewsCategoryTabs />
 
       {/* 置顶新闻 */}

@@ -88,47 +88,55 @@ export function ServicesSection() {
       },
       "odm.step1.desc": {
         "zh-Hans": "深刻理解客户需求",
-        "en": "In-depth Requirement Understanding",
+        "en": "In-depth understanding of customer needs",
       },
-      "odm.step2.title": {
+      "odm.step2.title":{
+        "zh-Hans":"技术预研",
+        "en":"Technology Research"
+      },
+      "odm.step2.desc":{
+        "zh-Hans":"关键技术研究，技术可行性验证",
+        "en":"Key technolohy study and feasibility validation"
+      },
+      "odm.step3.title": {
         "zh-Hans": "方案设计",
         "en": "Solution Design",
       },
-      "odm.step2.desc": {
-        "zh-Hans": "核心器件选型和产品规格制定",
-        "en": "Technical Solution Design",
-      },
-      "odm.step3.title": {
-        "zh-Hans": "研发开发",
-        "en": "Development",
-      },
       "odm.step3.desc": {
-        "zh-Hans": "硬件软件结构设计",
-        "en": "Hardware & Software Development",
+        "zh-Hans": "核心器件选型和产品规格制定",
+        "en": "Core component selection and product specification definition",
       },
       "odm.step4.title": {
+        "zh-Hans": "研发开发",
+        "en": "R&D Development",
+      },
+      "odm.step4.desc": {
+        "zh-Hans": "硬件软件结构设计",
+        "en": "Hardware, software and structural design",
+      },
+      "odm.step5.title": {
         "zh-Hans": "样机测试",
         "en": "Prototype Testing",
       },
-      "odm.step4.desc": {
-        "zh-Hans": "功能及性能测试",
-        "en": "Prototype Production & Testing",
-      },
-      "odm.step5.title": {
-        "zh-Hans": "产品认证",
-        "en": "Mass Production Support",
-      },
       "odm.step5.desc": {
-        "zh-Hans": "UL、CE等认证支持",
-        "en": "Certification & Mass Production",
+        "zh-Hans": "功能及性能测试",
+        "en": "Functional and performance verification",
       },
       "odm.step6.title": {
+        "zh-Hans": "产品认证",
+        "en": "Product Certification",
+      },
+      "odm.step6.desc": {
+        "zh-Hans": "UL、CE等认证支持",
+        "en": "UL, CE and other compliance support",
+      },
+      "odm.step7.title": {
         "zh-Hans": "量产支持",
         "en": "Mass Production Support",
       },
-      "odm.step6.desc": {
+      "odm.step7.desc": {
         "zh-Hans": "物料采购 贴片插件后焊测试喷涂组装",
-        "en": "Certification & Mass Production",
+        "en": "Material sourcing, SMT, THT, testing, coating, and assembly",
       },
       "odm.adv.title": {
         "zh-Hans": "ODM研发优势",
@@ -136,27 +144,27 @@ export function ServicesSection() {
       },
       "odm.adv1.title": {
         "zh-Hans": "研发资金投入",
-        "en": "Years of R&D Experience",
+        "en": "R&D Investment",
       },
       "odm.adv1.desc": {
         "zh-Hans": "将每年营业收入的10%用于研发团队人力及设备投入",
-        "en": "Over 15 years of experience in electronic product R&D, deeply understanding technical requirements of various application scenarios",
+        "en": "10% of annual revenue is dedicated to R&D, supporting continuous investment in talent and advanced equipment.",
       },
       "odm.adv2.title": {
         "zh-Hans": "研发人员占比",
-        "en": "Core Technology Patents",
+        "en": "R&D Team Ratio",
       },
       "odm.adv2.desc": {
         "zh-Hans": "拥有一支经验丰富的研发团队，研发人员占公司总人数的30%，涵盖硬件、软件、结构、算法等多个领域，为研发项目提供坚实保障",
-        "en": "Over 60 core technology patents, with deep technical accumulation in hardware design and embedded development",
+        "en": "R&D professionals make up 30% of the total staff, covering hardware, software, structure, and algorithm development to ensure strong project capability.",
       },
       "odm.adv3.title": {
         "zh-Hans": "核心专利技术",
-        "en": "High Proportion of R&D Staff",
+        "en": "Core Technology Patents",
       },
       "odm.adv3.desc": {
         "zh-Hans": "拥有60项以上核心技术专利，在硬件设计、嵌入式开发等领域具有深厚的技术积累",
-        "en": "R&D staff account for 30%, with rich experience in hardware design, embedded development and system design",
+        "en": "Over 60 core technology patents demonstrate deep expertise in hardware design and embedded system development.",
       },
       "odm.features.title": {
         "zh-Hans": "服务内容：",
@@ -257,66 +265,66 @@ export function ServicesSection() {
       id: 1,
       title: locale === "en" ? "Requirement Analysis & Solution Design" : "需求分析与方案设计",
       description: locale === "en"
-        ? "Deep understanding of customer requirements, providing professional technical consultation and solution design to ensure product design meets market demands and technical requirements"
+        ? "Deeply understand customer needs to deliver comprehensive hardware and software design solutions including core component selection and product specification definition, ensuring products meet both technical and market requirements."
         : "深刻理解客户需求，提供核心器件选型和产品规格制定，硬件软件整体方案设计，确保产品设计满足技术要求和市场需求",
       icon: <Lightbulb className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["Requirement Research & Analysis", "Technical Feasibility Assessment", "Overall Solution Design", "Cost Optimization Suggestions", "Project Planning & Milestone Setting"]
+        ? ["Requirement analysis", "Technical feasibility evaluation", "Core component selection", "Product specification definition", "Integrated solution design"]
         : ["需求分析", "技术可行性评估", "核心器件选型", "产品规格制定", "整体方案设计"],
     },
     {
       id: 2,
       title: locale === "en" ? "Hardware System Development" : "硬件系统开发",
       description: locale === "en"
-        ? "Professional hardware system development team that can develop various customized hardware systems according to customer requirements, including circuit design and PCB layout"
+        ? "A professional hardware development team providing customized hardware solutions tailored to client requirements."
         : "专业的硬件系统开发团队，可根据客户需求开发各类定制化硬件系统",
       icon: <Cpu className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["Circuit Schematic Design", "PCB Layout Design", "Hardware Testing & Verification", "Component Selection Optimization", "DFM Design Optimization"]
+        ? ["Schematic design", "PCB layout design", "Hardware testing & validation", "Component selection optimization", "DFM manufacturability analysis & improvement"]
         : ["原理图设计", "PCB布局设计", "硬件测试与验证", "元器件选型优化", "DFM可制造性分析优化"],
     },
     {
       id: 3,
       title: locale === "en" ? "Embedded Software Development" : "嵌入式软件开发",
       description: locale === "en"
-        ? "Provide high-quality embedded software development services, covering underlying drivers, middleware architecture and application layer development to ensure software performance and stability"
+        ? "Providing high-quality embedded software development services covering low-level drivers, middleware architecture, and application layers to ensure excellent performance and stability."
         : "提供高质量的嵌入式软件开发服务，涵盖底层驱动、中间层架构和应用层开发，确保软件性能良好和稳定性",
       icon: <CodeXml className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["Real-time Operating System (RTOS) Application Development", "Underlying Driver Development", "Communication Protocol Stack Implementation", "Algorithm Optimization & Porting", "Software Architecture Design"]
+        ? ["System architecture design", "Driver development & hardware adaptation", "Middleware & protocol stack development", "Application & algorithm implementation", "Tool & cloud software development","System debugging & validation","Product certification & compliance support","Production integration & maintenance support"]
         : ["方案与架构设计", "驱动开发与硬件适配", "中间件与协议栈开发", "应用于算法实现", "工具与云端软件开发","整机调试与验证","产品认证与合规支持","生产导入与维护支持"],
     },
     {
       id: 4,
-      title: locale === "en" ? "Prototype Production & Testing Verification" : "结构设计",
+      title: locale === "en" ? "Structural Design" : "结构设计",
       description: locale === "en"
-        ? "Rapid prototype production and comprehensive testing verification services to help customers shorten product development cycles and identify and solve potential problems early"
+        ? "Delivering structural solutions that balance functionality, and manufacturability."
         : "兼顾功能性与可制造性的结构解决方案",
       icon: <Box className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["Rapid Prototype Production", "Functional Testing & Verification", "Environmental Adaptability Testing", "Reliability & Life Testing", "EMC/EMI Testing Support"]
+        ? ["Product structure planning & appearance review", "Mechanical design & optimization", "3D modeling & assembly validation", "Mold & manufacturing feasibility assessment", "Prototype fabrication & structural verification"]
         : ["产品结构规划与外观评审", "机械结构设计与优化", "3D建模与装配验证", "膜具与制造可行性评估", "样机制作与结构验证"],
     },
     {
       id: 5,
-      title: locale === "en" ? "Prototype Production & Testing Verification" : "样机制作与测试验证",
+      title: locale === "en" ? "Prototype Fabrication & Testing Validation" : "样机制作与测试验证",
       description: locale === "en"
-        ? "Rapid prototype production and comprehensive testing verification services to help customers shorten product development cycles and identify and solve potential problems early"
+        ? "Providing rapid prototyping and comprehensive testing services to accelerate product development, identify potential issues early, and ensure design feasibility and reliability."
         : "提供快速样机制作与系统化测试验证服务，帮助客户加速产品开发进程，在早期阶段识别并解决潜在问题，确保设计的可行性与可靠性",
       icon: <Settings className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["Rapid Prototype Production", "Functional Testing & Verification", "Environmental Adaptability Testing", "Reliability & Life Testing", "EMC/EMI Testing Support"]
+        ? ["Rapid prototyping", "Functional & performance testing", "Environmental & reliability testing", "Aging & lifespan testing", "EMC/EMI testing & optimization"]
         : ["快速原型制作", "功能与性能测试", "环境与可靠性测试", "老化与寿命测试", "EMC/EMI测试与整改优化"],
     },
     {
       id: 5,
       title: locale === "en" ? "Product Certification & Mass Production Support" : "产品认证与量产支持",
       description: locale === "en"
-        ? "Assist customers in completing product certification and provide comprehensive technical support during mass production to ensure products smoothly enter the market"
+        ? "Assisting customers with product certification and providing end-to-end technical support during mass production to ensure smooth manufacturing and rapid market entry."
         : "协助客户完成各类产品认证，并在量产阶段提供全流程技术支持，确保产品顺利量产并快速进入目标市场。",
       icon: <FileCheck className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
-        ? ["CE/UL/FCC Certification Support", "Production Process Optimization", "Mass Production Testing Solution Design", "Product Iteration & Upgrade Support", "Technical Documentation Writing"]
+        ? ["Certification & compliance consulting", "Certification & compliance consulting", "Process integration & optimization", "Automated programming & testing equipment design", "Supply chain & material sustainability support","Quality traceability & after-sales support"]
         : ["产品认证与合规咨询", "认证测试与整改支持", "工艺导入与制程优化", "自动化烧录设备设计制作", "供应链与物料可持续性支持","品质追溯与售后支持"],
     },
   ]
@@ -497,29 +505,31 @@ export function ServicesSection() {
           <>
             {/* 服务流程图 */}
             <div className="relative mb-20">
-              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-200 -translate-y-1/2 z-0"></div>
+              <div className="hidden md:block absolute top-[80px] left-0 right-0 h-1 bg-blue-200 z-0"></div>
               <div className="flex flex-col md:flex-row justify-between relative z-10">
-                {[1, 2, 3, 4, 5, 6].map((step, index) => (
+                {[1, 2, 3, 4, 5, 6,7].map((step, index) => (
                   <div key={index} className="flex flex-col items-center mb-8 md:mb-0">
-                    <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-4">
+                    <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-6">
                       {step}
                     </div>
-                    <div className="text-center">
-                      <h3 className="font-bold text-lg mb-2">
+                    <div className="text-center max-w-[140px]">
+                      <h3 className="font-bold text-base mb-2 whitespace-normal break-words">
                         {index === 0 && t("odm.step1.title")}
                         {index === 1 && t("odm.step2.title")}
                         {index === 2 && t("odm.step3.title")}
                         {index === 3 && t("odm.step4.title")}
                         {index === 4 && t("odm.step5.title")}
                         {index === 5 && t("odm.step6.title")}
+                        {index === 6 && t("odm.step7.title") }
                       </h3>
-                      <p className="text-gray-600 text-sm px-4">
+                      <p className="text-gray-600 text-xs px-2 whitespace-normal break-words leading-relaxed">
                         {index === 0 && t("odm.step1.desc")}
                         {index === 1 && t("odm.step2.desc")}
                         {index === 2 && t("odm.step3.desc")}
                         {index === 3 && t("odm.step4.desc")}
                         {index === 4 && t("odm.step5.desc")}
                         {index === 5 && t("odm.step6.desc")}
+                        {index === 6 && t("odm.step7.desc")}
                       </p>
                     </div>
                   </div>

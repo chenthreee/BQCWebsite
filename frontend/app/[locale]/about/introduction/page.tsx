@@ -68,7 +68,7 @@ export default function CompanyIntroductionPage() {
               />
             </div>
           </div>,
-          "在发展历程中，我们始终坚守 “以人为本、以质为魂、以信为桥、以诚为基” 的企业核心价值观。在 “以人为本” 理念指引下，公司持续为员工创造更优质的工作环境与完善的福利待遇，我们注重培育一支高效自主的团队，激发员工的创新意识和工作热情，我们认为，只有员工幸福快乐工作，企业才能持久稳健发展。",
+          "在发展历程中，我们始终坚守“诚信、分享、回馈、客户第一”的企业核心价值观。以“尊重员工价值、赋能个体成长”为核心导向，公司持续为员工创造出更优质的工作环境与完善的福利待遇，注重培育高校自主的团队，激发员工的创新意识和工作热情。我们坚信，唯有员工在工作中获得价值认同和幸福感，企业才能实现持久稳健发展。",
         ],
       },
     },
@@ -135,7 +135,7 @@ export default function CompanyIntroductionPage() {
              />
            </div>
          </div>,
-           "At BQC, we uphold the values of people-oriented management, uncompromising quality, trust, and integrity. We foster a supportive, innovative, and self-driven work environment because we believe that happy, motivated employees are the key to sustainable growth and long-term success."
+           "Throughout our development, we have always adhered to the core values of \"Integrity, Share, Contribution, and Customer-first\". Guided by the core principle of \"Respecting Employee Value and Empowering Individual Growth\", the company continuously creates a better working environment and comprehensive welfare benefits for employees. It focuses on fostering efficient and autonomous teams, and inspiring employees' sense of innovation and work enthusiasm. We firmly believe that only when employees gain a sense of value recognition and happiness in their work can the enterprise achieve sustained and steady development."
         ],
       },
     },
