@@ -168,7 +168,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       },
       contact: {
         title: "Contact Us",
-        description: "If you have product development needs, please contact our OEM service team. We will provide you with professional technical consultation and solutions.",
+        description: "If you have product manufacturing needs, please contact our OEM service team. We will provide you with professional technical consultation and competitive quotation.",
         buttonText: "Contact Us to Discuss Your Project",
         href: "/en/contact.html"
       }
@@ -245,7 +245,6 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                 </div>
               </>
             )}
-
           </>
         )}
       </div>

@@ -63,7 +63,7 @@ export default function CoreValuesPage() {
         },
         {
           title: "Contribution",
-          description: <span className="text-lg font-medium">Strive to achieve carbon peaking and neutrality through technological innovation and energy storage advancements, thereby contributing to sustainable development and social well-being.</span>
+          description: <span className="text-lg font-medium">Strive to achieve carbon peaking and neutrality through technological innovation and advancements in energy storage, thereby giving back to human society and fostering sustainable development.</span>
         },
         {
           title: "Customer-first",

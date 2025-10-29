@@ -142,16 +142,16 @@ export default function OdmServicePage() {
           "BQC Electronics provides complete ODM R&D services covering hardware, software, structure, testing, certification to mass production delivery. We also support flexible JDSM (Joint Design & Selected Manufacturing) mode to meet different customers' customization needs.",
       },
       process: {
-        title: "ODM Development Process",
+        title: "ODM R&D Process",
         steps: [
           {
             icon: Lightbulb,
             title: "1. Product Definition & Planning",
             subtitle: "Product Definition & Planning",
             items: [
-              "Deep understanding of customer needs, clarifying product goals, application scenarios and performance indicators",
-              "Conduct feasibility analysis, project initiation and overall R&D path planning",
-              "Output system architecture draft and development cycle plan",
+              "Deeply understand customer needs to define product objectives, application scenarios, and performance targets.",
+              "Conduct feasibility analysis, project initiation, and overall R&D roadmap planning.",
+              "Deliver system architecture outline and development timeline.",
             ],
           },
           {
@@ -159,9 +159,9 @@ export default function OdmServicePage() {
             title: "2. Hardware System Design",
             subtitle: "Hardware System Design",
             items: [
-              "Responsible for circuit schematic design, PCB layout, core component selection and BOM cost optimization",
-              "Support complex system design including high-speed signals, power modules, BMS control, communication interfaces",
-              "Provide UL/CE standard electrical safety design and EMC prevention solutions",
+              "Responsible for schematic design, PCB layout, core component selection, and BOM cost optimization.",
+              "Supporting complex system designs including high-speed signals, power modules, BMS control, and communication interfaces.",
+              "Providing UL/CE-compliant electrical safety design and EMC preventive solutions.",
             ],
           },
           {
@@ -169,19 +169,19 @@ export default function OdmServicePage() {
             title: "3. Embedded Software Development",
             subtitle: "Embedded Software Development",
             items: [
-              "Develop underlying drivers, middleware, communication protocol stacks and upper application logic",
-              "Support RTOS/Linux platforms with experience in CAN, RS485, Ethernet, BLE, Wi-Fi protocols",
-              "Provide algorithm optimization, data acquisition, remote monitoring and system upgrade functions",
+              "Develop low-level drivers, middleware, communication protocol stacks, and application logic.",
+              "Support RTOS/Linux platforms with expertise in CAN, RS485, Ethernet, BLE, and Wi-Fi protocols.",
+              "Provide algorithm optimization, data acquisition, remote monitoring, and system upgrade capabilities.",
 
             ],
           },
           {
             icon: Box,
-            title: "4. Structural Design",
+            title: "4. Mechanical & Structural Design",
             subtitle: "Mechanical & Structural Design",
             items: [
-              "Conduct appearance and structural planning, balancing aesthetics, functionality and manufacturability",
-              "Output mass-producible 3D drawings and mold feasibility analysis (DFM)",
+              "Conduct appearance and structural design balancing aesthetics, functionality, and manufacturability.",
+              "Deliver mass-production-ready 3D drawings and mold feasibility analysis (DFM).",
             ],
           },
           {
@@ -189,8 +189,8 @@ export default function OdmServicePage() {
             title: "5. Prototyping & Testing Validation",
             subtitle: "Prototyping & Testing Validation",
             items: [
-              "Rapid prototype production for structural and functional verification",
-              "Execute systematic testing including environmental, performance, reliability, EMC/EMI",
+              "Rapidly build prototypes for structural and functional verification.",
+              "Perform comprehensive testing including environmental, performance, reliability, and EMC/EMI validation.",
 
             ],
           },
@@ -199,9 +199,9 @@ export default function OdmServicePage() {
             title: "6. Product Certification & MP Support",
             subtitle: "Product Certification & MP Support",
             items: [
-              "Assist customers in completing UL, CE, FCC certification tests",
-              "Provide process optimization, DFM analysis, ATE automatic test fixture development, trial production verification and process standardization",
-              "Ensure mass production consistency, yield rate and supply chain stability",
+              "Assist customers with UL, CE, FCC, and other certification testing.",
+              "Provide process optimization, DFM analysis, ATE fixture development, pilot run validation, and process standardization.",
+              "Ensure mass production consistency, high yield, and supply chain stability.",
             ],
           },
           {
@@ -209,29 +209,29 @@ export default function OdmServicePage() {
             title: "7. Mass Production & Lifecycle Support",
             subtitle: "Mass Production & Lifecycle Support",
             items: [
-              "Establish comprehensive production traceability system (MES) to ensure controllable and traceable quality",
-              "Continuously optimize manufacturing through data analysis, yield improvement and process improvement",
-              "Provide after-sales technical support and version iteration services",
+              "Ensure mass production consistency, high yield, and supply chain stability.",
+              "Continuously optimize manufacturing through data analysis, yield improvement, and process enhancement.",
+              "Provide after-sales technical support and product iteration services.",
             ],
           },
         ],
       },
       cooperationMode: {
-        title: "Cooperation Models",
+        title: "Collaboration Models",
         models: [
           {
             title: "ODM (Original Design Manufacturing)",
             description:
-              "Refers to a one-stop service from product definition, design and development to certification and mass production. Customers only need to propose functional requirements to obtain a complete deliverable product.",
+              "A full-process one-stop service covering product definition, design, certification, and mass production. Customers simply provide functional requirements to receive a fully deliverable product.",
           },
           {
-            title: "JDSM (Joint Design & Selected Manufacturing)",
+            title: " JDSM (Joint Design & Selected Manufacturing)",
             description:
-              "When customers only need partial R&D services (such as hardware design, software development, structural design, etc.), we provide flexible modular services that can individually select any link for collaborative completion, achieving efficient, customized joint development while retaining customers' independent intellectual property rights.",
+              "For customers needing only part of the R&D process (e.g., hardware, software, or structural design), we offer flexible, modular services. Any stage can be independently selected for collaborative development, ensuring efficiency, customization, and full retention of the customer’s intellectual property.",
           },
         ],
         summary:
-          "BQC's ODM R&D system covers the entire process from concept design → prototype verification → product certification → mass production delivery. It also supports flexible JDSM cooperation mode. Customers can choose full-process development or only select individual R&D modules according to project stages and needs, achieving efficient landing from creativity to market.",
+          "BQC’s ODM R&D system covers the entire process from concept design to prototype validation, product certification, and mass production delivery. It also supports a flexible JDSM model, allowing customers to choose full-process development or specific R&D modules as needed—enabling efficient product realization from concept to market.",
       },
       ipPolicy: {
         title: "Intellectual Property Open Policy",
