@@ -2,7 +2,7 @@
 
 import PageLayout from "@/components/page-layout"
 import Link from "next/link"
-import { ArrowRight, Users, Award, Shield, Globe, CheckCircle } from "lucide-react"
+import { ArrowRight, Users, Award, Shield, Globe, CheckCircle, HeartHandshakeIcon } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
@@ -72,7 +72,7 @@ export default function AboutPage() {
           title: "核心价值观",
           description: "我们的企业文化与价值理念",
           link: "/about/core-values",
-          icon: Award,
+          icon: HeartHandshakeIcon,
           color: "from-blue-300 to-blue-400",
         },
         {
@@ -149,7 +149,7 @@ export default function AboutPage() {
           title: "Core Values",
           description: "Our corporate culture and value principles",
           link: "/about/core-values",
-          icon: Award,
+          icon: HeartHandshakeIcon,
           color: "from-blue-300 to-blue-400",
         },
         {

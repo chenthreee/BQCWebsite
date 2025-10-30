@@ -18,7 +18,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
   }
 
   // 导航到高德地图的函数
-  const handleNavigate = (address: string, title: string) => {
+  const handleNavigateAmap = (address: string) => {
     const encodedAddress = encodeURIComponent(address)
 
     // 检测用户设备
@@ -63,6 +63,33 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     window.open(`https://ditu.amap.com/search?query=${encodedAddress}`, "_blank")
   }
 
+  // 导航到Google Maps的函数
+  const handleNavigateGoogleMaps = (address: string) => {
+    const encodedAddress = encodeURIComponent(address)
+    // Google Maps通用URL，支持移动端和桌面端
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, "_blank")
+  }
+
+  // 统一的导航处理函数
+  const handleNavigate = (locationKey: "shenzhenFactory" | "rdCenter" | "malaysiaFactory") => {
+    const address = currentContent.locations[locationKey].navigateAddress
+
+    // 马来西亚工厂始终使用Google Maps
+    if (locationKey === "malaysiaFactory") {
+      handleNavigateGoogleMaps(address)
+      return
+    }
+
+    // 深圳工厂和研发中心左右边界对齐，然后这两个的地址在中文状况下使用高德地图，英文状况下这两个使用google maps
+    // 马来工厂 因为高德没办法定位到国外 中英状态下都是使用google maps
+    //  深圳工厂和研发中心：中文使用高德地图，英文使用Google Maps
+    if (locale === "zh-Hans") {
+      handleNavigateAmap(address)
+    } else {
+      handleNavigateGoogleMaps(address)
+    }
+  }
+
   const content = {
     "zh-Hans": {
       title: "联系我们",
@@ -99,17 +126,20 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         shenzhenFactory: {
           title: "深圳工厂",
           address: "深圳市光明区玉塘街道长圳社区沙头巷工业区3B3栋整套 518132",
-          image: "/images/contact/location-zh.png",
+          image: "/images/contact/sz_factory_zh.png",
+          navigateAddress:"深圳市光明区公明街道光明新区公明办事处长圳社区沙头巷工业区3B号深圳市百千成电子有限公司"
         },
         rdCenter: {
           title: "研发中心",
           address: "深圳市南山区西丽桃源街道龙珠三路45号南山睿园17栋慧泽楼5层 518055",
-          image: "/images/contact/location-zh.png",
+          image: "/images/contact/sz_RD_zh.png",
+          navigateAddress:"深圳市南山区龙珠三路45号南山睿园17栋"
         },
         malaysiaFactory: {
           title: "马来西亚工厂",
           address: "PMT 828, PERSIARAN CASSIA SELATAN 4, TAMAN PERINDUSTRIAN BATU KAWAN, 14110 BANDAR CASSIA.",
-          image: "/images/contact/location-zh.png",
+          image: "/images/contact/malaysia.png",
+          navigateAddress:"BQCTECH SDN BHD"
         },
       },
     },
@@ -149,17 +179,20 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           title: "Shenzhen Factory",
           address:
             "Complete Building 3, No.3B ShaTouXiang Industrial Zone, ChangZhen Community, Yutang Street, Guangming District, Shenzhen, China. 518132",
-          image: "/images/contact/location-en.png",
+          image: "/images/contact/sz_factory_en.png",
+          navigateAddress:"343 Changfeng Rd, Guangming, Shenzhen, Guangdong Province, China, 518132"
         },
         rdCenter: {
           title: "R&D Centre",
           address: "5th Floor, Huize Building, Unit 17th The Sage Innopark, Longzhu 3rd Road No.45, Nanshan District, Shenzhen. 518055",
-          image: "/images/contact/location-en.png",
+          image: "/images/contact/sz_RD_en.png",
+          navigateAddress:"45 Longzhu 3rd Rd, Xili, Nan Shan Qu, Shen Zhen Shi, Guang Dong Sheng, China, 518072"
         },
         malaysiaFactory: {
           title: "Malaysia Factory",
           address: "PMT 828, PERSIARAN CASSIA SELATAN 4, TAMAN PERINDUSTRIAN BATU KAWAN, 14110 BANDAR CASSIA.",
-          image: "/images/contact/location-en.png",
+          image: "/images/contact/malaysia.png",
+          navigateAddress:"BQCTECH SDN BHD"
         },
       },
     },
@@ -279,15 +312,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
 
       {/* 位置卡片 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-        <div
-          onClick={() =>
-            handleNavigate(
-              currentContent.locations.shenzhenFactory.address,
-              currentContent.locations.shenzhenFactory.title,
-            )
-          }
-          className="block cursor-pointer"
-        >
+        <div onClick={() => handleNavigate("shenzhenFactory")} className="block cursor-pointer">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
@@ -310,12 +335,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           </div>
         </div>
 
-        <div
-          onClick={() =>
-            handleNavigate(currentContent.locations.rdCenter.address, currentContent.locations.rdCenter.title)
-          }
-          className="block cursor-pointer"
-        >
+        <div onClick={() => handleNavigate("rdCenter")} className="block cursor-pointer">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
@@ -338,15 +358,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           </div>
         </div>
 
-        <div
-          onClick={() =>
-            handleNavigate(
-              currentContent.locations.malaysiaFactory.address,
-              currentContent.locations.malaysiaFactory.title,
-            )
-          }
-          className="block cursor-pointer"
-        >
+        <div onClick={() => handleNavigate("malaysiaFactory")} className="block cursor-pointer">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
             <div className="h-48 overflow-hidden">
               <Image
@@ -370,7 +382,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         </div>
       </div>
 
-      {/* 新增图片板块 */}
+      {/* 新增图片板块
       <div className="mt-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">{locale === "en" ? "Our Global Presence" : "我们的全球布局"}</h2>
@@ -389,7 +401,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
             className="w-full h-auto object-cover"
           />
         </div>
-      </div>
+      </div> */}
     </PageLayout>
   )
 }
