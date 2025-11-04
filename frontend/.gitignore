@@ -7,6 +7,9 @@
 /.next/
 /out/
 
+/lib/config.ts
+
+next.config.js
 # production
 /build
 

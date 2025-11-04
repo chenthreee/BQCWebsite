@@ -334,18 +334,18 @@ export function ServicesSection() {
 
   // 合作客户数据 这里需要修改 pls这个客户不要 海辰也不要
   const clients = [
-    { id: 1, name: "ABB", logo: "/images/Brand Logo/ABB.png" },
-    { id: 2, name: "AgileX", logo: "/images/Brand Logo/Agilex.png" },
-    { id: 3, name: "Costco", logo: "/images/Brand Logo/Costco.png" },
-    { id: 4, name: "eSolutions", logo: "/images/Brand Logo/eSolutions free2move.png" },
-    { id: 5, name: "EVE", logo: "/images/Brand Logo/EVE.png" },
-    { id: 6, name: "Fenecon", logo: "/images/Brand Logo/FENECON.png" },
-    { id: 7, name: "GR", logo: "/images/Brand Logo/GE.png"},
-    { id: 8, name: "GivEnergy", logo:"/images/Brand Logo/GivEnergy.png"},
-    { id: 9, name: "Mammotion", logo:"/images/Brand Logo/MAMMOTION.png"},
-    { id: 10, name: "Narwal", logo:"/images/Brand Logo/Narwal.png"},
-    { id: 11, name: "Nidec", logo:"/images/Brand Logo/Nidec.png"},
-    { id: 12, name: "nLIGHT", logo:"/images/Brand Logo/nLIGHT.png"}
+    { id: 1, name: "ABB", logo: "/images/BrandLogo/ABB.png" },
+    { id: 2, name: "AgileX", logo: "/images/BrandLogo/Agilex.png" },
+    { id: 3, name: "Costco", logo: "/images/BrandLogo/Costco.png" },
+    { id: 4, name: "eSolutions", logo: "/images/BrandLogo/eSolutions free2move.png" },
+    { id: 5, name: "EVE", logo: "/images/BrandLogo/EVE.png" },
+    { id: 6, name: "Fenecon", logo: "/images/BrandLogo/FENECON.png" },
+    { id: 7, name: "GR", logo: "/images/BrandLogo/GE.png"},
+    { id: 8, name: "GivEnergy", logo:"/images/BrandLogo/GivEnergy.png"},
+    { id: 9, name: "Mammotion", logo:"/images/BrandLogo/MAMMOTION.png"},
+    { id: 10, name: "Narwal", logo:"/images/BrandLogo/Narwal.png"},
+    { id: 11, name: "Nidec", logo:"/images/BrandLogo/Nidec.png"},
+    { id: 12, name: "nLIGHT", logo:"/images/BrandLogo/nLIGHT.png"}
   ]
 
   return (
