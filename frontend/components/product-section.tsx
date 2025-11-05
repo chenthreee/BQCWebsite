@@ -195,7 +195,7 @@ export function ProductSection() {
               {/* 产品列表或查看更多按钮 */}
               {category.id === 1 ? (
                 <div className="relative">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     {category.products.map((product) => (
                       <Link
                         key={product.id}
