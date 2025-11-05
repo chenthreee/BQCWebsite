@@ -3,9 +3,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Calendar } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
+import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
-const STRAPI_URL = "http://localhost:1337"
-const GRAPHQL_URL = `${STRAPI_URL}/graphql`
+// const STRAPI_URL = "http://localhost:1337"
+// const GRAPHQL_URL = `${STRAPI_URL}/graphql`
 
 async function getAllNews(locale: string) {
   const query = `
