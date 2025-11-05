@@ -108,7 +108,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         {services.map((service, idx) => (
           <Link key={idx} href={service.link}>
-          <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
             <div className="h-64 overflow-hidden">
               <Image
                 src={service.image}
