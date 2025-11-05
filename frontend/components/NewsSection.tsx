@@ -43,6 +43,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
 
   useEffect(() => {
     getAllNews(locale).then(newsList => {
+      console.log("Fetched news data:", newsList);  // 添加日志
       setCompanyNews(newsList.find((n: any) => n.category?.name === "company"))
       setIndustryNews(newsList.find((n: any) => n.category?.name === "industry"))
     })
