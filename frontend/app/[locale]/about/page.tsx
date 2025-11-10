@@ -261,7 +261,7 @@ export default function AboutPage() {
           </div>
           <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
             <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="h-8 w-8 text-slate-600" />
+              <Award className="h-8 w-8 text-blue-600" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-slate-800">{currentContent.advantages[1].title}</h3>
             <p className="text-gray-600">{currentContent.advantages[1].description}</p>
