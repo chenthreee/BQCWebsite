@@ -253,14 +253,14 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">{currentContent.advantagesTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-blue-600" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-slate-800">{currentContent.advantages[0].title}</h3>
             <p className="text-gray-600">{currentContent.advantages[0].description}</p>
           </div>
           <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="h-8 w-8 text-blue-600" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-slate-800">{currentContent.advantages[1].title}</h3>
