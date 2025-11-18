@@ -37,16 +37,15 @@ export default function ManufacturingCapabilitiesPage() {
             count: "24",
             title: "SMT车间",
             description: "BQC拥有24个自动化SMT生产线，日生产能力8,640,000点每天"  
+          },{
+            count: "8",
+            title: "DIP车间",
+            description: "插件线4条，日生产能力1500,000点每天；后焊线4条，日生产能力500,000点每天"
           },
           {
             count: "11",
             title: "喷涂车间",
             description: "喷涂线11条，日生产能力每天2万件产品"
-          },
-          {
-            count: "8",
-            title: "DIP车间",
-            description: "插件线4条，日生产能力1500,000点每天；后焊线4条，日生产能力500,000点每天"
           },
           {
             count: "5",
@@ -194,15 +193,16 @@ export default function ManufacturingCapabilitiesPage() {
             title: "SMT Workshop",
             description: "BQC has 24 automated SMT lines with a daily production capacity of 8,640,000 points per day"
           },
-          {
-            count: "11",
-            title: "Conformal Coating Lines",
-            description: "11 coating lines with a daily production capacity of 20,000 pieces/day"
-          },
+          
           {
             count: "8",
             title: "DIP Workshop",
             description: "4 THT Production Lines, 1.5million points per day. 4 Hand Soldering Lines, 0.5million points per day."
+          },
+          {
+            count: "11",
+            title: "Conformal Coating Lines",
+            description: "11 coating lines with a daily production capacity of 20,000 pieces/day"
           },
           {
             count: "5",
