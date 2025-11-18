@@ -38,12 +38,12 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
             "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器能人领域二十余载，是兼具技术实力与国际视野的综合型企业。",
             "公司早期聚焦太阳能光伏逆变器研发制造，2006年相关业务占比超五成，并成功通过ISO9001国际认证，夯实品质根基。",
             "随着行业趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
-            "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破35GWh+，彰显在储能领域的核心竞争力。"
+            "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破50GWh+，彰显在储能领域的核心竞争力。"
         ]
       },
       future: {
         title: "未来展望",
-        description: "百千成电子将继续秉承诚信、分享、回馈、客户第一的核心价值观，不断提升技术实力和产品品质，为全球客户提供更优质的产品和服务，为清洁能源的发展贡献力量。"
+        description: "百千成电子将继续秉承客户第一、诚信、分享、回馈的核心价值观，不断提升技术实力和产品品质，为全球客户提供更优质的产品和服务，为清洁能源的发展贡献力量。"
       },
       milestones: [
         { year: "2003.07", title: "百千成在龙岗坂田成立" },
@@ -64,8 +64,8 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
         { year: "2019.01", title: "通过IATF16949 认证" },
         { year: "2019.03", title: "为北欧客户设计制造船舶储能BMS" },
         { year: "2023.12", title: "储能BMS客户累计装机量35GWh+" },
-        { year: "2024", title: "马来西亚工厂成立" },
-        {year:"2024.12",title:"储能BMS客户累计装机量35GWh+"}
+        { year: "2024.12", title: "马来西亚工厂成立" },
+        {year:"2024.12",title:"储能BMS客户累计装机量50GWh+"}
       ]
     },
     en: {
@@ -81,12 +81,13 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
             "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years, evolving into a comprehensive enterprise with strong technical capabilities and global vision.",
             "In our early phase, we focused on R&D and manufacturing of solar PV inverters. By 2006, this business accounted for over 50% of our total, and we obtained ISO 9001 certifications to solidify our quality foundation.",
             "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
+            "We have continuously upgraded our management system, successively obtaining certifications including ISO13485, ISO14001, and IATF16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage."
 
         ]
       },
       future: {
         title: "Future Outlook",
-        description: "BQC Electronics will continue to uphold its core values of 'Integrity, Share, Contribution, and Customer-first', continuously improving technical capabilities and product quality to provide better products and services for global customers and contribute to the development of clean energy."
+        description: "BQC Electronics will continue to uphold its core values of 'Customer-first, Integrity, Share and Contribution', continuously improving technical capabilities and product quality to provide better products and services for global customers and contribute to the development of clean energy."
       },
       milestones: [
         { year: "2003.07", title: "BQC was established in Bantian Shenzhen" },
@@ -107,8 +108,8 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
         { year: "2019.01", title: "Certified to IATF16949" },
         { year: "2019.03", title: "Design & Manufacture marine BESS BMS (North EU)" },
         { year: "2023.12", title: "BMS related yield: 35GWh+" },
-        { year: "2024", title: "BQC Plant in Malaysia was founded" },
-        {year:"2024.12",title:"BMS related yield: 35GWh+"}
+        { year: "2024.12", title: "BQC Plant in Malaysia was founded" },
+        {year:"2024.12",title:"BMS related yield: 50GWh+"}
       ]
     }
   }

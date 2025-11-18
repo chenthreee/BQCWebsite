@@ -33,7 +33,7 @@ export default function CompanyIntroductionPage() {
         title: "公司概况",
         paragraphs: [
           // ====== 保留原有中文介绍 ======
-          "深圳市百千成电子有限公司成立于2003年，是专业从事储能锂电池BMS设计制造，PCS\逆变器、智能机器人电路板PCBA设计制造代工企业。公司研发团队可为客户提供储能BMS技术方案咨询、框图设计及器件选型、硬件开发（原理图设计、PCB Layout）、软件及算法开发、器件优化替代、DFM可制造性设计分析、快速制样验证、全自动化烧录测试设计制作等全面研发支持服务。",
+          "深圳市百千成电子有限公司成立于2003年，是专业从事储能锂电池BMS设计制造，PCS\逆变器、智能机器人电路板PCBA设计制造企业。公司研发团队可为客户提供储能BMS技术方案咨询、框图设计及器件选型、硬件开发（原理图设计、PCB Layout）、软件及算法开发、器件优化替代、DFM可制造性设计分析、快速制样验证、全自动化烧录测试设计制作等全面研发支持服务。",
           "同时，公司生产基地设备齐全，深圳基地拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线；马来西亚槟城基地拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。可为客户提供元器件采购、贴片、后焊、测试以及喷涂、成品组装等一站式OEM生产制造服务。",
           <div key="video-zh" className="flex justify-center my-6">
             <video
@@ -48,7 +48,7 @@ export default function CompanyIntroductionPage() {
             </video>
           </div>,
           
-          "公司已通过ISO9001、ISO13485、IATF16949、ISO14001管理体系；并已导入MES管理系统，生产、管理科学规范，全流程数字化可追溯体系确保每片PCBA板高品质交付。已经为国际电力大储前5、船舶储能前3等超过50家国内外各大知名储能客户设计开发、生产制造BMS产品超35GWh+。为国内扫地机器人第1品牌、割草机器人第1品牌等各行业智能机器人客户制造出货PCBA线路板500万+",
+          "公司已通过ISO9001、ISO14001、ISO13485、IATF16949、管理体系；并已导入MES管理系统，生产、管理科学规范，全流程数字化可追溯体系确保每片PCBA板高品质交付。已经为国际电力大储前5、船舶储能前3等超过50家国内外各大知名储能客户设计开发、生产制造BMS产品超50GWh+。为国内扫地机器人第1品牌、割草机器人第1品牌、人形机器人等各行业智能机器人客户制造出货PCBA线路板500万+",
           "公司研发、销售、采购位于深圳南山高新科技园旁的南山睿园，两大制造基地，分别位于深圳光明和马来西亚槟城，现拥有高素质的管理技术人员和员工队伍900多人。",
           <div key="factory-images-zh" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
             <div className="relative w-full h-[400px]">
@@ -68,7 +68,7 @@ export default function CompanyIntroductionPage() {
               />
             </div>
           </div>,
-          "在发展历程中，我们始终坚守“诚信、分享、回馈、客户第一”的企业核心价值观。以“尊重员工价值、赋能个体成长”为核心导向，公司持续为员工创造出更优质的工作环境与完善的福利待遇，注重培育高校自主的团队，激发员工的创新意识和工作热情。我们坚信，唯有员工在工作中获得价值认同和幸福感，企业才能实现持久稳健发展。",
+          "在发展历程中，我们始终坚守“客户第一、诚信、分享、回馈”的企业核心价值观。以“尊重员工价值、赋能个体成长”为核心导向，公司持续为员工创造出更优质的工作环境与完善的福利待遇，注重打造自驱高效型团队，激发员工的创新意识和工作热情。我们坚信，唯有员工在工作中获得价值认同和幸福感，企业才能实现持久稳健发展。",
         ],
       },
     },
@@ -114,8 +114,8 @@ export default function CompanyIntroductionPage() {
             </video>
           </div>,
           
-           "BQC Electronics holds ISO9001, ISO13485, IATF16949, and ISO14001 certifications and has implemented an advanced MES system to ensure standardized, traceable, and high-quality production. Every PCBA we deliver meets the highest quality standards.",
-           "We have successfully designed, developed, and manufactured BMS products for over 50 leading energy storage clients, including Top 5 global on-grid and Top 3 marine energy storage companies, with a cumulative capacity of 35 GWh. Additionally, we have produced and shipped over 5 million PCBAs for intelligent robotics, serving industry leaders in robotic vacuum and mowing solutions.",
+           "BQC Electronics holds ISO9001, ISO14001, ISO13485 ans IATF16949 certifications and has implemented an advanced MES system to ensure standardized, traceable, and high-quality production. Every PCBA we deliver meets the highest quality standards.",
+           "We have successfully designed, developed, and manufactured BMS products for over 50 leading energy storage clients, including Top 5 global on-grid and Top 3 marine energy storage companies, with a cumulative capacity of 50 GWh. Additionally, we have produced and shipped over 5 million PCBAs for intelligent robotics, serving industry leaders in robotic vacuum, mowing, and humanoid robot solutions.",
            "Our R&D, sales, and procurement teams are based in Xili Ruiyuan, Shenzhen, while our two main manufacturing facilities are located in Gongming, Shenzhen and Penang, Malaysia. With over 900 skilled professionals, we combine technical expertise, operational excellence, and innovation.",
            <div key="factory-images-zh" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
            <div className="relative w-full h-[400px]">
@@ -135,7 +135,7 @@ export default function CompanyIntroductionPage() {
              />
            </div>
          </div>,
-           "Throughout our development, we have always adhered to the core values of \"Integrity, Share, Contribution, and Customer-first\". Guided by the core principle of \"Respecting Employee Value and Empowering Individual Growth\", the company continuously creates a better working environment and comprehensive welfare benefits for employees. It focuses on fostering efficient and autonomous teams, and inspiring employees' sense of innovation and work enthusiasm. We firmly believe that only when employees gain a sense of value recognition and happiness in their work can the enterprise achieve sustained and steady development."
+           "Throughout our development, we have always adhered to the core values of \" Customer-first, Integrity, Share and Contribution \". Guided by the core principle of \"Respecting Employee Value and Empowering Individual Growth\", the company continuously creates a better working environment and comprehensive welfare benefits for employees. It focuses on building a self-driven and highly efficient team, and inspiring employees' sense of innovation and work enthusiasm. We firmly believe that only when employees gain a sense of value recognition and happiness in their work can the enterprise achieve sustained and steady development."
         ],
       },
     },

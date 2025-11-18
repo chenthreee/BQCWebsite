@@ -28,7 +28,7 @@ export default function OdmServicePage() {
           "百千成电子提供覆盖硬件、软件、结构、测试、认证到量产交付的完整ODM研发服务，同时支持灵活的JDSM（联合设计与选择性制造）模式，满足不同客户的定制化需求。",
       },
       process: {
-        title: "ODM研发流程",
+        title: "ODM研发服务",
         steps: [
           {
             icon: Lightbulb,
@@ -80,22 +80,22 @@ export default function OdmServicePage() {
           },
           {
             icon: Award,
-            title: "6. 产品认证与量产支持",
+            title: "6.  量产制造与生产优化支持",
             subtitle: "Product Certification & MP Support",
             items: [
-              "协助客户完成UL、CE、FCC等认证测试",
+              "建立完善的生产追溯体系（MES），确保质量可控与可追溯",
               "提供工艺优化、DFM分析、ATE自动测试治具开发、试产验证与制程标准化",
-              "保障量产一致性、良率及供应链稳定性",
+              "通过数据分析、良率提升与工艺改进，保障量产一致性、良率及供应链稳定性",
             ],
           },
           {
             icon: Factory,
-            title: "7. 量产制造与持续支持",
+            title: "7. 产品认证与售后技术支持",
             subtitle: "Mass Production & Lifecycle Support",
             items: [
-              "建立完善的生产追溯体系（MES），确保质量可控与可追溯",
-              "通过数据分析、良率提升与工艺改进持续优化制造",
-              "提供售后技术支持与版本迭代服务",
+              "提供UL、CE、FCC 等产品认证与合规测试",
+              "提供认证阶段的样机测试、整改建议及相关技术文件准备支持",
+              "提供售后技术支持与版本迭代服务，客户少操心、少踩坑，产品更耐用、更好卖",
             ],
           },
         ],
@@ -106,22 +106,22 @@ export default function OdmServicePage() {
           {
             title: "ODM（Original Design Manufacturing）",
             description:
-              "指从产品定义、设计开发到认证量产的全流程一站式服务，客户仅需提出功能需求，即可获得完整可交付产品。",
+              "提供从产品定义、设计开发、认证量产、到售后服务的全流程一站式服务。客户专注销售、运营和行业方案，仅提出产品需求，即可获得完整可交付产品，整体投入产出比更高。",
           },
           {
             title: "JDSM（Joint Design & Selected Manufacturing）",
             description:
-              "当客户仅需其中部分研发服务（例如硬件设计、软件开发、结构设计等），我们提供灵活的模块化服务，可单独选择任意环节协同完成，在保留客户自主知识产权的前提下，实现高效、定制化的联合开发。",
+              "与客户团队联合开发，提供部分研发服务（如硬件、软件、结构、测试或认证等服务）。客户有针对性的补齐短板，投入灵活，预算可控，同时兼顾效率与技术主导权。",
           },
         ],
         summary:
-          "百千成的ODM研发体系覆盖从概念设计→样机验证→产品认证→量产交付的全流程，同时也支持灵活的JDSM合作模式，客户可根据项目阶段与需求，选择全流程开发，或仅选择单项研发模块，实现从创意到市场的高效落地。", 
+          "通过 ODM + JDSM 的灵活合作方式，为客户提供成熟的研发平台，分享技术经验、量产经验和供应链经验，降低项目风险，控制项目成本。客户既可以把产品完整托付，也可以按需“点单”式合作，以更少的投入、更短的时间，把更成熟、更易量产的产品推向市场。", 
       },
       ipPolicy: {
         title: "知识产权开放政策",
         description:
           "BQC在ODM及JDSM合作中始终秉持开放透明的原则，在项目完成后，可根据双方约定向客户开放并共享全部原始设计资料，包括但不限于：",
-        items: ["BOM表（物料清单）", "PCB原理图与Layout文件", "软件源代码", "ID/结构图纸", "测试报告"],
+        items: ["设计方案", "BOM表（物料清单）", "PCB原理图与Layout文件", "软件源代码", "ID/结构图纸", "测试报告"],
         conclusion: "确保客户对产品拥有完整的知识产权与后续可持续开发能力。",
       },
       contact: {
@@ -142,7 +142,7 @@ export default function OdmServicePage() {
           "BQC Electronics provides complete ODM R&D services covering hardware, software, structure, testing, certification to mass production delivery. We also support flexible JDSM (Joint Design & Selected Manufacturing) mode to meet different customers' customization needs.",
       },
       process: {
-        title: "ODM R&D Process",
+        title: "ODM R&D Services",
         steps: [
           {
             icon: Lightbulb,
@@ -196,22 +196,22 @@ export default function OdmServicePage() {
           },
           {
             icon: Award,
-            title: "6. Product Certification & MP Support",
-            subtitle: "Product Certification & MP Support",
+            title: "6. MP manufacturing & Production Optimization Support",
+            subtitle: "MP manufacturing & Production Optimization Support",
             items: [
-              "Assist customers with UL, CE, FCC, and other certification testing.",
+              "Establish a complete production traceability system (MES) to ensure quality control and traceability.",
               "Provide process optimization, DFM analysis, ATE fixture development, pilot run validation, and process standardization.",
-              "Ensure mass production consistency, high yield, and supply chain stability.",
+              "Through data analysis, process improvement and equipment optimization, ensure the consistency of mass production, yield rate and the stability of the supply chain.",
             ],
           },
           {
             icon: Factory,
-            title: "7. Mass Production & Lifecycle Support",
-            subtitle: "Mass Production & Lifecycle Support",
+            title: "7. Product Certification & After-sales Technical Support",
+            subtitle: "Product Certification & After-sales Technical Support",
             items: [
-              "Ensure mass production consistency, high yield, and supply chain stability.",
-              "Continuously optimize manufacturing through data analysis, yield improvement, and process enhancement.",
-              "Provide after-sales technical support and product iteration services.",
+              "Provide UL, CE, FCC, and other product certifications and compliance testing.",
+              "Provide support for sample machine testing during the certification stage, provide rectification suggestions, and prepare relevant technical documents.",
+              "Provide after-sales technical support and product iteration services, customers worry less and avoid pitfalls, products are more durable and better sold.",
             ],
           },
         ],
@@ -222,22 +222,23 @@ export default function OdmServicePage() {
           {
             title: "ODM (Original Design Manufacturing)",
             description:
-              "A full-process one-stop service covering product definition, design, certification, and mass production. Customers simply provide functional requirements to receive a fully deliverable product.",
+              "We offer a full-process one-stop service covering product definition, design and development, certification and mass production, as well as after-sales service. Customers can focus on sales, operation and industry solutions. They only need to present product requirements and can obtain complete deliverable products. The overall input-output ratio is higher.",
           },
           {
             title: " JDSM (Joint Design & Selected Manufacturing)",
             description:
-              "For customers needing only part of the R&D process (e.g., hardware, software, or structural design), we offer flexible, modular services. Any stage can be independently selected for collaborative development, ensuring efficiency, customization, and full retention of the customer’s intellectual property.",
+              "Jointly develop with the client team and provide some research and development services (such as hardware, software, structure, testing or certification services). The client focuses on filling the weak points, with flexible investment, controllable budget, and also takes into account efficiency and technical dominance.",
           },
         ],
         summary:
-          "BQC’s ODM R&D system covers the entire process from concept design to prototype validation, product certification, and mass production delivery. It also supports a flexible JDSM model, allowing customers to choose full-process development or specific R&D modules as needed—enabling efficient product realization from concept to market.",
+          "Through the flexible cooperation model of ODM + JDSM, we provide customers with a mature R&D platform, share technical experience, mass production experience and supply chain experience, reduce project risks and control project costs. Customers can either entrust the entire product to us or cooperate on a \"custom order\" basis as needed. With less investment and shorter time, they can bring more mature and easier-to-produce products to the market.",
       },
       ipPolicy: {
         title: "Intellectual Property Open Policy",
         description:
           "BQC always adheres to the principle of openness and transparency in ODM and JDSM cooperation. After project completion, according to mutual agreement, we can open and share all original design materials to customers, including but not limited to:",
         items: [
+          "Design Scheme",
           "BOM (Bill of Materials)",
           "PCB schematics and layout files",
           "Software source code",

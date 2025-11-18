@@ -108,7 +108,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           {
             icon: Factory,
             title: "产能优势",
-            description: "35GWh+ 年产能",
+            description: "50GWh+ 年产能",
           },
           {
             icon: Globe,
@@ -160,7 +160,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           {
             icon: Factory,
             title: "Production Capacity",
-            description: "35GWh+ Annual Capacity",
+            description: "50GWh+ Annual Capacity",
           },
           {
             icon: Globe,

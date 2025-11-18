@@ -51,7 +51,7 @@ export default function ManagementSystemPage() {
           },
           {
             title: "KPI管理体系",
-            image:"/images/about/managementSystem/KPI.png",
+            image:"/images/about/managementSystem/kpi.png",
             description:"KPI管理体系 是一套基于 关键绩效指标（Key Performance Indicators） 的系统化方法，通过 目标分解→指标设计→过程监控→绩效评估→持续改进 的闭环机制，将组织战略转化为可量化、可执行、可追溯的运营管理工具，驱动团队聚焦核心价值创造并实现战略目标对齐。"
           },
         ]
@@ -81,7 +81,7 @@ export default function ManagementSystemPage() {
           },
           {
             title: "KPI Management System",
-            image:"/images/about/managementSystem/KPI.png",
+            image:"/images/about/managementSystem/kpi.png",
             description:"KPI management system is a set of systematic methods based on key performance indicators, through the closed-loop mechanism of objective decomposition→ indicator design→ process monitoring→ performance evaluation → continuous improvement, transforming organizational strategy into quantifiable, executable and traceable operation management tools, driving the team to focus on core value creation and achieve strategic goal."
           },
         ]
