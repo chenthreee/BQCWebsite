@@ -206,8 +206,8 @@ export default function OdmServicePage() {
           },
           {
             icon: Factory,
-            title: "7. Product Certification & After-sales Technical Support",
-            subtitle: "Product Certification & After-sales Technical Support",
+            title: "7. Product Certification & After-Sales Technical Support",
+            subtitle: "Product Certification & After-Sales Technical Support",
             items: [
               "Provide UL, CE, FCC, and other product certifications and compliance testing.",
               "Provide support for sample machine testing during the certification stage, provide rectification suggestions, and prepare relevant technical documents.",
