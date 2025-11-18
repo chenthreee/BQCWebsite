@@ -196,8 +196,8 @@ export default function OdmServicePage() {
           },
           {
             icon: Award,
-            title: "6. MP manufacturing & Production Optimization Support",
-            subtitle: "MP manufacturing & Production Optimization Support",
+            title: "6. MP Manufacturing & Production Optimization Support",
+            subtitle: "MP Manufacturing & Production Optimization Support",
             items: [
               "Establish a complete production traceability system (MES) to ensure quality control and traceability.",
               "Provide process optimization, DFM analysis, ATE fixture development, pilot run validation, and process standardization.",
