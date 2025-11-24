@@ -40,25 +40,11 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
       },
       certificates: [
         {
-          title: "IATF16949",
-          description: "IATF16949 是国际汽车工作组制定的汽车行业质量管理体系标准，基于 ISO9001，增加行业特定要求。",
-          image: "/images/about/certificates/IATF16949.png",
-          issueDate: "2022年",
-          validUntil: "2025年",
-        },
-        {
           title: "ISO9001",
           description: "ISO9001 是国际标准化组织制定的质量管理体系标准，强调以顾客为中心，注重持续改进。",
           image: "/images/about/certificates/ISO9001.png",
           issueDate: "2019年",
           validUntil: "2025年",
-        },
-        {
-          title: "ISO13485",
-          description: "ISO13485是适用于医疗器械法规环境的质量管理体系标准，强调风险管控与法规符合。",
-          image: "/images/about/certificates/ISO13485.png",
-          issueDate: "2015年",
-          validUntil: "2027年",
         },
         {
           title: "ISO14001",
@@ -68,12 +54,35 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
           validUntil: "2027年",
         },
         {
+          title: "ISO13485",
+          description: "ISO13485是适用于医疗器械法规环境的质量管理体系标准，强调风险管控与法规符合。",
+          image: "/images/about/certificates/ISO13485.png",
+          issueDate: "2015年",
+          validUntil: "2027年",
+        },
+        {
+          title: "IATF16949",
+          description: "IATF16949 是国际汽车工作组制定的汽车行业质量管理体系标准，基于 ISO9001，增加行业特定要求。",
+          image: "/images/about/certificates/IATF16949.png",
+          issueDate: "2022年",
+          validUntil: "2025年",
+        },
+        
+        {
           title: "UL",
           description: "UL是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
           image: "/images/about/certificates/UL895.png",
           issueDate: "2016年",
           validUntil: "2027年",
         },
+        {
+          title: "CE",
+          description: "CE认证是欧盟对产品安全、健康、环保及消费者保护的强制性认证标志，是产品进入欧洲经济区市场的法定通行证",
+          image: "/images/about/certificates/CE.png",
+          issueDate: "2016年",
+          validUntil: "2027年",
+        },
+        
       ],
       honors: {
         title: "企业荣誉",
@@ -113,25 +122,11 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
       },
       certificates: [
         {
-          title: "IATF16949",
-          description: "IATF16949 is an automotive quality management system standard developed by the International Automotive Task Force, based on ISO9001 and adding industry-specific requirements.",
-          image: "/images/about/certificates/IATF16949_en.png",
-          issueDate: "2022",
-          validUntil: "2025",
-        },
-        {
           title: "ISO9001",
           description: "ISO9001 is an international standard for quality management systems, emphasizing customer focus and continuous improvement.",
           image: "/images/about/certificates/ISO9001_en.png",
           issueDate: "2019",
           validUntil: "2025",
-        },
-        {
-          title: "ISO13485",
-          description: "ISO13485 is an international standard for quality management systems for medical devices, emphasizing risk control and compliance with regulations.",
-          image: "/images/about/certificates/ISO13485_en.png",
-          issueDate: "2015",
-          validUntil: "2027",
         },
         {
           title: "ISO14001",
@@ -141,12 +136,33 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
           validUntil: "2027",
         },
         {
+          title: "ISO13485",
+          description: "ISO13485 is an international standard for quality management systems for medical devices, emphasizing risk control and compliance with regulations.",
+          image: "/images/about/certificates/ISO13485_en.png",
+          issueDate: "2015",
+          validUntil: "2027",
+        },
+        {
+          title: "IATF16949",
+          description: "IATF16949 is an automotive quality management system standard developed by the International Automotive Task Force, based on ISO9001 and adding industry-specific requirements.",
+          image: "/images/about/certificates/IATF16949_en.png",
+          issueDate: "2022",
+          validUntil: "2025",
+        }, 
+        {
           title: "UL",
           description: "UL is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
           image: "/images/about/certificates/UL895.png",
           issueDate: "2016",
           validUntil: "2027",
         },
+        {
+          title: "CE",
+          description: "CE is a mandatory certification mark for products in the European Economic Area, ensuring safety, health, environmental protection, and consumer protection.",
+          image: "/images/about/certificates/CE.png",
+          issueDate: "2016",
+          validUntil: "2027",
+        }
       ],
       honors: {
         title: "Enterprise Honors",

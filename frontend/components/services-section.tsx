@@ -303,7 +303,7 @@ export function ServicesSection() {
       icon: <Box className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Product structure planning & appearance review", "Mechanical design & optimization", "3D modeling & assembly validation", "Mold & manufacturing feasibility assessment", "Prototype fabrication & structural verification"]
-        : ["产品结构规划与外观评审", "机械结构设计与优化", "3D建模与装配验证", "膜具与制造可行性评估", "样机制作与结构验证"],
+        : ["产品结构规划与外观评审", "机械结构设计与优化", "3D建模与装配验证", "模具与制造可行性评估", "样机制作与结构验证"],
     },
     {
       id: 5,

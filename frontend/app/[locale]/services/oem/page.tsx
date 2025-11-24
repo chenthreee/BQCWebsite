@@ -57,7 +57,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             content: [
               "质量与智能制造：",
               "我们以“设计即质量、制造即数据”为原则，贯穿 DFM→来料→贴片→焊接→测试→组装→老化→包装→出货全流程。工厂采用 SPI/AOI/X-Ray、ICT/FCT、自动化测试治具与 MES 追溯体系，批次级追踪物料、工序与参数，确保高一致性与可复制的量产品质。",
-              "全面认证体系： ISO 9001｜IATF 16949｜ISO 13485｜ISO 14001｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关"
+              "全面认证体系： ISO 9001｜ISO 14001｜ISO 13485｜IATF 16949｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关"
             ]
           },
           {
@@ -114,7 +114,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             content: [
               "Quality & Smart Manufacturing：",
               "We follow the principle of “quality by design, manufacturing by data” across the entire lifecycle: DFM → incoming inspection → SMT → soldering → testing → assembly → burn-in → packing → shipment. Our plants deploy SPI/AOI/X-Ray, ICT/FCT, automated test jigs, and an MES traceability system to track materials, processes, and parameters at the lot/batch level, ensuring high consistency and repeatable mass-production quality.",
-              "Comprehensive Certifications: ISO 9001 | IATF 16949 | ISO 13485 | ISO 14001 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control.",
+              "Comprehensive Certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control.",
             ]
           },
           {

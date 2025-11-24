@@ -61,7 +61,7 @@ export default function CompanyIntroductionPage() {
             </div>
             <div className="relative w-full h-[400px]">
               <Image
-                src="/images/about/companyIntroduction/malaysia.jpg"
+                src="/images/about/companyIntroduction/malaysia2.png"
                 alt="BQC Malaysia Factory"
                 fill
                 className="rounded-lg shadow-lg object-cover"
@@ -128,7 +128,7 @@ export default function CompanyIntroductionPage() {
            </div>
            <div className="relative w-full h-[400px]">
              <Image
-               src="/images/about/companyIntroduction/malaysia.jpg"
+               src="/images/about/companyIntroduction/malaysia2.png"
                alt="BQC Malaysia Factory"
                fill
                className="rounded-lg shadow-lg object-cover"
