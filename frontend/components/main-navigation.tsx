@@ -238,7 +238,7 @@ export function MainNavigation() {
             { label: mounted ? t("大型船舶储能BMS") : "大型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/large-ship.html` },
             { label: mounted ? t("小型船舶储能BMS") : "小型船舶储能BMS", href: `/${currentLocale}/products/energy-storage-bms/small-ship.html` },
             { label: mounted ? t("通讯基站储能BMS") : "通讯基站储能BMS", href: `/${currentLocale}/products/energy-storage-bms/communication-base.html` },
-            { label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: `/${currentLocale}/products/energy-storage-bms/energy-storage-ems.html` },
+            //{ label: mounted ? t("储能EMS（总控）") : "储能EMS（总控）", href: `/${currentLocale}/products/energy-storage-bms/energy-storage-ems.html` },
             { label: mounted ? t("储能PCS") : "储能PCS", href: `/${currentLocale}/products/energy-storage-pcs.html` },
           ],
         },

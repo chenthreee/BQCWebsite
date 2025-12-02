@@ -139,14 +139,14 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         {/* 服务中心 - 包含OEM代工和ODM研发 */}
         <ServicesSection />
 
-        {/* 新闻中心 */}
-        <NewsSection locale={locale} />
-
         {/* 关于我们 */}
         <AboutSection />
 
         {/* 资质证书板块 */}
         <CertificatesSection />
+
+         {/* 新闻中心 */}
+         <NewsSection locale={locale} />
       </main>
 
       {/* 侧边栏联系方式 */}

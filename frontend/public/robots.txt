@@ -10,3 +10,4 @@ Disallow: /zh-Hans/about/development-history
 Disallow: /en/about/development-history 
 Disallow: /zh-Hans/contact
 Disallow: /en/about/contact
+Disallow: /admin/
