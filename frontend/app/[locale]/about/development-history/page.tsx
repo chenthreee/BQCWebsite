@@ -141,18 +141,18 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
 
         <div className="relative">
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-blue-600 -translate-x-1/2"></div>
-          <div className="space-y-12">
+          <div className="space-y-4">
             {currentContent.milestones.map((milestone, index) => (
               <div
                 key={index}
                 className={`relative flex items-start ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
               >
                 <div className="w-1/2"></div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg top-8"></div>
-                <div className="w-1/2 px-8">
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div className="text-blue-600 font-bold text-lg mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-gray-800">{milestone.title}</h3>
+                <div className="absolute left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-blue-600 rounded-full border-2 border-white shadow top-2.5"></div>
+                <div className="w-1/2 px-6">
+                  <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div className="text-blue-600 font-semibold text-sm mb-0.5">{milestone.year}</div>
+                    <h3 className="text-base font-medium text-gray-800">{milestone.title}</h3>
                   </div>
                 </div>
               </div>
