@@ -147,8 +147,8 @@ export function ServicesSection() {
         "en": "R&D Investment",
       },
       "odm.adv1.desc": {
-        "zh-Hans": "将每年营业收入的10%用于研发团队人力及设备投入",
-        "en": "10% of annual revenue is dedicated to R&D, supporting continuous investment in talent and advanced equipment.",
+        "zh-Hans": "将每年营业收入的5%用于研发团队人力及设备投入",
+        "en": "5% of annual revenue is dedicated to R&D, supporting continuous investment in talent and advanced equipment.",
       },
       "odm.adv2.title": {
         "zh-Hans": "研发人员占比",
@@ -549,7 +549,7 @@ export function ServicesSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">
-                    <span className="text-3xl font-bold">10%</span>
+                    <span className="text-3xl font-bold">5%</span>
                   </div>
                   <h4 className="text-xl font-bold mb-3">{t("odm.adv1.title")}</h4>
                   <p className="text-gray-600">{t("odm.adv1.desc")}</p>
