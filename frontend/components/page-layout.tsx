@@ -39,35 +39,51 @@ export default function PageLayout({
       <MainNavigation />
       <header
         className="relative py-24 bg-cover bg-center text-white"
-        style={{ backgroundImage: `url(${backgroundImage || "/placeholder.svg?height=1080&width=1920"})` }}
+        style={{
+          backgroundImage: `url(${backgroundImage || "/placeholder.svg?height=1080&width=1920"})`,
+        }}
       >
+        {/* 黑色遮罩 */}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          {extraHeaderContent}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-          {subtitle && <p className="text-xl md:text-2xl mb-6">{subtitle}</p>}
-          {/* 面包屑放到主标题下方的左下角 */}
-          {breadcrumbs && breadcrumbs.length > 0 && (
-            <nav className="mb-8 flex items-center text-sm text-gray-200/90">
-              <div className="flex items-center">
+
+        {/* 内容区域 */}
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-3xl relative">
+            {extraHeaderContent}
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {title}
+            </h1>
+
+            {subtitle && (
+              <p className="text-xl md:text-2xl mb-10">
+                {subtitle}
+              </p>
+            )}
+
+            {/* ✅ 面包屑：就在标题正下方 */}
+            {breadcrumbs && breadcrumbs.length > 0 && (
+              <nav className="absolute top-full mt-20 left-0 flex items-center text-sm text-gray-200/90">
                 {breadcrumbs.map((item, index) => (
                   <span key={index} className="flex items-center">
-                    <Link href={item.href} className="hover:underline hover:text-white font-medium">
+                    <Link
+                      href={item.href}
+                      className="hover:underline hover:text-white font-semibold"
+                    >
                       {item.label}
                     </Link>
                     {index < breadcrumbs.length - 1 && (
-                      <span className="mx-2 text-gray-400">&gt;</span>
+                      <span className="mx-2 text-gray-400 font-semibold">&gt;</span>
                     )}
                   </span>
                 ))}
-              </div>
-            </nav>
-          )}
-          {/* <div className="absolute top-4 right-8 z-20">
-            <LanguageSwitcher />
-          </div> */}
+              </nav>
+            )}
+
+          </div>
         </div>
       </header>
+
       <main className="container mx-auto px-4 py-12">{children}</main>
 
       {/* 页脚 */}

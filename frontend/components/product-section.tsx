@@ -40,8 +40,8 @@ export function ProductSection() {
         "en": "Products",
       },
       "section.subtitle": {
-        "zh-Hans": "智能储能系统解决方案",
-        "en": "Intelligent Energy Storage System Solutions",
+        "zh-Hans": "百千成电子有限公司专注于智能储能系统研发制造，依托自主研发的储能BMS/PCS全系列解决方案，涵盖电力大储、大型/小型船舶储能、通讯基站储能，以高精度SMT贴片加工设备定制化PCBA加工为核心，为全球客户提供高可靠、高集成度的能源管理硬件",
+        "en": "Baiqiancheng Electronics Co., Ltd. specializes in the research and development and manufacturing of intelligent energy storage systems. Relying on its self-developed full range of energy storage BMS/PCS solutions, it covers large-scale energy storage, large/small ship energy storage, and communication base station energy storage. With customized PCBA processing based on high-precision SMT chip processing equipment as the core, it provides global customers with highly reliable and highly integrated energy management hardware.",
       },
       "button.viewMore": {
         "zh-Hans": "查看更多",
@@ -133,7 +133,7 @@ export function ProductSection() {
     <section id="product-section" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t("section.title")}</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12">{t("section.subtitle")}</p>
+        <p className="text-xl text-gray-600 max-w-6xl mx-auto text-center mb-12">{t("section.subtitle")}</p>
 
         {/* 分类选项卡 */}
         <div className="relative mb-8">
@@ -173,9 +173,9 @@ export function ProductSection() {
               {/* 分类图片和描述 */}
               <div className="flex flex-col md:flex-row items-center mb-12">
                 <Link
-                  href={`/${locale}${category.id === 1 ? '/products' : category.products[0].link}.html`}
+                  href={`/${locale}${category.id === 1 ? '/products/energy-storage-bms' : category.products[0].link}.html`}
                   className="w-full md:w-1/2 mb-6 md:mb-0 block"
-                  rel="nofollow"
+                  //rel="nofollow"
                 >
                   <Image
                     src={category.image || "/placeholder.svg"}
@@ -195,13 +195,14 @@ export function ProductSection() {
               {/* 产品列表或查看更多按钮 */}
               {category.id === 1 ? (
                 <div className="relative">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                  {/* 这个地方lg:grid-cols-5 的意思就是一行五个 之前是lg:grid-cols-4 就是四个 然后第五个会到下一行就不美观了 */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
                     {category.products.map((product) => (
                       <Link
                         key={product.id}
                         href={`/${locale}${product.link}.html`}
                         className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1 block"
-                        rel="nofollow"
+                        //rel="nofollow"
                       >
                         <div className="h-48 overflow-hidden">
                           <Image
@@ -227,7 +228,7 @@ export function ProductSection() {
         {/* 底部查看更多按钮 */}
         <div className="flex justify-center mt-12">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
-            <Link href={`/${locale}${categories[activeCategory].id === 1 ? '/products' : categories[activeCategory].products[0].link}.html`} rel="nofollow">
+            <Link href={`/${locale}${categories[activeCategory].id === 1 ? '/products/energy-storage-bms.html' : categories[activeCategory].products[0].link}`} rel="nofollow">
               {t("button.viewMore")}
             </Link>
           </Button>

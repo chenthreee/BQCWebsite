@@ -61,7 +61,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Link
             href={`/${locale}/news/company.html`}
-            rel="nofollow"
+            //rel="nofollow"
             className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
           >
             <div className="flex items-center mb-6">
@@ -77,7 +77,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
           </Link>
           <Link
             href={`/${locale}/news/industry.html`}
-            rel="nofollow"
+            //rel="nofollow"
             className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
           >
             <div className="flex items-center mb-6">
@@ -94,7 +94,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {companyNews && (
-            <Link href={`/${locale}/news/company/${companyNews.slug}.html`} rel="nofollow" className="block">
+            <Link href={`/${locale}/news/company/${companyNews.slug}.html`}  className="block">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
                   {companyNews.cover?.url ? (
@@ -119,7 +119,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
             </Link>
           )}
           {industryNews && (
-            <Link href={`/${locale}/news/industry/${industryNews.slug}.html`} rel="nofollow" className="block">
+            <Link href={`/${locale}/news/industry/${industryNews.slug}.html`}  className="block">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
                   {industryNews.cover?.url ? (

@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useInView } from "react-intersection-observer"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
-import { Settings, Lightbulb, Globe, Shield, Award, Users, Leaf } from "lucide-react"
+import { Settings, Lightbulb, Globe, Shield, Award, Users, Leaf, CheckCheckIcon } from "lucide-react"
 
 interface CounterProps {
   end: number
@@ -68,8 +68,8 @@ export function AboutSection() {
       "about.title": { "zh-Hans": "关于我们", en: "About Us" },
       "about.desc": {
         "zh-Hans":
-          "百千成电子是专注于储能BMS系统研发与OEM制造服务的高新技术企业，致力于为全球客户提供安全可靠的储能解决方案。",
-        en: "BAIQIANCHENG Electronics is a high-tech enterprise focusing on energy storage BMS R&D and OEM manufacturing services, committed to providing safe and reliable energy storage solutions for global customers.",
+          "百千成电子是一家专注于储能BMS系统研发、PCBA加工工艺、电路板SMT贴片与OEM制造服务的高新技术企业，致力于为全球客户提供安全可靠的储能解决方案。",
+        en: "BAIQIANCHENG Electronics is a high-tech enterprise focusing on energy storage BMS R&D, PCBA processing technology, circuit board SMT chip processing and OEM manufacturing services, committed to providing safe and reliable energy storage solutions for global customers.",
       },
       "about.stat1.title": { "zh-Hans": "BMS研发经验", en: "BMS R&D Experience" },
       "about.stat1.bottom": { "zh-Hans": "年专业经验", en: "Years of Experience" },
@@ -79,27 +79,27 @@ export function AboutSection() {
       "about.stat3.bottom": { "zh-Hans": "家合作伙伴", en: "Partners" },
       "about.stat4.title": { "zh-Hans": "研发人员", en: "R&D Staff" },
       "about.stat4.bottom": { "zh-Hans": "占比", en: "Proportion" },
-      "about.mission.title": { "zh-Hans": "七大核心优势", en: "Seven Core Advantages" },
+      "about.mission.title": { "zh-Hans": "百千成电子八大核心优势", en: "Baiqiancheng Electronics Eight Core Advantages" },
       "about.advantage1.title": {
         "zh-Hans": "全流程定制与制造能力",
         en: "End-to-End Customization and Manufacturing Capabilities",
       },
       "about.advantage1.desc": {
         "zh-Hans":
-          "提供从联合设计（JDSM）、OEM制造到PCBA的一站式服务，覆盖消费电子、储能BMS、机器人、医疗及汽车电子等多领域。",
-        en: "We provide one-stop services from joint design (JDSM), OEM manufacturing, to full-range PCBA processes, covering diverse fields such as consumer electronics, energy storage BMS, robotics, medical devices, and automotive electronics.",
+          "百千成电子提供从联合设计（JDSM）、SMTOEM制造到PCBA加工的一站式服务，覆盖消费电子、储能BMS、机器人、医疗及汽车电子等多领域。",
+        en: "BAIQIANCHENG Electronics provide one-stop services from joint design (JDSM), SMTOEM manufacturing, to full-range PCBA processes, covering diverse fields such as consumer electronics, energy storage BMS, robotics, medical devices, and automotive electronics.",
       },
       "about.advantage2.title": { "zh-Hans": "深厚的技术与工程实力", en: "Strong Technical and Engineering Expertise" },
       "about.advantage2.desc": {
         "zh-Hans":
-          "拥有超过35名研发与工程人员，涵盖硬件、软件、结构、ID/MD设计及验证团队，支持客户完成从概念到量产的全过程。",
-        en: "With over 35 R&D and engineering professionals specializing in hardware, software, structural design, ID/MD, and validation, we support customers throughout the entire product development cycle—from concept to mass production.",
+          "百千成电子拥有超过35名研发与工程人员，涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程。",
+        en: "BAIQIANCHENG Electronics has over 35 R&D and engineering professionals specializing in hardware, software, structural design, ID/MD/SMT/PCBA, and validation, we support customers throughout the entire product development cycle—from concept to mass production.",
       },
       "about.advantage3.title": { "zh-Hans": "关键元器件供应链优势", en: "Key Component Supply Chain Advantages" },
       "about.advantage3.desc": {
         "zh-Hans":
-          "与ST、NXP、ADI、TI等国际厂商及代理商深度合作，享有优先采购权和稳定供应支持，具备国产替代方案能力，有效应对缺料和降本需求。",
-        en: "We maintain deep collaborations with leading international chip suppliers and distributors, including ST, NXP, ADI, and TI, ensuring priority procurement and stable supply support. We also offer domestic alternative solutions to address material shortages and cost reduction needs.",
+          "百千成电子与ST、NXP、ADI、TI等国际厂商及代理商深度合作，享有优先采购权和稳定供应支持，具备国产替代方案能力，有效应对SMT贴片加工缺料和PCBA加工降本需求。",
+        en: "BAIQIANCHENG Electronics maintain deep collaborations with leading international chip suppliers and distributors, including ST, NXP, ADI, and TI, ensuring priority procurement and stable supply support. We also offer domestic alternative solutions to address SMT chip processing material shortages and PCBA processing cost reduction needs.",
       },
       "about.advantage4.title": {
         "zh-Hans": "规模化制造与质量保障",
@@ -107,29 +107,37 @@ export function AboutSection() {
       },
       "about.advantage4.desc": {
         "zh-Hans":
-          "深圳工厂年产能达35GWh+，拥有22条SMT产线和完善的质检体系；马来西亚工厂辐射东南亚及欧美市场，均通过ISO9001/14001、IATF16949、ISO13485等认证。",
-        en: "Our Shenzhen facility boasts an annual capacity of 35GWh+, with 22 SMT lines and a comprehensive quality inspection system. Our Malaysia plant serves Southeast Asian and European/American markets, with certifications including ISO9001/14001, IATF16949, and ISO13485.",
+          "百千成电子深圳工厂年产能达35GWh+，拥有22条SMT贴片加工产线和完善的质检体系；马来西亚工厂辐射东南亚及欧美市场，均通过ISO9001/14001、IATF16949、ISO13485等认证。",
+        en: "BAIQIANCHENG Electronics' Shenzhen facility boasts an annual capacity of 35GWh+, with 22 SMT lines and a comprehensive quality inspection system. Our Malaysia plant serves Southeast Asian and European/American markets, with certifications including ISO9001/14001, IATF16949, and ISO13485.",
       },
       "about.advantage5.title": {
         "zh-Hans": "储能与机器人领域的领先经验",
         en: "Leading Expertise in Energy Storage and Robotics",
       },
       "about.advantage5.desc": {
-        "zh-Hans": "已成为全球储能BMS前三及扫地机器人头部品牌的核心供应商，服务多家全球TOP10集成商与品牌客户。",
-        en: "We are a core supplier to top global energy storage BMS integrators (ranked top 3) and leading robotic vacuum brands, serving multiple top 10 global integrators and branded customers.",
+        "zh-Hans": "百千成电子已成为全球储能BMS前三及扫地机器人头部品牌的核心供应商，服务多家全球TOP10集成商与品牌客户。",
+        en: "BAIQIANCHENG Electronics are a core supplier to top global energy storage BMS integrators (ranked top 3) and leading robotic vacuum brands, serving multiple top 10 global integrators and branded customers.",
       },
       "about.advantage6.title": { "zh-Hans": "自动化与数字化管理", en: "Automation and Digital Management" },
       "about.advantage6.desc": {
-        "zh-Hans": "自主研发自动化编程与测试设备，引入MES、OA等数字化系统，实现制造过程高效透明、可追溯。",
-        en: "We develop in-house automated programming and testing equipment and utilize digital systems such as MES and OA to ensure efficient, transparent, and traceable manufacturing processes.",
+        "zh-Hans": "百千成电子自主研发自动化PCBA、SMT贴片编程与测试设备，引入MES、OA等数字化系统，实现制造过程高效透明、可追溯。",
+        en: "BAIQIANCHENG Electronics develop in-house automated PCBA, SMT chip processing programming and testing equipment and utilize digital systems such as MES and OA to ensure efficient, transparent, and traceable manufacturing processes.",
       },
       "about.advantage7.title": {
         "zh-Hans": "环境友好与企业社会责任",
         en: "Eco-Friendliness and Social Responsibility",
       },
       "about.advantage7.desc": {
-        "zh-Hans": "秉持 共享、贡献、诚信、客户第一 的价值观，致力于通过技术创新推动碳中和，践行可持续制造。",
-        en: "Guided by our values of Sharing, Contribution, Integrity, and Customer First,  we are committed to achieving carbon neutrality through technological innovation and sustainable manufacturing practices.",
+        "zh-Hans": "百千成电子有限公司秉持 共享、贡献、诚信、客户第一 的价值观，致力于通过技术创新推动碳中和，践行可持续制造。",
+        en: "BAIQIANCHENG Electronics has always adhered to the values of Sharing, Contribution, Integrity, and Customer First,  we are committed to achieving carbon neutrality through technological innovation and sustainable manufacturing practices.",
+      },
+      "about.advantage8.title":{
+        "zh-Hans":"严苛的行业标准合规与定制化质量管控",
+        en:"Strict Compliance with Industry Standards and Customized Quality Control",
+      },
+      "about.advantage8.desc":{
+        "zh-Hans":"质控团队采用 X 射线检测、自动光学检测（AOI）、功能测试系统等先进设备，在生产各环节开展多维度检验，确保产品不良率低于行业基准。同时与客户建立联合质量评审机制，主动预判潜在风险并持续优化产品质量，为高标准应用场景提供可靠制造保障",
+        en:"Our quality control team utilizes advanced testing equipment (including X-ray inspection, AOI, and functional testing systems) to conduct multi-dimensional inspections at every production stage, ensuring that product defect rates are maintained below industry benchmarks. We also establish joint quality review mechanisms with customers to proactively address potential risks and continuously optimize product quality, providing reliable manufacturing support for high-standard application scenarios.",
       },
 
       "about.learnMore": { "zh-Hans": "了解更多", en: "Learn More" },
@@ -146,6 +154,7 @@ export function AboutSection() {
     Award, // 储能与机器人领域的领先经验
     Users, // 自动化与数字化管理
     Leaf, // 环境友好与企业社会责任
+    CheckCheckIcon,//严苛的行业标准合规与定制化质量管控
   ]
 
   return (
@@ -224,11 +233,11 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* 七大核心优势模块 */}
+          {/* 八大核心优势模块 */}
           <div className="mt-16">
             <h3 className="text-3xl font-bold mb-8 text-center text-white">{t("about.mission.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[1, 2, 3, 4, 5, 6, 7].map((num, index) => {
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((num, index) => {
                 const IconComponent = advantageIcons[index]
                 return (
                   <div
@@ -249,13 +258,13 @@ export function AboutSection() {
                       </div>
                     </div>
                   </div>
-
                 )
               })}
             </div>
             <div className="text-center mt-8">
               <a
                 href={`/${locale}/about/introduction`}
+                rel="nofollow"
                 className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
                 {t("about.learnMore")}

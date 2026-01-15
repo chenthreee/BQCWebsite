@@ -277,7 +277,7 @@ export function HeroSection() {
                   )}
                 >
                   <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 group relative overflow-hidden">
-                    <Link href={slide.buttonLink}>
+                    <Link href={slide.buttonLink} rel="nofollow">
                       <span className="relative z-10">{slide.buttonText}</span>
                       <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-[length:200%_100%] animate-gradient-x"></span>
                     </Link>

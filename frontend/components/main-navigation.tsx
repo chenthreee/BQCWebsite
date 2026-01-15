@@ -210,12 +210,12 @@ export function MainNavigation() {
     {
       key: "home",
       label: mounted ? t("首页") : "首页",
-      href: `/${currentLocale}.html`,
+      href: `/${currentLocale}`,
     },
     {
       key: "about",
       label: mounted ? t("关于我们") : "关于我们",
-      href: `/${currentLocale}/about.html`,
+      href: `/${currentLocale}/about`,
       children: [
         { label: mounted ? t("公司介绍") : "公司介绍", href: `/${currentLocale}/about/introduction.html` },
         { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values.html` },
@@ -228,7 +228,7 @@ export function MainNavigation() {
     {
       key: "products",
       label: mounted ? t("产品中心") : "产品中心",
-      href: `/${currentLocale}/products.html`,
+      href: `/${currentLocale}/products`,
       children: [
         {
           label: mounted ? t("储能BMS/储能PCS") : "储能BMS/储能PCS",
@@ -251,7 +251,7 @@ export function MainNavigation() {
     {
       key: "services",
       label: mounted ? t("服务") : "服务",
-      href: `/${currentLocale}/services.html`,
+      href: `/${currentLocale}/services`,
       children: [
         { label: mounted ? t("ODM研发服务") : "ODM研发服务", href: `/${currentLocale}/services/odm.html` },
         { label: mounted ? t("OEM制造服务") : "OEM制造服务", href: `/${currentLocale}/services/oem.html` },
@@ -260,7 +260,7 @@ export function MainNavigation() {
     {
       key: "news",
       label: mounted ? t("新闻中心") : "新闻中心",
-      href: `/${currentLocale}/news.html`,
+      href: `/${currentLocale}/news`,
       children: [
         { label: mounted ? t("公司新闻") : "company news", href: `/${currentLocale}/news/company.html` },
         { label: mounted ? t("行业知识") : "industry Knowledge", href: `/${currentLocale}/news/industry.html` },
@@ -269,11 +269,11 @@ export function MainNavigation() {
     {
       key: "contact",
       label: mounted ? t("联系我们") : "联系我们",
-      href: `/${currentLocale}/contact.html`,
+      href: `/${currentLocale}/contact`,
       children: [
-        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact.html` },
-        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact.html` },
-        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact.html` },
+        { label: mounted ? t("研发中心") : "研发中心", href: `/${currentLocale}/contact` },
+        { label: mounted ? t("深圳工厂") : "深圳工厂", href: `/${currentLocale}/contact` },
+        { label: mounted ? t("马来西亚工厂") : "马来西亚工厂", href: `/${currentLocale}/contact` },
       ],
     },
   ]
@@ -291,7 +291,7 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="sr-only">{currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}</h1>
-            <Link href={`/${currentLocale}.html`} className="flex items-center">
+            <Link href={`/${currentLocale}`} className="flex items-center">
               <Image src="/BQCLogo.png" alt={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} title={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} width={40} height={60} className="mr-2" />
               <span className="text-xl font-bold text-white">
                 {currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}

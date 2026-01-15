@@ -23,12 +23,12 @@ export function ServicesSection() {
         "en": "Our Services",
       },
       "section.subtitle": {
-        "zh-Hans": "百千成电子提供专业的OEM制造服务和ODM研发服务，满足客户从产品设计到量产的全流程需求",
-        "en": "BAIQIANCHENG Electronics provides professional OEM manufacturing services and ODM development services to meet customers' full-process needs from product design to mass production",
+        "zh-Hans": "百千成电子深度整合SMT贴片加工与PCBA代工代料全链路服务，提供从产品设计（ODM）到量产交付（OEM）的垂直解决方案。在PCB设计阶段，我们通过电路优化与高可靠性布局，为储能BMS/PCS、工业控制板等复杂系统奠定技术基础；进入SMT贴片加工环节，采用全自动高速贴片机实现微米级元器件精准焊接，支持0.4mm间距BGA芯片、高频通信模块等精密工艺，日产能突破500万点，良品率稳定达99.8%以上。依托智能化产线，我们完成整机组装的自动化生产，涵盖三防漆涂覆、ICT在线测试等关键工序，并通过全面测试与包装体系实施72小时老化测试及多维度功能验证，确保医疗设备、智能机器人等产品零缺陷交付",
+        "en": "Baiqiancheng Electronics deeply integrates SMT chip processing with full-link services for PCBA outsourcing and material supply, providing vertical solutions from product design (ODM) to mass production delivery (OEM). In the PCB design phase, we lay the technical foundation for complex systems such as energy storage BMS/PCS and industrial control boards through circuit optimization and high-reliability layouts. In the SMT chip processing stage, we use fully automated high-speed pick-and-place machines to achieve micron-level precision soldering of components, supporting precise processes such as 0.4mm pitch BGA chips and high-frequency communication modules. Our daily production capacity exceeds 5 million points, with a stable yield rate of over 99.8%. Relying on intelligent production lines, we complete automated assembly production, covering key processes such as conformal coating and ICT online testing. Through comprehensive testing and packaging systems, we conduct 72-hour aging tests and multidimensional functional verification to ensure zero-defect delivery for products such as medical devices and intelligent robots",
       },
       "section.customet.subtitle":{
-        "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，以先进技术引领行业发展。",
-        "en": "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and OEM manufacturing services for global customers, leading the industry with advanced technology.",
+        "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和PCBA/SMT贴片OEM制造服务，以先进技术引领行业发展。",
+        "en": "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and PCBA/SMT assembly OEM manufacturing services for global customers, leading the industry with advanced technology.",
       },
       "oem.title": {
         "zh-Hans": "OEM制造服务",
@@ -39,28 +39,28 @@ export function ServicesSection() {
         "en": "ODM Development Services (BMS)",
       },
       "oem.step1.title": {
-        "zh-Hans": "PCB设计",
-        "en": "PCB Design",
+        "zh-Hans": "PCBA加工设计",
+        "en": "PCBA Processing & Design",
       },
       "oem.step1.desc": {
-        "zh-Hans": "电路设计与PCB布局",
-        "en": "Circuit Design & PCB Layout",
+        "zh-Hans": "电路设计与PCBA加工布局",
+        "en": "Circuit Design & PCBA Processing Layout",
       },
       "oem.step2.title": {
-        "zh-Hans": "SMT贴片",
-        "en": "SMT Assembly",
+        "zh-Hans": "SMT贴片厂工艺",
+        "en": "SMT Assembly Factory Process",
       },
       "oem.step2.desc": {
-        "zh-Hans": "高精度表面贴装",
-        "en": "High-precision Surface Mount",
+        "zh-Hans": "SMT高精度表面贴装",
+        "en": "SMT High-precision Surface Mounting Technology",
       },
       "oem.step3.title": {
         "zh-Hans": "整机组装",
         "en": "Complete Assembly",
       },
       "oem.step3.desc": {
-        "zh-Hans": "自动化组装生产",
-        "en": "Automated Assembly Production",
+        "zh-Hans": "SMT加工自动化组装生产",
+        "en": "SMT Processing Automated Assembly Production",
       },
       "oem.step4.title": {
         "zh-Hans": "测试包装",
@@ -87,15 +87,15 @@ export function ServicesSection() {
         "en": "Requirement Analysis",
       },
       "odm.step1.desc": {
-        "zh-Hans": "深刻理解客户需求",
-        "en": "In-depth understanding of customer needs",
+        "zh-Hans": "深刻理解客户针对PCBA加工和SMT贴片加工的需求",//深刻理解客户需求
+        "en": "In-depth understanding of customer needs for PCBA processing and SMT assembly",
       },
       "odm.step2.title":{
         "zh-Hans":"技术预研",
         "en":"Technology Research"
       },
       "odm.step2.desc":{
-        "zh-Hans":"关键技术研究，技术可行性验证",
+        "zh-Hans":"SMT贴片关键技术研究，PCBA加工技术可行性验证",//关键技术研究，技术可行性分验证
         "en":"Key technolohy study and feasibility validation"
       },
       "odm.step3.title": {
@@ -103,16 +103,16 @@ export function ServicesSection() {
         "en": "Solution Design",
       },
       "odm.step3.desc": {
-        "zh-Hans": "核心器件选型和产品规格制定",
-        "en": "Core component selection and product specification definition",
+        "zh-Hans": "PCBA加工核心器件选型和SMT产品规格制定",//核心器件选型和产品规格制定
+        "en": "Core PCBA Component Selection And SMT Product Specification Definition",
       },
       "odm.step4.title": {
         "zh-Hans": "研发开发",
         "en": "R&D Development",
       },
       "odm.step4.desc": {
-        "zh-Hans": "硬件软件结构设计",
-        "en": "Hardware, software and structural design",
+        "zh-Hans": "SMT加工硬件软件结构设计",//硬件软件结构设计
+        "en": "Hardware, Software And Structural Design For SMT",
       },
       "odm.step5.title": {
         "zh-Hans": "样机测试",
@@ -120,7 +120,7 @@ export function ServicesSection() {
       },
       "odm.step5.desc": {
         "zh-Hans": "功能及性能测试",
-        "en": "Functional and performance verification",
+        "en": "Functional Testing of electronic SMT products and performance verification of PCBA Components",
       },
       "odm.step6.title": {
         "zh-Hans": "产品认证",
@@ -135,8 +135,8 @@ export function ServicesSection() {
         "en": "Mass Production Support",
       },
       "odm.step7.desc": {
-        "zh-Hans": "物料采购 贴片插件后焊测试喷涂组装",
-        "en": "Material sourcing, SMT, THT, testing, coating, and assembly",
+        "zh-Hans": "PCBA物料采购 SMT贴片插件后焊测试喷涂组装",//物料采购 贴片插件后焊测试喷涂组装
+        "en": "PCBA Material Sourcing, SMT, THT, testing, coating, and assembly",
       },
       "odm.adv.title": {
         "zh-Hans": "ODM研发优势",
@@ -353,7 +353,7 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("section.title")}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-6xl mx-auto">
             {t("section.subtitle")}
           </p>
 
@@ -491,14 +491,17 @@ export function ServicesSection() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
                 {clients.map((client) => (
-                  <div key={client.id} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      width={180}
-                      height={65}
-                      className="max-h-24 w-auto object-contain transition-all"
-                    />
+                  <div key={client.id} className="flex flex-col items-center">
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-24 w-full">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        width={180}
+                        height={65}
+                        className="max-h-24 w-auto object-contain transition-all"
+                      />
+                    </div>
+                    <p className="mt-2 text-md font-semibold text-gray-1000 text-center">{client.name}</p>
                   </div>
                 ))}
               </div>

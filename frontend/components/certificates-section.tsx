@@ -28,7 +28,7 @@ export function CertificatesSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">{t("about.certificates.title")}</h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto text-center mb-12">{t("about.certificates.desc")}</p>
-        <Link href={`/${locale}/about/certificates.html`} rel="nofollow"  className="block">
+        <Link href={`/${locale}/about/certificates.html`}   className="block">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 cursor-pointer">
           {certificates.map((cert, idx) => (
             <div key={idx} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center">
@@ -44,7 +44,7 @@ export function CertificatesSection() {
         </Link>
         <div className="flex justify-center mt-10">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8">
-            <Link href={`/${locale}/about/certificates.html`} rel="nofollow">
+            <Link href={`/${locale}/about/certificates`} rel="nofollow">
               {t("about.certificates.more") || (language === "en" ? "Learn More" : "了解更多")}
             </Link>
           </Button>

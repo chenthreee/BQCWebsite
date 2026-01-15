@@ -221,11 +221,11 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             {/* 公司信息 */}
             <div>
               <h1 className="sr-only">{t("company.name")}</h1>
-              <Link href={`/${locale}.html`} rel="nofollow" className="inline-block mb-6">
+              <div className="inline-block mb-6">
                 <Image src="/BQCLogo.png" alt={t("company.name")}
                   title={t("company.name")}
                   width={50} height={50} className="h-10 w-auto" />
-              </Link>
+              </div>
               <p className="text-gray-400 mb-4">{t("company.description")}</p>
               <div className="mt-4">
                 <a

@@ -11,7 +11,7 @@ export default function NewsCategoryTabs() {
   const locale = pathname.split("/")[1] || "zh-Hans";
 
   const tabs = [
-    { label: t("news.all"), subpath: ".html" },
+    { label: t("news.all"), subpath: "" },
     { label: t("news.company"), subpath: "/company.html" },
     { label: t("news.industry"), subpath: "/industry.html" },
   ];

@@ -251,4 +251,22 @@ export default function PowerStorageBmsPage() {
       )}
     </PageLayout>
   )
+} ts Available" : "暂无产品"}
+          </h3>
+          <p className="text-gray-500">
+            {locale === "en" ? "Products in this category will be available soon." : "该分类下的产品即将上线。"}
+          </p>
+        </div>
+      )}
+    </PageLayout>
+  )
+} ts Available" : "暂无产品"}
+          </h3>
+          <p className="text-gray-500">
+            {locale === "en" ? "Products in this category will be available soon." : "该分类下的产品即将上线。"}
+          </p>
+        </div>
+      )}
+    </PageLayout>
+  )
 } 
