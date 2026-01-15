@@ -291,7 +291,7 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="sr-only">{currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}</h1>
-            <Link href={`/${currentLocale}`} className="flex items-center">
+            <Link href={`/${currentLocale}.html`} className="flex items-center">
               <Image src="/BQCLogo.png" alt={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} title={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} width={40} height={60} className="mr-2" />
               <span className="text-xl font-bold text-white">
                 {currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}
@@ -308,14 +308,35 @@ export function MainNavigation() {
                 onMouseEnter={() => handleDropdownEnter(item.key)}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link
+                {/* <Link
                   href={item.href}
                   onClick={() => console.log('一级菜单跳转到:', item.href)}
                   className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
                 >
                   {item.label}
                   {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                </Link>
+                </Link> */}
+                {item.key === "contact" ? (
+                  <Link href={item.href} legacyBehavior>
+                    <a
+                      rel="nofollow"
+                      className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
+                    >
+                      {item.label}
+                      {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                    </a>
+                  </Link>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => console.log('一级菜单跳转到:', item.href)}
+                    className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
+                  >
+                    {item.label}
+                    {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                  </Link>
+                )}
+
 
                 {item.children && activeDropdown === item.key && (
                   <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 transition-all duration-300 ease-in-out">
@@ -327,14 +348,35 @@ export function MainNavigation() {
                           onMouseEnter={child.children ? () => handleSubDropdownEnter(child.href) : undefined}
                           onMouseLeave={child.children ? handleSubDropdownLeave : undefined}
                         >
-                          <Link
+                          {/* <Link
                             href={child.href}
                             onClick={() => console.log('二级菜单跳转到:', child.href)}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
                           >
                             {child.label}
                             {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                          </Link>
+                          </Link> */}
+                          {item.key === "contact" ? (
+                            <Link href={child.href} legacyBehavior>
+                              <a
+                                rel="nofollow"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
+                              >
+                                {child.label}
+                                {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link
+                              href={child.href}
+                              onClick={() => console.log('二级菜单跳转到:', child.href)}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
+                            >
+                              {child.label}
+                              {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
+                            </Link>
+                          )}
+
 
                           {child.children && activeSubDropdown === child.href && (
                             <div className="absolute left-full top-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 transition-all duration-300 ease-in-out">
@@ -398,7 +440,9 @@ export function MainNavigation() {
                         {child.children ? (
                           <>
                             <button
-                              onClick={() => setActiveSubDropdown(activeSubDropdown === child.href ? null : child.href)}
+                              onClick={() =>
+                                setActiveSubDropdown(activeSubDropdown === child.href ? null : child.href)
+                              }
                               className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex justify-between items-center"
                             >
                               {child.label}
@@ -407,19 +451,41 @@ export function MainNavigation() {
 
                             {activeSubDropdown === child.href && (
                               <div className="pl-4 space-y-1">
-                                {child.children.map((subChild) => (
-                                  <Link
-                                    key={subChild.href}
-                                    href={subChild.href}
-                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
-                                    onClick={() => setIsOpen(false)}
-                                  >
-                                    {subChild.label}
-                                  </Link>
-                                ))}
+                                {child.children.map((subChild) =>
+                                  item.key === "contact" ? (
+                                    <Link key={subChild.href} href={subChild.href} legacyBehavior>
+                                      <a
+                                        rel="nofollow"
+                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                                        onClick={() => setIsOpen(false)}
+                                      >
+                                        {subChild.label}
+                                      </a>
+                                    </Link>
+                                  ) : (
+                                    <Link
+                                      key={subChild.href}
+                                      href={subChild.href}
+                                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                                      onClick={() => setIsOpen(false)}
+                                    >
+                                      {subChild.label}
+                                    </Link>
+                                  )
+                                )}
                               </div>
                             )}
                           </>
+                        ) : item.key === "contact" ? (
+                          <Link href={child.href} legacyBehavior>
+                            <a
+                              rel="nofollow"
+                              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {child.label}
+                            </a>
+                          </Link>
                         ) : (
                           <Link
                             href={child.href}
@@ -436,13 +502,13 @@ export function MainNavigation() {
               </div>
             ))}
 
-            {/* Mobile Language Switcher */}
             <div className="px-3 py-2">
               <LanguageSwitcher />
             </div>
           </div>
         </div>
       )}
+
     </nav>
   )
 }
