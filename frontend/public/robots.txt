@@ -11,3 +11,5 @@ Disallow: /en/about/development-history
 Disallow: /zh-Hans/contact
 Disallow: /en/about/contact
 Disallow: /admin/
+Disallow: /en/
+Disallow: /en
