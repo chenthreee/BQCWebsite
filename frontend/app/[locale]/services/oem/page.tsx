@@ -35,7 +35,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       title: "OEM制造服务",
       subtitle: "一站式电子产品制造解决方案",
       breadcrumbs: [
-        { label: "服务", href: "/zh-Hans/services.html" },
+        { label: "服务", href: "/zh-Hans/services" },
         { label: "OEM制造服务", href: "/zh-Hans/services/oem.html" },
       ],
       oem: {
@@ -92,7 +92,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       title: "OEM Manufacturing Services",
       subtitle: "One-stop electronic product manufacturing solution",
       breadcrumbs: [
-        { label: "Services", href: "/en/services.html" },
+        { label: "Services", href: "/en/services" },
         { label: "OEM Manufacturing Services", href: "/en/services/oem.html" },
       ],
       oem: {

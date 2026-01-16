@@ -300,7 +300,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       title={product.title}
       subtitle={product.shortDescription || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
         { label: product.category?.title || (locale === "en" ? "Energy Storage BMS" : "储能BMS"), href: `/${locale}/products/energy-storage-bms.html` },
         { label: product.sub_category?.title || (locale === "en" ? "Power Storage BMS" : "电力储能BMS"), href: `/${locale}/products/energy-storage-bms/power-storage.html` },
         { label: product.title, href: `/${locale}/products/energy-storage-bms/power-storage/${params.slug}.html` },

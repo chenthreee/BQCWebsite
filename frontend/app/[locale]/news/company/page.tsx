@@ -56,7 +56,7 @@ export default async function CompanyNewsPage({ params, searchParams }: { params
       title={locale === "en" ? "Company News" : "公司新闻"}
       subtitle={locale === "en" ? "Learn about BQC Electronics' latest company news" : "了解百千成电子公司最新动态"}
       breadcrumbs={[
-        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news.html` },
+        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
         { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company.html` },
       ]}
       backgroundImage="/images/news/newsBreadcrumb.png"

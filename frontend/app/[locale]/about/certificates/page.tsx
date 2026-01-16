@@ -2,37 +2,19 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import { useEffect, useState } from "react"
 
 
-export default function CertificatesPage({params}:{params:{locale:string }}) {
-  // const { t, language, setLanguage } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  // const pathname = usePathname()
-  const locale=params.locale==="en"?"en":"zh-Hans"
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  // 根据 URL 自动切换语言
-  // useEffect(() => {
-  //   if (pathname.startsWith("/en")) setLanguage("en")
-  //   else setLanguage("zh")
-  // }, [pathname, setLanguage])
-
-  if (!mounted) {
-    return null
-  }
-
+export default function CertificatesPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale
+  const language = locale === "en" ? "en" : "zh"
   // 证书内容（中英文）
   const content = {
     zh: {
-      title:"资质证书",
-      subtitle:"百千成电子的资质认证与荣誉",
-      breadcrumbs:[
-        {label:"关于我们",href:"/zh-Hans/about.html"},
-        {label:"资质证书",href:"/zh-Hans/about/certificates.html"}
+      title: "资质证书",
+      subtitle: "百千成电子的资质认证与荣誉",
+      breadcrumbs: [
+        { label: "关于我们", href: "/zh-Hans/about" },
+        { label: "资质证书", href: "/zh-Hans/about/certificates.html" }
       ],
       overview: {
         title: "我们的资质",
@@ -67,7 +49,7 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
           issueDate: "2022年",
           validUntil: "2025年",
         },
-        
+
         {
           title: "UL",
           description: "UL是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
@@ -82,7 +64,7 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
           issueDate: "2016年",
           validUntil: "2027年",
         },
-        
+
       ],
       honors: {
         title: "企业荣誉",
@@ -110,11 +92,11 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
       }
     },
     en: {
-      title:"Certificates",
-      subtitle:"BQC Electronics Certifications and Honors",
-      breadcrumbs:[
-        {label:"About us",href:"/en/about.html"},
-        {label:"Certificates",href:"/en/about/certificates.html"}
+      title: "Certificates",
+      subtitle: "BQC Electronics Certifications and Honors",
+      breadcrumbs: [
+        { label: "About us", href: "/en/about" },
+        { label: "Certificates", href: "/en/about/certificates.html" }
       ],
       overview: {
         title: "Our Qualifications",
@@ -131,8 +113,8 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
         {
           title: "ISO14001",
           description: "ISO14001 is an international standard for environmental management systems, helping businesses reduce environmental impact and promote sustainable development.",
-            image: "/images/about/certificates/ISO14001_en.png",
-            issueDate: "2018",
+          image: "/images/about/certificates/ISO14001_en.png",
+          issueDate: "2018",
           validUntil: "2027",
         },
         {
@@ -148,7 +130,7 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
           image: "/images/about/certificates/IATF16949_en.png",
           issueDate: "2022",
           validUntil: "2025",
-        }, 
+        },
         {
           title: "UL",
           description: "UL is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
@@ -192,7 +174,7 @@ export default function CertificatesPage({params}:{params:{locale:string }}) {
   }
 
 
-  const currentContent=locale==="en" ? content.en : content.zh
+  const currentContent = locale === "en" ? content.en : content.zh
 
 
 

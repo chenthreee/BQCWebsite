@@ -267,7 +267,7 @@ export default function OdmServicePage() {
       breadcrumbs={[
         {
           label: locale === "en" ? "Services" : "服务",
-          href: `/${locale}/services.html`,
+          href: `/${locale}/services`,
         },
         {
           label: currentContent.title,

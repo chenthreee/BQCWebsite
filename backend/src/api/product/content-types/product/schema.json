@@ -134,6 +134,9 @@
       "relation": "manyToOne",
       "target": "api::product-sub-category.product-sub-category",
       "inversedBy": "products"
+    },
+    "keyword": {
+      "type": "text"
     }
   }
 }

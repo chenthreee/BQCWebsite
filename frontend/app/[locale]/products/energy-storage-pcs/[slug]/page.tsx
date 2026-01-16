@@ -298,7 +298,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       title={product.title}
       subtitle={product.shortDescription || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
         { label: product.category?.title || (locale === "en" ? "Energy Storage PCS" : "储能PCS"), href: `/${locale}/products/energy-storage-pcs.html` },
         { label: product.title, href: `/${locale}/products/energy-storage-pcs/${params.slug}.html` },
       ]}

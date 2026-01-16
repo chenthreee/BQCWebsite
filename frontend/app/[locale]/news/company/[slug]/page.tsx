@@ -111,7 +111,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       title={article.title}
       subtitle={article.description || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news.html` },
+        { label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` },
         { label: locale === "en" ? "Company News" : "公司新闻", href: `/${locale}/news/company.html` },
         { label: article.title, href: `/${locale}/news/company/${params.slug}.html` },
       ]}

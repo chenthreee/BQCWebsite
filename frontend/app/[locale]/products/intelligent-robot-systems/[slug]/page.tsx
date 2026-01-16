@@ -298,7 +298,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       title={product.title}
       subtitle={product.shortDescription || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
         { label: product.category?.title || (locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统"), href: `/${locale}/products/intelligent-robot-systems.html` },
         { label: product.title, href: `/${locale}/products/intelligent-robot-systems/${resolvedParams.slug}.html` },
       ]}

@@ -296,7 +296,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       title={product.title}
       subtitle={product.shortDescription || ""}
       breadcrumbs={[
-        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
         { label: product.category?.title || (locale === "en" ? "Industrial Control Boards" : "工业控制板"), href: `/${locale}/products/industrial-control-boards.html` },
         { label: product.title, href: `/${locale}/products/industrial-control-boards/${params.slug}.html` },
       ]}

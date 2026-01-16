@@ -1,34 +1,17 @@
-"use client"
+
 
 import PageLayout from "@/components/page-layout"
-import { useLanguage } from "@/components/language-context"
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 import Image from "next/image"
 
-export default function CompanyIntroductionPage() {
-  const { t, language, setLanguage } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
+export default function CompanyIntroductionPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale
+  const language = locale === "en" ? "en" : "zh"
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  // 根据 URL 自动切换语言
-  // 这里使用useEffect是因为 在页面加载时 如果直接使用setLanguage 会导致界面闪烁 所以使用useEffect 在页面加载完成后 再设置语言
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
-
-  if (!mounted) {
-    return null
-  }
-
+  
   const content = {
     zh: {
       title: "公司介绍",
+      main:"关于我们",
       subtitle: "了解百千成电子的发展历程与企业文化",
       sections: [
         {
@@ -101,6 +84,7 @@ export default function CompanyIntroductionPage() {
     },
     en: {
       title: "Company Introduction",
+      main:"About Us",
       subtitle: "Learn about Baiqiancheng Electronics' development history and corporate culture",
       sections: [
         {
@@ -193,15 +177,21 @@ export default function CompanyIntroductionPage() {
 
   const currentContent = language === "en" ? content.en : content.zh
 
+  
+  // const breadcrumbs = [
+  //   { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+  //   { label: t("about.breadcrumbs.intro"), href: language === "en" ? "/en/about/introduction" : "/zh-Hans/about/introduction" },
+  // ]
+
   const breadcrumbs = [
-    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.intro"), href: language === "en" ? "/en/about/introduction" : "/zh-Hans/about/introduction" },
+    { label:currentContent.main, href: language === "en" ? "/en/about" : "/zh-Hans/about" },
+    { label: currentContent.title, href: language === "en" ? "/en/about/introduction" : "/zh-Hans/about/introduction" },
   ]
 
   return (
     <PageLayout
-      title={t("about.introduction.title")}
-      subtitle={t("about.introduction.subtitle")}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
       breadcrumbs={breadcrumbs}
       backgroundImage="/images/about/aboutBreadcrumb.png"
     >

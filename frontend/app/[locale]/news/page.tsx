@@ -61,7 +61,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
     <PageLayout
       title={locale === "en" ? "News Center" : "新闻中心"}
       subtitle={locale === "en" ? "Learn about the latest news and industry knowledge of BQC Electronics" : "了解百千成电子最新动态与行业知识"}
-      breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: "/news.html" }]}
+      breadcrumbs={[{ label: locale === "en" ? "News Center" : "新闻中心", href: `/${locale}/news` }]}
       backgroundImage="/images/news/newsBreadcrumb.png"
     >
 

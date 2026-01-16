@@ -79,6 +79,9 @@
     },
     "clickCount": {
       "type": "integer"
+    },
+    "keyword": {
+      "type": "text"
     }
   }
 }

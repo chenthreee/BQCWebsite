@@ -3,32 +3,21 @@
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import { CheckCircle } from "lucide-react"
-import { useLanguage } from "@/components/language-context"
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 
-export default function ManufacturingCapabilitiesPage() {
-  const { t, language, setLanguage } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
+export default function ManufacturingCapabilitiesPage({params}:{params:{locale:string}}) {
   
-  if (!mounted) {
-    return null
-  }
+  const locale=params.locale
+  const language=locale==="en"?"en":"zh"
 
   const content = {
     zh: {
       title: "制造能力",
       subtitle: "百千成电子的生产设备与制造工艺",
+      breadcrumbs:[
+        {label:"关于我们",href:"/zh-Hans/about"},
+        {label:"制造能力",href:"/zh-Hans/about/manufacturing-capabilities.html"}
+      ],
       workshops: {
         title: "生产车间",
         desc: "自动化生产线，保障高效与高品质。",
@@ -184,6 +173,10 @@ export default function ManufacturingCapabilitiesPage() {
     en: {
       title: "Manufacturing Capabilities",
       subtitle: "BQC Electronics Production Equipment and Manufacturing Process",
+      breadcrumbs:[
+        {label:"About Us",href:"/en/about"},
+        {label:"Manufacturing Capabilities",href:"/en/about/manufacturing-capabilities.html"}
+      ],
       workshops: {
         title: "Production Workshops",
         desc: "Automated production lines ensure efficiency and quality.",
@@ -342,16 +335,11 @@ export default function ManufacturingCapabilitiesPage() {
 
   const currentContent = language === "en" ? content.en : content.zh
 
-  const breadcrumbs = [
-    { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.manufacturingCapabilities"), href: language === "en" ? "/en/about/manufacturing-capabilities" : "/zh-Hans/about/manufacturing-capabilities" },
-  ]
-
   return (
     <PageLayout
-      title={t("about.manufacturingCapabilities.title")}
-      subtitle={t("about.manufacturingCapabilities.subtitle")}
-      breadcrumbs={breadcrumbs}
+      title={currentContent.title}
+      subtitle={currentContent.subtitle}
+      breadcrumbs={currentContent.breadcrumbs}
       backgroundImage="/images/about/manufacturing/manufacturing-banner.png"
     >
       <div className="space-y-16">

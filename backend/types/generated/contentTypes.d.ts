@@ -441,6 +441,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    keyword: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -739,6 +740,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     gallery: Schema.Attribute.Media<'images', true>;
     isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    keyword: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

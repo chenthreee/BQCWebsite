@@ -1,32 +1,10 @@
-"use client"
-
 import PageLayout from "@/components/page-layout"
 import Link from "next/link"
 import { ArrowRight, Users, Award, Shield, Globe, CheckCircle, HeartHandshakeIcon } from "lucide-react"
-import { useLanguage } from "@/components/language-context"
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 
-export default function AboutPage() {
-  const { t, language, setLanguage } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  // 根据 URL 自动切换语言
-  useEffect(() => {
-    if (pathname.startsWith("/en")) setLanguage("en")
-    else setLanguage("zh")
-  }, [pathname, setLanguage])
-
-  if (!mounted) {
-    return null
-  }
-
-  const locale = language === "en" ? "en" : "zh-Hans"
+export default function AboutPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale
+  const language = locale === "en" ? "en" : "zh"
 
   const content = {
     zh: {

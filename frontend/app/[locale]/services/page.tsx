@@ -10,7 +10,7 @@ const content = {
   "zh-Hans": {
     title: "服务",
     subtitle: "百千成电子的专业服务与解决方案",
-    breadcrumbs: [{ label: "服务", href: "/zh-Hans/services.html" }],
+    breadcrumbs: [{ label: "服务", href: "/zh-Hans/services" }],
     services: [
       {
         title: "ODM研发服务",
@@ -46,7 +46,7 @@ const content = {
   en: {
     title: "Services",
     subtitle: "BQC Electronics' Professional Services and Solutions",
-    breadcrumbs: [{ label: "Services", href: "/en/services.html" }],
+    breadcrumbs: [{ label: "Services", href: "/en/services" }],
     services: [
       {
         title: "ODM R&D Service",
@@ -88,7 +88,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
   const breadcrumbs = [
     {
       label: locale === "en" ? "Services" : "服务",
-      href: locale === "en" ? "/en/services" : "/zh-Hans/services.html"
+      href: locale === "en" ? "/en/services" : "/zh-Hans/services"
     }
   ]
   const services = currentContent.services.map(service => ({

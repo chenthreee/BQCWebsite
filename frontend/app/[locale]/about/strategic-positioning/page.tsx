@@ -81,7 +81,7 @@ export default function StrategicPositioningPage() {
 
   const breadcrumbs = [
     { label: t("about.breadcrumbs.main"), href: language === "en" ? "/en/about" : "/zh-Hans/about" },
-    { label: t("about.breadcrumbs.strategicPositioning"), href: language === "en" ? "/en/about/strategic-positioning" : "/zh-Hans/about/strategic-positioning" },
+    { label: t("about.breadcrumbs.strategicPositioning"), href: language === "en" ? "/en/about/strategic-positioning.html" : "/zh-Hans/about/strategic-positioning.html" },
   ]
 
   return (

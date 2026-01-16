@@ -7,10 +7,10 @@ import { LanguageProvider } from "@/components/language-context"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "百千成电子 - 引领储能技术创造智能未来",
+  title: "SMT贴片加工厂专注于PCBA加工领域22年-「百千成电子」",
   description:
-    "百千成电子是专注于储能系统和智能控制技术的全球领先企业，为全球客户提供高品质的储能系统和智能控制解决方案。",
-  keywords: "百千成电子, 储能技术, 智能控制, BMS, EMS, PCS, 智能机器人系统",
+    "【百千成电子有限公司】成立于2003年，总部位于深圳，是一家专业的SMT贴片加工与PCBA加工制造服务商。公司主营业务涵盖SMT贴片加工、PCBA设计加工，储能BMS系统研发等，致力于为全球客户提供从电子制造到整机组装的一站式OEM全流程解决方案。",
+  keywords: "PCBA加工|SMT贴片加工|SMT贴片|SMT贴片厂|SMT贴片加工厂|贴片加工厂|百千成电子",
   authors: [{ name: "百千成电子" }],
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   robots: "index, follow",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     url: "https://www.baiqiancheng.com/",
     siteName: "百千成电子",
-    title: "百千成电子 - 引领储能技术创造智能未来",
+    title: "SMT贴片加工厂专注于PCBA加工领域22年-「百千成电子」",
     description:
-      "百千成电子是专注于储能系统和智能控制技术的全球领先企业，为全球客户提供高品质的储能系统和智能控制解决方案。",
+      "【百千成电子有限公司】成立于2003年，总部位于深圳，是一家专业的SMT贴片加工与PCBA加工制造服务商。公司主营业务涵盖SMT贴片加工、PCBA设计加工，储能BMS系统研发等，致力于为全球客户提供从电子制造到整机组装的一站式OEM全流程解决方案。",
   },
     generator: 'v0.dev'
 }

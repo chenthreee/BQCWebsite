@@ -94,7 +94,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     "zh-Hans": {
       title: "联系我们",
       subtitle: "欢迎通过以下方式与我们联系",
-      breadcrumbs: [{ label: "联系我们", href: "/zh-Hans/contact.html" }],
+      breadcrumbs: [{ label: "联系我们", href: "/zh-Hans/contact" }],
       generalContact: {
         title: "联系方式（中国）",
         description: "欢迎通过以下方式与我们联系，或致电获取即时帮助：",
@@ -146,7 +146,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     en: {
       title: "Contact Us",
       subtitle: "Get in touch with us",
-      breadcrumbs: [{ label: "Contact Us", href: "/en/contact.html" }],
+      breadcrumbs: [{ label: "Contact Us", href: "/en/contact" }],
       generalContact: {
         title: "General Contact（China）",
         description: "Send us a general inquiry through below info or contact by phone for immediate assistance:",

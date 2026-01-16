@@ -112,7 +112,7 @@ export default function EnergyStorageEmsPage() {
         title={locale === "en" ? "Energy Storage EMS" : "储能EMS"}
         subtitle={locale === "en" ? "Loading..." : "加载中..."}
         breadcrumbs={[
-          { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+          { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
           { label: locale === "en" ? "Energy Storage EMS" : "储能EMS", href: `/${locale}/products/energy-storage-bms/energy-storage-ems.html` },
         ]}
@@ -134,7 +134,7 @@ export default function EnergyStorageEmsPage() {
         title={locale === "en" ? "Energy Storage EMS" : "储能EMS"}
         subtitle={locale === "en" ? "Error loading page" : "页面加载错误"}
         breadcrumbs={[
-          { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+          { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
           { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
           { label: locale === "en" ? "Energy Storage EMS" : "储能EMS", href: `/${locale}/products/energy-storage-bms/energy-storage-ems.html` },
         ]}
@@ -166,7 +166,7 @@ export default function EnergyStorageEmsPage() {
       title={categoryInfo?.title || (locale === "en" ? "Energy Storage EMS" : "储能EMS")}
       subtitle={categoryInfo?.description || (locale === "en" ? "Smart and Efficient Energy Management System Solution" : "智能高效的能源管理系统解决方案")}
       breadcrumbs={[
-        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products.html` },
+        { label: locale === "en" ? "Products Center" : "产品中心", href: `/${locale}/products` },
         { label: locale === "en" ? "Energy Storage BMS" : "储能BMS", href: `/${locale}/products/energy-storage-bms.html` },
         { label: categoryInfo?.title || (locale === "en" ? "Energy Storage EMS" : "储能EMS"), href: `/${locale}/products/energy-storage-bms/energy-storage-ems.html` },
       ]}

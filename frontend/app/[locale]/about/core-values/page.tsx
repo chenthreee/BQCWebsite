@@ -1,39 +1,21 @@
-"use client"
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import { CheckCircle } from "lucide-react"
-import { useLanguage } from "@/components/language-context"
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
 
-export default function CoreValuesPage({params}:{params:{locale:string}}) {
-  // const { t, language, setLanguage } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  // const pathname = usePathname()
-  const locale=params.locale==="en"?"en":"zh-Hans"
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+export default function CoreValuesPage({ params }: { params: { locale: string } }) {
 
-  // 根据 URL 自动切换语言
-  // useEffect(() => {
-  //   if (pathname.startsWith("/en")) setLanguage("en")
-  //   else setLanguage("zh")
-  // }, [pathname, setLanguage])
-
-  if (!mounted) {
-    return null
-  }
+  const locale = params.locale
+  const language = locale === "en" ? "en" : "zh"
 
   const content = {
     zh: {
       title: "核心价值观",
       subtitle: "我们的企业文化与价值理念",
-      breadcrumbs:[
-        {label:"关于我们",href:"/zh-Hans/about.html"},
-        {label:"核心价值观",href:"/zh-Hans/about/core-values.html"}
+      breadcrumbs: [
+        { label: "关于我们", href: "/zh-Hans/about" },
+        { label: "核心价值观", href: "/zh-Hans/about/core-values.html" }
       ],
       values: [
         {
@@ -58,9 +40,9 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
     en: {
       title: "Core Values",
       subtitle: "Our Corporate Culture and Value Principles",
-      breadcrumbs:[
-        {label:"About us",href:"/en/about.html"},
-        {label:"Core Values",href:"/en/about/core-values.html"}
+      breadcrumbs: [
+        { label: "About us", href: "/en/about" },
+        { label: "Core Values", href: "/en/about/core-values.html" }
       ],
       values: [
         {
@@ -79,13 +61,13 @@ export default function CoreValuesPage({params}:{params:{locale:string}}) {
           title: "Contribution",
           description: <span className="text-lg font-medium"> Strive to achieve carbon peaking and neutrality through technological innovation and advancements in energy storage, thereby giving back to human society and fostering sustainable development.</span>
         }
-        
+
       ],
       image: "/images/about/coreValue/coreValue.png"
     }
   }
 
-  const currentContent=locale==="en"?content.en:content.zh
+  const currentContent = locale === "en" ? content.en : content.zh
 
 
   return (
