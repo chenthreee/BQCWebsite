@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
@@ -15,6 +17,7 @@ async function getProductBySlug(slug: string, locale: string) {
       ) {
         documentId
         title
+        keyword
         slug
         description
         shortDescription
@@ -74,7 +77,8 @@ async function getProductBySlug(slug: string, locale: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { slug, locale } }),
-    cache: "no-store"
+    //cache: "no-store"
+    next: { revalidate: 300 }
   })
   const { data } = await res.json()
   if (!data || !data.products || !data.products.length) {
@@ -110,7 +114,8 @@ async function getRelatedProducts(categoryName: string, currentSlug: string, loc
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { categoryName, currentSlug, locale } }),
-    cache: "no-store"
+    //cache: "no-store"
+    next: { revalidate: 300 }
   })
   const { data } = await res.json()
   return data.products || []
@@ -124,7 +129,7 @@ function renderBlock(block: any, index: number) {
         const fileUrl = STRAPI_URL + block.file.url
         const fileExtension = block.file.url.split('.').pop()?.toLowerCase()
         const isVideo = ['mp4', 'webm', 'ogg', 'mov', 'avi'].includes(fileExtension || '')
-        
+
         return (
           <div key={index} className="mb-8">
             <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-md">
@@ -173,11 +178,11 @@ function renderBlock(block: any, index: number) {
         .replace(/<p><\/p>/g, '')
         .replace(/<p><h([1-6])>/g, '<h$1>')
         .replace(/<\/h([1-6])><\/p>/g, '</h$1>')
-        
+
       return (
         <div key={index} className="mb-8">
-          <div 
-            dangerouslySetInnerHTML={{ __html: processedBody }} 
+          <div
+            dangerouslySetInnerHTML={{ __html: processedBody }}
             className="
              text-base font-medium leading-relaxed text-gray-800
               [&_h1]:font-black [&_h1]:text-gray-900 [&_h1]:text-2xl [&_h1]:mt-8 [&_h1]:mb-0 [&_h1]:leading-tight [&_h1:first-child]:mt-0
@@ -210,9 +215,8 @@ function renderBlock(block: any, index: number) {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {block.rows?.map((row: string[], rowIndex: number) => (
-                    <tr key={rowIndex} className={`hover:bg-gray-50 transition-colors ${
-                      block.styling === 'striped' && rowIndex % 2 === 0 ? 'bg-gray-25' : ''
-                    }`}>
+                    <tr key={rowIndex} className={`hover:bg-gray-50 transition-colors ${block.styling === 'striped' && rowIndex % 2 === 0 ? 'bg-gray-25' : ''
+                      }`}>
                       {row.map((cell: string, cellIndex: number) => (
                         <td key={cellIndex} className="px-6 py-4 text-gray-800 text-base font-medium">
                           {cell}
@@ -278,11 +282,43 @@ function renderBlock(block: any, index: number) {
   }
 }
 
+
+
+//这个函数可以动态生成seo 而且因为有缓存 只需要一次访问数据库
+export async function generateMetadata(
+  { params }: { params: { slug: string; locale: string } }
+): Promise<Metadata> {
+  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const product = await getProductBySlug(params.slug, locale)
+
+  if (!product) return {}
+
+  const brandSuffix =
+    locale === "en"
+      ? " | BAIQIANCHENG Electronics"
+      : "-「百千成电子」"
+
+  const seoTitle = `${product.title}${brandSuffix}`
+  const seoDescription = product.shortDescription || ""
+  const seoKeywords = product.keyword || product.title
+
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    keywords: seoKeywords,
+    openGraph: {
+      title: seoTitle,
+      description: seoDescription,
+    }
+  }
+}
+
+
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string, locale: string }> }) {
   const resolvedParams = await params
   const locale = resolvedParams.locale === "en" ? "en" : "zh-Hans"
   const product = await getProductBySlug(resolvedParams.slug, locale)
-  
+
   if (!product) {
     notFound()
   }
@@ -321,7 +357,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 </span>
               )}
             </div>
-            
+
             {product.description && (
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
                 <p className="text-gray-700 text-lg leading-relaxed">{product.description}</p>
@@ -377,7 +413,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         {/* <div className="border-t border-gray-200 pt-12 mt-12"> */}
         <div>
           <div className="space-y-10">
-            {product.blocks && product.blocks.map((block: any, index: number) => 
+            {product.blocks && product.blocks.map((block: any, index: number) =>
               renderBlock(block, index)
             )}
           </div>

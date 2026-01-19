@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
@@ -16,6 +18,7 @@ async function getProductBySlug(slug: string, locale: string) {
       ) {
         documentId
         title
+        keyword
         slug
         description
         shortDescription
@@ -75,7 +78,9 @@ async function getProductBySlug(slug: string, locale: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { slug, locale } }),
-    cache: "no-store"
+    //cache: "no-store" 改为缓存五分钟
+    next: { revalidate: 300 }
+
   })
   const { data } = await res.json()
   if (!data || !data.products || !data.products.length) {
@@ -112,7 +117,9 @@ async function getRelatedProducts(categoryName: string, subCategoryName: string,
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { categoryName, subCategoryName, currentSlug, locale } }),
-    cache: "no-store"
+    // cache: "no-store"
+    next: { revalidate: 300 }
+
   })
   const { data } = await res.json()
   return data.products || []
@@ -280,6 +287,36 @@ function renderBlock(block: any, index: number) {
       return null
   }
 }
+
+//这个函数可以动态生成seo 而且因为有缓存 只需要一次访问数据库
+export async function generateMetadata(
+  { params }: { params: { slug: string; locale: string } }
+): Promise<Metadata> {
+  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const product = await getProductBySlug(params.slug, locale)
+
+  if (!product) return {}
+
+  const brandSuffix =
+    locale === "en"
+      ? " | BAIQIANCHENG Electronics"
+      : "-「百千成电子」"
+
+  const seoTitle = `${product.title}${brandSuffix}`
+  const seoDescription = product.shortDescription || ""
+  const seoKeywords = product.keyword || product.title
+
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    keywords: seoKeywords,
+    openGraph: {
+      title: seoTitle,
+      description: seoDescription,
+    }
+  }
+}
+
 
 export default async function ProductDetailPage({ params }: { params: { slug: string, locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans"
