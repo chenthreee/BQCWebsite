@@ -1,3 +1,5 @@
+import type {Metadata} from "next"
+
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,6 +15,7 @@ async function getArticleBySlug(slug: string, locale: string) {
       articles(filters: { slug: { eq: $slug } }, locale: $locale) {
         documentId
         title
+        keyword
         category { name }
         author { name }
         publishedAt
@@ -33,7 +36,8 @@ async function getArticleBySlug(slug: string, locale: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { slug, locale } }),
-    cache: "no-store"
+    //cache: "no-store"
+    next:{revalidate:300}
   })
   const { data } = await res.json()
   if (!data || !data.articles || !data.articles.length) {
@@ -59,11 +63,42 @@ async function getAllCompanyNewsSlugs(locale: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { locale } }),
-    cache: "no-store"
+    //cache: "no-store"
+    next:{revalidate:300}
   });
   const { data } = await res.json();
   return data.articles || [];
 }
+
+//自动每个页面单独title、keyword、description
+export async function generateMetadata(
+  { params }: { params: { slug: string; locale: string } }
+): Promise<Metadata> {
+  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const article = await getArticleBySlug(params.slug, locale)
+
+  if (!article) return {}
+
+  const brandSuffix =
+    locale === "en"
+      ? " | BAIQIANCHENG Electronics"
+      : "-「百千成电子」"
+
+  const seoTitle = `${article.title}${brandSuffix}`
+  const seoDescription = article.description || ""
+  const seoKeywords = article.keyword || article.title
+
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    keywords: seoKeywords,
+    openGraph: {
+      title: seoTitle,
+      description: seoDescription,
+    },
+  }
+}
+
 
 export default async function NewsDetailPage({ params }: { params: { slug: string, locale: string } }) {
   const locale = params.locale === "en" ? "en" : "zh-Hans";
@@ -100,7 +135,8 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables: { category, slug: params.slug, locale } }),
-      cache: "no-store"
+      //cache: "no-store"
+      next:{revalidate:300}
     });
     const { data } = await res.json();
     return data.articles || [];
