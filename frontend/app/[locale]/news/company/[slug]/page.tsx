@@ -1,4 +1,4 @@
-import type {Metadata} from "next"
+import type { Metadata } from "next"
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
@@ -37,7 +37,7 @@ async function getArticleBySlug(slug: string, locale: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { slug, locale } }),
     //cache: "no-store"
-    next:{revalidate:300}
+    next: { revalidate: 300 }
   })
   const { data } = await res.json()
   if (!data || !data.articles || !data.articles.length) {
@@ -64,7 +64,7 @@ async function getAllCompanyNewsSlugs(locale: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables: { locale } }),
     //cache: "no-store"
-    next:{revalidate:300}
+    next: { revalidate: 300 }
   });
   const { data } = await res.json();
   return data.articles || [];
@@ -136,7 +136,7 @@ export default async function NewsDetailPage({ params }: { params: { slug: strin
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables: { category, slug: params.slug, locale } }),
       //cache: "no-store"
-      next:{revalidate:300}
+      next: { revalidate: 300 }
     });
     const { data } = await res.json();
     return data.articles || [];
