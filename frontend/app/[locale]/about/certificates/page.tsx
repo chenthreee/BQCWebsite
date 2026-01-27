@@ -48,7 +48,6 @@ export default function CertificatesPage({ params }: { params: { locale: string 
   const currentContent = locale === "en" ? content.en : content.zh
 
 
-
   return (
     <PageLayout
       title={currentContent.title}
@@ -109,15 +108,39 @@ export default function CertificatesPage({ params }: { params: { locale: string 
         <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.honorsTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {honors.map((honor, index) => (
-            <div key={honor.id} className="bg-white rounded-lg shadow-md  overflow-hidden text-center p-16">
-              <div className="h-40 overflow-hidden ">
-                <Image src={honor.image} alt={honor.title} width={300} height={300}
-                  className="w-full h-full object-contain"
+            <Link
+              key={honor.id}
+              href={`/${locale}/about/certificates/${honor.id}.html`}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer group text-center p-16"
+            >
+              <div className="h-40 overflow-hidden">
+                <Image
+                  src={honor.image}
+                  alt={honor.title}
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3">{honor.title}</h3>
-              <p className="text-gray-700">{honor.description}</p>
-            </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{honor.title}</h3>
+              <p className="text-gray-700 mb-4">{honor.description}</p>
+              <div className="text-blue-600 font-medium flex items-center justify-center">
+                {currentContent.viewDetails}
+                <svg
+                  className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

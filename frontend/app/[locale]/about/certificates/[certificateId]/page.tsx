@@ -4,15 +4,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
-import { certificatesData } from "@/data/certificates"
+import { certificatesData, honorsData } from "@/data/certificates"
 
 
 export async function generateStaticParams() {
   const certificateIds = certificatesData.zh.map((cert) => cert.id)
+  const honorIds = honorsData.zh.map((honor) => honor.id)
+  const allIds = [...certificateIds, ...honorIds]
   const locales = ["zh-Hans", "en"]
 
   return locales.flatMap((locale) =>
-    certificateIds.map((id) => ({
+    allIds.map((id) => ({
       locale,
       certificateId: id,
     }))
@@ -21,8 +23,18 @@ export async function generateStaticParams() {
 
 
 function getCertificateById(id: string, locale: string) {
-  const data = locale === "en" ? certificatesData.en : certificatesData.zh
-  return data.find((cert) => cert.id === id)
+  const certData = locale === "en" ? certificatesData.en : certificatesData.zh
+  const honorData = locale === "en" ? honorsData.en : honorsData.zh
+
+  // 先从证书数据中查找
+  let certificate = certData.find((cert) => cert.id === id)
+
+  // 如果没找到，再从荣誉数据中查找
+  if (!certificate) {
+    certificate = honorData.find((honor) => honor.id === id)
+  }
+
+  return certificate
 }
 
 

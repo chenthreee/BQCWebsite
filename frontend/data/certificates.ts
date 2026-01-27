@@ -156,7 +156,7 @@ export const certificatesData = {
     {
       id: "ce",
       title: "CE",
-      description: "CE认证是欧盟对产品安全、健康、环保及消费者保护的强制性认证标志，是产品进入欧洲经济区市场的法定通行证",
+      description: "CE认证是欧盟针对产品安全、健康、环保及消费者保护要求设立的强制性认证标志，表明产品符合欧盟相关指令和协调标准。获得CE认证意味着产品可以合法进入欧洲经济区（EEA）市场，体现企业在产品设计、制造和质量控制方面的合规性与可靠性。CE认证不仅提升产品国际竞争力，也增强客户对产品安全性和品质的信任。",
       image: "/images/about/certificates/CE.png",
       issueDate: "2016年",
       validUntil: "2027年",
@@ -179,7 +179,61 @@ export const certificatesData = {
           "保持产品符合性"
         ]
       }
-    }
+    },
+    // {
+    //   id: "highTechEnterprise",
+    //   title: "高新技术企业",
+    //   description: "高新技术企业证书是国家对企业技术创新能力、研发投入、知识产权及科技成果转化能力的权威认定。获得该资质表明企业在核心技术、产品创新和研发体系方面达到国家高新技术企业标准，具备持续创新和技术领先优势。该认证不仅提升企业品牌价值和行业影响力，也体现其在技术研发和产业升级方面的综合实力。",
+    //   image: "/images/about/certificates/高新技术企业证书.png",
+    //   issueDate: "2022年",
+    //   validUntil: "2025年",
+    //   detailedInfo: {
+    //     fullName: "高新技术企业证书",
+    //     scope: "适用于具备技术创新能力的企业",
+    //     certificationBody: "国家科技部、财政部、税务总局",
+    //     benefits: [
+    //       "享受企业所得税优惠政策",
+    //       "提升企业品牌价值和市场影响力",
+    //       "增强技术创新和研发能力",
+    //       "获得政府资金支持和项目优先权",
+    //       "提高企业核心竞争力"
+    //     ],
+    //     requirements: [
+    //       "拥有核心自主知识产权",
+    //       "产品或服务属于国家重点支持的高新技术领域",
+    //       "研发费用占销售收入比例达标",
+    //       "高新技术产品收入占比达标",
+    //       "具备完善的研发组织管理体系"
+    //     ]
+    //   }
+    // },
+    // {
+    //   id: "specializedSME",
+    //   title: "深圳市专精特新中小企业",
+    //   description: "深圳市专精特新中小企业证书是对企业在专业化、精细化、特色化和创新能力方面的权威认定。获得该资质表明企业在细分领域具备核心技术优势、稳定的产品质量和持续创新能力，具有较强的市场竞争力和成长潜力。该认证体现了企业在技术实力、产品差异化和行业影响力方面的综合优势。",
+    //   image: "/images/about/certificates/深圳市专精特新中小企业.png",
+    //   issueDate: "2023年",
+    //   validUntil: "2026年",
+    //   detailedInfo: {
+    //     fullName: "深圳市专精特新中小企业证书",
+    //     scope: "适用于专注细分市场的创新型中小企业",
+    //     certificationBody: "深圳市工业和信息化局",
+    //     benefits: [
+    //       "获得政府专项资金支持",
+    //       "享受融资贷款优惠政策",
+    //       "提升企业品牌认可度",
+    //       "优先参与政府采购项目",
+    //       "增强市场竞争力和行业影响力"
+    //     ],
+    //     requirements: [
+    //       "专注于细分市场领域",
+    //       "具备较强的创新能力和研发实力",
+    //       "拥有核心技术和自主知识产权",
+    //       "产品质量稳定且具有市场竞争力",
+    //       "经营管理规范且成长性良好"
+    //     ]
+    //   }
+    // }
   ],
   en: [
     {
@@ -320,7 +374,7 @@ export const certificatesData = {
     {
       id: "ce",
       title: "CE",
-      description: "CE is a mandatory certification mark for products in the European Economic Area, ensuring safety, health, environmental protection, and consumer protection.",
+      description: "CE certification is a mandatory conformity mark for products entering the European Economic Area (EEA), demonstrating compliance with EU requirements on safety, health, environmental protection, and consumer rights. Obtaining CE certification indicates that a product meets relevant EU directives and harmonized standards. It reflects the company's strong capabilities in product design, manufacturing, and quality control, enhancing market access, international competitiveness, and customer confidence.",
       image: "/images/about/certificates/CE.png",
       issueDate: "2016",
       validUntil: "2027",
@@ -343,7 +397,61 @@ export const certificatesData = {
           "Maintain product conformity"
         ]
       }
-    }
+    },
+    // {
+    //   id: "highTechEnterprise",
+    //   title: "High-Tech Enterprise Certificate",
+    //   description: "The High-Tech Enterprise Certificate is an official recognition of a company's technological innovation capabilities, R&D investment, intellectual property, and commercialization of scientific achievements. This qualification indicates that the company meets national standards for high-tech enterprises, demonstrating strong core technologies, innovation capacity, and sustainable development potential. It enhances corporate brand value, industry influence, and competitiveness in technology-driven markets.",
+    //   image: "/images/about/certificates/高新技术企业证书.png",
+    //   issueDate: "2022",
+    //   validUntil: "2025",
+    //   detailedInfo: {
+    //     fullName: "High-Tech Enterprise Certificate",
+    //     scope: "Applicable to enterprises with technological innovation capabilities",
+    //     certificationBody: "Ministry of Science and Technology, Ministry of Finance, State Taxation Administration",
+    //     benefits: [
+    //       "Enjoy corporate income tax incentives",
+    //       "Enhance corporate brand value and market influence",
+    //       "Strengthen technological innovation and R&D capabilities",
+    //       "Obtain government funding support and project priority",
+    //       "Improve core competitiveness"
+    //     ],
+    //     requirements: [
+    //       "Possess core independent intellectual property rights",
+    //       "Products or services belong to national key high-tech fields",
+    //       "R&D expenses meet required percentage of sales revenue",
+    //       "High-tech product revenue meets required proportion",
+    //       "Establish comprehensive R&D organization and management system"
+    //     ]
+    //   }
+    // },
+    // {
+    //   id: "specializedSME",
+    //   title: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
+    //   description: "The Shenzhen \"Specialized, Sophisticated, Distinctive and Innovative\" SME Certificate recognizes enterprises with strong specialization, refined management, distinctive products, and innovation capabilities. This qualification demonstrates the company's core technological strengths, stable product quality, and continuous innovation in niche markets. It highlights the enterprise's competitiveness, growth potential, and comprehensive advantages in technology, product differentiation, and industry positioning.",
+    //   image: "/images/about/certificates/深圳市专精特新中小企业.png",
+    //   issueDate: "2023",
+    //   validUntil: "2026",
+    //   detailedInfo: {
+    //     fullName: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
+    //     scope: "Applicable to innovative SMEs focused on niche markets",
+    //     certificationBody: "Shenzhen Municipal Bureau of Industry and Information Technology",
+    //     benefits: [
+    //       "Receive government special funding support",
+    //       "Enjoy preferential financing and loan policies",
+    //       "Enhance corporate brand recognition",
+    //       "Priority participation in government procurement projects",
+    //       "Strengthen market competitiveness and industry influence"
+    //     ],
+    //     requirements: [
+    //       "Focus on niche market segments",
+    //       "Possess strong innovation capabilities and R&D strength",
+    //       "Own core technologies and independent intellectual property",
+    //       "Maintain stable product quality and market competitiveness",
+    //       "Demonstrate standardized management and strong growth potential"
+    //     ]
+    //   }
+    // }
   ]
 }
 
@@ -351,30 +459,114 @@ export const certificatesData = {
 export const honorsData = {
   zh: [
     {
-      id: "high-tech",
+      id: "highTechEnterprise",
       title: "高新技术企业",
-      description: "国高证书即高新技术企业认定证书，证明企业符合国家高新技术领域要求，含金量高，可享多项政策优惠.",
-      image: "/images/about/certificates/高新技术企业证书.png"
+      description: "高新技术企业证书是国家对企业技术创新能力、研发投入、知识产权及科技成果转化能力的权威认定。获得该资质表明企业在核心技术、产品创新和研发体系方面达到国家高新技术企业标准，具备持续创新和技术领先优势。该认证不仅提升企业品牌价值和行业影响力，也体现其在技术研发和产业升级方面的综合实力。",
+      image: "/images/about/certificates/高新技术企业证书.png",
+      issueDate: "2022年",
+      validUntil: "2025年",
+      detailedInfo: {
+        fullName: "高新技术企业证书",
+        scope: "适用于具备技术创新能力的企业",
+        certificationBody: "国家科技部、财政部、税务总局",
+        benefits: [
+          "享受企业所得税优惠政策",
+          "提升企业品牌价值和市场影响力",
+          "增强技术创新和研发能力",
+          "获得政府资金支持和项目优先权",
+          "提高企业核心竞争力"
+        ],
+        requirements: [
+          "拥有核心自主知识产权",
+          "产品或服务属于国家重点支持的高新技术领域",
+          "研发费用占销售收入比例达标",
+          "高新技术产品收入占比达标",
+          "具备完善的研发组织管理体系"
+        ]
+      }
     },
     {
-      id: "specialized",
+      id: "specializedSME",
       title: "深圳市专精特新中小企业",
-      description: "专精特新中小企业是专注于细分市场、创新能力强、市场占有率高、掌握关键核心技术、质量效益优的排头兵企业。",
-      image: "/images/about/certificates/深圳市专精特新中小企业.png"
+      description: "深圳市专精特新中小企业证书是对企业在专业化、精细化、特色化和创新能力方面的权威认定。获得该资质表明企业在细分领域具备核心技术优势、稳定的产品质量和持续创新能力，具有较强的市场竞争力和成长潜力。该认证体现了企业在技术实力、产品差异化和行业影响力方面的综合优势。",
+      image: "/images/about/certificates/深圳市专精特新中小企业.png",
+      issueDate: "2022年",
+      validUntil: "2025年",
+      detailedInfo: {
+        fullName: "深圳市专精特新中小企业证书",
+        scope: "适用于专注细分市场的创新型中小企业",
+        certificationBody: "深圳市工业和信息化局",
+        benefits: [
+          "获得政府专项资金支持",
+          "享受融资贷款优惠政策",
+          "提升企业品牌认可度",
+          "优先参与政府采购项目",
+          "增强市场竞争力和行业影响力"
+        ],
+        requirements: [
+          "专注于细分市场领域",
+          "具备较强的创新能力和研发实力",
+          "拥有核心技术和自主知识产权",
+          "产品质量稳定且具有市场竞争力",
+          "经营管理规范且成长性良好"
+        ]
+      }
     }
   ],
   en: [
     {
-      id: "high-tech",
-      title: "High-Tech Enterprise",
-      description: "The High-Tech Enterprise certificate is a certificate that proves that the enterprise meets the requirements of the national high-tech enterprise field, with high content and can enjoy multiple policy preferential.",
-      image: "/images/about/certificates/高新技术企业证书.png"
+      id: "highTechEnterprise",
+      title: "High-Tech Enterprise Certificate",
+      description: "The High-Tech Enterprise Certificate is an official recognition of a company's technological innovation capabilities, R&D investment, intellectual property, and commercialization of scientific achievements. This qualification indicates that the company meets national standards for high-tech enterprises, demonstrating strong core technologies, innovation capacity, and sustainable development potential. It enhances corporate brand value, industry influence, and competitiveness in technology-driven markets.",
+      image: "/images/about/certificates/高新技术企业证书.png",
+      issueDate: "2022",
+      validUntil: "2025",
+      detailedInfo: {
+        fullName: "High-Tech Enterprise Certificate",
+        scope: "Applicable to enterprises with technological innovation capabilities",
+        certificationBody: "Ministry of Science and Technology, Ministry of Finance, State Taxation Administration",
+        benefits: [
+          "Enjoy corporate income tax incentives",
+          "Enhance corporate brand value and market influence",
+          "Strengthen technological innovation and R&D capabilities",
+          "Obtain government funding support and project priority",
+          "Improve core competitiveness"
+        ],
+        requirements: [
+          "Possess core independent intellectual property rights",
+          "Products or services belong to national key high-tech fields",
+          "R&D expenses meet required percentage of sales revenue",
+          "High-tech product revenue meets required proportion",
+          "Establish comprehensive R&D organization and management system"
+        ]
+      }
     },
     {
-      id: "specialized",
-      title: "Shenzhen Special New and Small Enterprises",
-      description: "Specialized, refined, distinctive and innovative small and medium-sized enterprises are leading enterprises that focus on niche markets, have strong innovation capabilities, high market share, master key core technologies, and have excellent quality and efficiency",
-      image: "/images/about/certificates/深圳市专精特新中小企业.png"
+      id: "specializedSME",
+      title: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
+      description: "The Shenzhen \"Specialized, Sophisticated, Distinctive and Innovative\" SME Certificate recognizes enterprises with strong specialization, refined management, distinctive products, and innovation capabilities. This qualification demonstrates the company's core technological strengths, stable product quality, and continuous innovation in niche markets. It highlights the enterprise's competitiveness, growth potential, and comprehensive advantages in technology, product differentiation, and industry positioning.",
+      image: "/images/about/certificates/深圳市专精特新中小企业.png",
+      issueDate: "2022",
+      validUntil: "2025",
+      detailedInfo: {
+        fullName: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
+        scope: "Applicable to innovative SMEs focused on niche markets",
+        certificationBody: "Shenzhen Municipal Bureau of Industry and Information Technology",
+        benefits: [
+          "Receive government special funding support",
+          "Enjoy preferential financing and loan policies",
+          "Enhance corporate brand recognition",
+          "Priority participation in government procurement projects",
+          "Strengthen market competitiveness and industry influence"
+        ],
+        requirements: [
+          "Focus on niche market segments",
+          "Possess strong innovation capabilities and R&D strength",
+          "Own core technologies and independent intellectual property",
+          "Maintain stable product quality and market competitiveness",
+          "Demonstrate standardized management and strong growth potential"
+        ]
+      }
     }
   ]
 }
