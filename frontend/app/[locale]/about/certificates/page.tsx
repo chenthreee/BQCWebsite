@@ -1,13 +1,18 @@
-"use client"
-
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
+import Link from "next/link"
+import { certificatesData, honorsData } from "@/data/certificates"
 
 
 export default function CertificatesPage({ params }: { params: { locale: string } }) {
   const locale = params.locale
   const language = locale === "en" ? "en" : "zh"
-  // 证书内容（中英文）
+
+  // 使用共享数据
+  const certificates = locale === "en" ? certificatesData.en : certificatesData.zh
+  const honors = locale === "en" ? honorsData.en : honorsData.zh
+
+  // 页面内容（中英文）
   const content = {
     zh: {
       title: "资质证书",
@@ -20,76 +25,8 @@ export default function CertificatesPage({ params }: { params: { locale: string 
         title: "我们的资质",
         description: "百千成电子通过了多项国际认证和资质认定，证明了公司在质量管理、环境保护、职业健康安全等方面的卓越表现，以及在技术创新方面的实力。"
       },
-      certificates: [
-        {
-          title: "ISO9001",
-          description: "ISO9001 是国际标准化组织制定的质量管理体系标准，强调以顾客为中心，注重持续改进。",
-          image: "/images/about/certificates/ISO9001.png",
-          issueDate: "2019年",
-          validUntil: "2025年",
-        },
-        {
-          title: "ISO14001",
-          description: "ISO14001是国际标准化组织制定的环境管理体系标准，助企业减环境影响，促可持续发展。",
-          image: "/images/about/certificates/ISO14001.png",
-          issueDate: "2018年",
-          validUntil: "2027年",
-        },
-        {
-          title: "ISO13485",
-          description: "ISO13485是适用于医疗器械法规环境的质量管理体系标准，强调风险管控与法规符合。",
-          image: "/images/about/certificates/ISO13485.png",
-          issueDate: "2015年",
-          validUntil: "2027年",
-        },
-        {
-          title: "IATF16949",
-          description: "IATF16949 是国际汽车工作组制定的汽车行业质量管理体系标准，基于 ISO9001，增加行业特定要求。",
-          image: "/images/about/certificates/IATF16949.png",
-          issueDate: "2022年",
-          validUntil: "2025年",
-        },
-
-        {
-          title: "UL",
-          description: "UL是美国针对家用电动个人美容用品的安全标准，旨在保障产品使用安全。",
-          image: "/images/about/certificates/UL895.png",
-          issueDate: "2016年",
-          validUntil: "2027年",
-        },
-        {
-          title: "CE",
-          description: "CE认证是欧盟对产品安全、健康、环保及消费者保护的强制性认证标志，是产品进入欧洲经济区市场的法定通行证",
-          image: "/images/about/certificates/CE.png",
-          issueDate: "2016年",
-          validUntil: "2027年",
-        },
-
-      ],
-      honors: {
-        title: "企业荣誉",
-        items: [
-          {
-            title: "高新技术企业",
-            description: "国高证书即高新技术企业认定证书，证明企业符合国家高新技术领域要求，含金量高，可享多项政策优惠.",
-            image: "/images/about/certificates/高新技术企业证书.png"
-          },
-          {
-            title: "深圳市专精特新中小企业",
-            description: "专精特新中小企业是专注于细分市场、创新能力强、市场占有率高、掌握关键核心技术、质量效益优的排头兵企业。",
-            image: "/images/about/certificates/深圳市专精特新中小企业.png"
-          },
-          // {
-          //   title: "待填写",
-          //   description: "待填写",
-          //   image: "/placeholder.svg"
-          // }
-        ]
-      },
-      dateLabels: {
-        issueDate: "发证日期：",
-        validUntil: "有效期至："
-      }
+      honorsTitle: "企业荣誉",
+      viewDetails: "查看详情"
     },
     en: {
       title: "Certificates",
@@ -102,74 +39,8 @@ export default function CertificatesPage({ params }: { params: { locale: string 
         title: "Our Qualifications",
         description: "BQC Electronics has obtained multiple international certifications, demonstrating our commitment to quality management, environmental protection, occupational health and safety, and technological innovation excellence."
       },
-      certificates: [
-        {
-          title: "ISO9001",
-          description: "ISO9001 is an international standard for quality management systems, emphasizing customer focus and continuous improvement.",
-          image: "/images/about/certificates/ISO9001_en.png",
-          issueDate: "2019",
-          validUntil: "2025",
-        },
-        {
-          title: "ISO14001",
-          description: "ISO14001 is an international standard for environmental management systems, helping businesses reduce environmental impact and promote sustainable development.",
-          image: "/images/about/certificates/ISO14001_en.png",
-          issueDate: "2018",
-          validUntil: "2027",
-        },
-        {
-          title: "ISO13485",
-          description: "ISO13485 is an international standard for quality management systems for medical devices, emphasizing risk control and compliance with regulations.",
-          image: "/images/about/certificates/ISO13485_en.png",
-          issueDate: "2015",
-          validUntil: "2027",
-        },
-        {
-          title: "IATF16949",
-          description: "IATF16949 is an automotive quality management system standard developed by the International Automotive Task Force, based on ISO9001 and adding industry-specific requirements.",
-          image: "/images/about/certificates/IATF16949_en.png",
-          issueDate: "2022",
-          validUntil: "2025",
-        },
-        {
-          title: "UL",
-          description: "UL is a safety standard for home electric personal grooming appliances in the United States, aimed at ensuring product safety.",
-          image: "/images/about/certificates/UL895.png",
-          issueDate: "2016",
-          validUntil: "2027",
-        },
-        {
-          title: "CE",
-          description: "CE is a mandatory certification mark for products in the European Economic Area, ensuring safety, health, environmental protection, and consumer protection.",
-          image: "/images/about/certificates/CE.png",
-          issueDate: "2016",
-          validUntil: "2027",
-        }
-      ],
-      honors: {
-        title: "Enterprise Honors",
-        items: [
-          {
-            title: "High-Tech Enterprise",
-            description: "The High-Tech Enterprise certificate is a certificate that proves that the enterprise meets the requirements of the national high-tech enterprise field, with high content and can enjoy multiple policy preferential.",
-            image: "/images/about/certificates/高新技术企业证书.png"
-          },
-          {
-            title: "Shenzhen Special New and Small Enterprises",
-            description: "Specialized, refined, distinctive and innovative small and medium-sized enterprises are leading enterprises that focus on niche markets, have strong innovation capabilities, high market share, master key core technologies, and have excellent quality and efficiency",
-            image: "/images/about/certificates/深圳市专精特新中小企业.png"
-          },
-          // {
-          //   title: "To be filled",
-          //   description: "To be filled",
-          //   image: "/placeholder.svg"
-          // }
-        ]
-      },
-      dateLabels: {
-        issueDate: "Issue Date: ",
-        validUntil: "Valid Until: "
-      }
+      honorsTitle: "Enterprise Honors",
+      viewDetails: "View Details"
     }
   }
 
@@ -193,34 +64,52 @@ export default function CertificatesPage({ params }: { params: { locale: string 
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {currentContent.certificates.map((certificate, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+        {certificates.map((certificate, index) => (
+          <Link
+            key={certificate.id}
+            href={`/${locale}/about/certificates/${certificate.id}.html`}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
+          >
             <div className="h-64 overflow-hidden">
               <Image
                 src={certificate.image}
                 alt={certificate.title}
                 width={600}
                 height={400}
-                className="w-full h-full object-contain p-4"
+                className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">{certificate.title}</h3>
-              <p className="text-gray-700 mb-4">{certificate.description}</p>
-              <div className="flex justify-between text-sm text-gray-500">
-                <div>{currentContent.dateLabels.issueDate}{certificate.issueDate}</div>
-                <div>{currentContent.dateLabels.validUntil}{certificate.validUntil}</div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+                {certificate.title}
+              </h3>
+              <p className="text-gray-700 mb-4 line-clamp-3">{certificate.description}</p>
+              <div className="text-blue-600 font-medium flex items-center">
+                {currentContent.viewDetails}
+                <svg
+                  className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       <div className="bg-gray-100 p-4 rounded-lg">
-        <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.honors.title}</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.honorsTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {currentContent.honors.items.map((honor, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md  overflow-hidden text-center p-16">
+          {honors.map((honor, index) => (
+            <div key={honor.id} className="bg-white rounded-lg shadow-md  overflow-hidden text-center p-16">
               <div className="h-40 overflow-hidden ">
                 <Image src={honor.image} alt={honor.title} width={300} height={300}
                   className="w-full h-full object-contain"

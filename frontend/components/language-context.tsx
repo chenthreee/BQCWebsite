@@ -352,9 +352,9 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Learn More",
   },
   "footer.copyright": {
-    zh: "© 2025 深圳市百千成电子有限公司. 版权所有.",
-    "zh-Hans": "© 2025 深圳市百千成电子有限公司. 版权所有.",
-    en: "© 2025 Shenzhen BAIQIANCHENG Electronics Co., Ltd. All rights reserved.",
+    zh: "© 2026 深圳市百千成电子有限公司. 版权所有.",
+    "zh-Hans": "© 2026 深圳市百千成电子有限公司. 版权所有.",
+    en: "© 2026 Shenzhen BAIQIANCHENG Electronics Co., Ltd. All rights reserved.",
   },
   "section.innovativeSolutions": {
     zh: "创新储能解决方案",

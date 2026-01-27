@@ -48,8 +48,8 @@ const translations: Record<string, Record<string, string>> = {
     "en": "Contact Us",
   },
   "footer.copyright": {
-    "zh-Hans": "© 2025 深圳市百千成电子有限公司. 版权所有.",
-    "en": "© 2025 Shenzhen BAIQIANCHENG Electronics Co., Ltd. All rights reserved.",
+    "zh-Hans": "© 2026 深圳市百千成电子有限公司. 版权所有.",
+    "en": "© 2026 Shenzhen BAIQIANCHENG Electronics Co., Ltd. All rights reserved.",
   },
   "footer.legal": {
     "zh-Hans": "法律声明",
