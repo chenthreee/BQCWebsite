@@ -169,6 +169,12 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
           ]
         }
       },
+      talent: {
+        title: "技术人才储备",
+        desc: "专业团队支撑产品全生命周期开发。",
+        description: "百千成电子拥有超过35名研发与工程人员，团队成员多数来自于985/211本硕，8年以上工作经验的老员工占比60%；涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程。",
+        image: "/images/about/manufacturing/talentDistribution.png"
+      },
     },
     en: {
       title: "Manufacturing Capabilities",
@@ -330,6 +336,12 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
           ]
         }
       },
+      talent: {
+        title: "Technical Talent Reserve",
+        desc: "Professional team supporting full product lifecycle development.",
+        description: "BQC Electronics has over 35 R&D and engineering personnel, with most team members holding bachelor's or master's degrees from top-tier universities (985/211). 60% of employees have more than 8 years of work experience. The team covers hardware, software, structure, ID/MD/SMT/PCBA design and verification, supporting customers from concept to mass production.",
+        image: "/images/about/manufacturing/talentDistribution.png"
+      },
     }
   }
 
@@ -391,6 +403,7 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
         {/* 装片运载能力参数 */}
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2>
           <p className="text-center text-gray-500 text-sm mb-6">{currentContent.parameters.desc}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -414,6 +427,28 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 技术人才储备 reserve of talents*/}
+        <div >
+          <h2 className="text-3xl font-bold mb-6 text-center">{currentContent.talent.title}</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">{currentContent.talent.desc}</p>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center">
+              {currentContent.talent.description}
+            </p>
+            <div className="flex justify-center">
+              <div className="w-full max-w-3xl bg-white p-4 rounded-lg shadow-md">
+                <Image
+                  src={currentContent.talent.image}
+                  alt={currentContent.talent.title}
+                  width={800}
+                  height={500}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>

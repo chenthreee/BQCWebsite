@@ -52,12 +52,28 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
+            image: "/images/services/4.png",
+            imagePosition: "left",
+            content: [
+              "供应商管理：",
+              "公司长期与NXP、ST、TI等原厂及Arrow/Future/Avnet等全球代理长期深度合作、高层关系默契，价格与交期具备显著优势，计划未来可预期，交付更准时。",
+              
+            ]
+          },
+          {
+            image: "/images/services/2.png",
+            imagePosition: "right",
+            content: [
+              "智能制造：",
+              "我们以“设计即质量、制造即数据”为原则，贯穿 DFM→来料→贴片→焊接→测试→组装→老化→包装→出货全流程。工厂采用 SPI/AOI/X-Ray、ICT/FCT、自动化测试治具与 MES 追溯体系，批次级追踪物料、工序与参数，确保高一致性与可复制的量产品质。",
+            ]
+          },
+          {
             image: "/images/services/2.png",
             imagePosition: "left",
             content: [
-              "质量与智能制造：",
-              "我们以“设计即质量、制造即数据”为原则，贯穿 DFM→来料→贴片→焊接→测试→组装→老化→包装→出货全流程。工厂采用 SPI/AOI/X-Ray、ICT/FCT、自动化测试治具与 MES 追溯体系，批次级追踪物料、工序与参数，确保高一致性与可复制的量产品质。",
-              "全面认证体系： ISO 9001｜ISO 14001｜ISO 13485｜IATF 16949｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关"
+              "质量管理体系：",
+              "全面认证体系： ISO 9001｜ISO 14001｜ISO 13485｜IATF 16949｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关，确保产品交付品质。"
             ]
           },
           {
@@ -71,8 +87,8 @@ export default function OemServicePage({ params }: { params: { locale: string } 
               "• 定制测试系统：上位机+全自动测试治具，自动烧录与功能测试，降低人为误差",
               "• 灵活付款：基于保险批复提供更灵活的账期方案",
               "• 成本优化：在不改动设计的前提下进行PIN-to-PIN 国产/国际替代，BOM平均降本20-30%",
-              "供应链与背书：",
-              "服务覆盖AI 机器人与新能源等行业生态，量产验证充分；BMS 累计装机 50GWh+。与 NXP、ST、TI 等原厂及 Arrow / Future / Avnet 等全球代理深度合作，价格与交期更可控，计划更可预期,交付更准时。"
+              // "供应链与背书：",
+              // "服务覆盖AI 机器人与新能源等行业生态，量产验证充分；BMS 累计装机 50GWh+。与 NXP、ST、TI 等原厂及 Arrow / Future / Avnet 等全球代理深度合作，价格与交期更可控，计划更可预期,交付更准时。"
             ]
           }
         ]
@@ -109,12 +125,28 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
+            image: "/images/services/4.png",
+            imagePosition: "left",
+            content: [
+              "Supplier Management：",
+              "The Company has long maintained deep cooperation with orignal equipment manufacturers such as NXP, ST, and TI, as well as global distributors like Arrow, Future, and Avnet. The senior management team has ezxellent communication skills, and the company enjoys significant advantages in terms of price and delivery time. The plans are predictable, and the delivery times are more punctual.",
+              
+            ]
+          },
+          {
+            image: "/images/services/2.png",
+            imagePosition: "right",
+            content: [
+              "Intelligent Manufacturing System：",
+              "We follow the principle of “quality by design, manufacturing by data” across the entire lifecycle: DFM → incoming inspection → SMT → soldering → testing → assembly → burn-in → packing → shipment. Our plants deploy SPI/AOI/X-Ray, ICT/FCT, automated test jigs, and an MES traceability system to track materials, processes, and parameters at the lot/batch level, ensuring high consistency and repeatable mass-production quality.",
+            ]
+          },
+          {
             image: "/images/services/2.png",
             imagePosition: "left",
             content: [
-              "Quality & Smart Manufacturing：",
-              "We follow the principle of “quality by design, manufacturing by data” across the entire lifecycle: DFM → incoming inspection → SMT → soldering → testing → assembly → burn-in → packing → shipment. Our plants deploy SPI/AOI/X-Ray, ICT/FCT, automated test jigs, and an MES traceability system to track materials, processes, and parameters at the lot/batch level, ensuring high consistency and repeatable mass-production quality.",
-              "Comprehensive Certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control.",
+              "Quality Management System：",
+              "Comprehensive Certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control, Ensure the quality of product delivery.",
             ]
           },
           {
@@ -128,8 +160,8 @@ export default function OemServicePage({ params }: { params: { locale: string } 
               "• Custom test systems: host software + fully automatic test jigs for auto programming & functional testing, reducing human error",
               "• Flexible payment terms enabled by trade-credit/insurance approvals",
               "• Cost optimization: PIN-to-PIN domestic/international alternates without design changes, delivering 20-30% BOM savings",
-              "Supply Chain & Endorsements：",
-              "Our services span the AI-robotics and new-energy ecosystems and are fully validated in mass production; BMS deployments exceed 35 GWh cumulatively. We maintain deep partnerships with NXP, ST, TI, and global distributors such as Arrow, Future, and Avnet, enabling more controllable pricing and lead times, more predictable planning, and more on-time delivery."
+              // "Supply Chain & Endorsements：",
+              // "Our services span the AI-robotics and new-energy ecosystems and are fully validated in mass production; BMS deployments exceed 35 GWh cumulatively. We maintain deep partnerships with NXP, ST, TI, and global distributors such as Arrow, Future, and Avnet, enabling more controllable pricing and lead times, more predictable planning, and more on-time delivery."
             ]
           }
         ]

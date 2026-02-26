@@ -37,34 +37,34 @@ function getCertificateById(id: string, locale: string) {
   return certificate
 }
 
+//这个地方编写生成title keyword description的通用规则
+export async function generateMetadata(
+  { params }: { params: { certificateId: string; locale: string } }
+): Promise<Metadata> {
+  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const certificate = getCertificateById(params.certificateId, locale)
 
-// export async function generateMetadata(
-//   { params }: { params: { certificateId: string; locale: string } }
-// ): Promise<Metadata> {
-//   const locale = params.locale === "en" ? "en" : "zh-Hans"
-//   const certificate = getCertificateById(params.certificateId, locale)
+  if (!certificate) return {}
 
-//   if (!certificate) return {}
+  const brandSuffix =
+    locale === "en"
+      ? " | BAIQIANCHENG Electronics"
+      : "-[百千成电子]"
 
-//   const brandSuffix =
-//     locale === "en"
-//       ? " | BAIQIANCHENG Electronics"
-//       : "-~C5P"
+  const seoTitle = `${certificate.title}${brandSuffix}`
+  const seoDescription = certificate.description || ""
+  const seoKeywords = certificate.title
 
-//   const seoTitle = `${certificate.title}${brandSuffix}`
-//   const seoDescription = certificate.description || ""
-//   const seoKeywords = certificate.title
-
-//   return {
-//     title: seoTitle,
-//     description: seoDescription,
-//     keywords: seoKeywords,
-//     openGraph: {
-//       title: seoTitle,
-//       description: seoDescription,
-//     },
-//   }
-// }
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    keywords: seoKeywords,
+    openGraph: {
+      title: seoTitle,
+      description: seoDescription,
+    },
+  }
+}
 
 export default async function CertificateDetailPage({
   params,

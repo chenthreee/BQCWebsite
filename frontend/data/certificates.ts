@@ -180,6 +180,7 @@ export const certificatesData = {
         ]
       }
     },
+    //这个地方追加的话 是在证书的最后的位置进行增加
     // {
     //   id: "highTechEnterprise",
     //   title: "高新技术企业",
