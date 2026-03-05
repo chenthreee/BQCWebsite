@@ -52,7 +52,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/4.png",
+            image: "/images/services/5_zh.png",
             imagePosition: "left",
             content: [
               "供应商管理：",
@@ -69,7 +69,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/2.png",
+            image: "/images/services/6.png",
             imagePosition: "left",
             content: [
               "质量管理体系：",
@@ -125,7 +125,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/4.png",
+            image: "/images/services/5_en.png",
             imagePosition: "left",
             content: [
               "Supplier Management：",
@@ -142,7 +142,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/2.png",
+            image: "/images/services/6.png",
             imagePosition: "left",
             content: [
               "Quality Management System：",

@@ -87,15 +87,15 @@ export function ServicesSection() {
         "en": "Requirement Analysis",
       },
       "odm.step1.desc": {
-        "zh-Hans": "深刻理解客户针对PCBA加工和SMT贴片加工的需求",//深刻理解客户需求
-        "en": "In-depth understanding of customer needs for PCBA processing and SMT assembly",
+        "zh-Hans": "深刻理解客户需求",//深刻理解客户需求
+        "en": "In-depth understanding of customer needs",
       },
       "odm.step2.title":{
         "zh-Hans":"技术预研",
         "en":"Technology Research"
       },
       "odm.step2.desc":{
-        "zh-Hans":"SMT贴片关键技术研究，PCBA加工技术可行性验证",//关键技术研究，技术可行性分验证
+        "zh-Hans":"关键技术研究，技术可行性分验证",//关键技术研究，技术可行性分验证
         "en":"Key technolohy study and feasibility validation"
       },
       "odm.step3.title": {
@@ -103,16 +103,16 @@ export function ServicesSection() {
         "en": "Solution Design",
       },
       "odm.step3.desc": {
-        "zh-Hans": "PCBA加工核心器件选型和SMT产品规格制定",//核心器件选型和产品规格制定
-        "en": "Core PCBA Component Selection And SMT Product Specification Definition",
+        "zh-Hans": "PCBA核心器件选型和产品规格制定",//核心器件选型和产品规格制定
+        "en": "Core component selection and product specification definition",
       },
       "odm.step4.title": {
         "zh-Hans": "研发开发",
         "en": "R&D Development",
       },
       "odm.step4.desc": {
-        "zh-Hans": "SMT加工硬件软件结构设计",//硬件软件结构设计
-        "en": "Hardware, Software And Structural Design For SMT",
+        "zh-Hans": "硬件软件结构设计",//硬件软件结构设计
+        "en": "Hardware, software, and structural design",
       },
       "odm.step5.title": {
         "zh-Hans": "样机测试",
@@ -120,7 +120,7 @@ export function ServicesSection() {
       },
       "odm.step5.desc": {
         "zh-Hans": "功能及性能测试",
-        "en": "Functional Testing of electronic SMT products and performance verification of PCBA Components",
+        "en": "Functional and performance verification",
       },
       "odm.step6.title": {
         "zh-Hans": "产品认证",
@@ -393,15 +393,15 @@ export function ServicesSection() {
           <>
             {/* 服务流程图 */}
             <div className="relative mb-20">
-              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-200 -translate-y-1/2 z-0"></div>
+              <div className="hidden md:block absolute top-[80px] left-0 right-0 h-1 bg-blue-200 z-0"></div>
               <div className="flex flex-col md:flex-row justify-between relative z-10">
                 {[1, 2, 3, 4].map((step, index) => (
                   <div key={index} className="flex flex-col items-center mb-8 md:mb-0">
-                    <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-4">
+                    <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold mb-6">
                       {step}
                     </div>
-                    <div className="text-center">
-                      <h3 className="font-bold text-lg mb-2">
+                    <div className="text-center max-w-[140px]">
+                      <h3 className="font-bold text-base mb-2 whitespace-normal break-words">
                         {index === 0 && t("oem.step1.title")}
                         {index === 1 && t("oem.step2.title")}
                         {index === 2 && t("oem.step3.title")}
@@ -448,13 +448,13 @@ export function ServicesSection() {
                       index === activeTab ? "block opacity-100" : "hidden opacity-0",
                     )}
                   >
-                    <div className="flex flex-col md:flex-row items-start gap-8">
+                    <div className="flex flex-col md:flex-row items-stretch gap-8">
                       <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                        <div className="bg-blue-50 rounded-lg p-6 flex justify-center items-center h-full">
+                        <div className="bg-blue-50 rounded-lg flex justify-center items-center h-full">
                           {service.icon}
                         </div>
                       </div>
-                      <div className="w-full md:w-2/3">
+                      <div className="w-full md:w-2/3 flex flex-col">
                         <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                         <p className="text-gray-700 mb-6">{service.description}</p>
 
@@ -605,13 +605,13 @@ export function ServicesSection() {
                       index === activeTab ? "block opacity-100" : "hidden opacity-0",
                     )}
                   >
-                    <div className="flex flex-col md:flex-row items-start gap-8">
+                    <div className="flex flex-col md:flex-row items-stretch gap-8">
                       <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                        <div className="bg-blue-50 rounded-lg p-6 flex justify-center items-center h-full">
+                        <div className="bg-blue-50 rounded-lg  flex justify-center items-center h-full">
                           {service.icon}
                         </div>
                       </div>
-                      <div className="w-full md:w-2/3">
+                      <div className="w-full md:w-2/3 flex flex-col">
                         <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                         <p className="text-gray-700 mb-6">{service.description}</p>
 

@@ -7,6 +7,20 @@ import { ChevronDown, Menu, X, Globe } from "lucide-react"
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+interface MenuItem {
+  label: string;
+  href: string;
+  nofollow?: boolean;
+  children?: MenuItem[];
+}
+
+interface NavItem {
+  key: string;
+  label: string;
+  href: string;
+  children?: MenuItem[];
+}
+
 export function MainNavigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -206,7 +220,7 @@ export function MainNavigation() {
     }, 200)
   }
 
-  const menuItems = [
+  const menuItems: NavItem[] = [
     {
       key: "home",
       label: mounted ? t("首页") : "首页",
@@ -218,7 +232,7 @@ export function MainNavigation() {
       href: `/${currentLocale}/about`,
       children: [
         { label: mounted ? t("公司介绍") : "公司介绍", href: `/${currentLocale}/about/introduction.html` },
-        { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values.html` },
+        { label: mounted ? t("核心价值观") : "核心价值观", href: `/${currentLocale}/about/core-values.html`, nofollow: true },
         { label: mounted ? t("发展历程") : "发展历程", href: `/${currentLocale}/about/development-history.html` },
         { label: mounted ? t("管理系统") : "管理系统", href: `/${currentLocale}/about/management-system.html` },
         { label: mounted ? t("制造能力") : "制造能力", href: `/${currentLocale}/about/manufacturing-capabilities.html` },
@@ -356,7 +370,7 @@ export function MainNavigation() {
                             {child.label}
                             {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
                           </Link> */}
-                          {item.key === "contact" ? (
+                          {item.key === "contact" || child.nofollow ? (
                             <Link href={child.href} legacyBehavior>
                               <a
                                 rel="nofollow"
@@ -476,7 +490,7 @@ export function MainNavigation() {
                               </div>
                             )}
                           </>
-                        ) : item.key === "contact" ? (
+                        ) : item.key === "contact" || child.nofollow ? (
                           <Link href={child.href} legacyBehavior>
                             <a
                               rel="nofollow"

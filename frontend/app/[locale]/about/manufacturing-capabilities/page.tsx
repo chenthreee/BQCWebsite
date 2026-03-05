@@ -173,7 +173,7 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
         title: "技术人才储备",
         desc: "专业团队支撑产品全生命周期开发。",
         description: "百千成电子拥有超过35名研发与工程人员，团队成员多数来自于985/211本硕，8年以上工作经验的老员工占比60%；涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程。",
-        image: "/images/about/manufacturing/talentDistribution.png"
+        image: "/images/about/manufacturing/talentDistribution_zh.png"
       },
     },
     en: {
@@ -340,7 +340,7 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
         title: "Technical Talent Reserve",
         desc: "Professional team supporting full product lifecycle development.",
         description: "BQC Electronics has over 35 R&D and engineering personnel, with most team members holding bachelor's or master's degrees from top-tier universities (985/211). 60% of employees have more than 8 years of work experience. The team covers hardware, software, structure, ID/MD/SMT/PCBA design and verification, supporting customers from concept to mass production.",
-        image: "/images/about/manufacturing/talentDistribution.png"
+        image: "/images/about/manufacturing/talentDistribution_en.png"
       },
     }
   }
