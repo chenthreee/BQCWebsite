@@ -71,10 +71,10 @@ async function fetchCommunicationBaseData(locale: string) {
 export default async function CommunicationBaseBmsPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-
+  const { locale: localeParam } = await params
+  const locale = localeParam === "en" ? "en" : "zh-Hans"
   const { products, categoryInfo } = await fetchCommunicationBaseData(locale)
 
   return (

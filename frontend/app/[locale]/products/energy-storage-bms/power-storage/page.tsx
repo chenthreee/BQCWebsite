@@ -71,9 +71,10 @@ async function fetchPowerStorageData(locale: string) {
 export default async function PowerStorageBmsPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const { locale: localeParam } = await params
+  const locale = localeParam === "en" ? "en" : "zh-Hans"
 
   const { products, categoryInfo } = await fetchPowerStorageData(locale)
 

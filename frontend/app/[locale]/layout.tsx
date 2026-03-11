@@ -6,8 +6,8 @@ interface LocaleLayoutProps {
   params: { locale: string };
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params.locale
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
 
   if (locale === 'en') {
     return {

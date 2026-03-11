@@ -96,8 +96,9 @@ async function fetchCategoryData(locale: string) {
   }
 }
 
-export default async function EnergyStorageBmsPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
+export default async function EnergyStorageBmsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: localeParam } = await params
+  const locale = localeParam === "en" ? "en" : "zh-Hans"
   const { categoryInfo, subCategories } = await fetchCategoryData(locale)
 
   const getCategoryLink = (item: any) => {

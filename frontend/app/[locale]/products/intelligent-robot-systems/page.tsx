@@ -69,9 +69,10 @@ async function fetchIntelligentRobotData(locale: string) {
 export default async function IntelligentRobotSystemsPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
+  const { locale: localeParam } = await params
+  const locale = localeParam === "en" ? "en" : "zh-Hans"
 
   const { categoryInfo, products } = await fetchIntelligentRobotData(locale)
 
