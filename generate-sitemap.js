@@ -18,6 +18,14 @@ const SITEMAP_OUTPUT = path.join(__dirname, "./frontend/public/sitemap.xml");
 const manualDynamicRoutes = [
   // "/zh-Hans/about/certificates/123.html",
   // "/en/about/certificates/123.html",
+  "/zh-Hans/about/certificates/iso9001.html",
+  "/zh-Hans/about/certificates/iso14001.html",
+  "/zh-Hans/about/certificates/iso13485.html",
+  "/zh-Hans/about/certificates/iatf16949.html",
+  "/zh-Hans/about/certificates/ul.html",
+  "/zh-Hans/about/certificates/ce.html",
+  "/zh-Hans/about/certificates/highTechEnterprise.html",
+  "/zh-Hans/about/certificates/specializedSME.html",
 ];
 
 function walk(dir) {

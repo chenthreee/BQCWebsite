@@ -463,6 +463,54 @@
     <changefreq>always</changefreq>
   </url>
   <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/ce.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/highTechEnterprise.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/iatf16949.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/iso13485.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/iso14001.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/iso9001.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/specializedSME.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://120.79.255.132:3000/zh-Hans/about/certificates/ul.html</loc>
+    <priority>0.6</priority>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
     <loc>http://120.79.255.132:3000/zh-Hans/about/core-values</loc>
     <priority>0.8</priority>
     <lastmod>2026-03-13</lastmod>
