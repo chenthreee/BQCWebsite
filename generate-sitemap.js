@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const DOMAIN = process.env.SITEMAP_DOMAIN || "http://192.168.8.97:3000";
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || process.env.STRAPI_URL || "http://192.168.8.97:1337";
+const DOMAIN = process.env.SITEMAP_DOMAIN || "http://120.79.255.132:3000";
+const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || process.env.STRAPI_URL || "http://120.79.255.132:1337";
 const GRAPHQL_URL = `${STRAPI_URL}/graphql`;
 
 const CHANGEFREQ = "always";
