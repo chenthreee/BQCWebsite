@@ -96,7 +96,7 @@ export function ProductSection() {
       title: locale === "en" ? "Medical Devices" : "医疗设备",
       description: locale === "en"
         ? "Medical device solutions for healthcare industry."
-        : "医疗行业的医疗设备解决方案。",
+        : "医疗电子 PCBA 全系列解决方案，涵盖便携式与可穿戴设备、康复医疗设备、膀胱扫描仪、心率检测器、血糖仪等控制板方案。",
       image: "/images/mainPage/medicalDevices.png",
       products: [
         { id: 401, title: locale === "en" ? "Medical Device" : "医疗设备", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/medical-devices" },
