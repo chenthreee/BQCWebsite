@@ -36,8 +36,8 @@ export default function OdmServicePage() {
             subtitle: "Product Definition & Planning",
             items: [
               "深入了解客户需求，明确产品目标、应用场景与性能指标",
-              "进行可行性分析、项目立项与整体研发路径规划",
-              "输出系统架构草案与开发周期计划"
+              "进行PCBA加工可行性分析，项目立项与整体研发路径规划",
+              "输出系统架构草案与PCBA开发周期计划"
             ],
           },
           {
@@ -45,7 +45,7 @@ export default function OdmServicePage() {
             title: "2. 硬件系统设计",
             subtitle: "Hardware System Design",
             items: [
-              "负责电路原理图设计、PCB Layout、核心器件选型与BOM成本优化",
+              "负责电路原理图设计、PCB Layout、核心器件选型与PCBA加工BOM成本优化",
               "支持高速信号、功率模块、BMS控制、通信接口等复杂系统设计",
               "提供UL/CE标准电气安全设计与EMC预防方案"
             ],
@@ -65,7 +65,7 @@ export default function OdmServicePage() {
             title: "4. 结构设计",
             subtitle: "Mechanical & Structural Design",
             items: [
-              "进行外观与结构规划，兼顾美学、功能性与可制造性",
+              "进行外观与结构规划，兼顾美学、功能性与SMT贴片 PCBA加工可制造性",
               "输出可量产化3D图纸及模具可行性分析（DFM）"
             ],
           },
@@ -74,7 +74,7 @@ export default function OdmServicePage() {
             title: "5. 样机制作与测试验证",
             subtitle: "Prototyping & Testing Validation",
             items: [
-              "快速实现样机制作，进行结构与功能验证",
+              "快速实现PCBA样机制作，进行结构与功能验证",
               "执行环境、性能、可靠性、EMC/EMI等系统化测试"
             ],
           },
@@ -83,9 +83,9 @@ export default function OdmServicePage() {
             title: "6.  量产制造与生产优化支持",
             subtitle: "Product Certification & MP Support",
             items: [
-              "建立完善的生产追溯体系（MES），确保质量可控与可追溯",
+              "建立完善的生产追溯体系（MES），确保PCBA产品质量可控与可追溯",
               "提供工艺优化、DFM分析、ATE自动测试治具开发、试产验证与制程标准化",
-              "通过数据分析、良率提升与工艺改进，保障量产一致性、良率及供应链稳定性",
+              "通过数据分析、良率提升与工艺改进，保障PCBA加工量产一致性、良率及供应链稳定性",
             ],
           },
           {
@@ -94,7 +94,7 @@ export default function OdmServicePage() {
             subtitle: "Mass Production & Lifecycle Support",
             items: [
               "提供UL、CE、FCC 等产品认证与合规测试",
-              "提供认证阶段的样机测试、整改建议及相关技术文件准备支持",
+              "提供认证阶段的PCBA样机测试、整改建议及相关技术文件准备支持",
               "提供售后技术支持与版本迭代服务，客户少操心、少踩坑，产品更耐用、更好卖",
             ],
           },
@@ -106,21 +106,23 @@ export default function OdmServicePage() {
           {
             title: "ODM（Original Design Manufacturing）",
             description:
-              "提供从产品定义、设计开发、认证量产、到售后服务的全流程一站式服务。客户专注销售、运营和行业方案，仅提出产品需求，即可获得完整可交付产品，整体投入产出比更高。",
+            ["提供从产品定义、设计开发、认证量产、到售后服务的全流程一站式服务。\n",
+"客户专注销售、运营和行业方案，仅提出产品需求，即可获得完整可交付产品。通过整合SMT贴片加工与PCBA加工技术，结合SMT贴片厂的生产能力，确保每个环节都高效落地，整体投入产出比更高。百千成电子为客户提供从设计到量产的全方位支持，助力产品快速进入市场并实现稳定生产。"]
+              
           },
           {
             title: "JDSM（Joint Design & Selected Manufacturing）",
             description:
-              "与客户团队联合开发，提供部分研发服务（如硬件、软件、结构、测试或认证等服务）。客户有针对性的补齐短板，投入灵活，预算可控，同时兼顾效率与技术主导权。",
+              "与客户团队联合开发，提供部分研发服务（如硬件、软件、结构、测试或认证等服务）。客户可根据需求，针对性地补齐短板，投入灵活，预算可控，同时兼顾效率与技术主导权。通过整合SMT贴片加工与PCBA加工技术，结合SMT贴片厂的生产优势，我们确保每一环节的高效实施，提供全面的研发支持和样机验证，助力客户产品的快速落地。",
           },
         ],
         summary:
-          "通过 ODM + JDSM 的灵活合作方式，为客户提供成熟的研发平台，分享技术经验、量产经验和供应链经验，降低项目风险，控制项目成本。客户既可以把产品完整托付，也可以按需“点单”式合作，以更少的投入、更短的时间，把更成熟、更易量产的产品推向市场。", 
+          "百千成电子通过 ODM + JDSM 的灵活合作方式，为客户提供成熟的研发平台，分享技术经验、量产经验和供应链经验，降低项目风险，控制项目成本。结合SMT贴片加工与PCBA加工技术，客户既可以将产品完整托付，也可以按需“点单”式合作，依托SMT贴片厂的生产优势和贴片加工厂的技术支持，以更少的投入、更短的时间，把更成熟、更易量产的产品推向市场。", 
       },
       ipPolicy: {
         title: "知识产权开放政策",
         description:
-          "BQC在ODM及JDSM合作中始终秉持开放透明的原则，在项目完成后，可根据双方约定向客户开放并共享全部原始设计资料，包括但不限于：",
+          "百千成电子作为专业的PCBA贴片加工厂，在 ODM 及 JDSM 合作中始终秉持开放透明的原则，在项目完成后，可根据双方约定向客户开放并共享PCBA 加工、SMT 贴片加工相关的全部原始设计资料，包括但不限于：",
         items: ["设计方案", "BOM表（物料清单）", "PCB原理图与Layout文件", "软件源代码", "ID/结构图纸", "测试报告"],
         conclusion: "确保客户对产品拥有完整的知识产权与后续可持续开发能力。",
       },

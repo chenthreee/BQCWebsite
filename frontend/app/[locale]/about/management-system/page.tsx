@@ -18,12 +18,12 @@ export default function ManagementSystemPage({params}:{params:{locale:string}}) 
       ],
       digitalPlatform: {
         title: "数字化管理平台",
-        description: "百千成电子建立了完整的数字化管理平台，实现企业管理的信息化、智能化和高效化。",
+        description: "百千成电子通过整合PCBA加工与SMT贴片加工技术，打造了一个全面的数字化管理平台。该平台结合了SMT贴片加工 THT插件 后焊 测试 喷涂 组装 包装等PCBA加工生产工艺，通过实时数据监控和资源调度，优化生产流程、提升生产效率，并确保产品质量的稳定性和可追溯性。",
         systems: [
           {
             title: "ERP系统",
             image:"/images/about/managementSystem/ERP.png",
-            description:"ERP系统 是一种集成的、模块化的企业管理软件平台，旨在通过统一的数字化系统，整合企业核心业务流程（如财务、供应链、生产、销售、人力资源等），实现数据的实时共享与流程协同，从而优化资源配置、提升运营效率并支持战略决策。"
+            description:"ERP系统 是一种集成的、模块化的企业管理软件平台，旨在通过统一的数字化系统，整合企业核心业务流程（如财务、供应链、生产、销售、人力资源等），实现PCBA加工数据的实时共享与流程协同，从而优化资源配置、提升运营效率并支持战略决策。"
           },
           {
             title: "Office Anywhere",
@@ -33,7 +33,7 @@ export default function ManagementSystemPage({params}:{params:{locale:string}}) 
           {
             title: "制造执行系统MES平台",
             image:"/images/about/managementSystem/mes.png",
-            description:"制造执行系统（MES） 是面向生产车间层级的 实时监控与执行管理平台，通过连接企业计划层（如ERP）与生产设备，实现 生产全流程的数字化管控、过程追溯与动态优化，核心目标是缩短制造周期、提升良品率并降低资源浪费。"
+            description:"制造执行系统（MES） 是面向生产车间层级的 实时监控与执行管理平台，通过连接企业计划层（如ERP）与生产设备，实现SMT贴片加工厂生产全流程的数字化管控、过程追溯与动态优化，核心目标是缩短PCBA加工制造周期、提升良品率并降低资源浪费。"
           },
           {
             title: "KPI管理体系",

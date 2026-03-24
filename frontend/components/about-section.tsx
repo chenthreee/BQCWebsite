@@ -68,7 +68,7 @@ export function AboutSection() {
       "about.title": { "zh-Hans": "关于我们", en: "About Us" },
       "about.desc": {
         "zh-Hans":
-          "百千成电子是一家专注于储能BMS系统研发、PCBA加工工艺、电路板SMT贴片与OEM制造服务的高新技术企业，致力于为全球客户提供安全可靠的储能解决方案。",
+          "百千成电子拥有超过35名研发与工程人员，涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程",
         en: "BAIQIANCHENG Electronics is a high-tech enterprise focusing on energy storage BMS R&D, PCBA processing technology, circuit board SMT chip processing and OEM manufacturing services, committed to providing safe and reliable energy storage solutions for global customers.",
       },
       "about.stat1.title": { "zh-Hans": "BMS研发经验", en: "BMS R&D Experience" },
@@ -86,7 +86,7 @@ export function AboutSection() {
       },
       "about.advantage1.desc": {
         "zh-Hans":
-          "百千成电子提供从联合设计（JDSM）、SMTOEM制造到PCBA加工的一站式服务，覆盖消费电子、储能BMS、机器人、医疗及汽车电子等多领域。",
+          "百千成电子提供从联合设计（JDSM）到PCBA集成量产交付的一站式整体解决方案，覆盖储能 BMS、智能机器人、医疗电子、汽车电子及高端消费电子等核心领域。",
         en: "BAIQIANCHENG Electronics provide one-stop services from joint design (JDSM), SMTOEM manufacturing, to full-range PCBA processes, covering diverse fields such as consumer electronics, energy storage BMS, robotics, medical devices, and automotive electronics.",
       },
       "about.advantage2.title": { "zh-Hans": "深厚的技术与工程实力", en: "Strong Technical and Engineering Expertise" },
@@ -98,7 +98,7 @@ export function AboutSection() {
       "about.advantage3.title": { "zh-Hans": "关键元器件供应链优势", en: "Key Component Supply Chain Advantages" },
       "about.advantage3.desc": {
         "zh-Hans":
-          "百千成电子与ST、NXP、ADI、TI等国际厂商及代理商深度合作，享有优先采购权和稳定供应支持，具备国产替代方案能力，有效应对SMT贴片加工缺料和PCBA加工降本需求。",
+          "百千成电子与ST、NXP、ADI、TI等国际厂商及代理商深度合作，享有优先采购权与稳定供应支持，具备国产替代方案能力，保障PCBA稳定供货与成本优化。",
         en: "BAIQIANCHENG Electronics maintain deep collaborations with leading international chip suppliers and distributors, including ST, NXP, ADI, and TI, ensuring priority procurement and stable supply support. We also offer domestic alternative solutions to address SMT chip processing material shortages and PCBA processing cost reduction needs.",
       },
       "about.advantage4.title": {
@@ -107,7 +107,7 @@ export function AboutSection() {
       },
       "about.advantage4.desc": {
         "zh-Hans":
-          "百千成电子深圳工厂年产能达35GWh+，拥有22条SMT贴片加工产线和完善的质检体系；马来西亚工厂辐射东南亚及欧美市场，均通过ISO9001/14001、IATF16949、ISO13485等认证。",
+          "百千成电子深圳与马来西亚双智造基地协同布局，拥有规模化精密制造能力与完善验证体系，海内外产能联动交付，两地核心体系均通过 ISO9001及ISO13485认证。",
         en: "BAIQIANCHENG Electronics' Shenzhen facility boasts an annual capacity of 35GWh+, with 22 SMT lines and a comprehensive quality inspection system. Our Malaysia plant serves Southeast Asian and European/American markets, with certifications including ISO9001/14001, IATF16949, and ISO13485.",
       },
       "about.advantage5.title": {
@@ -120,7 +120,7 @@ export function AboutSection() {
       },
       "about.advantage6.title": { "zh-Hans": "自动化与数字化管理", en: "Automation and Digital Management" },
       "about.advantage6.desc": {
-        "zh-Hans": "百千成电子自主研发自动化PCBA、SMT贴片编程与测试设备，引入MES、OA等数字化系统，实现制造过程高效透明、可追溯。",
+        "zh-Hans": "百千成电子自研自动化程控与测试平台，搭载 MES、OA 等数字化管理系统，实现 PCBA 全流程智能化管控、工艺透明与品质全程可追溯。",
         en: "BAIQIANCHENG Electronics develop in-house automated PCBA, SMT chip processing programming and testing equipment and utilize digital systems such as MES and OA to ensure efficient, transparent, and traceable manufacturing processes.",
       },
       "about.advantage7.title": {
