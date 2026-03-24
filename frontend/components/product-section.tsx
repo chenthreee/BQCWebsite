@@ -40,8 +40,8 @@ export function ProductSection() {
         "en": "Products",
       },
       "section.subtitle": {
-        "zh-Hans": "百千成电子有限公司专注于智能储能系统的研发与制造，依托自主研发的储能 BMS/PCS 全系列解决方案，可覆盖电力大储、船舶储能（大型/小型）、通信基站储能以及储能 EMS 总控系统等应用场景。公司以高精度电子装联能力与定制化 PCBA代工代料 服务为核心，为全球客户提供高可靠、高集成的能源管理硬件解决方案，实现快速导入与规模化量产",
-        "en": "Baixiancheng Electronics Co., Ltd. specializes in the research and development of intelligent energy storage systems. Relying on its own developed series of energy storage BMS/PCS solutions, it can cover various application scenarios such as large-scale power storage, ship energy storage (large/small), communication base station energy storage, and energy storage EMS central control systems. The company focuses on high-precision electronic assembly capabilities and customized PCBA outsourcing and material supply services, providing global customers with highly reliable and highly integrated energy management hardware solutions, enabling rapid introduction and large-scale production.",
+        "zh-Hans": "百千成电子专注于智能储能系统与电子控制硬件的研发制造，依托自主研发的储能 BMS / PCS 全系列解决方案，覆盖电力储能、大型及小型船舶储能、通信基站储能等应用领域。同时，公司在智能机器人控制系统、工业控制板及医疗设备电子模块方面具备成熟的工程与制造能力。以高精度自动化设备为基础，提供专业的 SMT贴片加工与PCBA加工服务，为全球客户提供高可靠、高集成度的电子控制与能源管理硬件解决方案。",
+        "en": "Baiqiancheng Electronics (BQC) focuses on the development and manufacturing of intelligent energy storage systems and electronic control hardware. With our self-developed BMS and PCS solutions, we support applications such as grid-scale energy storage, marine energy storage systems, and telecom base station power management.Beyond energy storage, BQC also provides engineering and manufacturing services for intelligent robotic control systems, industrial control boards, and medical electronic modules.Equipped with high-precision automated production lines, we offer professional SMT assembly and PCBA manufacturing services, delivering high-reliability, high-integration electronic control and energy management solutions for global customers.",
       },
       "button.viewMore": {
         "zh-Hans": "查看更多",

@@ -128,7 +128,7 @@ export function AboutSection() {
         en: "Eco-Friendliness and Social Responsibility",
       },
       "about.advantage7.desc": {
-        "zh-Hans": "百千成电子有限公司秉持 共享、贡献、诚信、客户第一 的价值观，致力于通过技术创新推动碳中和，践行可持续制造。",
+        "zh-Hans": "百千成电子始终秉持 客户第一、诚信、分享、回馈 的价值观，致力于通过PCBA加工技术创新推动碳中和，践行可持续制造。",
         en: "BAIQIANCHENG Electronics has always adhered to the values of Sharing, Contribution, Integrity, and Customer First,  we are committed to achieving carbon neutrality through technological innovation and sustainable manufacturing practices.",
       },
       "about.advantage8.title":{
