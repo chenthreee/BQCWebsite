@@ -205,8 +205,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "BQC Electronics Certifications and Honors"
   },
   "about.certificates.desc": {
-    zh: "公司通过多项国际权威认证，彰显了在质量管理和技术创新方面的实力。",
-    "zh-Hans": "公司通过多项国际权威认证，彰显了在质量管理和技术创新方面的实力。",
+    zh: "百千成作为SMT贴片加工厂家，深耕PCBA加工领域22载，通过多项国际权威认证及多项专利证书，并荣获国家级专精特新“小巨人”企业，彰显了在质量管理和技术创新方面的生产制造能力。",
+    "zh-Hans": "百千成作为SMT贴片加工厂家，深耕PCBA加工领域22载，通过多项国际权威认证及多项专利证书，并荣获国家级专精特新“小巨人”企业，彰显了在质量管理和技术创新方面的生产制造能力。",
     en: "The company has obtained multiple international authoritative certifications, demonstrating its strength in quality management and technological innovation.",
   },
   "about.certificates.more": {

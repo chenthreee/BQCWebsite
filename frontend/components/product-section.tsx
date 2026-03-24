@@ -74,7 +74,7 @@ export function ProductSection() {
       title: locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统",
       description: locale === "en"
         ? "Intelligent robot system solutions for various industries."
-        : "面向各行业的智能机器人系统解决方案。",
+        : "面向各行业提供智能机器人系统解决方案，包括智能物流机器人、自动化巡检机器人、智能配送机器人、扫地机器人、割草机机器人等。",
       image: "/images/mainPage/intelligentRobot.jpg",
       products: [
         { id: 201, title: locale === "en" ? "Robot Control Board" : "机器人控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/intelligent-robot-systems" },
