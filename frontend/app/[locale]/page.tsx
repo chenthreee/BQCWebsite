@@ -1,5 +1,6 @@
 "use client"
 
+import { use } from "react"
 import { HeroSection } from "@/components/hero-section"
 import { MainNavigation } from "@/components/main-navigation"
 import { ProductSection } from "@/components/product-section"
@@ -116,8 +117,9 @@ const translations: Record<string, Record<string, string>> = {
   },
 }
 
-export default function HomePage({ params }: { params: { locale: string } }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
+export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: rawLocale } = use(params)
+  const locale = rawLocale === "en" ? "en" : "zh-Hans"
 
   const t = (key: string): string => {
     return translations[key]?.[locale] || key

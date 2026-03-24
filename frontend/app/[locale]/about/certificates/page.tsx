@@ -1,11 +1,12 @@
+import { use } from "react"
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
 import Link from "next/link"
 import { certificatesData, honorsData } from "@/data/certificates"
 
 
-export default function CertificatesPage({ params }: { params: { locale: string } }) {
-  const locale = params.locale
+export default function CertificatesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params)
   const language = locale === "en" ? "en" : "zh"
 
   // 使用共享数据
@@ -23,7 +24,7 @@ export default function CertificatesPage({ params }: { params: { locale: string 
       ],
       overview: {
         title: "我们的资质",
-        description: "百千成电子通过了多项国际认证和资质认定，证明了公司在质量管理、环境保护、职业健康安全等方面的卓越表现，以及在技术创新方面的实力。"
+        description: "百千成电子坚持以技术研发为核心竞争力，凭借多项国际权威管理体系认证、自主知识产权专利及国家级专精特新 “小巨人” 企业资质，全面彰显了公司在精密制造、质量管控与技术创新领域的综合实力与行业领先水平。"
       },
       honorsTitle: "企业荣誉",
       viewDetails: "查看详情"
@@ -37,7 +38,7 @@ export default function CertificatesPage({ params }: { params: { locale: string 
       ],
       overview: {
         title: "Our Qualifications",
-        description: "BQC Electronics has obtained multiple international certifications, demonstrating our commitment to quality management, environmental protection, occupational health and safety, and technological innovation excellence."
+        description: "Baiqiancheng Electronics firmly bases its core competitiveness on technological research and development. With multiple international authoritative management system certifications, independent intellectual property patents, and the qualification of a national-level \"Small Giant\" specialized and innovative enterprise, the company fully demonstrates its comprehensive strength and industry-leading level in precision manufacturing, quality control, and technological innovation.",
       },
       honorsTitle: "Enterprise Honors",
       viewDetails: "View Details"

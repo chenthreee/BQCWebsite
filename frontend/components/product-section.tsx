@@ -40,8 +40,8 @@ export function ProductSection() {
         "en": "Products",
       },
       "section.subtitle": {
-        "zh-Hans": "百千成电子有限公司专注于智能储能系统研发制造，依托自主研发的储能BMS/PCS全系列解决方案，涵盖电力大储、大型/小型船舶储能、通讯基站储能，以高精度SMT贴片加工设备定制化PCBA加工为核心，为全球客户提供高可靠、高集成度的能源管理硬件",
-        "en": "Baiqiancheng Electronics Co., Ltd. specializes in the research and development and manufacturing of intelligent energy storage systems. Relying on its self-developed full range of energy storage BMS/PCS solutions, it covers large-scale energy storage, large/small ship energy storage, and communication base station energy storage. With customized PCBA processing based on high-precision SMT chip processing equipment as the core, it provides global customers with highly reliable and highly integrated energy management hardware.",
+        "zh-Hans": "百千成电子有限公司专注于智能储能系统的研发与制造，依托自主研发的储能 BMS/PCS 全系列解决方案，可覆盖电力大储、船舶储能（大型/小型）、通信基站储能以及储能 EMS 总控系统等应用场景。公司以高精度电子装联能力与定制化 PCBA代工代料 服务为核心，为全球客户提供高可靠、高集成的能源管理硬件解决方案，实现快速导入与规模化量产",
+        "en": "Baixiancheng Electronics Co., Ltd. specializes in the research and development of intelligent energy storage systems. Relying on its own developed series of energy storage BMS/PCS solutions, it can cover various application scenarios such as large-scale power storage, ship energy storage (large/small), communication base station energy storage, and energy storage EMS central control systems. The company focuses on high-precision electronic assembly capabilities and customized PCBA outsourcing and material supply services, providing global customers with highly reliable and highly integrated energy management hardware solutions, enabling rapid introduction and large-scale production.",
       },
       "button.viewMore": {
         "zh-Hans": "查看更多",
@@ -84,8 +84,8 @@ export function ProductSection() {
       id: 3,
       title: locale === "en" ? "Industrial Control Boards" : "工业控制板",
       description: locale === "en"
-        ? "Industrial control board solutions for automation and control."
-        : "自动化与控制领域的工业控制板解决方案。",
+        ? "Industrial control board solutions in the field of automation and control, covering PLC control boards, servo drive control boards, frequency converter control boards, industrial gateways/communication modules, HMI human-machine interface control boards, etc."
+        : "自动化与控制领域的工业控制板解决方案，覆盖PLC控制板、伺服驱动控制板、变频器控制板、工业网关/通讯模块、HMI人机界面控制板等。",
       image: "/images/mainPage/industrialControlBoard.png",
       products: [
         { id: 301, title: locale === "en" ? "Industrial Control Board" : "工业控制板", description: "", image: "/placeholder.svg?height=400&width=400", link: "/products/industrial-control-boards" },

@@ -25,16 +25,16 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
           {
             count: "24",
             title: "SMT车间",
-            description: "BQC拥有24个自动化SMT生产线，日生产能力8,640,000点每天"  
+            description: "BQC拥有24条自动化SMT生产线，日生产能力8,640,000点"  
           },{
             count: "8",
             title: "DIP车间",
-            description: "插件线4条，日生产能力1500,000点每天；后焊线4条，日生产能力500,000点每天"
+            description: "插件线4条，日生产能力1500,000点每天；后焊线4条，日生产能力500,000点"
           },
           {
             count: "11",
             title: "喷涂车间",
-            description: "喷涂线11条，日生产能力每天2万件产品"
+            description: "喷涂线11条，日生产能力2万件产品"
           },
           {
             count: "5",

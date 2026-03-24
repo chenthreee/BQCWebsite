@@ -19,10 +19,10 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
       overview: {
         title: "我们的历程",
         desc: [
-          "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器能人领域二十余载，是兼具技术实力与国际视野的综合型企业。",
+          "深圳市百千成电子有限公司于2003年7月在深圳龙岗坂田正式成立，深耕新能源与智能机器能人领域二十余载，是一家以研发设计为核心、兼具规模化制造能力的综合型高新技术企业。",
           "公司早期聚焦太阳能光伏逆变器研发制造，2006年相关业务占比超五成，并成功通过ISO9001国际认证，夯实品质根基。",
-          "随着行业趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
-          "公司持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破50GWh+，彰显在储能领域的核心竞争力。"
+          "随着行业发展趋势与市场需求变化，公司逐步拓展业务边界：在新能源领域，延伸至储能BMS（电池管理系统）、船舶储能BMS、小型电动船推进系统等细分赛道；在智能装备领域，切入猫砂盆机器人、扫地机器人等消费级智能产品领域，依托专业SMT 贴片厂制造能力，为全球客户提供稳定可靠的PCBA 产品，客户群体广泛覆盖欧洲、美洲及中国本土市场，形成多元化、全球化的业务格局。",
+          "百千成电子持续升级管理体系，先后通过ISO13485、ISO14001及IATF16949认证。2024年发展迈入新台阶：马来西亚工厂成立，标志着国际化布局深化；同年，储能BMS客户累计装机量突破50GWh+，彰显在储能领域的核心竞争力。"
         ]
       },
       future: {
@@ -62,10 +62,10 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
       overview: {
         title: "Our Journey",
         desc: [
-          "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years, evolving into a comprehensive enterprise with strong technical capabilities and global vision.",
+          "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years. It is a comprehensive high-tech enterprise with a focus on research and development and design, and also possesses large-scale manufacturing capabilities.",
           "In our early phase, we focused on R&D and manufacturing of solar PV inverters. By 2006, this business accounted for over 50% of our total, and we obtained ISO 9001 certifications to solidify our quality foundation.",
-          "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
-          "We have continuously upgraded our management system, successively obtaining certifications including ISO13485, ISO14001, and IATF16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage."
+          "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Relying on the manufacturing capabilities of a professional SMT assembly plant, we provide stable and reliable PCBA products to customers worldwide, our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
+          "Baiqiancheng Electronics continuously upgrades its management system, successively obtaining certifications including ISO13485, ISO14001, and IATF16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage."
 
         ]
       },

@@ -331,14 +331,13 @@ export function MainNavigation() {
                   {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link> */}
                 {item.key === "contact" ? (
-                  <Link href={item.href} legacyBehavior>
-                    <a
-                      rel="nofollow"
-                      className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
-                    >
-                      {item.label}
-                      {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                    </a>
+                  <Link
+                    href={item.href}
+                    rel="nofollow"
+                    className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800/70 flex items-center text-white"
+                  >
+                    {item.label}
+                    {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
                   </Link>
                 ) : (
                   <Link
@@ -371,14 +370,13 @@ export function MainNavigation() {
                             {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
                           </Link> */}
                           {item.key === "contact" || child.nofollow ? (
-                            <Link href={child.href} legacyBehavior>
-                              <a
-                                rel="nofollow"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
-                              >
-                                {child.label}
-                                {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                              </a>
+                            <Link
+                              href={child.href}
+                              rel="nofollow"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between"
+                            >
+                              {child.label}
+                              {child.children && <ChevronDown className="ml-1 h-4 w-4" />}
                             </Link>
                           ) : (
                             <Link
@@ -467,14 +465,14 @@ export function MainNavigation() {
                               <div className="pl-4 space-y-1">
                                 {child.children.map((subChild) =>
                                   item.key === "contact" ? (
-                                    <Link key={subChild.href} href={subChild.href} legacyBehavior>
-                                      <a
-                                        rel="nofollow"
-                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
-                                        onClick={() => setIsOpen(false)}
-                                      >
-                                        {subChild.label}
-                                      </a>
+                                    <Link
+                                      key={subChild.href}
+                                      href={subChild.href}
+                                      rel="nofollow"
+                                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                                      onClick={() => setIsOpen(false)}
+                                    >
+                                      {subChild.label}
                                     </Link>
                                   ) : (
                                     <Link
@@ -491,14 +489,13 @@ export function MainNavigation() {
                             )}
                           </>
                         ) : item.key === "contact" || child.nofollow ? (
-                          <Link href={child.href} legacyBehavior>
-                            <a
-                              rel="nofollow"
-                              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {child.label}
-                            </a>
+                          <Link
+                            href={child.href}
+                            rel="nofollow"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {child.label}
                           </Link>
                         ) : (
                           <Link

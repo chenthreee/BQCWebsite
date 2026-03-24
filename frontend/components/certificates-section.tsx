@@ -6,25 +6,27 @@ export function CertificatesSection() {
   const { t, language } = useLanguage();
   const certificates = [
     {
-      id: "iatf16949",
-      image: "/images/about/certificates/IATF16949.png",
-      title: language === "en" ? "IATF16949 Quality Certification" : "IATF16949质量认证",
-    },
-    {
       id: "iso9001",
       image: "/images/about/certificates/ISO9001.png",
-      title: language === "en" ? "ISO9001 Quality Certification" : "ISO9001质量认证",
-    },
-    {
-      id: "iso13485",
-      image: "/images/about/certificates/ISO13485.png",
-      title: language === "en" ? "ISO13485 Quality Certification" : "ISO13485质量认证",
+      title: language === "en" ? "ISO9001 Quality Management System Certification" : "ISO9001质量认证体系",
     },
     {
       id: "iso14001",
       image: "/images/about/certificates/ISO14001.png",
-      title: language === "en" ? "ISO14001 Quality Certification" : "ISO14001质量认证",
+      title: language === "en" ? "ISO14001 Environmental Management System Certification" : "ISO14001环境管理体系",
     },
+    {
+      id: "iso13485",
+      image: "/images/about/certificates/ISO13485.png",
+      title: language === "en" ? "ISO13485 Medical Device Quality Management System Certification" : "ISO13485医疗器械质量管理体系",
+    },
+    {
+      id: "iatf16949",
+      image: "/images/about/certificates/IATF16949.png",
+      title: language === "en" ? "IATF16949 Automotive Quality Management System Certification" : "IATF16949汽车行业质量管理体系",
+    },
+ 
+   
   ];
   const locale = language === "en" ? "en" : "zh-Hans";
   return (

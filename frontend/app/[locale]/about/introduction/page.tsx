@@ -23,13 +23,13 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "二、研发支持服务",
           content: [
-            "公司研发团队可为客户提供储能BMS技术方案咨询、框图设计及器件选型、硬件开发（原理图设计、PCB Layout）、软件及算法开发、器件优化替代、DFM可制造性设计分析、快速制样验证、全自动化烧录测试设计制作等全面研发支持服务。"
+            "公司研发团队可为客户提供储能BMS技术方案咨询、框图设计及器件选型、硬件开发（原理图设计、PCB Layout）、软件及算法开发、器件优化替代、DFM可制造性设计分析、快速制样验证、全自动化烧录测试设计制作等全面研发支持服务，为后续高品质SMT贴片加工与量产交付奠定坚实基础.。"
           ]
         },
         {
           title: "三、生产基地与制造服务",
           content: [
-            "公司生产基地设备齐全，深圳基地拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线；马来西亚槟城基地拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。可为客户提供元器件采购、贴片、后焊、测试以及喷涂、成品组装等一站式OEM生产制造服务。",
+            "公司生产基地设备齐全，深圳基地拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线；马来西亚槟城基地拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。百千成电子可为客户提供元器件采购、贴片、后焊、测试以及喷涂、成品组装等一站式OEM生产制造服务。",
             <div key="video-zh" className="flex justify-center my-6">
               <video
                 src="/Company%20introduction%20video.mp4"
@@ -53,7 +53,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "五、公司布局与团队规模",
           content: [
-            "公司研发、销售、采购位于深圳南山高新科技园旁的南山睿园，两大制造基地，分别位于深圳光明和马来西亚槟城，现拥有高素质的管理技术人员和员工队伍900多人。",
+            "百千成电子研发、销售、采购位于深圳南山高新科技园旁的南山睿园，两大制造基地，分别位于深圳光明和马来西亚槟城，现拥有高素质的管理技术人员和员工队伍900多人。",
             <div key="factory-images-zh" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
               <div className="relative w-full h-[400px]">
                 <Image
@@ -106,7 +106,8 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
               <li>DFM (Design for Manufacturing) analysis</li>
               <li>Rapid prototyping and product verification</li>
               <li>Automated programming and testing</li>
-            </ul>
+            </ul>,
+            "We provide comprehensive R&D support to ensure high-quality SMT production and mass production delivery."
           ]
         },
         {
@@ -118,7 +119,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
                 <li><strong>Shenzhen, China:</strong> 24 high-speed SMT lines, 4 wave soldering lines, 4 hand-soldering lines, and 10 conformal coating lines.</li>
                 <li><strong>Malaysia:</strong> 4 SMT lines, 2 automatic DIP lines, and 2 conformal coating lines.</li>
               </ul>
-              <p className="text-gray-700 text-xl">Combining strong R&D capabilities with extensive manufacturing resources, we provide one-stop OEM solutions tailored to meet the diverse needs of global partners.</p>
+              <p className="text-gray-700 text-xl">Combining strong R&D capabilities with extensive manufacturing resources, Baiqiancheng Electronics provide one-stop OEM solutions tailored to meet the diverse needs of global partners.</p>
             </div>,
             <div key="video-en" className="flex justify-center my-6">
               <video
@@ -144,7 +145,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "V. Company Layout and Team Scale",
           content: [
-            "Our R&D, sales, and procurement teams are based in Xili Ruiyuan, Shenzhen, while our two main manufacturing facilities are located in Gongming, Shenzhen and Penang, Malaysia. With over 900 skilled professionals, we combine technical expertise, operational excellence, and innovation.",
+            "Baiqiancheng Electronics’ R&D, sales, and procurement teams are based in Xili Ruiyuan, Shenzhen, while our two main manufacturing facilities are located in Gongming, Shenzhen and Penang, Malaysia. With over 900 skilled professionals, we combine technical expertise, operational excellence, and innovation.",
             <div key="factory-images-en" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
               <div className="relative w-full h-[400px]">
                 <Image

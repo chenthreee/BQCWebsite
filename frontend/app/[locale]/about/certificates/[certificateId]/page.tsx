@@ -39,10 +39,11 @@ function getCertificateById(id: string, locale: string) {
 
 //这个地方编写生成title keyword description的通用规则
 export async function generateMetadata(
-  { params }: { params: { certificateId: string; locale: string } }
+  { params }: { params: Promise<{ certificateId: string; locale: string }> }
 ): Promise<Metadata> {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-  const certificate = getCertificateById(params.certificateId, locale)
+  const { locale: rawLocale, certificateId } = await params
+  const locale = rawLocale === "en" ? "en" : "zh-Hans"
+  const certificate = getCertificateById(certificateId, locale)
 
   if (!certificate) return {}
 
@@ -69,10 +70,11 @@ export async function generateMetadata(
 export default async function CertificateDetailPage({
   params,
 }: {
-  params: { certificateId: string; locale: string }
+  params: Promise<{ certificateId: string; locale: string }>
 }) {
-  const locale = params.locale === "en" ? "en" : "zh-Hans"
-  const certificate = getCertificateById(params.certificateId, locale)
+  const { locale: rawLocale, certificateId } = await params
+  const locale = rawLocale === "en" ? "en" : "zh-Hans"
+  const certificate = getCertificateById(certificateId, locale)
 
   if (!certificate) {
     notFound()
@@ -124,7 +126,7 @@ export default async function CertificateDetailPage({
         },
         {
           label: certificate.title,
-          href: `/${locale}/about/certificates/${params.certificateId}.html`,
+          href: `/${locale}/about/certificates/${certificateId}.html`,
         },
       ]}
       backgroundImage="/images/about/aboutBreadcrumb.png"

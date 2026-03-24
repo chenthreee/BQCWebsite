@@ -20,7 +20,7 @@ export const certificatesData = {
   zh: [
     {
       id: "iso9001",
-      title: "ISO9001质量认证",
+      title: "ISO9001质量认证体系",
       description: "ISO 9001 是全球应用最广泛的质量管理体系标准，适用于各类行业和组织规模。该标准通过系统化的流程管理，帮助企业持续稳定地满足客户需求，并不断提升客户满意度。\n\nISO 9001 基于客户导向、领导作用、过程方法、风险思维和持续改进等核心原则，要求企业识别并优化关键业务流程，从而提高运营效率和产品一致性。\n\n百千成电子获得 ISO 9001 认证，表明企业在质量管理、内部控制和持续改进方面具备成熟的管理体系，是客户和合作伙伴评估供应商可靠性的重要参考。",
       image: "/images/about/certificates/ISO9001.png",
       issueDate: "2019年",
@@ -47,7 +47,7 @@ export const certificatesData = {
     },
     {
       id: "iso14001",
-      title: "ISO14001质量认证",
+      title: "ISO14001环境管理体系",
       description: "ISO 14001 是一项国际通用的环境管理体系标准，旨在帮助企业系统化地管理其环境责任，并持续降低对环境的影响。该标准强调环境风险识别、法规符合性以及环境绩效的持续改进。\n\n通过 ISO 14001 认证，企业需识别自身运营中的环境因素，制定明确的环境目标，并采取有效措施减少污染、废弃物和资源消耗。\n\n百千成电子通过了ISO 14001，体现了企业对可持续发展和社会责任的重视，有助于提升企业形象、降低合规风险，并满足客户和市场对绿色供应链的要求。",
       image: "/images/about/certificates/ISO14001.png",
       issueDate: "2018年",
@@ -74,7 +74,7 @@ export const certificatesData = {
     },
     {
       id: "iso13485",
-      title: "ISO13485质量认证",
+      title: "ISO13485医疗器械质量管理体系",
       description: "ISO 13485 是一项专门针对医疗器械行业制定的国际质量管理体系标准，覆盖产品从设计开发、生产、安装到售后服务的整个生命周期。该标准重点强调法规符合性、风险管理以及产品的一致性和安全性。\n\n百千成电子通过 ISO 13485 认证，表明企业具备满足全球医疗器械法规要求的能力，并能够通过系统化的流程控制，确保产品的可靠性和患者安全。标准要求对关键过程进行验证，强化文件与记录管理，并实施有效的纠正和预防措施。\n\n对于客户而言，ISO 13485 认证是企业质量体系成熟度的重要证明，可有效降低合规风险，并增强对供应商在医疗器械及相关组件制造能力方面的信任。",
       image: "/images/about/certificates/ISO13485.png",
       issueDate: "2015年",
@@ -101,7 +101,7 @@ export const certificatesData = {
     },
     {
       id: "iatf16949",
-      title: "IATF16949质量认证",
+      title: "IATF16949汽车行业质量管理体系",
       description: "IATF 16949 是专为汽车行业制定的全球质量管理体系标准，由国际汽车工作组（IATF）联合发布，是汽车供应链的重要准入标准。该体系以缺陷预防、过程控制和持续改进为核心。\n\n标准强调产品安全、风险管理、可追溯性以及先进质量工具的应用，如 APQP、PPAP、FMEA、SPC 和 MSA。\n\n百千成电子通过 IATF 16949 认证，表明企业具备满足全球汽车主机厂和一级供应商高标准质量要求的能力，是进入汽车行业供应链的重要质量保证。",
       image: "/images/about/certificates/IATF16949.png",
       issueDate: "2022年",
@@ -128,7 +128,7 @@ export const certificatesData = {
     },
     {
       id: "ul",
-      title: "UL质量认证",
+      title: "UL北美安全认证",
       description: "UL 859 是由美国保险商实验室（UL）制定的家用电动个人护理器具安全标准，适用于吹风机、卷发棒等个人护理电器产品。该标准重点关注电气安全、温升控制、机械强度和防火性能。\n\n产品需通过严格的测试，以验证其在正常和异常使用条件下的安全性，包括绝缘、防触电、防过热等方面。\n\n百千成电子已获得的UL 859 认证，是产品进入北美市场的重要安全合规标志，可显著提升消费者信任度，并满足零售商和法规机构的要求。",
       image: "/images/about/certificates/UL895.png",
       issueDate: "2016年",
@@ -155,7 +155,7 @@ export const certificatesData = {
     },
     {
       id: "ce",
-      title: "CE质量认证",
+      title: "CE欧盟安全合规认证",
       description: "百千成电子的 CE 认证是欧盟针对产品安全、健康、环保及消费者保护要求设立的强制性认证标志，证明百千成电子的产品符合相关指令和协调标准。获得 CE 认证意味着百千成电子的产品能够合法进入欧洲经济区（EEA）市场，体现其在产品设计、制造和质量控制方面的合规性与可靠性。CE 认证不仅提升百千成电子的国际竞争力，也增强客户对其产品安全性与品质的信任。",
       image: "/images/about/certificates/CE.png",
       issueDate: "2016年",
@@ -239,7 +239,7 @@ export const certificatesData = {
   en: [
     {
       id: "iso9001",
-      title: "ISO9001 Quality Certification",
+      title: "ISO9001 Quality Management System Certification",
       description: "ISO 9001 is the world’s most widely adopted quality management system standard, applicable to organizations of all sizes and industries. It provides a structured framework for consistently meeting customer requirements, enhancing customer satisfaction, and driving continuous improvement.\n\nThe standard is based on key quality management principles, including customer focus, leadership, process approach, risk-based thinking, and continual improvement. ISO 9001 requires organizations to define, monitor, and optimize their core processes, ensuring stable product quality and efficient operations.\n\nBaiQianCheng Electronics has obtained ISO9001 certification, which demonstrates a company’s commitment to quality, operational excellence, and systematic management. It helps reduce errors, improve internal communication, and increase overall efficiency.\n\nFor customers and partners, ISO 9001 certification is a strong indicator of reliability and professionalism, showing that the organization has effective controls in place to deliver consistent, high-quality products and services while continually improving performance.",
       image: "/images/about/certificates/ISO9001_en.png",
       issueDate: "2019",
@@ -266,7 +266,7 @@ export const certificatesData = {
     },
     {
       id: "iso14001",
-      title: "ISO14001 Quality Certification",
+      title: "ISO14001 Environmental Management System Certification",
       description: "ISO 14001 is an internationally recognized standard for environmental management systems, designed to help organizations manage their environmental responsibilities in a systematic and sustainable way. It focuses on reducing environmental impact, ensuring regulatory compliance, and promoting continuous environmental performance improvement.\n\nThe standard requires organizations to identify environmental aspects and impacts, set measurable environmental objectives, and implement effective controls to minimize pollution, waste, and resource consumption. It also emphasizes legal compliance, emergency preparedness, and ongoing monitoring and evaluation.\n\nBaiqiancheng Electronics has obtained ISO 14001 certification, which demonstrates a company’s commitment to environmental protection, sustainability, and responsible business practices. It helps organizations reduce operational risks, improve resource efficiency, and enhance their environmental reputation.\n\nFor customers and stakeholders, ISO 14001 provides confidence that the organization actively manages environmental risks and aligns its operations with global sustainability expectations and environmental regulations.",
       image: "/images/about/certificates/ISO14001_en.png",
       issueDate: "2018",
@@ -293,7 +293,7 @@ export const certificatesData = {
     },
     {
       id: "iso13485",
-      title: "ISO13485 Quality Certification",
+      title: "ISO13485 Medical Device Quality Management System Certification",
       description: "ISO 13485 is an internationally recognized quality management system standard specifically developed for the medical device industry. It focuses on regulatory compliance, risk management, and consistent product quality throughout the entire product lifecycle, including design, development, production, installation, and servicing.\n\nBaiqiancheng Electronics has obtained ISO 13485 certification, which demonstrates an organization’s ability to meet stringent medical device regulatory requirements and to ensure patient safety and product reliability. The standard emphasizes risk-based thinking, traceability, validation of processes, and strict control of documentation and records.\n\nFor customers, ISO 13485 certification provides strong assurance that the manufacturer operates under a robust quality system aligned with global medical regulations such as FDA QSR and EU MDR. It also reflects a commitment to continuous improvement, effective corrective and preventive actions, and compliance with applicable statutory and regulatory requirements.\n\nOverall, ISO 13485 is a key benchmark for companies involved in medical devices, diagnostic equipment, and related components, enabling them to compete in regulated global markets with confidence.",
       image: "/images/about/certificates/ISO13485_en.png",
       issueDate: "2015",
@@ -320,7 +320,7 @@ export const certificatesData = {
     },
     {
       id: "iatf16949",
-      title: "IATF16949 Quality Certification",
+      title: "IATF16949 Automotive Quality Management System Certification",
       description: "IATF 16949 is a global quality management system standard specifically developed for the automotive industry. It replaced ISO/TS 16949 and is jointly established by the International Automotive Task Force (IATF). The standard focuses on defect prevention, process optimization, and continual improvement across the automotive supply chain.\n\nIATF 16949 emphasizes advanced quality planning, risk management, traceability, product safety, and rigorous process control. It integrates core automotive tools such as APQP, PPAP, FMEA, SPC, and MSA to ensure stable and reliable manufacturing processes.\n\nBaiqiancheng Electronics has obtained IATF 16949 certification, which demonstrates an organization’s capability to meet the demanding quality requirements of global automotive OEMs and Tier 1 suppliers. It also reflects strong management commitment, supplier quality control, and continuous improvement culture.\n\nFor customers, IATF 16949 certification is a critical qualification, ensuring consistent quality, reduced risks, and long-term supply chain reliability.",
       image: "/images/about/certificates/IATF16949_en.png",
       issueDate: "2022",
@@ -347,7 +347,7 @@ export const certificatesData = {
     },
     {
       id: "ul",
-      title: "UL Quality Certification",
+      title: "UL Safety Certification",
       description: "UL 859 is a safety standard developed by Underwriters Laboratories for household electric personal grooming appliances, such as hair dryers, curling irons, and similar products. The standard focuses on electrical safety, thermal performance, mechanical strength, and fire risk prevention.\n\nCompliance with UL 859 requires products to undergo rigorous testing to evaluate insulation, grounding, temperature rise, abnormal operation, and resistance to electrical and mechanical hazards. The goal is to ensure safe operation under both normal and foreseeable misuse conditions.\n\nBaiqiancheng Electronics has obtained UL 859 certification, which demonstrates that a product meets recognized safety requirements for the North American market. It enhances consumer trust and helps manufacturers comply with retailer and regulatory safety expectations.\n\nFor brands and manufacturers, UL 859 certification reduces market entry risks, supports regulatory compliance, and confirms a strong commitment to product safety, quality, and end-user protection.",
       image: "/images/about/certificates/UL895.png",
       issueDate: "2016",
@@ -374,7 +374,7 @@ export const certificatesData = {
     },
     {
       id: "ce",
-      title: "CE Quality Certification",
+      title: "CE European Conformity Certification",
       description: "CE certification obtained by Baiqiancheng Electronics is the mandatory mark established by the European Union to ensure compliance with safety, health, environmental, and consumer-protection requirements for products. It confirms that Baiqiancheng Electronics’ products comply with the relevant EU directives and harmonized standards. Obtaining CE certification enables Baiqiancheng Electronics’ products to legally enter the European Economic Area (EEA) market, reflecting the company's compliance and reliability in product design, manufacturing, and quality control. CE certification not only enhances Baiqiancheng Electronics’ international competitiveness but also strengthens customers’ trust in the safety and quality of its products.",
       image: "/images/about/certificates/CE.png",
       issueDate: "2016",
