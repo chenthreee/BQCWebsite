@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'standalone',
   allowedDevOrigins: ["http://localhost:3000", "http://192.168.8.96:3000","http://192.168.34.74:3000","http://192.168.34.228:3000","http://120.79.255.132:3000"],
   images: {
-    domains: ['localhost', '192.168.8.97', '192.168.34.74'],
+    domains: ['localhost', '192.168.8.97', '192.168.34.74', 'api.bqcdz.com', 'www.bqcdz.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -21,6 +21,18 @@ const nextConfig = {
         protocol: 'http',
         hostname: '192.168.34.74',
         port: '1337',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.bqcdz.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.bqcdz.com',
+        port: '',
         pathname: '/**',
       },
       {
