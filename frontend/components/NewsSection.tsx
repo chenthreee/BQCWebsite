@@ -61,7 +61,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Link
             href={`/${locale}/news/company.html`}
-            //rel="nofollow"
+            rel="nofollow"
             className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
           >
             <div className="flex items-center mb-6">
@@ -77,7 +77,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
           </Link>
           <Link
             href={`/${locale}/news/industry.html`}
-            //rel="nofollow"
+            rel="nofollow"
             className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 block"
           >
             <div className="flex items-center mb-6">

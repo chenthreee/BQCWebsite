@@ -301,9 +301,19 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
             </div>
           </div>
           <div className="mt-8 text-center">
-            <p className="text-gray-400">{t("footer.copyright")}</p>
-            <Link href={`/${locale}/legal.html`} rel="nofollow" className="text-gray-400 hover:text-white ml-4">{t("footer.legal")}</Link>
-            <Link href={`/${locale}/privacy.html`} rel="nofollow" className="text-gray-400 hover:text-white ml-4">{t("footer.privacy")}</Link>
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-gray-400">
+              <p>{t("footer.copyright")}</p>
+              <a
+                href="https://beian.miit.gov.cn/#/Integrated/index"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="hover:text-white"
+              >
+                备案号：粤ICP备06061046号
+              </a>
+              <Link href={`/${locale}/legal.html`} rel="nofollow" className="hover:text-white">{t("footer.legal")}</Link>
+            </div>
+            {/* <Link href={`/${locale}/privacy.html`} rel="nofollow" className="text-gray-400 hover:text-white ml-4">{t("footer.privacy")}</Link> */}
           </div>
         </div>
       </footer>
