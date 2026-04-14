@@ -14,10 +14,13 @@ export const metadata: Metadata = {
   authors: [{ name: "百千成电子" }],
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   robots: "index, follow",
+  alternates: {
+    canonical: "https://www.bqcdz.com/",
+  },
   openGraph: {
     type: "website",
     locale: "zh_CN",
-    url: "https://www.baiqiancheng.com/",
+    url: "https://www.bqcdz.com/",
     siteName: "百千成电子",
     title: "SMT贴片加工厂专注于PCBA加工领域22年-「百千成电子」",
     description:
