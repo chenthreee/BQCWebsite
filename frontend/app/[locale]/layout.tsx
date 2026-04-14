@@ -28,11 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     title: 'SMT贴片加工厂专注于PCBA加工领域22年-「百千成电子」',
-    description: '【百千成电子有限公司】成立于2003年，总部位于深圳，是一家专业SMT贴片加工厂家，业务涵盖PCBA加工设计、储能BMS系统研发、SMT贴片加工等，致力于全球整机组装全流程OEM制造服务。',
+    description: '【百千成电子有限公司】成立于2003年，是一家深圳专业SMT贴片加工厂家，业务涵盖PCBA加工设计、储能BMS系统研发、SMT贴片加工等，致力于全球整机组装全流程OEM制造服务。',
     keywords: 'PCBA加工|SMT贴片加工|SMT贴片|SMT贴片厂|SMT贴片加工厂|贴片加工厂|百千成电子',
     openGraph: {
       title: 'SMT贴片加工厂专注于PCBA加工领域22年-「百千成电子」',
-      description: '【百千成电子有限公司】成立于2003年，总部位于深圳，是一家专业SMT贴片加工厂家，业务涵盖PCBA加工设计、储能BMS系统研发、SMT贴片加工等，致力于全球整机组装全流程OEM制造服务。',
+      description: '【百千成电子有限公司】成立于2003年，是一家深圳专业SMT贴片加工厂家，业务涵盖PCBA加工设计、储能BMS系统研发、SMT贴片加工等，致力于全球整机组装全流程OEM制造服务。',
     },
   }
 }
