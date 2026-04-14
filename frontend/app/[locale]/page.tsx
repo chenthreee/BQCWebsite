@@ -184,7 +184,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
             <a
               href="https://www.linkedin.com/in/jacky-fan-a63b79137/overlay/contact-info/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow"
               className="text-blue-600 text-sm hover:underline"
             >
               访问公司 LinkedIn
