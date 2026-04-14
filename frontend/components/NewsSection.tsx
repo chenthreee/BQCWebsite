@@ -55,10 +55,10 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">{t("news.center.title")}</h2>
-          <p className="text-xl text-gray-600 mb-2">{t("news.center.subtitle")}</p>
-          <p className="text-gray-500 max-w-3xl mx-auto">{t("news.center.description")}</p>
+          <p className="text-gray-500 text-center max-w-3xl mx-auto">{t("news.center.subtitle")}</p>
+          <p className="text-gray-500 text-center max-w-3xl mx-auto mb-4">{t("news.center.description")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Link
             href={`/${locale}/news/company.html`}
             rel="nofollow"
