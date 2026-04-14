@@ -1,5 +1,8 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+const VALID_LOCALES = ["zh-Hans", "en"]
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -8,6 +11,10 @@ interface LocaleLayoutProps {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
+
+  if (!VALID_LOCALES.includes(locale)) {
+    notFound()
+  }
 
   if (locale === 'en') {
     return {

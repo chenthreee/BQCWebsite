@@ -1,6 +1,7 @@
 "use client"
 
 import { use } from "react"
+import { notFound } from "next/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { MainNavigation } from "@/components/main-navigation"
 import { ProductSection } from "@/components/product-section"
@@ -117,8 +118,15 @@ const translations: Record<string, Record<string, string>> = {
   },
 }
 
+const VALID_LOCALES = ["zh-Hans", "en"]
+
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = use(params)
+
+  if (!VALID_LOCALES.includes(rawLocale)) {
+    notFound()
+  }
+
   const locale = rawLocale === "en" ? "en" : "zh-Hans"
 
   const t = (key: string): string => {
