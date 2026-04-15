@@ -228,7 +228,9 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
           <div className="absolute right-0 top-0 bottom-0 -left-[250px] group-hover:block hidden"></div>
           <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-10">
             <p className="font-bold text-sm">电话</p>
-            <div className="text-sm">86-18823428986</div>
+            <a href="tel:+8618823428986" className="text-sm text-blue-600 hover:underline">
+              86-18823428986
+            </a>
             {/* <div className="text-sm">86-755-26788245</div> */}
           </div>
         </div>
