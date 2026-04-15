@@ -354,7 +354,7 @@ export function ServicesSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("section.title")}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">{t("section.title")}</h2>
           <p className="text-gray-500 text-center max-w-3xl mx-auto ">
             {t("section.subtitle")}
           </p>
@@ -487,7 +487,7 @@ export function ServicesSection() {
 
             {/* 合作客户 */}
             <div className="mt-20">
-              <h3 className="text-2xl font-bold text-center mb-10">{t("oem.clients.title")}</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-center mb-4">{t("oem.clients.title")}</h3>
               <p className="text-gray-500 text-center max-w-3xl mx-auto mb-10">
                 {t("section.customet.subtitle")}
               </p>
@@ -550,7 +550,7 @@ export function ServicesSection() {
 
             {/* 我们的优势 */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold text-center mb-10">{t("odm.adv.title")}</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-center mb-4">{t("odm.adv.title")}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">

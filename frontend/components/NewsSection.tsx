@@ -60,7 +60,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t("news.center.title")}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">{t("news.center.title")}</h2>
           <p className="text-gray-500 text-center max-w-3xl mx-auto">{t("news.center.subtitle")}</p>
           <p className="text-gray-500 text-center max-w-3xl mx-auto mb-4">{t("news.center.description")}</p>
         </div>
@@ -76,7 +76,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
               <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">{t("news.company")}</h3>
+              <h3 className="text-base font-bold text-gray-900">{t("news.company")}</h3>
             </div>
             <p className="text-gray-600 mb-6">{t("news.company.desc")}</p>
             <span className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
@@ -92,7 +92,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
               <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                 <span className="w-6 h-6 block bg-white rounded-full"></span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">{t("news.industry")}</h3>
+              <h3 className="text-base font-bold text-gray-900">{t("news.industry")}</h3>
             </div>
             <p className="text-gray-600 mb-6">{t("news.industry.desc")}</p>
             <span className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300">
@@ -130,9 +130,9 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
                       )}
                     </div>
                     <div className="p-4 flex flex-col flex-1">
-                      <span className={`text-xs font-medium ${categoryColor}`}>{categoryLabel}</span>
-                      <h4 className="text-sm font-bold text-gray-900 mt-1 mb-2 line-clamp-2 flex-1">{news.title}</h4>
-                      <p className="text-gray-500 text-xs mb-3 line-clamp-2">{news.description}</p>
+                      <span className={`text-base font-medium ${categoryColor}`}>{categoryLabel}</span>
+                      <h4 className="text-base font-bold text-gray-900 mt-1 mb-2 line-clamp-2 flex-1">{news.title}</h4>
+                      <p className="text-gray-500 mb-3 line-clamp-2">{news.description}</p>
                       <div className="flex items-center justify-between mt-auto">
                         <div className="flex items-center text-xs text-gray-400">
                           <Calendar className="h-3 w-3 mr-1" />

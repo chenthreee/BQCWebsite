@@ -235,7 +235,7 @@ export function AboutSection() {
 
           {/* 八大核心优势模块 */}
           <div className="mt-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-white">{t("about.mission.title")}</h3>
+            <h3 className="text-3xl font-bold mb-4 text-center text-white">{t("about.mission.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((num, index) => {
                 const IconComponent = advantageIcons[index]
@@ -249,10 +249,10 @@ export function AboutSection() {
                         <IconComponent className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                        <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-300">
                           {t(`about.advantage${num}.title`)}
                         </h4>
-                        <p className="text-gray-700 text-sm leading-relaxed">
+                        <p className="text-base text-gray-700  leading-relaxed">
                           {t(`about.advantage${num}.desc`)}
                         </p>
                       </div>
