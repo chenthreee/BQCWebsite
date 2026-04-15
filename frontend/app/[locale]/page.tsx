@@ -171,15 +171,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
                 // rel="nofollow noopener noreferrer"
                 className="transition hover:text-blue-600"
               >
-                DIP插件加工
-              </a>
-              <a
-                href="https://www.smt-pcba.com.cn/"
-                target="_blank"
-                // rel="nofollow noopener noreferrer"
-                className="transition hover:text-blue-600"
-              >
-                百千成pcba加工
+                smt贴片
               </a>
             </div>
           </div>
