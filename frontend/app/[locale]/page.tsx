@@ -309,7 +309,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
                 rel="nofollow noopener noreferrer"
                 className="hover:text-white"
               >
-                备案号：粤ICP备06061046号
+                备案号：粤ICP备06061046号-1
               </a>
               <Link href={`/${locale}/legal.html`} rel="nofollow" className="hover:text-white">{t("footer.legal")}</Link>
             </div>
