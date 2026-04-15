@@ -159,6 +159,40 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
          <NewsSection locale={locale} />
       </main>
 
+      <section className="bg-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="border-t border-gray-200 pt-6">
+            <h2 className="mb-6 text-2xl font-bold text-blue-600">友情链接</h2>
+            <div className="flex flex-wrap gap-x-8 gap-y-4 text-base text-gray-800">
+              <a
+                href="https://smtsmt.1688.com/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition hover:text-blue-600"
+              >
+                百千成SMT诚信通
+              </a>
+              <a
+                href="http://www.smt-smt.com/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition hover:text-blue-600"
+              >
+                DIP插件加工
+              </a>
+              <a
+                href="https://www.smt-pcba.com.cn/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition hover:text-blue-600"
+              >
+                百千成pcba加工
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 侧边栏联系方式 */}
       <div className="fixed right-4 bottom-20 z-40 flex flex-col gap-2">
         {/* 邮箱 */}
