@@ -5,9 +5,6 @@ import { Calendar } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { STRAPI_URL, GRAPHQL_URL } from "@/lib/config"
 
-// const STRAPI_URL = "http://localhost:1337"
-// const GRAPHQL_URL = `${STRAPI_URL}/graphql`
-
 async function getAllNews(locale: string) {
   const query = `
     query GetAllNews($locale: I18NLocaleCode) {
@@ -39,16 +36,25 @@ interface NewsSectionProps {
 
 export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
   const { t } = useLanguage();
-  const [companyNews, setCompanyNews] = useState<any>(null)
-  const [industryNews, setIndustryNews] = useState<any>(null)
+  const [companyNewsList, setCompanyNewsList] = useState<any[]>([])
+  const [industryNewsList, setIndustryNewsList] = useState<any[]>([])
 
   useEffect(() => {
     getAllNews(locale).then(newsList => {
-      console.log("Fetched news data:", newsList);  // 添加日志
-      setCompanyNews(newsList.find((n: any) => n.category?.name === "company"))
-      setIndustryNews(newsList.find((n: any) => n.category?.name === "industry"))
+      // 按发布时间降序排列，各取最新 4 条
+      const sorted = [...newsList].sort(
+        (a: any, b: any) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      )
+      setCompanyNewsList(sorted.filter((n: any) => n.category?.name === "company").slice(0, 4))
+      setIndustryNewsList(sorted.filter((n: any) => n.category?.name === "industry").slice(0, 6))
     })
   }, [locale])
+
+  // 先放公司新闻 2 条，再放行业新闻 6 条
+  const displayNews = [
+    ...companyNewsList.slice(0, 2).map((n: any) => ({ ...n, _type: "company" })),
+    ...industryNewsList.slice(0, 6).map((n: any) => ({ ...n, _type: "industry" })),
+  ]
 
   return (
     <section className="py-20 bg-white">
@@ -58,7 +64,9 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
           <p className="text-gray-500 text-center max-w-3xl mx-auto">{t("news.center.subtitle")}</p>
           <p className="text-gray-500 text-center max-w-3xl mx-auto mb-4">{t("news.center.description")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* 分类入口 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <Link
             href={`/${locale}/news/company.html`}
             rel="nofollow"
@@ -92,59 +100,56 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ locale }) => {
             </span>
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {companyNews && (
-            <Link href={`/${locale}/news/company/${companyNews.slug}.html`}  className="block">
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
-                  {companyNews.cover?.url ? (
-                    <Image src={STRAPI_URL + companyNews.cover.url} alt={companyNews.title} width={800} height={240} className="object-cover w-full h-full" />
-                  ) : (
-                    <span className="text-gray-400">无封面</span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <span className="text-sm text-blue-600 font-medium">{t("news.company")}</span>
-                  <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{companyNews.title}</h4>
-                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">{companyNews.description}</p>
-                  <div className="flex items-center text-xs text-gray-400 mb-2">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    <span>{companyNews.publishedAt?.slice(0, 10)}</span>
+
+        {/* 新闻列表：最多 8 条，4列2行 */}
+        {displayNews.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {displayNews.map((news: any) => {
+              const isCompany = news._type === "company"
+              const categoryLabel = isCompany ? t("news.company") : t("news.industry")
+              const categoryColor = isCompany ? "text-blue-600" : "text-green-600"
+              const hoverColor = isCompany ? "hover:text-blue-800" : "hover:text-green-800"
+              const href = isCompany
+                ? `/${locale}/news/company/${news.slug}.html`
+                : `/${locale}/news/industry/${news.slug}.html`
+
+              return (
+                <Link key={news.documentId} href={href} className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+                    <div className="h-44 overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      {news.cover?.url ? (
+                        <Image
+                          src={STRAPI_URL + news.cover.url}
+                          alt={news.title}
+                          width={400}
+                          height={176}
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <span className="text-gray-400">无封面</span>
+                      )}
+                    </div>
+                    <div className="p-4 flex flex-col flex-1">
+                      <span className={`text-xs font-medium ${categoryColor}`}>{categoryLabel}</span>
+                      <h4 className="text-sm font-bold text-gray-900 mt-1 mb-2 line-clamp-2 flex-1">{news.title}</h4>
+                      <p className="text-gray-500 text-xs mb-3 line-clamp-2">{news.description}</p>
+                      <div className="flex items-center justify-between mt-auto">
+                        <div className="flex items-center text-xs text-gray-400">
+                          <Calendar className="h-3 w-3 mr-1" />
+                          <span>{news.publishedAt?.slice(0, 10)}</span>
+                        </div>
+                        <span className={`text-xs font-medium ${categoryColor} ${hoverColor}`}>
+                          {t("news.readMore")} →
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium">
-                    {t("news.readMore")} &rarr;
-                  </span>
-                </div>
-              </div>
-            </Link>
-          )}
-          {industryNews && (
-            <Link href={`/${locale}/news/industry/${industryNews.slug}.html`}  className="block">
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div className="h-60 overflow-hidden bg-gray-100 flex items-center justify-center">
-                  {industryNews.cover?.url ? (
-                    <Image src={STRAPI_URL + industryNews.cover.url} alt={industryNews.title} width={800} height={240} className="object-cover w-full h-full" />
-                  ) : (
-                    <span className="text-gray-400">无封面</span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <span className="text-sm text-green-600 font-medium">{t("news.industry")}</span>
-                  <h4 className="text-lg font-bold text-gray-900 mt-2 mb-3">{industryNews.title}</h4>
-                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">{industryNews.description}</p>
-                  <div className="flex items-center text-xs text-gray-400 mb-2">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    <span>{industryNews.publishedAt?.slice(0, 10)}</span>
-                  </div>
-                  <span className="text-green-600 hover:text-green-800 flex items-center text-sm font-medium">
-                    {t("news.readMore")} &rarr;
-                  </span>
-                </div>
-              </div>
-            </Link>
-          )}
-        </div>
+                </Link>
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   )
-} 
+}

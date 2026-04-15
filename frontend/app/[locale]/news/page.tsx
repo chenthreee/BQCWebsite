@@ -116,7 +116,7 @@ export default async function NewsPage({ params, searchParams }: { params: { loc
 
       {/* 新闻列表 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {pageNews.slice(page === 1 ? 1 : 0).map((news: any) => (
+        {pageNews.map((news: any) => (
           <div key={news.documentId} className="bg-white rounded-lg shadow-md overflow-hidden">
             <Link href={`/${locale}/news/${news.category?.name === 'industry' ? 'industry' : 'company'}/${news.slug}.html`}>
             <div className="h-48 overflow-hidden">
