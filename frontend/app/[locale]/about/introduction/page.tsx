@@ -32,11 +32,13 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
             "公司生产基地设备齐全，深圳基地拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线；马来西亚槟城基地拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。百千成电子可为客户提供元器件采购、贴片、后焊、测试以及喷涂、成品组装等一站式OEM生产制造服务。",
             <div key="video-zh" className="flex justify-center my-6">
               <video
-                src="/Company%20introduction%20video.mp4"
+                src="/Company%20introduction%20video-web.mp4"
                 controls
+                preload="metadata"
+                playsInline
                 width={1000}
                 height={600}
-                className="rounded-lg shadow-lg"
+                className="w-full max-w-[1000px] h-auto rounded-lg shadow-lg"
                 poster="/images/about/companyIntroduction/cover.png"
               >
                 您的浏览器不支持视频播放。
@@ -123,11 +125,13 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
             </div>,
             <div key="video-en" className="flex justify-center my-6">
               <video
-                src="/Company%20introduction%20video.mp4"
+                src="/Company%20introduction%20video-web.mp4"
                 controls
+                preload="metadata"
+                playsInline
                 width={1000}
                 height={600}
-                className="rounded-lg shadow-lg"
+                className="w-full max-w-[1000px] h-auto rounded-lg shadow-lg"
                 poster="/images/about/companyIntroduction/cover.png"
               >
                 Your browser does not support video playback.
