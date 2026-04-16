@@ -437,13 +437,37 @@ export function MainNavigation() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
               <div key={item.key} className="relative">
-                <button
-                  onClick={() => setActiveDropdown(activeDropdown === item.key ? null : item.key)}
-                  className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex justify-between items-center"
-                >
-                  {item.label}
-                  {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                </button>
+                {item.children ? (
+                  <div className="flex items-center gap-2">
+                    <Link
+                      href={item.href}
+                      className="flex-1 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setActiveDropdown(activeDropdown === item.key ? null : item.key)}
+                      className="px-3 py-2 rounded-md text-white hover:bg-gray-800 flex items-center justify-center"
+                      aria-label={`展开${item.label}子菜单`}
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === item.key ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
 
                 {item.children && activeDropdown === item.key && (
                   <div className="pl-4 space-y-1">
@@ -458,7 +482,11 @@ export function MainNavigation() {
                               className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 flex justify-between items-center"
                             >
                               {child.label}
-                              <ChevronDown className="ml-1 h-4 w-4" />
+                              <ChevronDown
+                                className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                                  activeSubDropdown === child.href ? "rotate-180" : ""
+                                }`}
+                              />
                             </button>
 
                             {activeSubDropdown === child.href && (
