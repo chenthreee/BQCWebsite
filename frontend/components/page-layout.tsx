@@ -51,12 +51,12 @@ export default function PageLayout({
           <div className="max-w-3xl relative">
             {extraHeaderContent}
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-2xl md:text-4xl font-bold mb-4">
               {title}
             </h1>
 
             {subtitle && (
-              <p className="text-xl md:text-2xl mb-10">
+              <p className="text-lg md:text-xl mb-10">
                 {subtitle}
               </p>
             )}
