@@ -326,7 +326,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
               {/* <p>{t("footer.copyright")}</p> */}
               <p>
                 {locale === "en" ? "© 2026 " : "© 2026 "}
-                <Link href={`/`} rel="nofollow" className="transition-colors hover:text-white hover:underline underline-offset-4">
+                <Link href={`/`}  className="transition-colors hover:text-white hover:underline underline-offset-4">
                   {locale === "en" ? "Shenzhen BAIQIANCHENG Electronics Co., Ltd." : "深圳市百千成电子有限公司"}
                 </Link>
                 {locale === "en" ? " All rights reserved." : " 版权所有"}

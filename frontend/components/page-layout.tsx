@@ -91,7 +91,7 @@ export default function PageLayout({
         <div className="container mx-auto px-4 text-center">
           <p>
             {locale === "en" ? "© 2026 " : "© 2026 "}
-            <Link href={`/`} rel="nofollow" className="inline-block transition duration-200 hover:scale-105 hover:text-white hover:underline underline-offset-4">
+            <Link href={`/`}  className="inline-block transition duration-200 hover:scale-105 hover:text-white hover:underline underline-offset-4">
               {locale === "en" ? "Shenzhen BAIQIANCHENG Electronics Co., Ltd." : "深圳市百千成电子有限公司"}
             </Link>
             {locale === "en" ? " All rights reserved." : " 版权所有"}
