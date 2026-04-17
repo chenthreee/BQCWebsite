@@ -89,7 +89,13 @@ export default function PageLayout({
       {/* 页脚 */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-        <Link href={`/`} rel="nofollow" className="hover:text-white">{t("footer.copyright")}</Link>
+          <p>
+            {locale === "en" ? "© 2026 " : "© 2026 "}
+            <Link href={`/`} rel="nofollow" className="inline-block transition duration-200 hover:scale-105 hover:text-white hover:underline underline-offset-4">
+              {locale === "en" ? "Shenzhen BAIQIANCHENG Electronics Co., Ltd." : "深圳市百千成电子有限公司"}
+            </Link>
+            {locale === "en" ? " All rights reserved." : " 版权所有"}
+          </p>
           {/* <p>{t("footer.copyright")}</p> */}
         </div>
       </footer>

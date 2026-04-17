@@ -306,7 +306,7 @@ export function MainNavigation() {
           <div className="flex-shrink-0">
             <h1 className="sr-only">{currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}</h1>
             <Link href={`/`} className="flex items-center">
-              <Image src="/BQCLogo.png" alt={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} title={currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"} width={40} height={60} className="mr-2" />
+              <Image src="/BQCLogo.png" alt="smt贴片" title="百千成电子有限公司" width={40} height={60} className="mr-2" />
               <span className="text-xl font-bold text-white">
                 {currentLocale === "en" ? "BAIQIANCHENG Electronics" : "百千成电子"}
               </span>

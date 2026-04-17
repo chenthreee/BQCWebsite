@@ -324,7 +324,13 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
           <div className="mt-8 text-center">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-gray-400">
               {/* <p>{t("footer.copyright")}</p> */}
-              <Link href={`/`} rel="nofollow" className="hover:text-white">{t("footer.copyright")}</Link>
+              <p>
+                {locale === "en" ? "© 2026 " : "© 2026 "}
+                <Link href={`/`} rel="nofollow" className="transition-colors hover:text-white hover:underline underline-offset-4">
+                  {locale === "en" ? "Shenzhen BAIQIANCHENG Electronics Co., Ltd." : "深圳市百千成电子有限公司"}
+                </Link>
+                {locale === "en" ? " All rights reserved." : " 版权所有"}
+              </p>
               <a
                 href="https://beian.miit.gov.cn/#/Integrated/index"
                 target="_blank"
