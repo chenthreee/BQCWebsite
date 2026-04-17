@@ -6,22 +6,22 @@ export function CertificatesSection() {
   const { t, language } = useLanguage();
   const certificates = [
     {
-      id: "iso9001",
+      id: "iso9001", //质量管理体系
       image: "/images/about/certificates/ISO9001.png",
       title: language === "en" ? "ISO9001 Quality Management System Certification" : "ISO9001质量认证体系",
     },
     {
-      id: "iso14001",
+      id: "iso14001", //环境管理体系
       image: "/images/about/certificates/ISO14001.png",
       title: language === "en" ? "ISO14001 Environmental Management System Certification" : "ISO14001环境管理体系",
     },
     {
-      id: "iso13485",
+      id: "iso13485", //医疗器械质量管理体系
       image: "/images/about/certificates/ISO13485.png",
       title: language === "en" ? "ISO13485 Medical Device Quality Management System Certification" : "ISO13485医疗器械质量管理体系",
     },
     {
-      id: "iatf16949",
+      id: "iatf16949", //汽车行业质量管理体系
       image: "/images/about/certificates/IATF16949.png",
       title: language === "en" ? "IATF16949 Automotive Quality Management System Certification" : "IATF16949汽车行业质量管理体系",
     },
