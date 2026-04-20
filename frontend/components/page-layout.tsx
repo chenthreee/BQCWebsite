@@ -96,7 +96,8 @@ export default function PageLayout({
             </Link>
             {locale === "en" ? " All rights reserved." : " 版权所有"}
           </p>
-          {/* <p>{t("footer.copyright")}</p> */}
+          {/* <p>{t("footer.copyright")}</p>  已经更改写入方式 如上 这一句话要分块写入
+          因为 只有 深圳市百千成电子有限公司 这几个字有点击效果 可供点击 分成三段去书写这个内容*/}
         </div>
       </footer>
     </div>
