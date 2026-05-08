@@ -7,10 +7,12 @@ Disallow: /zh-Hans/legal
 Disallow: /en/legal
 Disallow: /about/development-history
 Disallow: /zh-Hans/about/development-history
-Disallow: /en/about/development-history 
+Disallow: /en/about/development-history
 Disallow: /zh-Hans/contact
 Disallow: /en/about/contact
 Disallow: /admin/
 Disallow: /en/
 Disallow: /en
 
+# 禁止抓取所有带 ? 参数的 URL（分页、筛选等，避免重复收录）
+Disallow: /*?*
