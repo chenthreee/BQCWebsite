@@ -54,6 +54,20 @@ const nextConfig = {
   //   defaultLocale: 'zh-Hans',
   //   localeDetection: false,
   // }
+  async headers() {
+    return [
+      {
+        // 精确匹配 /zh-Hans 这一个页面，告诉搜索引擎不收录
+        source: '/zh-Hans',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, follow',
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       // 将 /zh-Hans 根路径 301 重定向到 /（避免SEO重复内容）
