@@ -54,6 +54,16 @@ const nextConfig = {
   //   defaultLocale: 'zh-Hans',
   //   localeDetection: false,
   // }
+  async redirects() {
+    return [
+      // 将 /zh-Hans 根路径 301 重定向到 /（避免SEO重复内容）
+      {
+        source: '/zh-Hans',
+        destination: '/',
+        permanent: true, // 301
+      },
+    ]
+  },
   async rewrites() {
     return [
       {

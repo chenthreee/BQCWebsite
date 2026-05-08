@@ -102,7 +102,7 @@ export function HeroSection() {
     if (!autoPlayRef.current) {
       autoPlayRef.current = setInterval(() => {
         nextSlide()
-      }, 5000) // 切换间隔，单位：毫秒
+      }, 2500) // 切换间隔，单位：毫秒
     }
   }
 
