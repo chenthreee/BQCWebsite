@@ -350,8 +350,8 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                               src={section.image}
                               alt={`OEM Service ${index + 1}`}
                               width={700}
-                              height={500}
-                              className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                              height={700}
+                              className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700"
                               priority={index === 0}
                             />
                           </div>
