@@ -512,6 +512,35 @@ export const honorsData = {
           "经营管理规范且成长性良好"
         ]
       }
+    },
+    {
+      id: "littleGiantMan",
+      title: "专精特新“小巨人”企业",
+      description: "深圳市百千成电子有限公司荣获专精特新 “小巨人” 企业证书，是国家层面针对企业专业化、精细化、特色化、创新能力的最高等级权威认定，标志着公司已从优质专精特新中小企业跃升为细分领域的标杆型企业。该资质充分印证企业深耕电子领域主业突出，在关键技术、产品质量、工艺管控与差异化创新上形成核心壁垒，具备稳定可靠的产品供给能力与强劲可持续的研发创新实力，细分市场竞争力、行业影响力与长期成长潜力获得国家级认可，是企业技术实力、品牌价值与综合竞争力的重要体现。",
+      image: "/images/about/certificates/little_gaint_man.jpg",
+      issueDate: "2025年",
+      validUntil: "2028年",
+      detailedInfo: {
+        fullName: "专精特新 “小巨人” 企业证书",
+        scope: "适用于专注细分市场的创新型优质中小企业",
+        certificationBody: "工业和信息化部",
+        benefits: [
+          "提升企业行业公信力与品牌影响力",
+          "享受国家级及地方专项政策与资金扶持",
+          "增强客户合作信任度与市场竞争力",
+          "优先参与产业链核心项目与资源对接",
+          "强化企业创新能力与可持续发展动力"
+        ],
+        requirements: [
+          "拥有市级专精特新中小企业资质（前置条件）",
+          "深耕同一细分市场≥3 年，合规经营无失信记录",
+          "上年度营收≥5000 万元，主营业务占比≥90%",
+          "近两年研发费用累计≥1200 万元，研发费用占营收比例≥3%",
+          "拥有 Ⅰ 类核心自主知识产权≥4 项，且与主导产品相关",
+          "主导产品属于制造业关键领域，细分市场占有率领先",
+          "具备完善的研发组织管理体系与信息化支撑能力"
+        ]
+      }
     }
   ],
   en: [
@@ -559,6 +588,33 @@ export const honorsData = {
           "Enhance corporate brand recognition",
           "Priority participation in government procurement projects",
           "Strengthen market competitiveness and industry influence"
+        ],
+        requirements: [
+          "Focus on niche market segments",
+          "Possess strong innovation capabilities and R&D strength",
+          "Own core technologies and independent intellectual property",
+          "Maintain stable product quality and market competitiveness",
+          "Demonstrate standardized management and strong growth potential"
+        ]
+      }
+    },
+    {
+      id: "littleGiantMan",
+      title: "Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate",
+      description: "Baiqiancheng Electronics has obtained the Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate which is the highest level of official recognition for enterprises with specialization, refinement, distinctiveness, and innovation capabilities. This qualification marks the company's transition from a high-quality specialized and innovative SME to a benchmark enterprise in its细分领域. The certification fully verifies the company's深耕电子领域主业突出，在关键技术、产品质量、工艺管控与差异化创新上形成核心壁垒，具备稳定可靠的产品供给能力与强劲可持续的研发创新实力，细分市场竞争力、行业影响力与长期成长潜力获得国家级认可，是企业技术实力、品牌价值与综合竞争力的重要体现。",
+      image: "/images/about/certificates/little_gaint_man.jpg",
+      issueDate: "2025",
+      validUntil: "2028",
+      detailedInfo: {
+        fullName: "Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate",
+        scope: "Applicable to innovative SMEs focused on niche markets",
+        certificationBody: "Industrial and Information Technology Department",
+        benefits: [
+          "Enhance enterprise industry credibility and brand influence",
+          "Enjoy national and local special policy and financial support",
+          "Strengthen customer cooperation trust and market competitiveness",
+          "Priority participation in core project and resource docking",
+          "Strengthen enterprise innovation ability and sustainable development"
         ],
         requirements: [
           "Focus on niche market segments",

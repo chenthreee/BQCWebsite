@@ -2,7 +2,7 @@
 
 import PageLayout from "@/components/page-layout"
 import Image from "next/image"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle, ArrowRight, Globe, MapPin, Handshake, BadgeCheck, Shield, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -41,27 +41,27 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       oem: {
         sections: [
           {
-            image: "/images/services/1.png",
+            image: "/images/services/1_zh.png",
             imagePosition: "right",
             content: [
-              "百千成（BQC）成立于2003年，是一家深耕22年的专业电子制造服务（EMS）供应商。我们以\"强研发 + 强制造\"的闭环能力，帮助客户将产品从设计验证快速推进到稳定量产。现有员工1000+，厂区总面积20,000㎡+（深圳15,000㎡、马来西亚槟城6,000㎡）。提供从元器件采购、PCBA贴片/插件到整机装配与功能/老化测试的一站式 OEM/ODM 交付，覆盖储能系统、AI智能机器人、医疗电子、汽车电子等高可靠领域，持续为海内外客户交付稳定、高质量的量产方案。",
+              "百千成（BQC）成立于2003年，是一家深耕22年的专业电子制造服务（EMS）供应商。我们以“强研发 + 强制造”的闭环能力，帮助客户将产品从设计验证快速推进到稳定量产。BQC提供从元器件采购、PCBA贴片/插件、整机装配，到功能测试、老化测试的一站式 OEM/ODM 交付，覆盖储能系统、固态变压器（SST）、AI智能机器人、医疗电子、汽车电子等高可靠领域。针对固态变压器及大功率电力电子产品，BQC具备厚铜/超厚铜功率板、SiC模块、大电流端子、高耐压板卡等专项制造能力。通过定制化选择性波峰焊、自动化压接、水基清洗及离子污染检测，保障产品焊接可靠性、压接一致性、板面洁净度与长期运行稳定性。",
               "产能与布局：",
-              "• 中国·深圳（15,000㎡）：24 条 SMT、配套插件/手焊/测试/三防/组装/老化/包装一站式服务",
-              "• 马来西亚·槟城（6,000㎡）：4 条 SMT，配套自动化插件机/手焊/测试/三防/组装/老化/包装一站式服务。",
-              "满足东南亚、欧盟与美国的原产地与本地化交付需求，灵活应对关务与时效。"
+              "• 中国·深圳基地（15,000㎡）：24条SMT产线，配套插件、手焊、选择性波峰焊、压接、测试、三防、组装、老化及包装一站式服务。",
+              "• 马来西亚·槟城基地（6,000㎡）：4条SMT产线，配套插件、手焊、测试、三防、组装、老化及包装服务，满足东南亚、欧盟及美国市场的原产地与本地化交付需求。"
             ]
           },
           {
-            image: "/images/services/5_zh.png",
+            image: "/images/services/5.png",
             imagePosition: "left",
             content: [
               "供应商管理：",
-              "公司长期与NXP、ST、TI等原厂及Arrow/Future/Avnet等全球代理长期深度合作、高层关系默契，价格与交期具备显著优势，计划未来可预期，交付更准时。",
-              
+              "公司长期与NXP、ST、TI等原厂，以及Arrow、Future、Avnet等全球代理保持稳定合作。",
+              "核心器件资源更稳定，价格与交期更具优势，可支持中长期备料与交付规划。",
+              "通过供应商分级管理与风险管控，提升供应链可预期性，保障项目准时交付。",
             ]
           },
           {
-            image: "/images/services/2.png",
+            image: "/images/services/2_zh.png",
             imagePosition: "right",
             content: [
               "智能制造：",
@@ -69,11 +69,12 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/6.png",
+            image: "/images/services/6_zh.png",
             imagePosition: "left",
             content: [
               "质量管理体系：",
-              "全面认证体系： ISO 9001｜ISO 14001｜ISO 13485｜IATF 16949｜RoHS/REACH｜IPC-A-610 Class II/III针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关，确保产品交付品质。"
+              "全面认证体系：ISO 9001｜ISO 14001｜ISO 13485｜IATF 16949｜RoHS/REACH｜IPC-A-610 Class II/III",
+              "针对高可靠应用制定工艺窗口与失效分析流程，全流程质量把关，确保产品交付品质。"
             ]
           },
           {
@@ -114,7 +115,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       oem: {
         sections: [
           {
-            image: "/images/services/1.png",
+            image: "/images/services/1_zh.png",
             imagePosition: "right",
             content: [
               "BQC, founded in 2003, is a professional Electronics Manufacturing Services (EMS) provider with 22 years of experience. With a “Strong R&D × Strong Manufacturing” closed-loop capability, we help customers accelerate products from design validation to stable mass production. We have 1,000+ employees and 20,000+ m² of manufacturing space (Shenzhen 15,000 m², Penang, Malaysia 6,000 m²). Our one-stop OEM/ODM offering covers component sourcing, PCBA SMT/THT, and box-build assembly with functional and burn-in testing, serving energy storage systems, intelligent AI robotics, medical electronics, and automotive electronics—consistently delivering reliable, high-quality volume production for customers worldwide.",
@@ -125,16 +126,17 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/5_en.png",
+            image: "/images/services/5.png",
             imagePosition: "left",
             content: [
-              "Supplier Management：",
-              "The Company has long maintained deep cooperation with orignal equipment manufacturers such as NXP, ST, and TI, as well as global distributors like Arrow, Future, and Avnet. The senior management team has ezxellent communication skills, and the company enjoys significant advantages in terms of price and delivery time. The plans are predictable, and the delivery times are more punctual.",
-              
+              "Supplier Management:",
+              "We maintain stable cooperation with original manufacturers including NXP, ST, and TI, as well as global distributors such as Arrow, Future, and Avnet.",
+              "Core component supply is more stable, with stronger advantages in pricing and lead time to support mid- and long-term material planning.",
+              "Supplier grading and risk control improve supply-chain predictability and help keep projects on schedule.",
             ]
           },
           {
-            image: "/images/services/2.png",
+            image: "/images/services/2_zh.png",
             imagePosition: "right",
             content: [
               "Intelligent Manufacturing System：",
@@ -142,11 +144,12 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/6.png",
+            image: "/images/services/6_zh.png",
             imagePosition: "left",
             content: [
-              "Quality Management System：",
-              "Comprehensive Certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III. For high-reliability applications, we define tight process windows and failure analysis procedures, enforcing end-to-end quality control, Ensure the quality of product delivery.",
+              "Quality Management System:",
+              "Comprehensive certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III",
+              "For high-reliability applications, we define process windows and failure-analysis procedures with end-to-end quality control to ensure delivery quality.",
             ]
           },
           {
@@ -239,7 +242,89 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                         {/* 文字内容 */}
                         <div className={`${section.imagePosition === "left" ? "lg:order-2" : "lg:order-1"} space-y-3 lg:space-y-4`}>
                           {section.content.map((paragraph, pIndex) => {
+                            const isCapacityTitle = index === 0 && pIndex === 1
+                            const isLocationLine = index === 0 && (pIndex === 2 || pIndex === 3)
+                            const isSupplierSection = index === 1
+                            const isQualitySection = index === 3
+                            const isInfoPanelTitle = (isSupplierSection || isQualitySection) && pIndex === 0
+                            const isInfoPanelRow = (isSupplierSection || isQualitySection) && pIndex > 0
                             const isSubtitle = paragraph.endsWith('：') && paragraph.length < 50
+
+                            if (isCapacityTitle) {
+                              return (
+                                <div
+                                  key={pIndex}
+                                  className="mt-6 first:mt-0 flex items-center gap-3 text-xl sm:text-2xl font-bold text-blue-700"
+                                >
+                                  <Globe className="h-6 w-6 shrink-0 text-blue-600" />
+                                  <span>{paragraph}</span>
+                                </div>
+                              )
+                            }
+
+                            if (isLocationLine) {
+                              const cleaned = paragraph.slice(2).trim()
+                              const separatorIndex = cleaned.search(/[:\uFF1A]/)
+                              const title =
+                                separatorIndex >= 0 ? cleaned.slice(0, separatorIndex).trim() : cleaned
+                              const description =
+                                separatorIndex >= 0 ? cleaned.slice(separatorIndex + 1).trim() : ""
+
+                              return (
+                                <div
+                                  key={pIndex}
+                                  className="rounded-xl border border-blue-100 bg-white/70 px-4 py-3 shadow-sm"
+                                >
+                                  <div className="flex items-center gap-2 text-base sm:text-lg font-bold text-blue-700">
+                                    <MapPin className="h-5 w-5 shrink-0 text-blue-600" />
+                                    <span>{title.trim()}</span>
+                                  </div>
+                                  {description && (
+                                    <p className="mt-2 pl-7 text-sm sm:text-base leading-relaxed text-gray-700">
+                                      {description}
+                                    </p>
+                                  )}
+                                </div>
+                              )
+                            }
+
+                            if (isInfoPanelTitle) {
+                              return (
+                                <div
+                                  key={pIndex}
+                                  className="mt-2 flex items-center border-l-4 border-blue-500 pl-4 text-2xl font-bold text-blue-700"
+                                >
+                                  <span>{paragraph}</span>
+                                </div>
+                              )
+                            }
+
+                            if (isInfoPanelRow) {
+                              const Icon =
+                                isSupplierSection
+                                  ? pIndex === 1
+                                    ? Handshake
+                                    : pIndex === 2
+                                      ? BadgeCheck
+                                      : Shield
+                                  : pIndex === 1
+                                    ? CheckCircle
+                                    : ShieldCheck
+
+                              return (
+                                <div
+                                  key={pIndex}
+                                  className={`flex gap-4 py-4 ${pIndex > 1 ? "border-t border-blue-100/80" : ""}`}
+                                >
+                                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 ring-1 ring-blue-100">
+                                    <Icon className="h-5 w-5" />
+                                  </div>
+                                  <p className="pt-1 text-base sm:text-lg text-gray-800 leading-relaxed hover:text-gray-900 transition-colors">
+                                    {paragraph}
+                                  </p>
+                                </div>
+                              )
+                            }
 
                             return (
                               <p
