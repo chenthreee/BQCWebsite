@@ -352,6 +352,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
                               width={700}
                               height={700}
                               className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700"
+                              unoptimized={index === 0}
                               priority={index === 0}
                             />
                           </div>
