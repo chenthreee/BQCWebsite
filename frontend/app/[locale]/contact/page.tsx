@@ -98,10 +98,10 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       generalContact: {
         title: "联系方式（中国）",
         description: "欢迎通过以下方式与我们联系，或致电获取即时帮助：",
-        phone: "86-18823428986",
+        phone: "86-13923876486",
         fax: "86-755-26788245",
         email: "jacky@bqcdz.com",
-        malaysiaPhone: "60-184027289",
+        malaysiaPhone: "60-184058321",
         malaysiaFax: "xx-755-26788245",
         malaysiaEmail: "bqctech@bqcdz.com",
         features: [
@@ -150,10 +150,10 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       generalContact: {
         title: "General Contact（China）",
         description: "Send us a general inquiry through below info or contact by phone for immediate assistance:",
-        phone: "86-18823428986",
+        phone: "86-13923876486",
         fax: "86-755-26788245",
         email: "jacky@bqcdz.com",
-        malaysiaPhone: "60-184027289",
+        malaysiaPhone: "60-184058321",
         malaysiaFax: "xx-755-26788245",
         malaysiaEmail: "bqctech@bqcdz.com",
         features: [
