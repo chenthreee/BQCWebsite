@@ -48,9 +48,9 @@ export function HeroSection() {
     {
       id: 1,
       title: locale === "en" ? "OEM Manufacturing Services" : "OEM制造服务",
-      subtitle: locale === "en" ? "One-stop Electronic Manufacturing Solutions" : "一站式电子制造解决方案",
+      subtitle: locale === "en" ? "One-Stop Electronics Manufacturing Solutions" : "一站式电子制造解决方案",
       description: locale === "en"
-        ? "Providing full-process OEM manufacturing services from PCB design, SMT assembly to complete unit assembly"
+        ? "From PCB design and SMT assembly to complete system assembly, we provide end-to-end OEM manufacturing services to support your product from concept to production."
         : "提供从PCB设计、SMT贴片到整机组装的全流程OEM制造服务",
       buttonText: t("button.learnMore"),
       buttonLink: `/${locale}/services/oem.html`,
@@ -60,9 +60,9 @@ export function HeroSection() {
     {
       id: 2,
       title: locale === "en" ? "Energy Storage BMS System Expert" : "储能BMS系统专家",
-      subtitle: locale === "en" ? "Safe, Reliable, Smart and Efficient" : "安全可靠，智能高效",
+      subtitle: locale === "en" ? "Safe, Reliable, Smart, and Efficient" : "安全可靠，智能高效",
       description: locale === "en"
-        ? "Focusing on BMS system development and production for power storage, ship storage, communication base stations, data centers and other fields"
+        ? "Focused on the R&D and manufacturing of BMS solutions for BESS, marine energy storage, telecom base stations, data centers, and other applications"
         : "专注于电力储能、船舶储能、通讯基站、数据中心等领域的BMS系统研发与生产",
       buttonText: t("button.learnMore"),
       buttonLink: `/${locale}/products/energy-storage-bms.html`,

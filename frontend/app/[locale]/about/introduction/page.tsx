@@ -92,36 +92,36 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "I. Company Overview",
           content: [
-            "Founded in 2003, Shenzhen Baiqiancheng Electronics Co., Ltd. is a leading provider of Battery Management Systems (BMS) and PCBA (Printed Circuit Board Assembly) solutions for power conversion systems (PCS), inverters, and intelligent robots. With over two decades of experience, we specialize in both design and manufacturing, offering complete OEM and ODM services from concept development to mass production."
+            "Shenzhen Baiqiancheng Electronics Co., Ltd. was founded in 2003. It is a high-tech enterprise specializing in the design and manufacture of BMS for energy storage lithium batteries, as well as PCBA design and manufacturing for PCS inverters and intelligent robotics applications."
           ]
         },
         {
           title: "II. R&D Support Services",
           content: [
-            "Our R&D team delivers comprehensive engineering support, including:",
+            "Our professional R&D team provides one-stop R&D support services, including:",
             <ul key="en-rd-services" className="list-disc pl-6 space-y-2 text-gray-700 text-xl mt-3">
-              <li>Energy storage BMS consulting</li>
-              <li>Circuit architecture and component selection</li>
-              <li>Hardware and software development</li>
+              <li>Energy storage BMS technical consulting</li>
+              <li>Block diagram design and component selection</li>
+              <li>Hardware (schematic design and PCB layout) and software development</li>
               <li>Algorithm design and optimization</li>
-              <li>Component substitution and cost-down engineering</li>
+              <li>Component optimization and replacement</li>
               <li>DFM (Design for Manufacturing) analysis</li>
               <li>Rapid prototyping and product verification</li>
               <li>Automated programming and testing</li>
             </ul>,
-            "We provide comprehensive R&D support to ensure high-quality SMT production and mass production delivery."
+            " These services lay a solid foundation for high-quality SMT assembly and reliable mass production."
           ]
         },
         {
-          title: "III. Manufacturing Bases and Production Services",
+          title: "III. Production Base & Manufacturing Services",
           content: [
             <div key="en-manufacturing" className="space-y-3">
               <p className="text-gray-700 text-xl">Our manufacturing bases are equipped with advanced production facilities to ensure precision, flexibility, and reliability:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 text-xl">
-                <li><strong>Shenzhen, China:</strong> 24 high-speed SMT lines, 4 wave soldering lines, 4 hand-soldering lines, and 10 conformal coating lines.</li>
-                <li><strong>Malaysia:</strong> 4 SMT lines, 2 automatic DIP lines, and 2 conformal coating lines.</li>
+                <li><strong>Shenzhen, China:</strong> 24 high-speed SMT lines, 4 wave soldering lines, 4 post-soldering lines, and 10 conformal coating lines.</li>
+                <li><strong>Malaysia:</strong> 4 high-speed SMT lines, 2 fully automated through-hole insertion lines, and 2 conformal coating lines.</li>
               </ul>
-              <p className="text-gray-700 text-xl">Combining strong R&D capabilities with extensive manufacturing resources, Baiqiancheng Electronics provide one-stop OEM solutions tailored to meet the diverse needs of global partners.</p>
+              <p className="text-gray-700 text-xl">Baiqiancheng Electronics provides one-stop OEM manufacturing services covering component sourcing, SMT assembly, post-soldering, functional testing, conformal coating, and finished product assembly.</p>
             </div>,
             <div key="video-en" className="flex justify-center my-6">
               <video
@@ -142,14 +142,14 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "IV. Certifications and Customer Achievements",
           content: [
-            "BQC Electronics holds ISO9001, ISO14001, ISO13485 and IATF16949 certifications and has implemented an advanced MES system to ensure standardized, traceable, and high-quality production. Every PCBA we deliver meets the highest quality standards.",
-            "We have successfully designed, developed, and manufactured BMS products for over 50 leading energy storage clients, including Top 5 global on-grid and Top 3 marine energy storage companies, with a cumulative capacity of 50 GWh+. Additionally, we have produced and shipped over 5 million PCBAs for intelligent robotics, serving industry leaders in robotic vacuum, mowing, and humanoid robot solutions."
+            "The company is certified to ISO 9001, ISO 14001, ISO 13485, and IATF 16949 management system standards. Meanwhile, we have implemented an MES management system to support standardized production and refined management. Our full-process digital traceability system helps ensure the high-quality delivery of every PCBA.",
+            "To date, we have provided BMS R&D and manufacturing services to more than 50 well-known energy storage customers in China and overseas, including customers among the leading players in large-scale power storage and marine energy storage, with cumulative delivered capacity exceeding 50 GWh. For intelligent robotics applications, including leading brands in robotic vacuum cleaners, robotic lawn mowers, and humanoid robots, we have shipped more than 5 million PCBA units."
           ]
         },
         {
-          title: "V. Company Layout and Team Scale",
+          title: "V. Company Footprint and Team Size",
           content: [
-            "Baiqiancheng Electronics’ R&D, sales, and procurement teams are based in Xili Ruiyuan, Shenzhen, while our two main manufacturing facilities are located in Gongming, Shenzhen and Penang, Malaysia. With over 900 skilled professionals, we combine technical expertise, operational excellence, and innovation.",
+            "Our R&D, sales, and procurement teams are located at Nanshan Ruiyuan, adjacent to Nanshan High-Tech Industrial Park in Shenzhen. The company operates two major manufacturing bases in Guangming, Shenzhen and Penang, Malaysia, with more than 900 employees across management, engineering, and production teams.",
             <div key="factory-images-en" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
               <div className="relative w-full h-[400px]">
                 <Image
@@ -173,7 +173,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "VI. Corporate Values and Employee Development",
           content: [
-            "Throughout our development, we have always adhered to the core values of \"Customer-first, Integrity, Share and Contribution\". Guided by the core principle of \"Respecting Employee Value and Empowering Individual Growth\", the company continuously creates a better working environment and comprehensive welfare benefits for employees. It focuses on building a self-driven and highly efficient team, and inspiring employees' sense of innovation and work enthusiasm. We firmly believe that only when employees gain a sense of value recognition and happiness in their work can the enterprise achieve sustained and steady development."
+            "Throughout our development, we have consistently upheld the core values of Customer First, Integrity, Sharing, and Giving Back. Guided by the philosophy of \"Respecting employee value and empowering individual growth,\" the company continuously creates a superior working environment and comprehensive benefits for employees. We focus on building a self-driven and efficient team while stimulating employees’ innovation awareness and work enthusiasm. We firmly believe that only when employees feel valued and fulfilled at work can the company achieve sustainable and steady growth."
           ]
         }
       ]

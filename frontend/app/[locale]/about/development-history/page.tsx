@@ -54,7 +54,7 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
     },
     en: {
       title: "Development History",
-      subtitle: "Growth and Development of BQC Electronics",
+      subtitle: "The Growth and Development of BQC Electronic",
       breadcrumb: [
         { label: "About Us", href: "/en/about" },
         { label: "Development History", href: "/en/about/development-history.html" }
@@ -62,38 +62,38 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
       overview: {
         title: "Our Journey",
         desc: [
-          "Founded in July 2003 in Bantian, Longgang, Shenzhen, we have specialized in the new energy and intelligent robot sectors for over 20 years. It is a comprehensive high-tech enterprise with a focus on research and development and design, and also possesses large-scale manufacturing capabilities.",
-          "In our early phase, we focused on R&D and manufacturing of solar PV inverters. By 2006, this business accounted for over 50% of our total, and we obtained ISO 9001 certifications to solidify our quality foundation.",
-          "In line with the evolution of industry trends and market demands, we have gradually expanded our business scope. In the new energy field, we cover energy storage BMS (Battery Management System), marine energy storage BMS and small electric boat propulsion systems; in the intelligent equipment field, we cover consumer products like cat litter robots and floor-sweeping robots. Relying on the manufacturing capabilities of a professional SMT assembly plant, we provide stable and reliable PCBA products to customers worldwide, our customers span Europe, the Americas and the domestic China, forming a diversified global layout.",
-          "Baiqiancheng Electronics continuously upgrades its management system, successively obtaining certifications including ISO13485, ISO14001, and IATF16949. In 2024, we entered a new stage: the launch of our Malaysian factory deepened our global presence; in the same year, the BMS related yield exceeded 35 GWh, highlighting our core competitiveness in energy storage."
-
+          "Shenzhen Baiqiancheng Electronic Co., Ltd. was officially established in Bantian, Longgang District, Shenzhen in July 2003. With more than 20 years of dedication to the new energy and intelligent robotics industries, BQC has grown into a comprehensive high-tech enterprise with R&D and design at its core, supported by strong large-scale manufacturing capabilities.",
+          "In its early years, the company focused on the R&D and manufacturing of solar photovoltaic inverters. By 2006, this business accounted for more than 50% of the company’s revenue. BQC also successfully obtained ISO 9001 international certification, laying a solid foundation for quality management.",
+          "As industry trends and market demands evolved, BQC gradually expanded its business scope. In the new energy sector, BQC has expanded its expertise into BESS BMS (Battery Management System), marine energy storage BMS, small electric boat propulsion systems, and other specialized applications. In the intelligent equipment sector, BQC entered the consumer smart product market, including self-cleaning litter box robots and robotic vacuum cleaners.",
+          "Leveraging its professional SMT assembly and manufacturing capabilities, BQC provides stable and reliable PCBA products to customers worldwide. Its customer base covers Europe, the Americas, and the Chinese domestic market, forming a diversified and global business structure.",
+          "BQC has continuously upgraded its management system and has successively obtained ISO 13485, ISO 14001, and IATF 16949 certifications. In 2024, the company reached a new stage of development: the establishment of its Malaysia factory marked a further step in its international expansion. In the same year, the cumulative installed capacity of BQC’s energy storage BMS customers exceeded 50GWh+, demonstrating the company’s core competitiveness in the energy storage field."
         ]
       },
       future: {
         title: "Future Outlook",
-        description: "BQC Electronics will continue to uphold its core values of 'Customer-first, Integrity, Share and Contribution', continuously improving technical capabilities and product quality to provide better products and services for global customers and contribute to the development of clean energy."
+        description: "BQC Electronic will continue to uphold its core values of customer first, integrity, sharing, and giving back. We will keep strengthening our technical capabilities and product quality, providing better products and services to customers around the world, and contributing to the development of clean energy."
       },
       milestones: [
-        { year: "2003.07", title: "BQC was established in Bantian Shenzhen" },
-        { year: "2004.01", title: "Design & Manufacture solar PV (DE)" },
-        { year: "2005.10", title: "Certified to ISO9001" },
-        { year: "2006.06", title: "PV inverters hit 50% turnover" },
-        { year: "2007.12", title: "Moved to new workshop in Changzhen, Guangming district" },
-        { year: "2009.03", title: "Design & Manufacture Small Electric Boat Propulsion Systems BMS (EU)" },
-        { year: "2012.08", title: "Design & Manufacture Cat Litter Robots for overseas customers" },
-        { year: "2013.03", title: "Design & Manufacture BEES BMS (EU)" },
-        { year: "2015.04", title: "Certified to ISO13485" },
-        { year: "2015.06", title: "Design & Manufacture industrial BESS BMS(North American)" },
-        { year: "2016.01", title: "Manufacture Cat Litter Robots (CN)" },
-        { year: "2016.08", title: "Manufacture Hotel Robots PCBA" },
-        { year: "2017.05", title: "Manufacture Floor Sweeping Robots (CN)" },
-        { year: "2018.07", title: "Certified to ISO14001" },
-        { year: "2018.11", title: "Manufacture Robot Lawn Mowers (CN)" },
-        { year: "2019.01", title: "Certified to IATF16949" },
-        { year: "2019.03", title: "Design & Manufacture marine BESS BMS (North EU)" },
-        { year: "2023.12", title: "BMS related yield: 35GWh+" },
-        { year: "2024.12", title: "BQC Plant in Malaysia was founded" },
-        { year: "2024.12", title: "BMS related yield: 50GWh+" }
+        { year: "2003.07", title: "BQC was established in Bantian, Longgang District, Shenzhen." },
+        { year: "2004.01", title: "Designed and manufactured solar photovoltaic inverters for German customers." },
+        { year: "2005.10", title: "Obtained ISO 9001 quality certification." },
+        { year: "2006.06", title: "Sales revenue from solar photovoltaic inverters accounted for more than 50%." },
+        { year: "2007.12", title: "Moved into new factory in Changzhen, Guanging district." },
+        { year: "2009.03", title: "Started designing and manufacturing battery BMS for small electric boat propulsion systems for European customers." },
+        { year: "2012.08", title: "Started designing and manufacturing self-cleaning litter box robots for overseas customers." },
+        { year: "2013.03", title: "Started designing and manufacturing BESS BMS for European customers." },
+        { year: "2015.04", title: "Obtained ISO 13485 certification." },
+        { year: "2015.06", title: "Started designing and manufacturing BESS BMS for North American customers." },
+        { year: "2016.01", title: "Started manufacturing self-cleaning litter box robots for domestic customers." },
+        { year: "2016.08", title: "Started manufacturing PCBA for hotel delivery robot customers." },
+        { year: "2017.05", title: "Started manufacturing robotic vacuum cleaners for domestic customers." },
+        { year: "2018.07", title: "Obtained ISO 14001 certification." },
+        { year: "2018.11", title: "Started manufacturing robotic lawn mowers for domestic customers." },
+        { year: "2019.01", title: "Obtained IATF 16949 certification." },
+        { year: "2019.03", title: "Designed and manufactured marine energy storage BMS for Northern European customers." },
+        { year: "2023.12", title: "The cumulative installed capacity of BESS BMS customers exceeded 35GWh+." },
+        { year: "2024.12", title: "The Malaysia factory was established." },
+        { year: "2024.12", title: "The cumulative installed capacity of BESS BMS customers exceeded 50GWh+." }
       ]
     }
   }

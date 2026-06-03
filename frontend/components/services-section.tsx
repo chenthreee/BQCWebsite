@@ -149,7 +149,7 @@ export function ServicesSection() {
         "en": "R&D Investment",
       },
       "odm.adv1.desc": {
-        "zh-Hans": "百千成电子每年将营业收入的 5% 投入研发团队建设与设备升级，持续强化产品研发与技术创新能力。依托公司 20 余年 PCBA 加工生产经验，我们在产品设计、制造及测试全流程严格把控，确保产品性能稳定可靠。",
+        "zh-Hans": "百千成电子持续加大研发团队建设、工程技术能力提升与关键制造设备升级投入，每年将营业收入的 5% 用于研发及技术创新相关领域。",
         "en": "5% of annual revenue is dedicated to R&D, supporting continuous investment in talent and advanced equipment.",
       },
       "odm.adv2.title": {
@@ -157,7 +157,7 @@ export function ServicesSection() {
         "en": "R&D Team Ratio",
       },
       "odm.adv2.desc": {
-        "zh-Hans": "百千成电子拥有一支经验丰富的研发团队，研发人员占公司总人数的 30%，涵盖硬件、软件、结构、算法等多个领域，为公司PCBA 加工、SMT 贴片加工业务提供坚实的技术保障。",
+        "zh-Hans": "百千成电子拥有覆盖硬件、软件、结构与测试验证的研发团队，研发人员占公司总人数的 30%。在ODM研发项目中，团队可围绕客户产品需求，提供方案设计、元器件选型、BOM优化、样机验证及DFM评估等支持，并结合PCBA加工和SMT贴片加工经验，使产品设计在研发阶段就更贴近后续制造与交付要求。",
         "en": "R&D professionals make up 30% of the total staff, covering hardware, software, structure, and algorithm development to ensure strong project capability.",
       },
       "odm.adv3.title": {
@@ -165,7 +165,7 @@ export function ServicesSection() {
         "en": "Core Technology Patents",
       },
       "odm.adv3.desc": {
-        "zh-Hans": "百千成电子拥有 60 项以上核心技术专利，在硬件设计、嵌入式开发等领域具备深厚技术积累，为SMT 贴片加工和PCBA 加工提供坚实技术保障。",
+        "zh-Hans": "百千成电子拥有 60 余项技术专利，技术积累覆盖硬件设计、嵌入式开发、测试验证及制造工艺等方向。这些研发与工程经验可应用于产品功能实现、结构优化、测试方案规划和量产风险预判，并在后续SMT贴片、PCBA加工及质量管控过程中形成有效支撑，帮助客户提升产品可靠性与批量生产一致性。",
         "en": "Over 60 core technology patents demonstrate deep expertise in hardware design and embedded system development.",
       },
       "odm.features.title": {
@@ -268,7 +268,7 @@ export function ServicesSection() {
       title: locale === "en" ? "Requirement Analysis & Solution Design" : "需求分析与方案设计",
       description: locale === "en"
         ? "Deeply understand customer needs to deliver comprehensive hardware and software design solutions including core component selection and product specification definition, ensuring products meet both technical and market requirements."
-        : "百千成电子作为专业的SMT贴片和PCBA加工厂，深刻理解客户PCBA加工需求，提供核心器件选型和产品规格制定，硬件软件整体方案设计，确保产品设计满足技术要求和市场需求，同时充分考虑后续 SMT贴片生产与PCBA加工的制造可行性。",
+        : "百千成电子在ODM项目初期即参与客户需求分析与方案设计，结合产品应用场景、性能要求、成本目标及量产规划，协助客户完成核心元器件选型、产品规格制定、硬件架构设计和软件功能规划。同时，我们会将DFM可制造性、SMT贴片工艺适配性、测试验证方案及PCBA加工稳定性纳入前期设计评估，确保产品方案既满足技术和市场需求，也具备良好的量产可行性。",
       icon: <Lightbulb className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Requirement analysis", "Technical feasibility evaluation", "Core component selection", "Product specification definition", "Integrated solution design"]
@@ -290,7 +290,7 @@ export function ServicesSection() {
       title: locale === "en" ? "Embedded Software Development" : "嵌入式软件开发",
       description: locale === "en"
         ? "Providing high-quality embedded software development services covering low-level drivers, middleware architecture, and application layers to ensure excellent performance and stability."
-        : "百千成电子提供高质量的嵌入式软件开发服务，涵盖底层驱动、中间层架构和应用层开发，确保软件性能良好和稳定性，为后续的PCBA加工与生产提供坚实的技术基础。",
+        : "百千成电子提供覆盖底层驱动、中间层架构和应用层功能的嵌入式软件开发支持，可协助客户完成硬件联调、通信控制、功能实现和系统稳定性优化。",
       icon: <CodeXml className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["System architecture design", "Driver development & hardware adaptation", "Middleware & protocol stack development", "Application & algorithm implementation", "Tool & cloud software development","System debugging & validation","Product certification & compliance support","Production integration & maintenance support"]
@@ -301,7 +301,7 @@ export function ServicesSection() {
       title: locale === "en" ? "Structural Design" : "结构设计",
       description: locale === "en"
         ? "Delivering structural solutions that balance functionality, and manufacturability."
-        : "百千成电子专注于为客户提供符合功能性与可制造性的结构解决方案，涵盖从SMT贴片加工到完整的PCBA组装全过程，确保在设计阶段已考虑到生产的可行性与后续制造流程。我们提供3D建模与装配配件验证，并结合SMT贴片厂的生产需求，优化结构设计，提升产品性能与制造效率。",
+        : "百千成电子可为ODM项目提供结构设计、3D建模及装配验证支持，帮助客户优化产品空间布局、散热设计和生产装配方案。",
       icon: <Box className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Product structure planning & appearance review", "Mechanical design & optimization", "3D modeling & assembly validation", "Mold & manufacturing feasibility assessment", "Prototype fabrication & structural verification"]
@@ -312,7 +312,7 @@ export function ServicesSection() {
       title: locale === "en" ? "Prototype Fabrication & Testing Validation" : "样机制作与测试验证",
       description: locale === "en"
         ? "Providing rapid prototyping and comprehensive testing services to accelerate product development, identify potential issues early, and ensure design feasibility and reliability."
-        : "百千成电子提供快速原型制作与系统化测试验证服务，涵盖从SMT贴片加工到PCBA加工的全流程。我们为客户提供从样机制造到功能验证的全过程支持，确保产品设计的可行性与市场需求的匹配。通过专业的PCBA加工厂技术支持，结合DFM分析，帮助客户在早期阶段快速识别并解决设计问题，确保产品在后续生产中具备稳定的性能和可靠性。",
+        : "百千成电子提供快速原型制作与系统化测试验证服务，支持客户完成样机制造、功能测试、DFM分析和设计优化。依托PCBA加工、SMT贴片加工及测试验证经验，我们可在产品早期阶段快速识别设计与制造风险，帮助客户提升样机验证效率，并为后续稳定量产打好基础。",
       icon: <Settings className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Rapid prototyping", "Functional & performance testing", "Environmental & reliability testing", "Aging & lifespan testing", "EMC/EMI testing & optimization"]
@@ -323,7 +323,7 @@ export function ServicesSection() {
       title: locale === "en" ? "Product Certification & Mass Production Support" : "产品认证与量产支持",
       description: locale === "en"
         ? "Assisting customers with product certification and providing end-to-end technical support during mass production to ensure smooth manufacturing and rapid market entry."
-        : "百千成电子协助客户完成各类产品认证，并在量产阶段提供涵盖从物料采，SMT贴片加工到完整PCBA加工的全流程支持，确保产品在生产过程中的质量与合规性。",
+        : "百千成电子可协助客户完成产品认证导入，并结合PCBA加工、SMT贴片加工及测试验证经验，为后续量产提供物料准备、工艺评估、生产制造和质量管控支持，确保产品从认证到批量交付过程更加高效、稳定、合规。",
       icon: <FileCheck className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
         ? ["Certification & compliance consulting", "Certification & compliance consulting", "Process integration & optimization", "Automated programming & testing equipment design", "Supply chain & material sustainability support","Quality traceability & after-sales support"]

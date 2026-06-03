@@ -18,7 +18,7 @@ export default function ManagementSystemPage({params}:{params:{locale:string}}) 
       ],
       digitalPlatform: {
         title: "数字化管理平台",
-        description: "百千成电子通过整合PCBA加工与SMT贴片加工技术，打造了一个全面的数字化管理平台。该平台结合了SMT贴片加工 THT插件 后焊 测试 喷涂 组装 包装等PCBA加工生产工艺，通过实时数据监控和资源调度，优化生产流程、提升生产效率，并确保产品质量的稳定性和可追溯性。",
+        description: "百千成电子建立了覆盖全流程的数字化生产管理系统，通过生产数据实时采集、工单进度跟踪、物料流转监控和资源调度优化，有效提升了生产协同效率，减少过程异常，并确保产品质量的稳定性、一致性和可追溯性。",
         systems: [
           {
             title: "ERP系统",

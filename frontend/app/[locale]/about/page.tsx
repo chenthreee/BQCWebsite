@@ -87,9 +87,9 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
     en: {
       title: "About Us",
       subtitle: "Learn about BQC Electronics' corporate culture and development history",
-      companyName: "BQC Electronics",
-      intro1: "Shenzhen Baiqiancheng Electronics Co., Ltd. was founded in 2003, specializing in the design and manufacturing of energy storage lithium battery BMS, PCS/inverters, and intelligent robot circuit board PCBA design and OEM manufacturing.",
-      intro2: "The company has passed ISO9001, ISO14001, ISO13485 and IATF16949 management system certifications, and has a complete digital management platform to implement full-process quality control of SMT, ensuring high-quality delivery of each PCBA board.",
+      companyName: "Shenzhen Baiqiancheng Electronics Co., Ltd.",
+      intro1: "Founded in 2003, Shenzhen Baiqiancheng Electronics Co., Ltd. is a high-tech enterprise specializing in the design and manufacture of BMS for energy storage lithium batteries, PCS/inverters, and PCBAs for intelligent robotics applications.",
+      intro2: "The company is certified to ISO 9001, ISO 14001, ISO 13485, and IATF 16949 management system standards. With a comprehensive digital management platform, we implement end-to-end quality control across SMT assembly processes to ensure the high-quality delivery of every PCBA.",
       learnMore: "Learn More",
       videoUnsupported: "Your browser does not support video playback.",
       statsTitle: "Key Statistics",

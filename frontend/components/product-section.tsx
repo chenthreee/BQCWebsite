@@ -37,11 +37,11 @@ export function ProductSection() {
     const translations: Record<string, Record<string, string>> = {
       "section.title": {
         "zh-Hans": "产品中心",
-        "en": "Products",
+        "en": "Product Overview",
       },
       "section.subtitle": {
         "zh-Hans": "百千成电子有限公司专注于智能储能系统研发与智造，依托自主研发的储能 BMS/PCS 全系列解决方案，可覆盖电力大储、船舶储能（大型/小型）、通信基站储能以及储能 EMS 总控系统等应用场景。公司具备专业的高精度电子装联技术，同时提供PCBA 代工代料定制化服务，可为全球客户提供高可靠、高集成度的能源管理硬件整体解决方案，实现项目快速落地导入与规模化量产交付。",
-        "en": "Baiqiancheng Electronics (BQC) focuses on the development and manufacturing of intelligent energy storage systems and electronic control hardware. With our self-developed BMS and PCS solutions, we support applications such as grid-scale energy storage, marine energy storage systems, and telecom base station power management.Beyond energy storage, BQC also provides engineering and manufacturing services for intelligent robotic control systems, industrial control boards, and medical electronic modules.Equipped with high-precision automated production lines, we offer professional SMT assembly and PCBA manufacturing services, delivering high-reliability, high-integration electronic control and energy management solutions for global customers.",
+        "en": "Baiqiancheng Electronics specializes in the R&D and manufacturing of intelligent energy storage systems and electronic control hardware. Relying on its independently developed full-range energy storage BMS and PCS solutions, the company serves a wide range of applications, including power energy storage, large and small marine energy storage systems, and communication base station energy storage. In addition, the company has mature engineering and manufacturing capabilities in intelligent robot control systems, industrial control boards, and electronic modules for medical equipment. Based on high-precision automated equipment, we provide professional SMT assembly and PCBA manufacturing services, delivering highly reliable and highly integrated electronic control and energy management hardware solutions to global customers.",
       },
       "button.viewMore": {
         "zh-Hans": "查看更多",
@@ -55,9 +55,9 @@ export function ProductSection() {
   const categories: ProductCategory[] = [
     {
       id: 1,
-      title: locale === "en" ? "Energy Storage BMS/PCS" : "储能BMS/储能PCS",
+      title: locale === "en" ? "Energy Storage BMS / Energy Storage PCS" : "储能BMS/储能PCS",
       description: locale === "en"
-        ? "Comprehensive BMS/PCS solutions for energy storage, including Power Storage BMS, Large Ship BMS, Small Ship BMS, Communication Base Station BMS, Energy Storage EMS, and PCS."
+        ? "A full range of energy storage BMS/PCS solutions, including BMS for utility-scale power energy storage systems, BMS for large marine energy storage systems, BMS for small marine energy storage systems, BMS for communication base station energy storage systems, energy storage EMS (master control system), and energy storage PCS."
         : "储能BMS/PCS全系列解决方案，包括电力大储BMS、大型船舶储能BMS、小型船舶储能BMS、通讯基站储能BMS、储能EMS（总控）、储能PCS等。",
       image: "/images/mainPage/BMSPCSBIG.png",
       products: [
@@ -95,7 +95,7 @@ export function ProductSection() {
       id: 4,
       title: locale === "en" ? "Medical Devices" : "医疗设备",
       description: locale === "en"
-        ? "Medical device solutions for healthcare industry."
+        ? "Full-series PCBA solutions for medical electronics: control boards for portable/wearable devices, rehabilitation equipment, bladder scanners, heart rate monitors, blood glucose meters, etc."
         : "医疗电子 PCBA 全系列解决方案，涵盖便携式与可穿戴设备、康复医疗设备、膀胱扫描仪、心率检测器、血糖仪等控制板方案。",
       image: "/images/mainPage/medicalDevices.png",
       products: [
