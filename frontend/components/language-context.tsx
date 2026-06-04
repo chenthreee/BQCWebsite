@@ -28,7 +28,7 @@ const translations: Record<string, Record<Language, string>> = {
   "company.description": {
     zh: "专注于储能BMS系统研发与OEM制造服务的高新技术企业",
     "zh-Hans": "专注于储能BMS系统研发与OEM制造服务的高新技术企业",
-    en: "High-tech enterprise focusing on energy storage BMS development and OEM manufacturing services",
+    en: "A high-tech company specializing in R&D and OEM manufacturing services for energy storage BMS systems",
   },
 
 //navigation
@@ -207,7 +207,7 @@ const translations: Record<string, Record<Language, string>> = {
   "about.certificates.desc": {
     zh: "百千成电子坚持以技术研发为核心竞争力，凭借多项国际权威管理体系认证、自主知识产权专利及国家级专精特新 “小巨人” 资质，全面彰显了公司在精密制造、质量管控与技术创新领域的综合实力与行业领先水平。",
     "zh-Hans": "百千成电子坚持以技术研发为核心竞争力，凭借多项国际权威管理体系认证、自主知识产权专利及国家级专精特新 “小巨人” 企业资质，全面彰显了公司在精密制造、质量管控与技术创新领域的综合实力与行业领先水平。",
-    en: "BQC Electronics regards technological R&D as a core competitive strength. With multiple internationally recognized management system certifications, independently owned intellectual property patents, and national-level “Little Giant” recognition under China’s Specialized, Refined, Distinctive and Innovative SME program, the company demonstrates strong capabilities in precision manufacturing, quality control, and technological innovation.",
+    en: "Baiqiancheng Electronics is committed to technological R&D as its core competitiveness. Leveraging multiple internationally recognized management system certifications, independently owned intellectual property patents, and its status as a nationally accredited “Specialized, Sophisticated, Distinctive, and Innovative” Little Giant enterprise, the company fully demonstrates its comprehensive strength and industry-leading level in precision manufacturing, quality control, and technological innovation.",
   },
   "about.certificates.more": {
     zh:"了解更多",
@@ -300,12 +300,12 @@ const translations: Record<string, Record<Language, string>> = {
   "news.company.desc": {
     zh: "了解百千成电子公司最新动态、产品发布和合作伙伴关系",
     "zh-Hans": "了解百千成电子公司最新动态、产品发布和合作伙伴关系",
-    en: "Learn about the latest company news, product releases, and partnerships of BQC Electronics",
+    en: "Stay informed about the latest company updates, product launches, and partnerships.s",
   },
   "news.industry.desc": {
     zh: "关注储能行业发展趋势、技术创新和市场分析",
     "zh-Hans": "关注储能行业发展趋势、技术创新和市场分析",
-    en: "Focus on energy storage industry trends, technological innovation, and market analysis",
+    en: "Follow trends, technological innovations, and market analysis in the energy storage industry.",
   },
   "news.center.title": {
     zh: "新闻中心",
@@ -315,12 +315,12 @@ const translations: Record<string, Record<Language, string>> = {
   "news.center.subtitle": {
     zh: "了解最新动态",
     "zh-Hans": "了解最新动态",
-    en: "Get the latest news",
+    en: "Stay Updated",
   },
   "news.center.description": {
     zh: "获取百千成电子最新资讯、行业动态和技术分享",
     "zh-Hans": "获取百千成电子最新资讯、行业动态和技术分享",
-    en: "Get the latest news, industry trends and technical insights from BQC Electronics",
+    en: "Get the latest news, industry insights, and technical updates from Baiqiancheng Electronics.",
   },
   "news.readMore": {
     zh: "查看更多",

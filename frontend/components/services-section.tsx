@@ -26,7 +26,7 @@ export function ServicesSection() {
 
       "section.subtitle": {
         "zh-Hans": "百千成电子是一家专注于 SMT贴片与PCBA加工的一站式制造服务企业，依托成熟的工程能力与自动化制造体系，为全球客户提供从 产品设计支持（ODM / DFM）到规模化量产交付（OEM） 的一站式解决方案。作为专业PCBA加工厂，公司在储能BMS/PCS系统、工业控制设备、智能机器人及医疗电子模块等领域积累了丰富的工程与制造经验。产品开发阶段，百千成电子工程团队可提供 电路优化与高可靠性PCB布局设计支持，帮助客户提升复杂电子系统的稳定性与可制造性，加速产品从研发到量产的落地。在制造环节，公司拥有多条自动化 SMT贴片生产线，配备高精度贴装设备，可稳定处理 0.4mm间距BGA器件、高密度封装元件及RF通信模块 等复杂工艺需求。作为经验丰富的 SMT贴片加工厂，百千成电子SMT贴片 日产能超过3000万点，能够满足中高批量电子产品的制造需求，并保持稳定的生产效率与质量一致性。除PCB组装外，公司还提供 系统级整机组装与Box Build集成制造服务，涵盖三防漆涂覆、ICT在线测试、功能测试及自动化装配等关键工序。依托完善的质量管理体系，产品在出货前将根据需要进行功能验证、可靠性测试及老化测试，确保电子产品在工业控制、医疗设备及智能机器人等应用场景中的稳定运行。",
-        "en": "Electronics (BQC) is a one-stop electronics manufacturing service provider specializing in SMT assembly and PCBA manufacturing. Leveraging strong engineering expertise and advanced automated production systems, BQC provides global customers with integrated solutions ranging from product design support (ODM/DFM) to high-volume OEM production and delivery. As an experienced PCBA manufacturer, the company has built extensive expertise in applications such as energy storage BMS/PCS systems, industrial control equipment, intelligent robotic systems, and medical electronic modules.During the product development stage, BQC’s engineering team provides circuit optimization and high-reliability PCB layout design support, helping customers enhance system stability and manufacturability while accelerating the transition from prototype development to mass production. In manufacturing, the company operates multiple automated SMT production lines equipped with high-precision placement systems capable of handling 0.4 mm pitch BGA components, high-density packages, and RF communication modules. As a professional SMT assembly manufacturer, BQC achieves a daily SMT placement capacity of over 30 million components, enabling efficient production for medium- to high-volume electronics programs while maintaining consistent product quality and manufacturing efficiency.Beyond PCB assembly, BQC also offers system-level integration and box-build manufacturing services, including conformal coating, ICT testing, functional testing, and automated assembly processes. Supported by a comprehensive quality management system, products undergo functional verification, reliability testing, and burn-in testing when required, ensuring stable performance in demanding applications such as industrial control systems, medical devices, and intelligent robotics.",
+        "en": "Baiqiancheng Electronics is a one-stop manufacturing service provider specializing in SMT assembly and PCBA processing. Leveraging mature engineering capabilities and an automated manufacturing system, we offer global customers one-stop solutions from product design support (ODM/DFM) to high-volume OEM production and delivery. As a professional PCBA manufacturer, we have extensive engineering and manufacturing experience in energy storage BMS/PCS systems, industrial control equipment, intelligent robotic systems, and medical electronics modules. During product development, our engineering team provides circuit optimization and high-reliability PCB layout design support, enhancing the stability and manufacturability of complex electronic systems and accelerating their transition from R&D to mass production. In production, we operate multiple automated SMT lines equipped with high-precision placement equipment, capable of reliably handling complex processes such as 0.4 mm-pitch BGA components, high-density packages, and RF communication modules. With a daily placement capacity exceeding 30 million points, we can meet medium- to high-volume production demands while maintaining consistent quality and stable efficiency. Beyond PCB assembly, we provide system-level complete machine assembly and Box Build integration services, covering conformal coating, in-circuit testing (ICT), functional testing, and automated assembly. Supported by a robust quality management system, finished products undergo customized functional verification, reliability testing, and burn-in testing prior to shipment, ensuring reliable operation in industrial control, medical devices, intelligent robotics, and other applications.",
       },
       "section.customet.subtitle":{
         "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，依托核心技术与严苛品质标准，以前沿研发实力引领行业高质量发展",
@@ -34,43 +34,43 @@ export function ServicesSection() {
       },
       "oem.title": {
         "zh-Hans": "OEM制造服务",
-        "en": "OEM Manufacturing Services",
+        "en": "OEM Manufacturing Service",
       },
       "odm.title": {
         "zh-Hans": "ODM研发服务（BMS）",
-        "en": "ODM Development Services (BMS)",
+        "en": "ODM R&D Service (BMS)",
       },
       "oem.step1.title": {
         "zh-Hans": "PCBA加工设计",
-        "en": "PCBA Processing & Design",
+        "en": "PCBA Design & Processing",
       },
       "oem.step1.desc": {
         "zh-Hans": "电路设计与PCBA加工布局",
-        "en": "Circuit Design & PCBA Processing Layout",
+        "en": "Circuit design & PCBA layout optimization",
       },
       "oem.step2.title": {
         "zh-Hans": "SMT贴片厂工艺",
-        "en": "SMT Assembly Factory Process",
+        "en": "Precision SMT Assembly Process",
       },
       "oem.step2.desc": {
         "zh-Hans": "SMT高精度表面贴装",
-        "en": "SMT High-precision Surface Mounting Technology",
+        "en": "High-precision SMT component mounting",
       },
       "oem.step3.title": {
         "zh-Hans": "整机组装",
-        "en": "Complete Assembly",
+        "en": "Box Build & Complete Product Assembly",
       },
       "oem.step3.desc": {
         "zh-Hans": "SMT加工自动化组装生产",
-        "en": "SMT Processing Automated Assembly Production",
+        "en": "Automated assembly after SMT processing",
       },
       "oem.step4.title": {
         "zh-Hans": "测试包装",
-        "en": "Testing & Packaging",
+        "en": "Full Testing & Packaging",
       },
       "oem.step4.desc": {
         "zh-Hans": "全面测试与包装",
-        "en": "Comprehensive Testing & Packaging",
+        "en": "Comprehensive product testing and final packaging",
       },
       "oem.features.title": {
         "zh-Hans": "服务特点：",
@@ -86,19 +86,19 @@ export function ServicesSection() {
       },
       "odm.step1.title": {
         "zh-Hans": "需求分析",
-        "en": "Requirement Analysis",
+        "en": "Demand Analysis",
       },
       "odm.step1.desc": {
         "zh-Hans": "深刻理解客户需求",//深刻理解客户需求
-        "en": "In-depth understanding of customer needs",
+        "en": "In-depth understanding of customer requirements",
       },
       "odm.step2.title":{
         "zh-Hans":"技术预研",
-        "en":"Technology Research"
+        "en":"Preliminary Technical Research"
       },
       "odm.step2.desc":{
         "zh-Hans":"关键技术研究，技术可行性分验证",//关键技术研究，技术可行性分验证
-        "en":"Key technolohy study and feasibility validation"
+        "en":"Research on key technologies and verification of technical feasibility"
       },
       "odm.step3.title": {
         "zh-Hans": "方案设计",
@@ -106,7 +106,7 @@ export function ServicesSection() {
       },
       "odm.step3.desc": {
         "zh-Hans": "PCBA核心器件选型和产品规格制定",//核心器件选型和产品规格制定
-        "en": "Core component selection and product specification definition",
+        "en": "Selection of core PCBA components and definition of product specifications",
       },
       "odm.step4.title": {
         "zh-Hans": "研发开发",
@@ -114,7 +114,7 @@ export function ServicesSection() {
       },
       "odm.step4.desc": {
         "zh-Hans": "硬件软件结构设计",//硬件软件结构设计
-        "en": "Hardware, software, and structural design",
+        "en": "Hardware, software, and mechanical design",
       },
       "odm.step5.title": {
         "zh-Hans": "样机测试",
@@ -122,7 +122,7 @@ export function ServicesSection() {
       },
       "odm.step5.desc": {
         "zh-Hans": "功能及性能测试",
-        "en": "Functional and performance verification",
+        "en": "Functional and performance testing",
       },
       "odm.step6.title": {
         "zh-Hans": "产品认证",
@@ -130,7 +130,7 @@ export function ServicesSection() {
       },
       "odm.step6.desc": {
         "zh-Hans": "UL、CE等认证支持",
-        "en": "UL, CE and other compliance support",
+        "en": "Support for UL, CE, and other certifications",
       },
       "odm.step7.title": {
         "zh-Hans": "量产支持",
@@ -138,11 +138,11 @@ export function ServicesSection() {
       },
       "odm.step7.desc": {
         "zh-Hans": "PCBA物料采购 SMT贴片插件后焊测试喷涂组装",//物料采购 贴片插件后焊测试喷涂组装
-        "en": "PCBA Material Sourcing, SMT, THT, testing, coating, and assembly",
+        "en": "PCBA material procurement, SMT assembly, through-hole soldering, post-assembly testing, conformal coating, and final assembly",
       },
       "odm.adv.title": {
         "zh-Hans": "ODM研发优势",
-        "en": "ODM Advantages",
+        "en": "ODM R&D Advantages",
       },
       "odm.adv1.title": {
         "zh-Hans": "研发资金投入",
@@ -162,7 +162,7 @@ export function ServicesSection() {
       },
       "odm.adv3.title": {
         "zh-Hans": "核心专利技术",
-        "en": "Core Technology Patents",
+        "en": "Core Patented Technologies",
       },
       "odm.adv3.desc": {
         "zh-Hans": "百千成电子拥有 60 余项技术专利，技术积累覆盖硬件设计、嵌入式开发、测试验证及制造工艺等方向。这些研发与工程经验可应用于产品功能实现、结构优化、测试方案规划和量产风险预判，并在后续SMT贴片、PCBA加工及质量管控过程中形成有效支撑，帮助客户提升产品可靠性与批量生产一致性。",
@@ -218,44 +218,44 @@ export function ServicesSection() {
       id: 1,
       title: locale === "en" ? "PCB Design & Layout" : "PCB设计与布局",
       description: locale === "en" 
-        ? "Provide professional circuit design and PCB layout services, from schematic design to PCB layout, ensuring product performance and reliability"
+        ? "We provide professional circuit design and PCB layout services ranging from schematic capture to PCB routing to guarantee product performance and reliability."
         : "提供专业的电路设计与PCB布局服务，从原理图设计到PCB布局，确保产品性能与可靠性",
       icon: <Layers className="h-16 w-16 text-blue-600" />,   //pcb图标
       features: locale === "en"
-        ? ["Multi-layer PCB Design & Layout", "High-speed Signal Integrity Analysis", "Power Integrity Analysis", "EMC/EMI Design Optimization", "Thermal Analysis & Heat Dissipation Design"]
+        ? ["Multi-layer PCB design & layout", "High-speed signal integrity analysis", "Power integrity analysis", "EMC/EMI optimization design", "Thermal analysis & thermal dissipation design"]
         : ["多层PCB设计与布局", "高速信号完整性分析", "电源完整性分析", "EMC/EMI设计优化", "热分析与散热设计"],
     },
     {
       id: 2,
       title: locale === "en" ? "SMT Assembly Production" : "SMT贴片生产",
       description: locale === "en"
-        ? "Using advanced SMT production lines to provide high-precision, high-efficiency surface mount technology services to meet the production needs of various electronic products"
+        ? "We deploy advanced automated SMT production lines to deliver high-precision & high-efficiency surface mount services for diversified electronic product manufacturing requirements."
         : "采用先进的SMT生产线，提供高精度、高效率的表面贴装技术服务，满足各类电子产品的生产需求",
       icon: <Cpu className="h-16 w-16 text-blue-600" />,   // SMT
       features: locale === "en"
-        ? ["High-precision SMT Assembly", "BGA/CSP/QFN Complex Package Processing", "Lead-free Process Support", "3D SPI Solder Paste Inspection", "AOI Automatic Optical Inspection"]
+        ? ["High-precision SMT component placement", "Complex package processing for BGA / CSP / QFN", "Lead-free Process Support", "3D SPI solder paste inspection", "AOI automated optical inspection"]
         : ["高精度SMT贴片", "BGA/CSP/QFN等复杂封装处理", "无铅工艺支持", "3D SPI锡膏检测", "AOI自动光学检测"],
     },
     {
       id: 3,
       title: locale === "en" ? "Complete Assembly & Testing" : "整机组装测试",
       description: locale === "en"
-        ? "Provide full-process assembly services from PCBA to complete units, including functional testing, aging testing, packaging and other processes to ensure product quality"
+        ? "We offer full-process assembly services from finished PCBA to end-product, covering functional testing, burn-in testing and packaging to secure consistent product quality."
         : "提供从PCBA到整机的全流程组装服务，包括功能测试、老化测试、包装等环节，确保产品质量",
       icon: <Package className="h-16 w-16 text-blue-600" />,   // 组装
       features: locale === "en"
-        ? ["Automated Assembly Production Line", "Functional Testing & Aging Testing", "Anti-static Work Environment", "Traceability Management System", "Packaging & Logistics Services"]
+        ? ["Automated assembly production lines", "Functional test & burn-in reliability test", "ESD-controlled workshop environment", "Full product traceability management system", "Custom packaging & logistic support"]
         : ["自动化组装生产线", "功能测试与老化测试", "防静电工作环境", "可追溯性管理系统", "包装与物流服务"],
     },
     {
       id: 4,
       title: locale === "en" ? "Quality Control System" : "质量控制体系",
       description: locale === "en"
-        ? "Strict quality control system, full-process quality control from raw material entry to finished product shipment, ensuring products meet international standards"
+        ? "We implement rigorous full-process quality control covering incoming raw materials through finished goods delivery to ensure products comply with international standards."
         : "严格的质量控制体系，从原材料进厂到成品出货的全流程质量管控，确保产品符合国际标准",
       icon: <ShieldCheck className="h-16 w-16 text-blue-600" />,   //质量
       features: locale === "en"
-        ? ["ISO9001 Quality Management System", "IPC Standard Production Process", "Incoming Inspection & Supplier Management", "Process Quality Control", "Finished Product Inspection & Reliability Testing"]
+        ? ["ISO9001 certified quality management system", "Production processes compliant with IPC specifications", "Incoming quality inspection & supplier management", "In-process quality control", "Finished product inspection & reliability verification"]
         : ["ISO9001质量管理体系", "IPC标准生产工艺", "来料检验与供应商管理", "过程质量控制", "成品检验与可靠性测试"],
     },
   ]

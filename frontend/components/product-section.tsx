@@ -61,19 +61,19 @@ export function ProductSection() {
         : "储能BMS/PCS全系列解决方案，包括电力大储BMS、大型船舶储能BMS、小型船舶储能BMS、通讯基站储能BMS、储能EMS（总控）、储能PCS等。",
       image: "/images/mainPage/BMSPCSBIG.png",
       products: [
-        { id: 101, title: locale === "en" ? "Power Storage BMS" : "电力大储BMS", description: "", image: "/images/mainPage/powerStorageBMS.png", link: "/products/energy-storage-bms/power-storage" },
-        { id: 102, title: locale === "en" ? "Large-scale Marine Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/images/mainPage/largeShip.png", link: "/products/energy-storage-bms/large-ship" },
-        { id: 103, title: locale === "en" ? "Small-scale Marine Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/images/mainPage/smallShip.png", link: "/products/energy-storage-bms/small-ship" },
-        { id: 104, title: locale === "en" ? "Communication Base Station BMS" : "通讯基站储能BMS", description: "", image: "/images/mainPage/communicationBase.png", link: "/products/energy-storage-bms/communication-base" },
+        { id: 101, title: locale === "en" ? "Utility-Scale Energy Storage BMS" : "电力大储BMS", description: "", image: "/images/mainPage/powerStorageBMS.png", link: "/products/energy-storage-bms/power-storage" },
+        { id: 102, title: locale === "en" ? "Large-Vessel Energy Storage BMS" : "大型船舶储能BMS", description: "", image: "/images/mainPage/largeShip.png", link: "/products/energy-storage-bms/large-ship" },
+        { id: 103, title: locale === "en" ? "Small-Vessel Energy Storage BMS" : "小型船舶储能BMS", description: "", image: "/images/mainPage/smallShip.png", link: "/products/energy-storage-bms/small-ship" },
+        { id: 104, title: locale === "en" ? "Telecom Base Station Energy Storage BMS" : "通讯基站储能BMS", description: "", image: "/images/mainPage/communicationBase.png", link: "/products/energy-storage-bms/communication-base" },
         //{ id: 105, title: locale === "en" ? "Energy Storage EMS (Master Control)" : "储能EMS（总控）", description: "", image: "/images/mainPage/powerStorageEMS.jpg", link: "/products/energy-storage-bms/energy-storage-ems" },
         { id: 106, title: locale === "en" ? "Energy Storage PCS" : "储能PCS", description: "", image: "/images/mainPage/powerStoragePCS.png", link: "/products/energy-storage-pcs" },
       ],
     },
     {
       id: 2,
-      title: locale === "en" ? "Intelligent Robot Systems" : "智能机器人系统",
+      title: locale === "en" ? "Intelligent Robotic Systems" : "智能机器人系统",
       description: locale === "en"
-        ? "Intelligent robot system solutions for various industries."
+        ? "Industry-focused intelligent robotic solutions, covering autonomous logistics robots, inspection robots, delivery robots, robotic vacuum cleaners, and robotic lawn mowers."
         : "面向各行业提供智能机器人系统解决方案，包括智能物流机器人、自动化巡检机器人、智能配送机器人、扫地机器人、割草机机器人等。",
       image: "/images/mainPage/intelligentRobot.jpg",
       products: [
@@ -84,7 +84,7 @@ export function ProductSection() {
       id: 3,
       title: locale === "en" ? "Industrial Control Boards" : "工业控制板",
       description: locale === "en"
-        ? "Industrial control board solutions in the field of automation and control, covering PLC control boards, servo drive control boards, frequency converter control boards, industrial gateways/communication modules, HMI human-machine interface control boards, etc."
+        ? "Comprehensive industrial control board solutions for automation and control applications, including PLC control boards, servo drive control boards, inverter control boards, industrial gateways and communication modules, and HMI (Human-Machine Interface) control boards."
         : "自动化与控制领域的工业控制板解决方案，覆盖PLC控制板、伺服驱动控制板、变频器控制板、工业网关/通讯模块、HMI人机界面控制板等。",
       image: "/images/mainPage/industrialControlBoard.png",
       products: [
@@ -95,7 +95,7 @@ export function ProductSection() {
       id: 4,
       title: locale === "en" ? "Medical Devices" : "医疗设备",
       description: locale === "en"
-        ? "Full-series PCBA solutions for medical electronics: control boards for portable/wearable devices, rehabilitation equipment, bladder scanners, heart rate monitors, blood glucose meters, etc."
+        ? "Full-range PCBA solutions for medical electronics, covering control board solutions for portable and wearable devices, rehabilitation medical devices, bladder scanners, heart rate monitors, blood glucose meters, and other medical equipment."
         : "医疗电子 PCBA 全系列解决方案，涵盖便携式与可穿戴设备、康复医疗设备、膀胱扫描仪、心率检测器、血糖仪等控制板方案。",
       image: "/images/mainPage/medicalDevices.png",
       products: [

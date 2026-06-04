@@ -69,7 +69,7 @@ export function AboutSection() {
       "about.desc": {
         "zh-Hans":
           "百千成电子拥有超过35名研发与工程人员，涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程",
-        en: "BAIQIANCHENG Electronics is a high-tech enterprise focusing on energy storage BMS R&D, PCBA processing technology, circuit board SMT chip processing and OEM manufacturing services, committed to providing safe and reliable energy storage solutions for global customers.",
+        en: "BQC Electronics has over 35 R&D and engineering professionals consisting of hardware, software, mechanical, ID/MD as well as SMT & PCBA design and verification teams, enabling full-cycle customer project support from conceptual design through mass production.",
       },
       "about.stat1.title": { "zh-Hans": "BMS研发经验", en: "BMS R&D Experience" },
       "about.stat1.bottom": { "zh-Hans": "年专业经验", en: "Years of Experience" },
@@ -82,62 +82,62 @@ export function AboutSection() {
       "about.mission.title": { "zh-Hans": "百千成电子八大核心优势", en: "BQC’s Eight Core Strengths" },
       "about.advantage1.title": {
         "zh-Hans": "全流程定制与制造能力",
-        en: "End-to-End Customization and Manufacturing Capabilities",
+        en: "Full-Cycle Customization & Manufacturing Capabilities",
       },
       "about.advantage1.desc": {
         "zh-Hans":
           "百千成电子提供从联合设计（JDSM）到PCBA集成量产交付的一站式整体解决方案，覆盖储能 BMS、智能机器人、医疗电子、汽车电子及高端消费电子等核心领域。",
-        en: "BQC provides one-stop solutions from Joint Design and Smart Manufacturing (JDSM) to PCBA mass production and delivery, covering key sectors such as energy storage BMS, smart robotics, medical electronics, automotive electronics, and high-end consumer electronics.",
+        en: "BQC Electronics delivers one-stop integrated solutions ranging from joint design service (JDSM) to integrated PCBA mass production delivery, focusing on core sectors including energy storage BMS, intelligent robots, medical electronics, automotive electronics and high-end consumer electronics.",
       },
-      "about.advantage2.title": { "zh-Hans": "深厚的技术与工程实力", en: "Strong Technical and Engineering Expertise" },
+      "about.advantage2.title": { "zh-Hans": "深厚的技术与工程实力", en: "Solid Technical & Engineering Strength" },
       "about.advantage2.desc": {
         "zh-Hans":
           "百千成电子拥有超过35名研发与工程人员，涵盖硬件、软件、结构、ID/MD/SMT/PCBA设计及验证团队，支持客户完成从概念到量产的全过程。",
-        en: "BQC has a team of over 35 R&D and engineering professionals covering hardware, software, mechanical design, ID/MD, SMT, PCBA design, and validation, supporting customers throughout the entire process from concept to mass production.",
+        en: "The company employs more than 35 R&D and engineering specialists across hardware, embedded software, mechanical structure, ID/MD, SMT and PCBA design & validation teams, supporting clients through the entire project lifecycle from concept formulation to volume manufacturing.",
       },
-      "about.advantage3.title": { "zh-Hans": "关键元器件供应链优势", en: "Key Component Supply Chain Advantage" },
+      "about.advantage3.title": { "zh-Hans": "关键元器件供应链优势", en: "Competitive Supply Chain for Key Components" },
       "about.advantage3.desc": {
         "zh-Hans":
           "百千成电子与ST、NXP、ADI、TI等国际厂商及代理商深度合作，享有优先采购权与稳定供应支持，具备国产替代方案能力，保障PCBA稳定供货与成本优化。",
-        en: "BQC maintains long-term partnerships with leading international chip suppliers and distributors, including ST, NXP, ADI, and TI, enabling priority sourcing and stable supply. We also support qualified local component alternatives to improve supply stability and cost competitiveness.",
+        en: "BQC maintains in-depth partnerships with global semiconductor manufacturers and authorized distributors including ST, NXP, ADI and TI. We enjoy priority sourcing and stable component supply alongside mature domestic alternative solutions to stabilize PCBA delivery and optimize overall product cost.",
       },
       "about.advantage4.title": {
         "zh-Hans": "规模化制造与质量保障",
-        en: "Scalable Manufacturing and Quality Assurance",
+        en: "Large-Scale Production & Reliable Quality Assurance",
       },
       "about.advantage4.desc": {
         "zh-Hans":
           "百千成电子深圳与马来西亚双智造基地协同布局，拥有规模化精密制造能力与完善验证体系，海内外产能联动交付，两地核心体系均通过 ISO9001及ISO13485认证。",
-        en: "With manufacturing bases strategically located in Shenzhen and Malaysia, BQC has large-scale precision manufacturing capabilities and a comprehensive validation system. Both facilities operate in sync for cross-border delivery, with core systems certified to ISO 9001 and ISO 13485.",
+        en: "With dual smart manufacturing bases in Shenzhen, China and Malaysia, BQC realizes coordinated high-precision mass production and comprehensive validation systems to fulfill global order demands. Both facilities are certified with ISO9001 and ISO13485 quality management systems.",
       },
       "about.advantage5.title": {
         "zh-Hans": "储能与机器人领域的领先经验",
-        en: "Leading Experience in Energy Storage and Robotics",
+        en: "Proven Leading Expertise in Energy Storage & Roboticss",
       },
       "about.advantage5.desc": {
         "zh-Hans": "百千成电子已成为全球储能BMS前三及扫地机器人头部品牌的核心供应商，服务多家全球TOP10集成商与品牌客户。",
-        en: "BQC has become a core supplier to one of the world’s top three energy storage BMS companies and leading robotics brands, serving multiple global top-10 integrators and brand customers.",
+        en: "We serve as a core supplier for top-three global energy storage BMS manufacturers and leading robotic vacuum brands, partnering with multiple world’s top 10 system integrators and branded clients.",
       },
-      "about.advantage6.title": { "zh-Hans": "自动化与数字化管理", en: "Digital and Automated Management" },
+      "about.advantage6.title": { "zh-Hans": "自动化与数字化管理", en: "Automated & Digitalized Production Management" },
       "about.advantage6.desc": {
         "zh-Hans": "百千成电子自研自动化程控与测试平台，搭载 MES、OA 等数字化管理系统，实现 PCBA 全流程智能化管控、工艺透明与品质全程可追溯。",
-        en: "BQC has developed automated program-controlled test platforms and digital management systems such as MES and OA, enabling intelligent PCBA process control, process transparency, and full quality traceability.",
+        en: "In-house developed automatic programming and testing platforms together with digital management systems such as MES and OA enable intelligent full-process PCBA control, open production workflow and end-to-end traceability of all quality records.",
       },
       "about.advantage7.title": {
         "zh-Hans": "环境友好与企业社会责任",
-        en: "Eco-Friendliness and Social Responsibility",
+        en: "Eco-friendly Operation & Corporate Social Responsibility",
       },
       "about.advantage7.desc": {
         "zh-Hans": "百千成电子始终秉持 客户第一、诚信、分享、回馈 的价值观，致力于通过PCBA加工技术创新推动碳中和，践行可持续制造。",
-        en: "BQC always upholds the values of customer first, integrity, sharing, and giving back to society. We are committed to promoting carbon neutrality and sustainable manufacturing through continuous innovation in PCBA manufacturing technologies.",
+        en: "BQC Electronics adheres to the core values of Customer-oriented, Integrity, Sharing and Social Feedback. We commit to advancing carbon neutrality via technological innovation in PCBA processing and practicing sustainable manufacturing.",
       },
       "about.advantage8.title":{
         "zh-Hans":"严苛的行业标准合规与定制化质量管控",
-        en:"Stringent Industry Compliance and Customized Quality Control",
+        en:"Strict Compliance with Industrial Standards & Customized Quality Control",
       },
       "about.advantage8.desc":{
         "zh-Hans":"质控团队采用 X 射线检测、自动光学检测（AOI）、功能测试系统等先进设备，在生产各环节开展多维度检验，确保产品不良率低于行业基准。同时与客户建立联合质量评审机制，主动预判潜在风险并持续优化产品质量，为高标准应用场景提供可靠制造保障",
-        en:"Our QC team uses advanced equipment such as X-ray inspection, automatic optical inspection (AOI), and functional test systems to conduct multi-dimensional inspections at every stage of production, helping ensure product defect rates remain below industry benchmarks. We also establish joint quality review mechanisms with customers to proactively identify potential risks and continuously improve product quality, providing reliable manufacturing assurance for high-standard applications.",
+        en:"Our QC team deploys advanced testing equipment including X-Ray inspection equipment, AOI (Automated Optical Inspection) and dedicated functional test systems to implement multi-stage in-process inspections across all production procedures, keeping defect rate below industrial average benchmarks. Meanwhile, we establish joint quality review mechanisms with customers to proactively identify potential risks and continuously upgrade product quality, delivering reliable manufacturing support for high-standard application scenarios.",
       },
 
       "about.learnMore": { "zh-Hans": "了解更多", en: "Learn More" },

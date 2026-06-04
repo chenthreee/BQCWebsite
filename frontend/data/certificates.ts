@@ -600,15 +600,15 @@ export const honorsData = {
     },
     {
       id: "littleGiantMan",
-      title: "Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate",
-      description: "Baiqiancheng Electronics has obtained the Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate which is the highest level of official recognition for enterprises with specialization, refinement, distinctiveness, and innovation capabilities. This qualification marks the company's transition from a high-quality specialized and innovative SME to a benchmark enterprise in its细分领域. The certification fully verifies the company's深耕电子领域主业突出，在关键技术、产品质量、工艺管控与差异化创新上形成核心壁垒，具备稳定可靠的产品供给能力与强劲可持续的研发创新实力，细分市场竞争力、行业影响力与长期成长潜力获得国家级认可，是企业技术实力、品牌价值与综合竞争力的重要体现。",
+      title: "National SRDI \"Little Giant\" Enterprise",
+      description: "Shenzhen Baiqiancheng Electronics Co., Ltd. has been awarded the qualification of national SRDI \"Little Giant\" Enterprise. It is China’s highest authoritative national accreditation for enterprises in terms of specialization, refinement, differentiation and innovation capacity. This certification represents the company’s upgrade from an outstanding SRDI SME to a benchmark enterprise in its specific niche market.The credential verifies the company’s long-term focus on the electronics core business. We have established core competitive barriers in core technologies, product quality, process management and differentiated innovation, paired with stable product supply capability and sustainable strong R&D strength. Our niche competitiveness, industrial influence and long-term development potential are nationally recognized, which stands as key evidence of our technical strength, brand value and overall comprehensive competitiveness.",
       image: "/images/about/certificates/little_gaint_man.jpg",
       issueDate: "2025",
       validUntil: "2028",
       detailedInfo: {
-        fullName: "Specialized, Sophisticated, Distinctive and Innovative “Little Giant” Enterprise Certificate",
-        scope: "Applicable to innovative SMEs focused on niche markets",
-        certificationBody: "Industrial and Information Technology Department",
+        fullName: "Certificate of National Specialized, Refined, Differentiated and Innovative (SRDI) \"Little Giant\" Enterprise",
+        scope: "High-quality innovative SMEs concentrating on segmented markets",
+        certificationBody: "Ministry of Industry and Information Technology (MIIT, PRC)",
         benefits: [
           "Enhance enterprise industry credibility and brand influence",
           "Enjoy national and local special policy and financial support",
