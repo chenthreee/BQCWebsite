@@ -111,7 +111,7 @@ export default function OdmServicePage() {
               
           },
           {
-            title: "JDSM（Joint Design & Selected Manufacturing）",
+            title: "JDSM（Joint Design Manufacturing）",
             description:
               "在JDSM联合设计制造模式下，百千成电子与客户研发团队协同推进产品开发，围绕客户现有方案、技术目标和项目进度，提供硬件设计、软件开发、结构优化、测试验证、认证支持及样机制作等模块化研发服务。客户可按需选择支持内容，在保持技术主导权的同时提升研发效率、控制项目投入。依托自有SMT贴片厂的制造体系，以及SMT贴片加工、PCBA加工和测试验证经验，百千成电子可在设计阶段同步评估工艺适配性、可制造性和量产可行性，帮助客户实现从联合开发到批量交付的高效衔接。",
           },
@@ -141,7 +141,7 @@ export default function OdmServicePage() {
       intro: {
         title: "Service Overview",
         description:
-          "BQC Electronics provides complete ODM R&D services covering hardware, software, structure, testing, certification to mass production delivery. We also support flexible JDSM (Joint Design & Selected Manufacturing) mode to meet different customers' customization needs.",
+          "BQC Electronics provides complete ODM R&D services covering hardware, software, structure, testing, certification to mass production delivery. We also support flexible JDSM (Joint Design Manufacturing) mode to meet different customers' customization needs.",
       },
       process: {
         title: "ODM R&D Services",
@@ -227,7 +227,7 @@ export default function OdmServicePage() {
               "We offer a full-process one-stop service covering product definition, design and development, certification and mass production, as well as after-sales service. Customers can focus on sales, operation and industry solutions. They only need to present product requirements and can obtain complete deliverable products. The overall input-output ratio is higher.",
           },
           {
-            title: " JDSM (Joint Design & Selected Manufacturing)",
+            title: " JDSM (Joint Design Manufacturing)",
             description:
               "Jointly develop with the client team and provide some research and development services (such as hardware, software, structure, testing or certification services). The client focuses on filling the weak points, with flexible investment, controllable budget, and also takes into account efficiency and technical dominance.",
           },
