@@ -38,7 +38,7 @@ export default function CertificatesPage({ params }: { params: Promise<{ locale:
       ],
       overview: {
         title: "Our Qualifications",
-        description: "Baiqiancheng Electronics firmly bases its core competitiveness on technological research and development. With multiple international authoritative management system certifications, independent intellectual property patents, and the qualification of a national-level \"Small Giant\" specialized and innovative enterprise, the company fully demonstrates its comprehensive strength and industry-leading level in precision manufacturing, quality control, and technological innovation.",
+        description: "Baiqiancheng Electronics is committed to technological R&D as its core competitiveness. Leveraging multiple internationally recognized management system certifications, independently owned intellectual property patents, and its status as a nationally accredited “national-level Specialized, Refined, Distinctive and Innovative “Little Giant” Enterprise, the company fully demonstrates its comprehensive strength and industry-leading level in precision manufacturing, quality control, and technological innovation.",
       },
       honorsTitle: "Enterprise Honors",
       viewDetails: "View Details"

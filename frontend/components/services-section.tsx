@@ -30,7 +30,7 @@ export function ServicesSection() {
       },
       "section.customet.subtitle":{
         "zh-Hans": "百千成电子致力于为全球客户提供高品质的储能BMS系统和OEM制造服务，依托核心技术与严苛品质标准，以前沿研发实力引领行业高质量发展",
-        "en": "BAIQIANCHENG Electronics is committed to providing high-quality energy storage BMS systems and PCBA/SMT assembly OEM manufacturing services for global customers, leading the industry with advanced technology.",
+        "en": "BQC is committed to providing high-quality energy storage BMS systems and OEM manufacturing services to customers worldwide. Leveraging core technologies, rigorous quality standards, and cutting-edge R&D capabilities, we help drive high-quality development across the industry.",
       },
       "oem.title": {
         "zh-Hans": "OEM制造服务",

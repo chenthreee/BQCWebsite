@@ -240,7 +240,7 @@ export const certificatesData = {
     {
       id: "iso9001",
       title: "ISO9001 Quality Management System Certification",
-      description: "ISO 9001 is the world’s most widely adopted quality management system standard, applicable to organizations of all sizes and industries. It provides a structured framework for consistently meeting customer requirements, enhancing customer satisfaction, and driving continuous improvement.\n\nThe standard is based on key quality management principles, including customer focus, leadership, process approach, risk-based thinking, and continual improvement. ISO 9001 requires organizations to define, monitor, and optimize their core processes, ensuring stable product quality and efficient operations.\n\nBaiQianCheng Electronics has obtained ISO9001 certification, which demonstrates a company’s commitment to quality, operational excellence, and systematic management. It helps reduce errors, improve internal communication, and increase overall efficiency.\n\nFor customers and partners, ISO 9001 certification is a strong indicator of reliability and professionalism, showing that the organization has effective controls in place to deliver consistent, high-quality products and services while continually improving performance.",
+      description: "ISO 9001 is the world’s most widely adopted quality management system standard, applicable to organizations of all sizes and industries. Through systematic process management, the standard helps companies consistently meet customer requirements while continuously improving customer satisfaction. ISO 9001 is based on key principles including customer focus, leadership, process approach, risk-based thinking, and continual improvement. It requires organizations to identify and optimize critical business processes, thereby improving operational efficiency and product consistency. BQC Electronics has obtained ISO 9001 certification, demonstrating that the company has established a mature management system in quality management, internal control, and continual improvement. It also serves as an important reference for customers and partners when evaluating supplier reliability.",
       image: "/images/about/certificates/ISO9001_en.png",
       issueDate: "2019",
       validUntil: "2025",
@@ -249,16 +249,16 @@ export const certificatesData = {
         scope: "Applicable to quality management of all types of organizations",
         certificationBody: "International Organization for Standardization (ISO)",
         benefits: [
-          "Improve product and service quality",
-          "Enhance customer satisfaction",
-          "Increase organizational operational efficiency",
+          "Consistently meet customer requirements",
+          "Improve customer satisfaction",
+          "Enhance operational efficiency and product consistency",
           "Strengthen market competitiveness",
-          "Promote continuous improvement culture"
+          "Promote a culture of continual improvement"
         ],
         requirements: [
-          "Establish a comprehensive quality management system",
-          "Define quality policy and objectives",
-          "Implement process management and monitoring",
+          "Establish a systematic quality management system",
+          "Define quality policies and objectives",
+          "Implement process approach and risk-based thinking",
           "Conduct regular internal audits",
           "Continuously improve the quality management system"
         ]
@@ -267,7 +267,7 @@ export const certificatesData = {
     {
       id: "iso14001",
       title: "ISO14001 Environmental Management System Certification",
-      description: "ISO 14001 is an internationally recognized standard for environmental management systems, designed to help organizations manage their environmental responsibilities in a systematic and sustainable way. It focuses on reducing environmental impact, ensuring regulatory compliance, and promoting continuous environmental performance improvement.\n\nThe standard requires organizations to identify environmental aspects and impacts, set measurable environmental objectives, and implement effective controls to minimize pollution, waste, and resource consumption. It also emphasizes legal compliance, emergency preparedness, and ongoing monitoring and evaluation.\n\nBaiqiancheng Electronics has obtained ISO 14001 certification, which demonstrates a company’s commitment to environmental protection, sustainability, and responsible business practices. It helps organizations reduce operational risks, improve resource efficiency, and enhance their environmental reputation.\n\nFor customers and stakeholders, ISO 14001 provides confidence that the organization actively manages environmental risks and aligns its operations with global sustainability expectations and environmental regulations.",
+      description: "ISO 14001 is an internationally recognized standard for environmental management systems, designed to help organizations systematically manage their environmental responsibilities and continuously reduce their environmental impact. The standard emphasizes the identification of environmental risks, regulatory compliance, and continuous improvement of environmental performance. To obtain ISO 14001 certification, companies are required to identify environmental aspects within their operations, establish clear environmental objectives, and implement effective measures to reduce pollution, waste, and resource consumption. Baiqiancheng Electronics has obtained ISO 14001 certification, demonstrating the company’s strong commitment to sustainable development and social responsibility. This certification helps enhance corporate image, reduce compliance risks, and meet customers’ and market requirements for green supply chains.",
       image: "/images/about/certificates/ISO14001_en.png",
       issueDate: "2018",
       validUntil: "2027",
@@ -278,13 +278,13 @@ export const certificatesData = {
         benefits: [
           "Reduce environmental risks and impacts",
           "Improve environmental performance",
-          "Save resources and energy",
+          "Conserve resources and energy",
           "Enhance corporate social responsibility image",
           "Comply with environmental regulations"
         ],
         requirements: [
-          "Identify environmental aspects and impacts",
-          "Develop environmental policy and objectives",
+          "Identify environmental aspects and impacts ",
+          "Establish environmental policy and objectives",
           "Implement environmental management programs",
           "Monitor and measure environmental performance",
           "Continuously improve the environmental management system"
@@ -294,7 +294,7 @@ export const certificatesData = {
     {
       id: "iso13485",
       title: "ISO13485 Medical Device Quality Management System Certification",
-      description: "ISO 13485 is an internationally recognized quality management system standard specifically developed for the medical device industry. It focuses on regulatory compliance, risk management, and consistent product quality throughout the entire product lifecycle, including design, development, production, installation, and servicing.\n\nBaiqiancheng Electronics has obtained ISO 13485 certification, which demonstrates an organization’s ability to meet stringent medical device regulatory requirements and to ensure patient safety and product reliability. The standard emphasizes risk-based thinking, traceability, validation of processes, and strict control of documentation and records.\n\nFor customers, ISO 13485 certification provides strong assurance that the manufacturer operates under a robust quality system aligned with global medical regulations such as FDA QSR and EU MDR. It also reflects a commitment to continuous improvement, effective corrective and preventive actions, and compliance with applicable statutory and regulatory requirements.\n\nOverall, ISO 13485 is a key benchmark for companies involved in medical devices, diagnostic equipment, and related components, enabling them to compete in regulated global markets with confidence.",
+      description: "ISO 13485 is an international quality management system standard specifically developed for the medical device industry. It covers the entire product lifecycle, including design and development, manufacturing, installation, and after-sales service. The standard places strong emphasis on regulatory compliance, risk management, product consistency, and safety. BQC Electronics has obtained ISO 13485 certification, demonstrating the company’s capability to comply with global medical device regulatory requirements and to ensure product reliability and patient safety through systematic process control. The standard requires validation of critical processes, strengthened document and record management, as well as effective corrective and preventive actions. For customers, ISO 13485 certification is an important indication of a mature quality management system. It helps reduce compliance risks and enhances confidence in the supplier’s capabilities in manufacturing medical devices and related components.",
       image: "/images/about/certificates/ISO13485_en.png",
       issueDate: "2015",
       validUntil: "2027",
@@ -303,25 +303,25 @@ export const certificatesData = {
         scope: "Applicable to design, production and service of medical devices",
         certificationBody: "International Organization for Standardization (ISO)",
         benefits: [
-          "Ensure safety and effectiveness of medical devices",
-          "Meet regulatory and compliance requirements",
+          "Ensure the safety and effectiveness of medical devices",
+          "Comply with global medical device regulations (such as FDA QSR and EU MDR)",
           "Improve product quality and reliability",
-          "Enhance customer trust",
-          "Facilitate international market access"
+          "Enhance patient safety assurance",
+          "Support access to international markets"
         ],
         requirements: [
-          "Establish medical device quality management system",
-          "Implement risk management",
-          "Ensure product design and development meet requirements",
-          "Strictly control production processes",
-          "Establish product traceability system"
+          "Establish a medical device quality management system",
+          "Implement risk-based thinking and management",
+          "Ensure product traceability",
+          "Validate critical processes",
+          "Strictly control document and record management"
         ]
       }
     },
     {
       id: "iatf16949",
       title: "IATF16949 Automotive Quality Management System Certification",
-      description: "IATF 16949 is a global quality management system standard specifically developed for the automotive industry. It replaced ISO/TS 16949 and is jointly established by the International Automotive Task Force (IATF). The standard focuses on defect prevention, process optimization, and continual improvement across the automotive supply chain.\n\nIATF 16949 emphasizes advanced quality planning, risk management, traceability, product safety, and rigorous process control. It integrates core automotive tools such as APQP, PPAP, FMEA, SPC, and MSA to ensure stable and reliable manufacturing processes.\n\nBaiqiancheng Electronics has obtained IATF 16949 certification, which demonstrates an organization’s capability to meet the demanding quality requirements of global automotive OEMs and Tier 1 suppliers. It also reflects strong management commitment, supplier quality control, and continuous improvement culture.\n\nFor customers, IATF 16949 certification is a critical qualification, ensuring consistent quality, reduced risks, and long-term supply chain reliability.",
+      description: "IATF 16949 is a global quality management system standard specifically developed for the automotive industry, jointly issued by the International Automotive Task Force (IATF). It serves as a key entry requirement for the automotive supply chain and is built around defect prevention, process control, and continuous improvement. The standard emphasizes product safety, risk management, traceability, and the application of advanced quality tools such as APQP, PPAP, FMEA, SPC, and MSA. BQC Electronics’ IATF 16949 certification demonstrates the company’s capability to meet the stringent quality requirements of global automotive OEMs and Tier 1 suppliers, and serves as an important quality assurance credential for entering the automotive supply chain.",
       image: "/images/about/certificates/IATF16949_en.png",
       issueDate: "2022",
       validUntil: "2025",
@@ -330,17 +330,17 @@ export const certificatesData = {
         scope: "Applicable to production and service in the automotive industry",
         certificationBody: "International Automotive Task Force (IATF)",
         benefits: [
-          "Improve automotive parts quality",
-          "Reduce supply chain risks",
-          "Meet automotive industry customer requirements",
-          "Increase production efficiency",
-          "Enhance continuous improvement capability"
+          "Improving the quality of automotive parts",
+          "Reducing supply chain risks",
+          "Meeting the requirements of automotive industry customers",
+          "Increasing production efficiency",
+          "Enhancing continuous improvement capabilities"
         ],
         requirements: [
-          "Comply with ISO9001 basic requirements",
+          "Comply with ISO 9001 basic requirements",
           "Implement automotive industry-specific requirements",
           "Establish product safety management",
-          "Implement manufacturing process audits",
+          "Conduct manufacturing process audits",
           "Ensure supplier quality management"
         ]
       }
@@ -348,7 +348,7 @@ export const certificatesData = {
     {
       id: "ul",
       title: "UL Safety Certification",
-      description: "UL 859 is a safety standard developed by Underwriters Laboratories for household electric personal grooming appliances, such as hair dryers, curling irons, and similar products. The standard focuses on electrical safety, thermal performance, mechanical strength, and fire risk prevention.\n\nCompliance with UL 859 requires products to undergo rigorous testing to evaluate insulation, grounding, temperature rise, abnormal operation, and resistance to electrical and mechanical hazards. The goal is to ensure safe operation under both normal and foreseeable misuse conditions.\n\nBaiqiancheng Electronics has obtained UL 859 certification, which demonstrates that a product meets recognized safety requirements for the North American market. It enhances consumer trust and helps manufacturers comply with retailer and regulatory safety expectations.\n\nFor brands and manufacturers, UL 859 certification reduces market entry risks, supports regulatory compliance, and confirms a strong commitment to product safety, quality, and end-user protection.",
+      description: "UL 859 is a safety standard for household electric personal care appliances established by UL Solutions. It applies to products such as hair dryers, curling irons, and other personal care electrical appliances. The standard mainly focuses on electrical safety, temperature rise control, mechanical strength, and fire resistance performance. Products must pass rigorous testing to verify their safety under both normal and abnormal operating conditions, including insulation performance, protection against electric shock, and overheating prevention. BQC Electronics’ applicable products have obtained UL 859 certification., which is an important safety compliance qualification for entering the North American market. It helps enhance consumer confidence and meet the requirements of retailers and regulatory authorities.",
       image: "/images/about/certificates/UL895.png",
       issueDate: "2016",
       validUntil: "2027",
@@ -357,17 +357,17 @@ export const certificatesData = {
         scope: "Applicable to home electric personal grooming appliances",
         certificationBody: "Underwriters Laboratories (UL)",
         benefits: [
-          "Ensure product electrical safety",
-          "Increase consumer confidence",
+          "Ensure electrical product safety",
+          "Enhance consumer confidence",
           "Meet North American market access requirements",
           "Reduce product liability risks",
-          "Enhance brand reputation"
+          "Strengthen brand reputation"
         ],
         requirements: [
           "Comply with UL safety standards",
           "Pass product safety testing",
           "Establish quality control procedures",
-          "Accept regular factory inspections",
+          "Undergo regular factory inspections",
           "Maintain product consistency"
         ]
       }
@@ -375,7 +375,7 @@ export const certificatesData = {
     {
       id: "ce",
       title: "CE European Conformity Certification",
-      description: "CE certification obtained by Baiqiancheng Electronics is the mandatory mark established by the European Union to ensure compliance with safety, health, environmental, and consumer-protection requirements for products. It confirms that Baiqiancheng Electronics’ products comply with the relevant EU directives and harmonized standards. Obtaining CE certification enables Baiqiancheng Electronics’ products to legally enter the European Economic Area (EEA) market, reflecting the company's compliance and reliability in product design, manufacturing, and quality control. CE certification not only enhances Baiqiancheng Electronics’ international competitiveness but also strengthens customers’ trust in the safety and quality of its products.",
+      description: "CE marking indicates that BQC Electronics’ applicable products comply with relevant EU directives and harmonized standards related to safety, health, environmental protection, and consumer protection. Obtaining CE marking allows applicable products to enter the European Economic Area (EEA) market legally, demonstrating compliance and reliability in product design, manufacturing, and quality control.",
       image: "/images/about/certificates/CE.png",
       issueDate: "2016",
       validUntil: "2027",
@@ -384,14 +384,14 @@ export const certificatesData = {
         scope: "Applicable to products entering the European Economic Area",
         certificationBody: "European Commission",
         benefits: [
-          "Gain access to the EU market",
+          "Gain EU market access",
           "Prove product compliance with EU regulations",
           "Enhance product competitiveness",
-          "Increase consumer trust",
+          "Boost consumer trust",
           "Simplify trade processes"
         ],
         requirements: [
-          "Comply with relevant EU directive requirements",
+          "Comply with relevant EU directives",
           "Conduct conformity assessment procedures",
           "Prepare technical documentation",
           "Affix CE marking",
@@ -547,7 +547,7 @@ export const honorsData = {
     {
       id: "highTechEnterprise",
       title: "High-Tech Enterprise Certificate",
-      description: "Baiqiancheng Electronics has obtained the High-Tech Enterprise Certificate which is an official recognition of a company's technological innovation capabilities, R&D investment, intellectual property, and commercialization of scientific achievements. This qualification indicates that the company meets national standards for high-tech enterprises, demonstrating strong core technologies, innovation capacity, and sustainable development potential. It enhances corporate brand value, industry influence, and competitiveness in technology-driven markets.",
+      description: "BQC Electronics has been awarded the High-Tech Enterprise Certificate, an official recognition issued by the Chinese government for a company’s technological innovation capability, R&D investment, intellectual property, and commercialization of scientific and technological achievements. Obtaining this qualification demonstrates that the company has met the national standards for high-tech enterprises in terms of core technologies, product innovation, and R&D management systems, while also possessing strong capabilities for continuous innovation and technological leadership. The certification not only enhances the company’s brand value and industry influence, but also reflects its comprehensive strength in technology development and industrial upgrading.",
       image: "/images/about/certificates/高新技术企业证书.png",
       issueDate: "2022",
       validUntil: "2025",
@@ -556,45 +556,45 @@ export const honorsData = {
         scope: "Applicable to enterprises with technological innovation capabilities",
         certificationBody: "Ministry of Science and Technology, Ministry of Finance, State Taxation Administration",
         benefits: [
-          "Enjoy corporate income tax incentives",
-          "Enhance corporate brand value and market influence",
+          "Enjoy preferential corporate income tax policies",
+          "Enhance brand value and market influence",
           "Strengthen technological innovation and R&D capabilities",
-          "Obtain government funding support and project priority",
+          "Gain access to government funding support and project priority opportunities",
           "Improve core competitiveness"
         ],
         requirements: [
           "Possess core independent intellectual property rights",
-          "Products or services belong to national key high-tech fields",
-          "R&D expenses meet required percentage of sales revenue",
-          "High-tech product revenue meets required proportion",
-          "Establish comprehensive R&D organization and management system"
+          "Products or services must belong to nationally supported high-tech fields",
+          "Meet the required ratio of R&D expenses to sales revenue",
+          "Meet the required ratio of high-tech product revenue",
+          "Establish a comprehensive R&D organization and management system"
         ]
       }
     },
     {
       id: "specializedSME",
       title: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
-      description: "Baiqiancheng Electronics has obtained the Shenzhen \"Specialized, Sophisticated, Distinctive and Innovative\" SME Certificate which recognizes enterprises with strong specialization, refined management, distinctive products, and innovation capabilities. This qualification demonstrates the company's core technological strengths, stable product quality, and continuous innovation in niche markets. It highlights the enterprise's competitiveness, growth potential, and comprehensive advantages in technology, product differentiation, and industry positioning.",
+      description: "The Shenzhen Specialized, Refined, and Innovative SME Certification obtained by Baiqiancheng Electronics is an authoritative recognition of the company's specialization, refinement, uniqueness, and innovation capabilities. Obtaining this qualification demonstrates that the company possesses core technological advantages, stable product quality, and continuous innovation capabilities in its niche market, exhibiting strong market competitiveness and growth potential. This certification reflects the company's comprehensive advantages in technological strength, product differentiation, and industry influence.",
       image: "/images/about/certificates/深圳市专精特新中小企业.png",
       issueDate: "2022",
       validUntil: "2025",
       detailedInfo: {
-        fullName: "Shenzhen Specialized, Sophisticated, Distinctive and Innovative SME Certificate",
-        scope: "Applicable to innovative SMEs focused on niche markets",
-        certificationBody: "Shenzhen Municipal Bureau of Industry and Information Technology",
+        fullName: "Shenzhen Specialized, Refined, and Innovative SME Certification",
+        scope: "Applicable to innovative small and medium-sized enterprises focusing on market segments",
+        certificationBody: "Bureau of Industry and Information Technology of Shenzhen Municipality",
         benefits: [
-          "Receive government special funding support",
+          "Receive special government funding support",
           "Enjoy preferential financing and loan policies",
           "Enhance corporate brand recognition",
           "Priority participation in government procurement projects",
           "Strengthen market competitiveness and industry influence"
         ],
         requirements: [
-          "Focus on niche market segments",
-          "Possess strong innovation capabilities and R&D strength",
-          "Own core technologies and independent intellectual property",
-          "Maintain stable product quality and market competitiveness",
-          "Demonstrate standardized management and strong growth potential"
+          "Focus on a niche market segment",
+          "Possess strong innovation and R&D capabilities",
+          "Own core technologies and independent intellectual property rights",
+          "Stable product quality and market competitiveness",
+          "Standardized business management and good growth potential"
         ]
       }
     },

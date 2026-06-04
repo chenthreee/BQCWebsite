@@ -148,8 +148,8 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
       subtitle: "Get in touch with us",
       breadcrumbs: [{ label: "Contact Us", href: "/en/contact" }],
       generalContact: {
-        title: "General Contact（China）",
-        description: "Send us a general inquiry through below info or contact by phone for immediate assistance:",
+        title: "Contact Information (China)",
+        description: "Please contact us through the following channels, or call us for immediate assistance:",
         phone: "86-13923876486",
         fax: "86-755-26788245",
         email: "jacky@bqcdz.com",
@@ -178,19 +178,19 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         shenzhenFactory: {
           title: "Shenzhen Factory",
           address:
-            "Complete Building 3, No.3B ShaTouXiang Industrial Zone, ChangZhen Community, Yutang Street, Guangming District, Shenzhen, China. 518132",
+            "Building 3, No. 3B Shatouxiang Industrial Zone, Changzhen Community, Yutang Street, Guangming District, Shenzhen, Guangdong, China 518132",
           image: "/images/contact/sz_factory_en.png",
           navigateAddress:"343 Changfeng Rd, Guangming, Shenzhen, Guangdong Province, China, 518132"
         },
         rdCenter: {
-          title: "R&D Centre",
-          address: "5th Floor, Huize Building, Unit 17th The Sage Innopark, Longzhu 3rd Road No.45, Nanshan District, Shenzhen. 518055",
+          title: "R&D Center",
+          address: "5/F, Huize Tower, Building 17, Nanshan Ruiyuan, No. 45 Longzhu 3rd Road, Taoyuan Subdistrict, Xili, Nanshan District, Shenzhen, Guangdong, China 518055",
           image: "/images/contact/sz_RD_en.png",
           navigateAddress:"45 Longzhu 3rd Rd, Xili, Nan Shan Qu, Shen Zhen Shi, Guang Dong Sheng, China, 518072"
         },
         malaysiaFactory: {
           title: "Malaysia Factory",
-          address: "PMT 828, PERSIARAN CASSIA SELATAN 4, TAMAN PERINDUSTRIAN BATU KAWAN, 14110 BANDAR CASSIA.",
+          address: "PMT 828, Persiaran Cassia Selatan 4, Taman Perindustrian Batu Kawan, 14110 Bandar Cassia, Penang, Malaysia",
           image: "/images/contact/malaysia.png",
           navigateAddress:"BQCTECH SDN BHD"
         },
@@ -269,9 +269,9 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         {/* 右：马来西亚联系卡 —— 放在第3列，竖向排列 */}
         <div className="md:col-start-3 md:col-span-1">
           <div className="bg-white p-6 md:p-8 rounded-lg shadow-md h-full">
-            <h2 className="text-2xl font-bold mb-6">{locale === "en" ? "Malaysia Contact" : "联系方式（马来西亚）"}</h2>
+            <h2 className="text-2xl font-bold mb-6">{locale === "en" ? "Contact Information (Malaysia)" : "联系方式（马来西亚）"}</h2>
             <p className="text-gray-700 mb-6">
-              {locale === "en" ? "Reach our Malaysia team:" : "马来西亚团队联系方式："}
+              {locale === "en" ? "Malaysia Team Contact Information:" : "马来西亚团队联系方式："}
             </p>
 
             {/* 右卡内部：上下排列，空间更充足 */}
