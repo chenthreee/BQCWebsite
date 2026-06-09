@@ -610,18 +610,20 @@ export const honorsData = {
         scope: "High-quality innovative SMEs concentrating on segmented markets",
         certificationBody: "Ministry of Industry and Information Technology (MIIT, PRC)",
         benefits: [
-          "Enhance enterprise industry credibility and brand influence",
-          "Enjoy national and local special policy and financial support",
-          "Strengthen customer cooperation trust and market competitiveness",
-          "Priority participation in core project and resource docking",
-          "Strengthen enterprise innovation ability and sustainable development"
+          "Enhance corporate industry credibility and brand influence",
+          "Gain access to national and local special preferential policies and financial subsidies",
+          "Boost customer trust and overall market competitiveness",
+          "Secure priority access to core industrial chain projects and resource matching",
+          "Strengthen corporate innovation capacity and sustainable development momentum"
         ],
         requirements: [
-          "Focus on niche market segments",
-          "Possess strong innovation capabilities and R&D strength",
-          "Own core technologies and independent intellectual property",
-          "Maintain stable product quality and market competitiveness",
-          "Demonstrate standardized management and strong growth potential"
+          "Precondition: Possess the qualification of Municipal-level Specialized, Refined, Unique & Innovative SME",
+          "Have engaged in the same segmented market for no less than 3 consecutive years, operate in full compliance with laws and regulations without bad credit records",
+          "Annual revenue of the previous fiscal year ≥ RMB 50 million, with core business revenue accounting for no less than 90% of total turnover",
+          "Accumulated R&D expenditure over the latest two years ≥ RMB 12 million, and the annual R&D expense-to-revenue ratio maintains above 3%",
+          "Hold no fewer than 4 Type-I core independent intellectual property rights relevant to flagship products",
+          "Flagship products fall within key manufacturing sectors and occupy a leading market share in respective niche segments",
+          "Establish a sound R&D management system backed by complete information infrastructure"
         ]
       }
     }

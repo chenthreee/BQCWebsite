@@ -150,15 +150,15 @@ export function ServicesSection() {
       },
       "odm.adv1.desc": {
         "zh-Hans": "百千成电子持续加大研发团队建设、工程技术能力提升与关键制造设备升级投入，每年将营业收入的 5% 用于研发及技术创新相关领域。",
-        "en": "5% of annual revenue is dedicated to R&D, supporting continuous investment in talent and advanced equipment.",
+        "en": "BQC Electronics keeps scaling up investment in R&D team development, improvement of engineering and technical capabilities as well as upgrading of core manufacturing equipment. The company allocates 5% of its annual operating revenue to R&D and technological innovation initiatives.",
       },
       "odm.adv2.title": {
         "zh-Hans": "研发人员占比",
-        "en": "R&D Team Ratio",
+        "en": "Proportion of R&D Staff",
       },
       "odm.adv2.desc": {
         "zh-Hans": "百千成电子拥有覆盖硬件、软件、结构与测试验证的研发团队，研发人员占公司总人数的 30%。在ODM研发项目中，团队可围绕客户产品需求，提供方案设计、元器件选型、BOM优化、样机验证及DFM评估等支持，并结合PCBA加工和SMT贴片加工经验，使产品设计在研发阶段就更贴近后续制造与交付要求。",
-        "en": "R&D professionals make up 30% of the total staff, covering hardware, software, structure, and algorithm development to ensure strong project capability.",
+        "en": "BQC Electronics has an R&D team covering hardware, software, mechanical structure as well as test & verification disciplines, with R&D personnel accounting for 30% of the company’s total workforce. For ODM development projects, the team delivers full-spectrum technical support per customer specifications, including schematic design, component selection, BOM optimization, prototype verification and DFM assessment. Leveraging in-house expertise in PCBA and SMT assembly, the team optimizes product design at the R&D phase to align with downstream production and delivery requirements.",
       },
       "odm.adv3.title": {
         "zh-Hans": "核心专利技术",
@@ -166,7 +166,7 @@ export function ServicesSection() {
       },
       "odm.adv3.desc": {
         "zh-Hans": "百千成电子拥有 60 余项技术专利，技术积累覆盖硬件设计、嵌入式开发、测试验证及制造工艺等方向。这些研发与工程经验可应用于产品功能实现、结构优化、测试方案规划和量产风险预判，并在后续SMT贴片、PCBA加工及质量管控过程中形成有效支撑，帮助客户提升产品可靠性与批量生产一致性。",
-        "en": "Over 60 core technology patents demonstrate deep expertise in hardware design and embedded system development.",
+        "en": "BQC Electronics holds more than 60 technical patents, with accumulated know-how spanning hardware design, embedded development, test verification and manufacturing processes. Such R&D and engineering expertise facilitates product function realization, structural optimization, test scheme formulation and mass-production risk assessment. It also provides robust technical backup throughout subsequent SMT mounting, PCBA fabrication and quality control procedures, helping customers enhance product reliability and consistency in volume production.",
       },
       "odm.features.title": {
         "zh-Hans": "服务内容：",
@@ -265,9 +265,9 @@ export function ServicesSection() {
   const odmServices = [
     {
       id: 1,
-      title: locale === "en" ? "Requirement Analysis & Solution Design" : "需求分析与方案设计",
+      title: locale === "en" ? "Demand Analysis & Solution Design" : "需求分析与方案设计",
       description: locale === "en"
-        ? "Deeply understand customer needs to deliver comprehensive hardware and software design solutions including core component selection and product specification definition, ensuring products meet both technical and market requirements."
+        ? "BQC Electronics gets involved in customer demand analysis and solution design at the initial stage of ODM projects. In combination with product application scenarios, performance specifications, cost targets and mass production roadmap, we assist customers in core component selection, product specification definition, hardware architecture design and software function planning. Meanwhile, DFM manufacturability, SMT process compatibility, test verification plan and PCBA processing stability are included in upfront design evaluation. This ensures the finalized solution complies with technical and market requirements while securing excellent manufacturability for mass production."
         : "百千成电子在ODM项目初期即参与客户需求分析与方案设计，结合产品应用场景、性能要求、成本目标及量产规划，协助客户完成核心元器件选型、产品规格制定、硬件架构设计和软件功能规划。同时，我们会将DFM可制造性、SMT贴片工艺适配性、测试验证方案及PCBA加工稳定性纳入前期设计评估，确保产品方案既满足技术和市场需求，也具备良好的量产可行性。",
       icon: <Lightbulb className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
@@ -278,7 +278,7 @@ export function ServicesSection() {
       id: 2,
       title: locale === "en" ? "Hardware System Development" : "硬件系统开发",
       description: locale === "en"
-        ? "A professional hardware development team providing customized hardware solutions tailored to client requirements."
+        ? "BQC Electronics is staffed with a professional hardware development team capable of developing customized PCBA products in accordance with customer requirements."
         : "百千成电子拥有专业的硬件系统开发团队，可根据客户需求开发各类定制化PCBA产品",
       icon: <Cpu className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
@@ -289,7 +289,7 @@ export function ServicesSection() {
       id: 3,
       title: locale === "en" ? "Embedded Software Development" : "嵌入式软件开发",
       description: locale === "en"
-        ? "Providing high-quality embedded software development services covering low-level drivers, middleware architecture, and application layers to ensure excellent performance and stability."
+        ? "BQC Electronics delivers embedded software development services covering bottom-level drivers, middleware architecture and application-layer functions. We assist customers with hardware joint debugging, communication control, function implementation and system stability optimization."
         : "百千成电子提供覆盖底层驱动、中间层架构和应用层功能的嵌入式软件开发支持，可协助客户完成硬件联调、通信控制、功能实现和系统稳定性优化。",
       icon: <CodeXml className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
@@ -298,9 +298,9 @@ export function ServicesSection() {
     },
     {
       id: 4,
-      title: locale === "en" ? "Structural Design" : "结构设计",
+      title: locale === "en" ? "Mechanical Design" : "结构设计",
       description: locale === "en"
-        ? "Delivering structural solutions that balance functionality, and manufacturability."
+        ? "BQC Electronics provides mechanical design, 3D modeling and assembly validation services for ODM projects to help customers optimize product layout, thermal design and production assembly solutions."
         : "百千成电子可为ODM项目提供结构设计、3D建模及装配验证支持，帮助客户优化产品空间布局、散热设计和生产装配方案。",
       icon: <Box className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
@@ -309,9 +309,9 @@ export function ServicesSection() {
     },
     {
       id: 5,
-      title: locale === "en" ? "Prototype Fabrication & Testing Validation" : "样机制作与测试验证",
+      title: locale === "en" ? "Prototype Fabrication & Test Verification" : "样机制作与测试验证",
       description: locale === "en"
-        ? "Providing rapid prototyping and comprehensive testing services to accelerate product development, identify potential issues early, and ensure design feasibility and reliability."
+        ? "BQC Electronics provides rapid prototyping and systematic test verification services to support customers in prototype production, functional testing, DFM analysis and design optimization. Backed by rich experience in PCBA fabrication, SMT assembly and testing validation, we promptly identify design and manufacturing risks at the early product development phase, improve prototype verification efficiency and lay a solid foundation for stable mass production afterward."
         : "百千成电子提供快速原型制作与系统化测试验证服务，支持客户完成样机制造、功能测试、DFM分析和设计优化。依托PCBA加工、SMT贴片加工及测试验证经验，我们可在产品早期阶段快速识别设计与制造风险，帮助客户提升样机验证效率，并为后续稳定量产打好基础。",
       icon: <Settings className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
@@ -322,7 +322,7 @@ export function ServicesSection() {
       id: 5,
       title: locale === "en" ? "Product Certification & Mass Production Support" : "产品认证与量产支持",
       description: locale === "en"
-        ? "Assisting customers with product certification and providing end-to-end technical support during mass production to ensure smooth manufacturing and rapid market entry."
+        ? "BQC Electronics assists customers in product certification implementation. Drawing on our extensive experience in PCBA fabrication, SMT assembly and test verification, we offer full-lifecycle mass-production support including material preparation, process evaluation, manufacturing and quality control. This enables efficient, stable and compliant product rollout from certification to bulk delivery."
         : "百千成电子可协助客户完成产品认证导入，并结合PCBA加工、SMT贴片加工及测试验证经验，为后续量产提供物料准备、工艺评估、生产制造和质量管控支持，确保产品从认证到批量交付过程更加高效、稳定、合规。",
       icon: <FileCheck className="h-16 w-16 text-blue-600" />,
       features: locale === "en"
