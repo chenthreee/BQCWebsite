@@ -178,168 +178,168 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
     },
     en: {
       title: "Manufacturing Capabilities",
-      subtitle: "BQC Electronics Production Equipment and Manufacturing Process",
+      subtitle: "Advanced Production Equipment & Manufacturing Processes of BQC",
       breadcrumbs:[
         {label:"About Us",href:"/en/about"},
         {label:"Manufacturing Capabilities",href:"/en/about/manufacturing-capabilities.html"}
       ],
       workshops: {
         title: "Production Workshops",
-        desc: "Automated production lines ensure efficiency and quality.",
+        desc: "Automated production lines ensuring efficiency and high quality",
         items: [
           {
             count: "24",
-            title: "SMT Workshop",
-            description: "BQC has 24 automated SMT lines with a daily production capacity of 8,640,000 points per day"
+            title: "SMT Lines",
+            description: "BQC operates 24 automated SMT production lines with a daily capacity of 8,640,000 solder joints"
           },
           
           {
             count: "8",
-            title: "DIP Workshop",
-            description: "4 THT Production Lines, 1.5million points per day. 4 Hand Soldering Lines, 0.5million points per day."
+            title: "DIP Lines",
+            description: "4 THT (through-hole insertion) lines with a daily capacity of 1,500,000 pins, plus 4 manual soldering lines with a daily capacity of 500,000 pins"
           },
           {
             count: "11",
             title: "Conformal Coating Lines",
-            description: "11 coating lines with a daily production capacity of 20,000 pieces/day"
+            description: "11 coating production lines, with a daily production capacity of 20,000 units"
           },
           {
             count: "5",
             title: "Functional Test Lines",
-            description: "Functional test line 4 pcs, 20,000 pieces/day"
+            description: "5 functional testing lines, capable of testing 20,000 units per day"
           },
           {
             count: "4",
-            title: "Product assembly line",
-            description: "4 assembly lines for finished products, 20,000 pieces/day"
+            title: "4 Product Assembly Lines",
+            description: "4 final assembly lines, with a daily assembly capacity of 20,000 units"
           }
         ]
       },
       equipment: {
-        title: "Major Equipment",
-        desc: "Advanced equipment improves efficiency and consistency.",
+        title: "Core Equipment",
+        desc: "Advanced equipment ensures high efficiency and consistent product quality",
         items: [
           {
-            title: "High-speed mounter 50 sets",
-            description: "Equipped with high-speed precision mounters, enabling mass production with both speed and stability",
+            title: "50 High-Speed Pick-and-Place Machines",
+            description: "Enabling high-precision, high-speed mass production with excellent stability",
             image: "/images/about/manufacturing/High-speed-mounter.jpg"
           },
           {
-            title: "Automatic printing machine 20 sets",
-            description: "Using fully automatic screen printers to ensure uniform solder paste application, enhancing efficiency and yield",
+            title: "20 Automatic Solder Paste Printers",
+            description: "Fully automated stencil printing systems ensure uniform solder paste deposition, improving efficiency and yield ",
             image: "/images/about/manufacturing/Automatic printing machine.png"
           },
           {
-            title: "10 temperature zone hot air reflow soldering (can add nitrogen) 12 sets",
-            description: "10-zone precise temperature-controlled reflow ovens with nitrogen option, ensuring superior soldering quality and reliability",
+            title: "12 Ten-Temperature-Zone Reflow Ovens (Nitrogen Capable)",
+            description: "Precision-controlled reflow systems with nitrogen support, ensuring superior soldering quality and reliability",
             image: "/images/about/manufacturing/temperature zone hot air reflow soldering.png"
           },
           {
-            title: "Wave soldering 4 sets",
-            description: "Efficient wave soldering machines, ideal for mass soldering of through-hole components",
+            title: "4 Wave Soldering Machines",
+            description: "High-efficiency wave soldering equipment designed for mass production of through-hole components",
             image: "/images/about/manufacturing/Wave soldering.png"
           },
           {
-            title: "Automatic plug-in machine 1 set",
-            description: "Automates component insertion, improving efficiency and minimizing manual errors",
+            title: "1 Automatic Insertion Machine",
+            description: "Automated THT insertion reduces manual errors and improves production efficiency",
             image: "/images/about/manufacturing/Automatic plug-in machine.png"
           },
           {
-            title: "3D X-RAY",
-            description: "3D X-ray inspection system for precise analysis of solder joints and hidden defects",
+            title: "3 3D X-Ray Inspection Systems",
+            description: "Advanced inspection for precise analysis of solder joints and hidden defects",
             image: "/images/about/manufacturing/3D X-RAY.png"
           },
           {
-            title: "3D SPI 8 sets",
-            description: "In-line 3D solder paste inspection to monitor printing quality in real time",
+            title: "8 3D SPI Systems",
+            description: "Real-time solder paste inspection to ensure printing quality stability",
             image: "/images/about/manufacturing/3D SPI.png"
           },
           {
-            title: "FAI First Article Tester 4 sets",
-            description: "Ensures fast first-article inspection to maintain production consistency and reliability",
+            title: "4 FAI (First Article Inspection) Systems",
+            description: "Fast and accurate first-article verification to ensure production consistency",
             image: "/images/about/manufacturing/FAI First Article Tester.png"
           },
           {
-            title: "Vision High Precision Dispenser",
-            description: "High-precision vision dispensing system, ensuring uniform adhesive application for diverse processes",
+            title: "High-Precision Vision Dispensing Systems",
+            description: "Accurate adhesive dispensing with vision alignment for diverse process requirements",
             image: "/images/about/manufacturing/Vision High Precision Dispenser.png"
           },
           {
-            title: "3D AOI",
-            description: "3D automated optical inspection for comprehensive detection of complex soldering defects",
+            title: "3D AOI Systems",
+            description: "Comprehensive inspection of complex soldering defects using 3D optical imaging",
             image: "/images/about/manufacturing/3D AOI.png"
           },
           {
-            title: "Online AOI 6 sets",
-            description: "Real-time in-line inspection to ensure high product yield",
+            title: "6 In-Line AOI Systems",
+            description: "Real-time inline inspection ensuring high yield rates during production",
             image: "/images/about/manufacturing/Online AOI.png"
           },
           {
-            title: "Offline AOI 20 sets",
-            description: "Flexible inspection supporting multi-batch and multi-angle analysis",
+            title: "20 Offline AOI Systems",
+            description: "Flexible multi-batch inspection for detailed quality analysis",
             image: "/images/about/manufacturing/Offline AOI.png"
           },
           {
-            title: "Image Measuring Instruments (Secondary Elements)",
-            description: "High-precision image measuring instruments for dimensional and process verification",
+            title: "2D Optical Measurement Systems",
+            description: "High-precision dimensional measurement ensuring compliance with design specifications",
             image: "/images/about/manufacturing/Image Measuring Instruments.png"
           },
           {
-            title: "Constant temperature and humidity test chamber",
-            description: "Simulates extreme environments to test product reliability and durability",
+            title: "Temperature & Humidity Test Chambers",
+            description: "Simulating extreme environments to evaluate product reliability and durability",
             image: "/images/about/manufacturing/Constant temperature and humidity test chamber.png"
           },
           {
-            title: "ROHS Tester",
-            description: "Rapid hazardous substance detection to ensure compliance with environmental standards",
+            title: "RoHS Testing Equipment",
+            description: "Rapid detection of hazardous substances to ensure environmental compliance",
             image: "/images/about/manufacturing/ROHS Tester.png"
           },
         ]
       },
       mountingRange: {
-        title: "Effective Mounting Component Package Range",
-        desc: "Supports various package types to meet diverse product needs.",
+        title: "Supported Component Packaging Range",
+        desc: "Supports a wide range of package types to meet diverse product requirements:",
         description: "01005 to 2512; QFP, QFN, CSP, TSOP, SOJ, BGA, uBGA, etc."
       },
       parameters: {
-        title: "Mounting Capacity Parameters",
+        title: "PCB & Assembly Capability Parameters",
         desc: "Combines high precision and speed for versatile production.",
         pcb: {
-          title: "PCB Parameter Basic Information",
+          title: "PCBA Manufacturing Capability",
           items: [
-            "•	Max Production Panel Size:",
-            "     -1.	Standard Capability：545*650",
-            "     -2.	Best Capability：620*2300",
-            "•	Layer Count(max):",
-            "     -1.	Standard Capability：26 layers",
-            "     -2.	Best Capability：48 layers",
-            "•	Board Thickness:",
-            "     -1.	Min finished board thickness(mm)：Standard Capability-0.1, Best Capability-0.05",
-            "     -2.	Max finished board thickness(mm)：Standard Capability-6.3, Best Capability-8.0",
-            "•	 Min Core Thickness(I/L)(mm):",
-            "     -1.	Standard Capability：0.075",
-            "     -2.	Best Capability：0.05",
-            "•   Min Core Dielectric Thickness(mm):",
-            "     -1.	Standard Capability：0.075",
-            "     -2.	Best Capability：0.05",
+            "•	PCB Manufacturing Capability",
+            "     -1.	Standard process: 545 × 650 mm",
+            "     -2.	Extended capability: 620 × 2300 mm",
+            "•	Layer count:",
+            "     -1.	Standard: up to 26 layers",
+            "     -2.	Advanced capability: up to 48 layers",
+            "•	PCB thickness:",
+            "     -1.	Minimum finished thickness: 0.1 mm (standard), 0.05 mm (advanced)",
+            "     -2.	Maximum thickness: 6.3 mm (standard), 8.0 mm (advanced)",
+            "•	Inner core thickness:",
+            "     -1.	0.075 mm (standard)",
+            "     -2.	0.05 mm (advanced)",
+            "•  Minimum dielectric thickness:",
+            "     -1.	0.075 mm (standard)",
+            "     -2.	0.05 mm (advanced)",
           ]
         },
         component: {
-          title: "Component Parameters",
+          title: "Assembly Capability",
           items: [
-            "Chip accuracy: Laser recognition ±0.05mm, Image recognition ±0.03mm",
-            "Mounting speed: 0.09s/piece",
-            "Component size: 0.6 * 0.3mm - 33.5 * 33.5mm",
-            "Component height: 6mm (max)",
-            "Pin pitch: 0.65mm and above laser recognition; High resolution VCS 0.2mm",
-            "Ball pitch: Laser recognition 1.0 and above, High resolution VCS 0.25mm"
+            "Chip placement accuracy: Laser recognition ±0.05mm, Vision recognition ±0.03mm",
+            "Placement speed: 0.09 seconds/component",
+            "Component size range: 0.6 × 0.3 mm to 33.5 × 33.5 mm",
+            "Maximum component height: 6 mm",
+            "Lead pitch: ≥0.65 mm (laser recognition); 0.2 mm (high-resolution vision system)",
+            "BGA ball pitch: ≥1.0 mm (laser recognition); 0.25 mm (high-resolution vision system)"
           ]
         }
       },
       talent: {
-        title: "Technical Talent Reserve",
+        title: "Engineering & Technical Talent",
         desc: "Professional team supporting full product lifecycle development.",
-        description: "BQC Electronics has over 35 R&D and engineering personnel, with most team members holding bachelor's or master's degrees from top-tier universities (985/211). 60% of employees have more than 8 years of work experience. The team covers hardware, software, structure, ID/MD/SMT/PCBA design and verification, supporting customers from concept to mass production.",
+        description: "BQC has a strong engineering and R&D team of over 35 professionals, most graduated from top-tier universities (Project 985/211 institutions). 60% of team members have over 8 years of industry experience. Expertise covers hardware, software, mechanical structure, ID/MD design, SMT, PCBA design, and validation. Supports customers throughout the entire product lifecycle—from concept development to mass production",
         image: "/images/about/manufacturing/talentDistribution_en.png"
       },
     }
@@ -402,7 +402,7 @@ export default function ManufacturingCapabilitiesPage({params}:{params:{locale:s
 
         {/* 装片运载能力参数 */}
         <div>
-          <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2>
+          {/* <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2> */}
           <h2 className="text-3xl font-bold mb-8 text-center">{currentContent.parameters.title}</h2>
           <p className="text-center text-gray-500 text-sm mb-6">{currentContent.parameters.desc}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

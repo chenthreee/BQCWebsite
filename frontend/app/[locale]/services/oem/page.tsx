@@ -115,32 +115,32 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       oem: {
         sections: [
           {
-            image: "/images/services/1_zh.png",
+            image: "/images/services/1_en.jpg",
             imagePosition: "right",
             content: [
-              "BQC, founded in 2003, is a professional Electronics Manufacturing Services (EMS) provider with 22 years of experience. With a “Strong R&D × Strong Manufacturing” closed-loop capability, we help customers accelerate products from design validation to stable mass production. We have 1,000+ employees and 20,000+ m² of manufacturing space (Shenzhen 15,000 m², Penang, Malaysia 6,000 m²). Our one-stop OEM/ODM offering covers component sourcing, PCBA SMT/THT, and box-build assembly with functional and burn-in testing, serving energy storage systems, intelligent AI robotics, medical electronics, and automotive electronics—consistently delivering reliable, high-quality volume production for customers worldwide.",
-              "Capacity & Footprint：",
-              "• Shenzhen, China (15,000 m²): 24 SMT lines, with end-to-end services including THT/insertion, hand soldering, testing, conformal coating, assembly, burn-in, and packing.",
-              "• Penang, Malaysia (6,000 m²): 4 SMT lines, with automated THT insertion, hand soldering, testing, conformal coating, assembly, burn-in, and packing in a one-stop flow.",
-              "Our dual-site setup meets country-of-origin and localization requirements for Southeast Asia, the European Union, and the United States, enabling flexible responses to customs, compliance, and lead-time needs."
+              "BQC was established in 2003 and is a professional Electronics Manufacturing Services (EMS) provider with 22 years of industry experience. Leveraging our “Strong R&D + Strong Manufacturing” closed-loop capability, we help customers rapidly move products from design validation to stable mass production. BQC provides one-stop OEM/ODM services covering component sourcing, PCBA SMT/THT assembly, full product assembly, functional testing, and burn-in testing, serving high-reliability industries such as energy storage systems, solid-state transformers (SST), AI intelligent robotics, medical electronics, and automotive electronics. For solid-state transformers and high-power power electronics applications, BQC offers specialized manufacturing capabilities including thick copper/ultra-thick copper power boards, SiC module assembly, high-current terminals, and high-voltage PCB assemblies. Through customized selective wave soldering, automated crimping, water-based cleaning, and ionic contamination testing, BQC ensures soldering reliability, crimping consistency, board cleanliness, and long-term operational stability of products.",
+              "Manufacturing Capacity & Global Footprint：",
+              "• China · Shenzhen Facility (15,000㎡): Equipped with 24 SMT production lines, supported by comprehensive in-house capabilities including THT assembly, manual soldering, selective wave soldering, crimping, testing, conformal coating, product assembly, burn-in aging, and packaging — providing a complete one-stop manufacturing solution.",
+              "• Malaysia · Penang Facility (6,000㎡): Equipped with 4 SMT production lines, supported by THT assembly, manual soldering, testing, conformal coating, product assembly, burn-in aging, and packaging services, enabling localized manufacturing and country-of-origin compliance for Southeast Asian, European, and U.S. markets.",
             ]
           },
           {
-            image: "/images/services/5.png",
+            image: "/images/services/5_en.png",
             imagePosition: "left",
             content: [
               "Supplier Management:",
-              "We maintain stable cooperation with original manufacturers including NXP, ST, and TI, as well as global distributors such as Arrow, Future, and Avnet.",
-              "Core component supply is more stable, with stronger advantages in pricing and lead time to support mid- and long-term material planning.",
-              "Supplier grading and risk control improve supply-chain predictability and help keep projects on schedule.",
+              "The company maintains long-term and stable partnerships with leading semiconductor manufacturers such as NXP, STMicroelectronics, and Texas Instruments, as well as global distributors including Arrow, Future Electronics, and Avnet.",
+              "This ensures more stable access to key components, with improved pricing competitiveness and lead-time advantages, supporting medium- to long-term material planning and delivery scheduling.",
+              "Through a structured supplier tiering system and risk management framework, we enhance supply chain predictability and ensure on-time project delivery.",
             ]
           },
           {
             image: "/images/services/2_zh.png",
             imagePosition: "right",
             content: [
-              "Intelligent Manufacturing System：",
-              "We follow the principle of “quality by design, manufacturing by data” across the entire lifecycle: DFM → incoming inspection → SMT → soldering → testing → assembly → burn-in → packing → shipment. Our plants deploy SPI/AOI/X-Ray, ICT/FCT, automated test jigs, and an MES traceability system to track materials, processes, and parameters at the lot/batch level, ensuring high consistency and repeatable mass-production quality.",
+              "Smart Manufacturing：",
+              "We operate under the principle of “Design equals Quality, Manufacturing equals Data,” integrating the entire process from DFM → incoming inspection → SMT placement → soldering → testing → assembly → aging → packaging → shipment.",
+              "Our factories are equipped with SPI, AOI, and X-Ray inspection systems, ICT/FCT testing, automated test fixtures, and a MES traceability system. We enable batch-level tracking of materials, processes, and parameters, ensuring high consistency and reproducible mass-production quality."
             ]
           },
           {
@@ -148,21 +148,21 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             imagePosition: "left",
             content: [
               "Quality Management System:",
-              "Comprehensive certifications: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III",
-              "For high-reliability applications, we define process windows and failure-analysis procedures with end-to-end quality control to ensure delivery quality.",
+              "Comprehensive Certification System: ISO 9001 | ISO 14001 | ISO 13485 | IATF 16949 | RoHS/REACH | IPC-A-610 Class II/III",
+              "We establish defined process windows and failure analysis procedures for high-reliability applications. Full-process quality control is implemented to ensure consistent product quality and delivery performance.",
             ]
           },
           {
-            image: "/images/services/3.png",
+            image: "/images/services/3_en.png",
             imagePosition: "right",
             content: [
               "Value-Added Services (Beyond Traditional EMS)：",
-              "• DFM (Design for Manufacturability) analys",
-              "• Key component selection & risk assessment",
-              "• Free stocking of long-lead materials (based on annual forecasts and shipment plans)",
-              "• Custom test systems: host software + fully automatic test jigs for auto programming & functional testing, reducing human error",
-              "• Flexible payment terms enabled by trade-credit/insurance approvals",
-              "• Cost optimization: PIN-to-PIN domestic/international alternates without design changes, delivering 20-30% BOM savings",
+              "• DFM (Design for Manufacturability) analysis",
+              "• Critical component selection and risk assessment",
+              "• Free stocking of long-lead-time materials based on annual forecasts and shipment plans",
+              "• Customized test systems: host PC + fully automated test fixtures, with automatic programming and functional testing to reduce human error",
+              "• Flexible payment terms: extended credit solutions based on insurance approval",
+              "• Cost optimization: PIN-to-PIN replacement with qualified domestic or international alternatives without design changes, achieving an average BOM cost reduction of 20–30%",
               // "Supply Chain & Endorsements：",
               // "Our services span the AI-robotics and new-energy ecosystems and are fully validated in mass production; BMS deployments exceed 35 GWh cumulatively. We maintain deep partnerships with NXP, ST, TI, and global distributors such as Arrow, Future, and Avnet, enabling more controllable pricing and lead times, more predictable planning, and more on-time delivery."
             ]
@@ -203,7 +203,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
       },
       contact: {
         title: "Contact Us",
-        description: "If you have product manufacturing needs, please contact our OEM service team. We will provide you with professional technical consultation and competitive quotation.",
+        description: "If you have product manufacturing requirements, please feel free to contact our OEM service team. We will provide professional technical consultation and competitive quotations tailored to your needs.",
         buttonText: "Contact Us to Discuss Your Project",
         href: "/en/contact.html"
       }

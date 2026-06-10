@@ -45,20 +45,20 @@ const content = {
   },
   en: {
     title: "Services",
-    subtitle: "BQC Electronics' Professional Services and Solutions",
+    subtitle: "Baiqiancheng Electronics' Professional Services and Solutions",
     breadcrumbs: [{ label: "Services", href: "/en/services" }],
     services: [
       {
-        title: "ODM R&D Service",
-        desc: "BQC Electronics has a professional R&D team, providing one-stop ODM services from requirement analysis, solution design to prototyping and mass production support, helping customers quickly realize product innovation.",
+        title: "ODM R&D Services",
+        desc: "Baiqiancheng Electronics has a professional R&D team and provides one-stop ODM development services covering requirement analysis, solution design, prototype development, and mass production support, helping customers quickly turn product ideas into reality.",
         link: "/en/services/odm.html",
         linkText: "Learn More",
         image: "/images/services/odm.png",
         alt: "ODM R&D Service"
       },
       {
-        title: "OEM Manufacturing Service",
-        desc: "BQC Electronics provides full-process OEM services from PCB design, SMT to final assembly, with advanced equipment and strict quality control to deliver high-quality electronic manufacturing services.",
+        title: "OEM Manufacturing Services",
+        desc: "Baiqiancheng Electronics provides full-process OEM manufacturing services, from PCB design and SMT assembly to final product assembly. With advanced production equipment and a strict quality control system, we deliver high-quality electronic manufacturing services to our customers.",
         link: "/en/services/jdsm-oem.html",
         linkText: "Learn More",
         image: "/images/services/oem.png",
@@ -67,10 +67,10 @@ const content = {
     ],
     advantagesTitle: "Service Advantages",
     advantages: [
-      { title: "Professional Team", desc: "A professional R&D team composed of PhDs and Masters, with strong technical strength.", image: "/images/services/team.png", alt: "Professional Team" },
-      { title: "Advanced Equipment", desc: "Equipped with advanced R&D equipment and production lines to ensure high-quality design and manufacturing.", image: "/images/services/equipment.png", alt: "Advanced Equipment" },
-      { title: "Quality Assurance", desc: "Strict quality control system, excellence in every step from design to production.", image: "/images/services/quality.png", alt: "Quality Assurance" },
-      { title: "Quick Response", desc: "Efficient project management and quick response mechanism to ensure on-time delivery.", image: "/images/services/response.png", alt: "Quick Response" },
+      { title: "Professional Team", desc: "A strong R&D team composed of PhDs, Master’s degree holders, and highly skilled engineers, ensuring solid technical capabilities.", image: "/images/services/team.png", alt: "Professional Team" },
+      { title: "Advanced Equipment", desc: "Equipped with state-of-the-art R&D tools and production lines to guarantee high-quality product design and manufacturing.", image: "/images/services/equipment.png", alt: "Advanced Equipment" },
+      { title: "Quality Assurance", desc: "A strict quality control system that ensures excellence at every stage, from design to production.", image: "/images/services/quality.png", alt: "Quality Assurance" },
+      { title: "Fast Response", desc: "Efficient project management and a rapid response mechanism to ensure on-time project delivery.", image: "/images/services/response.png", alt: "Quick Response" },
     ],
     contact: {
       title: "Contact Us",
