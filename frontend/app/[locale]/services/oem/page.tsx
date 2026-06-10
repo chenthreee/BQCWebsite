@@ -125,7 +125,7 @@ export default function OemServicePage({ params }: { params: { locale: string } 
             ]
           },
           {
-            image: "/images/services/5_en.png",
+            image: "/images/services/5.png",
             imagePosition: "left",
             content: [
               "Supplier Management:",
