@@ -111,7 +111,7 @@ export default function DevelopmentHistoryPage({ params }: { params: { locale: s
         { year: "2023.12", title: "Cumulative installed capacity of energy storage BMS for clients exceeded 35 GWh" },
         { year: "2024", title: "Established Hangzhou Office" },
         { year: "2024.12", title: "Established Malaysia factory" },
-        { year: "2024.12", title: "TCumulative installed capacity of energy storage BMS for clients exceeded 50 GWh" }
+        { year: "2024.12", title: "Cumulative installed capacity of energy storage BMS for clients exceeded 50 GWh" }
       ]
     }
   }
