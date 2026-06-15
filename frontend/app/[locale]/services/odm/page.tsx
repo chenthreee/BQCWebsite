@@ -99,7 +99,7 @@ export default function OdmServicePage() {
             ],
           },
         ],
-      },
+      }, 
       cooperationMode: {
         title: "合作模式",
         models: [
@@ -137,7 +137,7 @@ export default function OdmServicePage() {
 
     en: {
       title: "ODM R&D Services",
-      subtitle: "One-stop ODM R&D solution from product definition to mass production delivery",
+      subtitle: "An end-to-end, one-stop ODM R&D solution from product definition to mass production and delivery.",
       intro: {
         title: "Service Overview",
         description:
@@ -148,12 +148,12 @@ export default function OdmServicePage() {
         steps: [
           {
             icon: Lightbulb,
-            title: "1. Product Definition & Planning",
-            subtitle: "Product Definition & Planning",
+            title: "1. Product Definition & Solution Planning",
+            subtitle: "Product Definition & Solution Planning",
             items: [
-              "Deeply understand customer needs to define product objectives, application scenarios, and performance targets.",
-              "Conduct feasibility analysis, project initiation, and overall R&D roadmap planning.",
-              "Deliver system architecture outline and development timeline.",
+              "In-depth understanding of customer requirements. Clear definition of product objectives, application scenarios, and performance targets.",
+              "Early consideration of PCBA manufacturing, SMT assembly, and testing verification requirements.",
+              "Structured delivery of system architecture solutions, project initiation recommendations, and overall R&D timeline planning.",
             ],
           },
           {
@@ -161,9 +161,9 @@ export default function OdmServicePage() {
             title: "2. Hardware System Design",
             subtitle: "Hardware System Design",
             items: [
-              "Responsible for schematic design, PCB layout, core component selection, and BOM cost optimization.",
-              "Supporting complex system designs including high-speed signals, power modules, BMS control, and communication interfaces.",
-              "Providing UL/CE-compliant electrical safety design and EMC preventive solutions.",
+              "Schematic design and PCB layout. Core component selection and BOM cost optimization.",
+              "Complex system design support for high-speed signals, power modules, BMS control, and communication interfaces",
+              "UL/CE-compliant electrical safety design and EMC preventive solutions.",
             ],
           },
           {
@@ -171,10 +171,9 @@ export default function OdmServicePage() {
             title: "3. Embedded Software Development",
             subtitle: "Embedded Software Development",
             items: [
-              "Develop low-level drivers, middleware, communication protocol stacks, and application logic.",
-              "Support RTOS/Linux platforms with expertise in CAN, RS485, Ethernet, BLE, and Wi-Fi protocols.",
-              "Provide algorithm optimization, data acquisition, remote monitoring, and system upgrade capabilities.",
-
+              "Low-level driver, middleware, communication protocol stack, and application logic development.",
+              "RTOS/Linux platform support with expertise in CAN, RS485, Ethernet, BLE, and Wi-Fi protocols.",
+              "Algorithm optimization, data acquisition, remote monitoring, and system upgrade capabilities.",
             ],
           },
           {
@@ -182,8 +181,8 @@ export default function OdmServicePage() {
             title: "4. Mechanical & Structural Design",
             subtitle: "Mechanical & Structural Design",
             items: [
-              "Conduct appearance and structural design balancing aesthetics, functionality, and manufacturability.",
-              "Deliver mass-production-ready 3D drawings and mold feasibility analysis (DFM).",
+              "Appearance and structural design with consideration for aesthetics, functionality, and manufacturability.",
+              "Mass-production-ready 3D drawings and mold feasibility analysis (DFM).",
             ],
           },
           {
@@ -191,19 +190,19 @@ export default function OdmServicePage() {
             title: "5. Prototyping & Testing Validation",
             subtitle: "Prototyping & Testing Validation",
             items: [
-              "Rapidly build prototypes for structural and functional verification.",
-              "Perform comprehensive testing including environmental, performance, reliability, and EMC/EMI validation.",
+              "Rapid PCBA prototyping for structural and functional verification.",
+              "Environmental, performance, reliability, and EMC/EMI testing and validation.",
 
             ],
           },
           {
             icon: Award,
-            title: "6. MP Manufacturing & Production Optimization Support",
-            subtitle: "MP Manufacturing & Production Optimization Support",
+            title: "6. Mass Production & Production Optimization Support",
+            subtitle: "Mass Production & Production Optimization Support",
             items: [
-              "Establish a complete production traceability system (MES) to ensure quality control and traceability.",
-              "Provide process optimization, DFM analysis, ATE fixture development, pilot run validation, and process standardization.",
-              "Through data analysis, process improvement and equipment optimization, ensure the consistency of mass production, yield rate and the stability of the supply chain.",
+              "MES-based production traceability systems for quality control and product traceability.",
+              "Process optimization, DFM analysis, ATE test fixture development, pilot run validation, and process standardization.",
+              "Data analysis, yield improvement, and process enhancement for mass production consistency, high yield, and supply chain stability.",
             ],
           },
           {
@@ -211,9 +210,9 @@ export default function OdmServicePage() {
             title: "7. Product Certification & After-Sales Technical Support",
             subtitle: "Product Certification & After-Sales Technical Support",
             items: [
-              "Provide UL, CE, FCC, and other product certifications and compliance testing.",
-              "Provide support for sample machine testing during the certification stage, provide rectification suggestions, and prepare relevant technical documents.",
-              "Provide after-sales technical support and product iteration services, customers worry less and avoid pitfalls, products are more durable and better sold.",
+              "UL, CE, FCC, and other product certification and compliance testing support.",
+              "PCBA prototype testing, certification support, corrective action recommendations, and technical documentation preparation.",
+              "After-sales technical support and product version iteration services for enhanced product reliability, reduced development risks, and improved market competitiveness.",
             ],
           },
         ],
@@ -224,21 +223,21 @@ export default function OdmServicePage() {
           {
             title: "ODM (Original Design Manufacturing)",
             description:
-              "We offer a full-process one-stop service covering product definition, design and development, certification and mass production, as well as after-sales service. Customers can focus on sales, operation and industry solutions. They only need to present product requirements and can obtain complete deliverable products. The overall input-output ratio is higher.",
+              "We offer a full-process one-stop service covering product definition, design and development, certification support, mass production manufacturing, and after-sales service. Customers can focus on market development and industry applications, while we provide comprehensive R&D support covering product functionality planning, key component selection, hardware and software development, DFM evaluation, and test plan development. Backed by our in-house SMT manufacturing system and extensive experience in SMT assembly, PCBA manufacturing, functional testing, and box-build assembly, we help shorten development cycles, reduce trial-and-error costs, and efficiently bring products from concept design to stable mass production.",
           },
           {
             title: " JDSM (Joint Design Manufacturing)",
             description:
-              "Jointly develop with the client team and provide some research and development services (such as hardware, software, structure, testing or certification services). The client focuses on filling the weak points, with flexible investment, controllable budget, and also takes into account efficiency and technical dominance.",
+              "Under the JDSM (Joint Design & Manufacturing) model, we jointly develop products with the client’s R&D team and provide modular R&D services including hardware design, software development, structural optimization, testing validation, certification support, and prototype development. Based on the client’s existing design, technical objectives, and project schedule, support can be selected as needed, allowing customers to maintain technical ownership while improving development efficiency and controlling project investment. Backed by our in-house SMT manufacturing system and extensive experience in SMT assembly, PCBA manufacturing, and testing validation, we evaluate process compatibility, manufacturability, and mass-production feasibility during the design stage, helping ensure a smooth transition from joint development to volume production.",
           },
         ],
         summary:
-          "Through the flexible cooperation model of ODM + JDSM, we provide customers with a mature R&D platform, share technical experience, mass production experience and supply chain experience, reduce project risks and control project costs. Customers can either entrust the entire product to us or cooperate on a \"custom order\" basis as needed. With less investment and shorter time, they can bring more mature and easier-to-produce products to the market.",
+          "Baiqiancheng Electronics provides customers with a flexible ODM + JDSM cooperation model, delivering R&D collaboration, engineering verification, mass production introduction, and supply chain support.Customers can choose full ODM engagement or modular JDSM collaboration as needed, maintaining technical control while improving development efficiency.Leveraging our in-house SMT manufacturing system and extensive experience in SMT assembly, PCBA manufacturing, and testing validation, we evaluate manufacturability, cost control, and production stability during the design stage, helping customers bring products to market with lower risk and higher efficiency.",
       },
       ipPolicy: {
         title: "Intellectual Property Open Policy",
         description:
-          "BQC always adheres to the principle of openness and transparency in ODM and JDSM cooperation. After project completion, according to mutual agreement, we can open and share all original design materials to customers, including but not limited to:",
+          "BQC always adheres to the principle of openness and transparency in ODM and JDSM cooperation. After project completion, and according to mutual agreement, we provide customers with project-related design materials and engineering documents, including but not limited to:",
         items: [
           "Design Scheme",
           "BOM (Bill of Materials)",
@@ -248,7 +247,7 @@ export default function OdmServicePage() {
           "Test reports",
         ],
         conclusion:
-          "Ensuring customers have complete intellectual property rights and subsequent sustainable development capabilities for products.",
+          "Ensuring customers retain full intellectual property rights and the ability to sustainably develop their products.",
       },
       contact: {
         title: "Contact Us",

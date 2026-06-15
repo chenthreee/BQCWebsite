@@ -52,7 +52,7 @@ export default function ManagementSystemPage({params}:{params:{locale:string}}) 
       ],
       digitalPlatform: {
         title: "Digital Management Platform",
-        description: "BQC Electronics has established a comprehensive digital management platform to achieve informatization, intelligence, and efficiency in enterprise management.",
+        description: "Baiqiancheng Electronics has built a full-process digital production management system that enables real-time production data collection, work order tracking, material flow monitoring, and optimized resource scheduling. This enhances production coordination, reduces process deviations, and ensures stable, consistent, and fully traceable product quality.",
         systems: [
           {
             title: "ERP System",
@@ -62,17 +62,17 @@ export default function ManagementSystemPage({params}:{params:{locale:string}}) 
           {
             title: "Office Anywhere",
             image:"/images/about/managementSystem/Office.png",
-            description:"Office Anyware is a cloud-based and virtualization-based smart office solution designed to enable a seamless work experience on any device, anywhere, anytime. At its core, the office environment (operating system, application software, data storage) is deployed in the cloud, allowing users to securely access the virtual workspace through the Internet, completely free from the limitations of physical devices and geographical locations."
+            description:"Office Anyware is a cloud- and virtualization-based smart office solution that enables seamless work across any device, from anywhere, at any time. By deploying the office environment—including operating systems, applications, and data storage—in the cloud, users can securely access a virtual workspace via the Internet, reducing dependence on physical devices and fixed locations. "
           },
           {
             title: "MES（Manufacturing Execution System）",
             image:"/images/about/managementSystem/mes.png",
-            description:"Manufacturing Execution System (MES) is a real-time monitoring and execution management platform for the production floor level, which realizes digital control, process traceability and dynamic optimization of the whole production process by connecting the enterprise planning layer (such as ERP) and the production equipment, with the core goal of shortening the manufacturing cycle, improving the yield rate and reducing resource waste."
+            description:"Manufacturing Execution System (MES) enables real-time monitoring and execution management across shop-floor operations. By connecting ERP planning with production equipment, the system supports digital control, process traceability, and dynamic optimization throughout the SMT and PCBA manufacturing process, helping shorten production cycles, improve yield, and reduce resource waste."
           },
           {
             title: "KPI Management System",
             image:"/images/about/managementSystem/kpi.png",
-            description:"KPI management system is a set of systematic methods based on key performance indicators, through the closed-loop mechanism of objective decomposition→ indicator design→ process monitoring→ performance evaluation → continuous improvement, transforming organizational strategy into quantifiable, executable and traceable operation management tools, driving the team to focus on core value creation and achieve strategic goal."
+            description:"KPI management system is built around Key Performance Indicators and follows a closed-loop process of goal cascading, indicator design, process monitoring, performance evaluation, and continuous improvement. It transforms organizational strategy into quantifiable, actionable, and traceable management practices, helping teams focus on core value creation and stay aligned with strategic goals."
           },
         ]
       },

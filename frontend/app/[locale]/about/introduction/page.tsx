@@ -17,7 +17,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "一、公司概况",
           content: [
-            "深圳市百千成电子有限公司成立于2003年，是专业从事储能锂电池BMS设计制造，PCS\逆变器、智能机器人电路板PCBA设计制造企业。"
+            "深圳市百千成电子有限公司成立于2003年，是专业从事储能锂电池BMS设计制造，PCS逆变器、智能机器人电路板PCBA设计制造的行业领先企业。"
           ]
         },
         {
@@ -29,7 +29,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "三、生产基地与制造服务",
           content: [
-            "公司生产基地设备齐全，深圳基地拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线；马来西亚槟城基地拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。百千成电子可为客户提供元器件采购、贴片、后焊、测试以及喷涂、成品组装等一站式OEM生产制造服务。",
+            "公司制造实力雄厚，两大基地总面积达26,000多平方米。其中， 深圳厂区面积20,000多平方米，拥有24条高速SMT贴片线、4条波峰焊线、4条后焊线和10条三防喷涂线； 马来西亚厂区面积6,000平方米，拥有4条高速SMT贴片线、2条全自动插件线和2条三防喷涂线。百千成电子可为客户提供元器件采购、贴片、后焊、烧录、功能测试以及三防漆喷涂、成品组装等一站式OEM/EMS生产制造服务。",
             <div key="video-zh" className="flex justify-center my-6">
               <video
                 src="/Company%20introduction%20video-web.mp4"
@@ -49,13 +49,13 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "四、资质认证与客户成果",
           content: [
-            "公司已通过ISO9001、ISO14001、ISO13485、IATF16949、管理体系；并已导入MES管理系统，生产、管理科学规范，全流程数字化可追溯体系确保每片PCBA板高品质交付。已经为国际电力大储前5、船舶储能前3等超过50家国内外各大知名储能客户设计开发、生产制造BMS产品超50GWh+。为国内扫地机器人第1品牌、割草机器人第1品牌、人形机器人等各行业智能机器人客户制造出货PCBA线路板500万+"
+            "公司已通过ISO9001、ISO14001、ISO13485、IATF16949等国际管理体系认证；并全面导入MES管理系统，生产与管理科学规范，全流程数字化可追溯体系确保每片PCBA板高品质交付。在储能领域，公司产品线全面覆盖电力大储、通讯基站储能、工商业储能、船舶储能以及家储等核心场景。目前已为国际电力大储前5、船舶储能前3等超过50家国内外各大知名储能客户设计开发、生产制造BMS产品超50GWh+。同时，为国内扫地机器人第1品牌、割草机器人第1品牌、人形机器人等各行业智能机器人客户制造出货PCBA线路板500万+。"
           ]
         },
         {
           title: "五、公司布局与团队规模",
           content: [
-            "百千成电子研发、销售、采购位于深圳南山高新科技园旁的南山睿园，两大制造基地，分别位于深圳光明和马来西亚槟城，现拥有高素质的管理技术人员和员工队伍900多人。",
+            "百千成电子研发、销售、采购中心位于深圳南山高新科技园旁的南山睿园，两大制造基地分别位于深圳光明和马来西亚槟城。随着业务的持续拓展，公司现拥有高素质的管理技术人员和员工队伍1,000多人。",
             <div key="factory-images-zh" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
               <div className="relative w-full h-[400px]">
                 <Image
@@ -92,7 +92,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "I. Company Overview",
           content: [
-            "Shenzhen Baiqiancheng Electronics Co., Ltd. was founded in 2003. It is a high-tech enterprise specializing in the design and manufacture of BMS for energy storage lithium batteries, as well as PCBA design and manufacturing for PCS inverters and intelligent robotics applications."
+            "Founded in 2003, Shenzhen BQC Electronic Co., Ltd. is an industry-leading enterprise specializing in the design and manufacture of energy storage lithium battery BMS, as well as the PCBA design and manufacture for PCS inverters and intelligent robots."
           ]
         },
         {
@@ -116,12 +116,12 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
           title: "III. Production Base & Manufacturing Services",
           content: [
             <div key="en-manufacturing" className="space-y-3">
-              <p className="text-gray-700 text-xl">Our manufacturing bases are equipped with advanced production facilities to ensure precision, flexibility, and reliability:</p>
+              <p className="text-gray-700 text-xl">The company boasts robust manufacturing capabilities with two major bases covering a total area of over 26,000 square meters.</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 text-xl">
-                <li><strong>Shenzhen, China:</strong> 24 high-speed SMT lines, 4 wave soldering lines, 4 post-soldering lines, and 10 conformal coating lines.</li>
-                <li><strong>Malaysia:</strong> 4 high-speed SMT lines, 2 fully automated through-hole insertion lines, and 2 conformal coating lines.</li>
+                <li><strong>Shenzhen, China:</strong> 24 high-speed SMT lines, 4 wave soldering lines, 4 hand soldering (post-soldering) lines, and 10 conformal coating lines.</li>
+                <li><strong>Malaysia:</strong> 4 high-speed SMT lines, 2 fully automated DIP lines, and 2 conformal coating lines.</li>
               </ul>
-              <p className="text-gray-700 text-xl">Baiqiancheng Electronics provides one-stop OEM manufacturing services covering component sourcing, SMT assembly, post-soldering, functional testing, conformal coating, and finished product assembly.</p>
+              <p className="text-gray-700 text-xl">BQC provides customers with one-stop OEM/EMS manufacturing services, including component procurement, SMT, hand soldering (post-soldering) , programming , functional testing (FCT) , conformal coating, and finished product assembly.</p>
             </div>,
             <div key="video-en" className="flex justify-center my-6">
               <video
@@ -142,14 +142,14 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "IV. Certifications and Customer Achievements",
           content: [
-            "The company is certified to ISO 9001, ISO 14001, ISO 13485, and IATF 16949 management system standards. Meanwhile, we have implemented an MES management system to support standardized production and refined management. Our full-process digital traceability system helps ensure the high-quality delivery of every PCBA.",
-            "To date, we have provided BMS R&D and manufacturing services to more than 50 well-known energy storage customers in China and overseas, including customers among the leading players in large-scale power storage and marine energy storage, with cumulative delivered capacity exceeding 50 GWh. For intelligent robotics applications, including leading brands in robotic vacuum cleaners, robotic lawn mowers, and humanoid robots, we have shipped more than 5 million PCBA units."
+            "The company has passed international management system certifications including ISO9001, ISO14001, ISO13485, and IATF16949. We have fully implemented the MES management system, ensuring scientific and standardized production and management. A full-process digital traceability system ensures the high-quality delivery of every single PCBA.",
+            "In the field of energy storage, the company's product line comprehensively covers core scenarios such as utility-scale energy storage , telecom base station energy storage , commercial & industrial (C&I) energy storage , marine energy storage , and residential energy storage . To date, BQC has designed, developed, and manufactured over 50GWh+ of BMS products for more than 50 renowned global energy storage customers, including the top 5 in international utility-scale energy storage and the top 3 in marine energy storage . Concurrently, we have manufactured and shipped over 5 million PCBA boards for various intelligent robot clients, including China's No.1 robotic vacuum brand, No.1 robotic lawn mower brand, and humanoid robot developers."
           ]
         },
         {
           title: "V. Company Footprint and Team Size",
           content: [
-            "Our R&D, sales, and procurement teams are located at Nanshan Ruiyuan, adjacent to Nanshan High-Tech Industrial Park in Shenzhen. The company operates two major manufacturing bases in Guangming, Shenzhen and Penang, Malaysia, with more than 900 employees across management, engineering, and production teams.",
+            "BQC's R&D, sales, and procurement centers are located at Nanshan Ruiyuan, adjacent to the Shenzhen Nanshan High-Tech Park. Our two manufacturing bases are situated in Guangming, Shenzhen, and Penang, Malaysia. Driven by continuous business expansion, the company now boasts a highly qualified management and technical team with a workforce of over 1,000 employees .",
             <div key="factory-images-en" className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
               <div className="relative w-full h-[400px]">
                 <Image
@@ -173,7 +173,7 @@ export default function CompanyIntroductionPage({ params }: { params: { locale: 
         {
           title: "VI. Corporate Values and Employee Development",
           content: [
-            "Throughout our development, we have consistently upheld the core values of Customer First, Integrity, Sharing, and Giving Back. Guided by the philosophy of \"Respecting employee value and empowering individual growth,\" the company continuously creates a superior working environment and comprehensive benefits for employees. We focus on building a self-driven and efficient team while stimulating employees’ innovation awareness and work enthusiasm. We firmly believe that only when employees feel valued and fulfilled at work can the company achieve sustainable and steady growth."
+            "Throughout our development, we have consistently adhered to our core corporate values: \"Customer First, Integrity,Sharing, and Giving Back.\" Guided by \"respecting employee value and empowering individual growth,\" the company continuously creates superior working environments and comprehensive welfare benefits. We focus on building selfdriven, highly efficient teams to stimulate employees' innovation awareness and work passion. We firmly believe that only when employees achieve value recognition and happiness in their work can the enterprise achieve sustainable and steady development."
           ]
         }
       ]
